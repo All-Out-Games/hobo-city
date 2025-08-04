@@ -1,0 +1,367 @@
+{
+"skeleton": { "hash": "Pp8vuv+VPqY", "spine": "4.0.64" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "confetti_bunch_B", "parent": "root", "x": -169.13, "y": 34.42 },
+	{ "name": "confetti_bunch_A", "parent": "root", "x": 188.02, "y": 92.5 },
+	{ "name": "confetti_bunch_C", "parent": "root", "x": -67.37, "y": 126.13 },
+	{ "name": "confetti_bunch_E", "parent": "root", "x": 17.74, "y": -15.41 },
+	{ "name": "confetti_bunch_F", "parent": "root", "x": 104.06, "y": 34.69 },
+	{ "name": "confetti_bunch_D", "parent": "root", "x": 9.25, "y": 95.65 },
+	{ "name": "confetti_bunch_G", "parent": "root", "x": -128.23, "y": 14.11 }
+],
+"slots": [
+	{ "name": "confetti_bunch_A", "bone": "confetti_bunch_A" },
+	{ "name": "confetti_bunch_B", "bone": "confetti_bunch_B" },
+	{ "name": "confetti_bunch_C", "bone": "confetti_bunch_C" },
+	{ "name": "confetti_bunch_D", "bone": "confetti_bunch_D" },
+	{ "name": "confetti_bunch_E", "bone": "confetti_bunch_E" },
+	{ "name": "confetti_bunch_F", "bone": "confetti_bunch_F" },
+	{ "name": "confetti_bunch_G", "bone": "confetti_bunch_G" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"confetti_bunch_A": {
+				"confetti_bunch_A": { "x": 7.74, "y": -10.96, "width": 261, "height": 261 }
+			},
+			"confetti_bunch_B": {
+				"confetti_bunch_B": { "x": 14.45, "y": -3.54, "width": 251, "height": 266 }
+			},
+			"confetti_bunch_C": {
+				"confetti_bunch_C": { "x": 7.17, "y": 1.15, "width": 263, "height": 233 }
+			},
+			"confetti_bunch_D": {
+				"confetti_bunch_D": { "x": -1, "y": 9.7, "width": 167, "height": 124 }
+			},
+			"confetti_bunch_E": {
+				"confetti_bunch_E": { "x": -9.62, "y": 6.62, "width": 199, "height": 206 }
+			},
+			"confetti_bunch_F": {
+				"confetti_bunch_F": { "x": 5.16, "y": 8.33, "width": 190, "height": 195 }
+			},
+			"confetti_bunch_G": {
+				"confetti_bunch_G": { "x": 14.34, "y": 0.65, "width": 159, "height": 144 }
+			}
+		}
+	}
+],
+"animations": {
+	"Confetti_Explosion": {
+		"slots": {
+			"confetti_bunch_A": {
+				"rgba": [
+					{
+						"time": 0.6667,
+						"color": "ffffffff",
+						"curve": [ 0.739, 1, 0.811, 1, 0.739, 1, 0.811, 1, 0.739, 1, 0.811, 1, 0.739, 1, 0.811, 0 ]
+					},
+					{ "time": 0.8833, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.05, "name": "confetti_bunch_A" }
+				]
+			},
+			"confetti_bunch_B": {
+				"rgba": [
+					{
+						"time": 0.6167,
+						"color": "ffffffff",
+						"curve": [ 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 0 ]
+					},
+					{ "time": 0.8333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "confetti_bunch_B" }
+				]
+			},
+			"confetti_bunch_C": {
+				"rgba": [
+					{
+						"time": 0.6833,
+						"color": "ffffffff",
+						"curve": [ 0.756, 1, 0.828, 1, 0.756, 1, 0.828, 1, 0.756, 1, 0.828, 1, 0.756, 1, 0.828, 0 ]
+					},
+					{ "time": 0.9, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0667, "name": "confetti_bunch_C" }
+				]
+			},
+			"confetti_bunch_D": {
+				"rgba": [
+					{
+						"time": 0.6167,
+						"color": "ffffffff",
+						"curve": [ 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 0 ]
+					},
+					{ "time": 0.8333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "confetti_bunch_D" }
+				]
+			},
+			"confetti_bunch_E": {
+				"rgba": [
+					{
+						"time": 0.6167,
+						"color": "ffffffff",
+						"curve": [ 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 1, 0.689, 1, 0.761, 0 ]
+					},
+					{ "time": 0.8333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "confetti_bunch_E" }
+				]
+			},
+			"confetti_bunch_F": {
+				"rgba": [
+					{
+						"time": 0.6333,
+						"color": "ffffffff",
+						"curve": [ 0.706, 1, 0.778, 1, 0.706, 1, 0.778, 1, 0.706, 1, 0.778, 1, 0.706, 1, 0.778, 0 ]
+					},
+					{ "time": 0.85, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0167, "name": "confetti_bunch_F" }
+				]
+			},
+			"confetti_bunch_G": {
+				"rgba": [
+					{
+						"time": 0.6667,
+						"color": "ffffffff",
+						"curve": [ 0.739, 1, 0.811, 1, 0.739, 1, 0.811, 1, 0.739, 1, 0.811, 1, 0.739, 1, 0.811, 0 ]
+					},
+					{ "time": 0.8833, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.05, "name": "confetti_bunch_G" }
+				]
+			}
+		},
+		"bones": {
+			"confetti_bunch_A": {
+				"rotate": [
+					{ "time": 0.05 },
+					{ "time": 0.9333, "value": -50.47 }
+				],
+				"translatex": [
+					{
+						"time": 0.05,
+						"value": -141.27,
+						"curve": [ 0.189, 71.11, 0.195, 133.65 ]
+					},
+					{
+						"time": 0.3333,
+						"value": 177.3,
+						"curve": [ 0.475, 222, 0.793, 318.46 ]
+					},
+					{ "time": 0.9333, "value": 345.99 }
+				],
+				"translatey": [
+					{
+						"time": 0.05,
+						"value": -79.64,
+						"curve": [ 0.189, 369.09, 0.194, 593.46 ]
+					},
+					{
+						"time": 0.3333,
+						"value": 593.46,
+						"curve": [ 0.472, 593.46, 0.794, 375.18 ]
+					},
+					{ "time": 0.9333, "value": -61.37 }
+				]
+			},
+			"confetti_bunch_B": {
+				"rotate": [
+					{},
+					{ "time": 0.8833, "value": 25.69 }
+				],
+				"translatex": [
+					{
+						"value": 73.65,
+						"curve": [ 0.139, -133.65, 0.145, -197.38 ]
+					},
+					{
+						"time": 0.2833,
+						"value": -237.3,
+						"curve": [ 0.421, -276.98, 0.742, -345.27 ]
+					},
+					{ "time": 0.8833, "value": -358.84 }
+				],
+				"translatey": [
+					{
+						"value": -42.15,
+						"curve": [ 0.139, 372.09, 0.144, 579.2 ]
+					},
+					{
+						"time": 0.2833,
+						"value": 579.2,
+						"curve": [ 0.422, 579.2, 0.744, 359.71 ]
+					},
+					{ "time": 0.8833, "value": -79.26 }
+				]
+			},
+			"confetti_bunch_C": {
+				"rotate": [
+					{ "time": 0.0667 },
+					{ "time": 0.9, "value": -40.78 }
+				],
+				"translatex": [
+					{
+						"time": 0.0667,
+						"value": 23.95,
+						"curve": [ 0.207, 30.04, 0.211, 33.8 ]
+					},
+					{
+						"time": 0.35,
+						"value": 34.47,
+						"curve": [ 0.489, 35.15, 0.81, 30.58 ]
+					},
+					{ "time": 0.95, "value": 25.4 }
+				],
+				"translatey": [
+					{
+						"time": 0.0667,
+						"value": -96.86,
+						"curve": [ 0.206, 395.23, 0.211, 641.28 ]
+					},
+					{
+						"time": 0.35,
+						"value": 641.28,
+						"curve": [ 0.489, 641.28, 0.811, 396.4 ]
+					},
+					{ "time": 0.95, "value": -93.37 }
+				]
+			},
+			"confetti_bunch_D": {
+				"rotate": [
+					{},
+					{ "time": 0.8167, "value": 34.58 }
+				],
+				"translatex": [
+					{
+						"value": -18.18,
+						"curve": [ 0.139, -94.55, 0.145, -112.67 ]
+					},
+					{
+						"time": 0.2833,
+						"value": -132.74,
+						"curve": [ 0.418, -152.29, 0.743, -194.66 ]
+					},
+					{ "time": 0.8833, "value": -211.88 }
+				],
+				"translatey": [
+					{
+						"value": -39.86,
+						"curve": [ 0.139, 295.08, 0.144, 462.55 ]
+					},
+					{
+						"time": 0.2833,
+						"value": 462.55,
+						"curve": [ 0.422, 462.55, 0.744, 236.77 ]
+					},
+					{ "time": 0.8833, "value": -214.79 }
+				]
+			},
+			"confetti_bunch_E": {
+				"rotate": [
+					{
+						"curve": [ 0.139, 0, 0.694, 43.59 ]
+					},
+					{ "time": 0.8333, "value": 43.59 }
+				],
+				"translatex": [
+					{
+						"curve": [ 0.139, 116.05, 0.145, 162.84 ]
+					},
+					{
+						"time": 0.2833,
+						"value": 185.33,
+						"curve": [ 0.422, 207.83, 0.743, 251.88 ]
+					},
+					{ "time": 0.8833, "value": 272.49 }
+				],
+				"translatey": [
+					{
+						"curve": [ 0.139, 498.09, 0.144, 747.13 ]
+					},
+					{
+						"time": 0.2833,
+						"value": 747.13,
+						"curve": [ 0.422, 747.13, 0.744, 530.06 ]
+					},
+					{ "time": 0.8833, "value": 95.93 }
+				]
+			},
+			"confetti_bunch_F": {
+				"rotate": [
+					{ "time": 0.0167 },
+					{ "time": 0.85, "value": -51.54 }
+				],
+				"translatex": [
+					{
+						"time": 0.0167,
+						"value": -81.54,
+						"curve": [ 0.156, -27.23, 0.161, 15.34 ]
+					},
+					{
+						"time": 0.3,
+						"value": 28.06,
+						"curve": [ 0.442, 41.04, 0.759, 67.01 ]
+					},
+					{ "time": 0.9, "value": 75.69 }
+				],
+				"translatey": [
+					{
+						"time": 0.0167,
+						"value": -39.82,
+						"curve": [ 0.156, 330.63, 0.161, 515.85 ]
+					},
+					{
+						"time": 0.3,
+						"value": 515.85,
+						"curve": [ 0.439, 515.85, 0.761, 300.68 ]
+					},
+					{ "time": 0.9, "value": -129.66 }
+				]
+			},
+			"confetti_bunch_G": {
+				"rotate": [
+					{ "time": 0.05, "value": 28.37 },
+					{ "time": 0.9333, "value": 55.21 }
+				],
+				"translatex": [
+					{
+						"time": 0.05,
+						"value": 66.54,
+						"curve": [ 0.191, -47.17, 0.194, -98.39 ]
+					},
+					{
+						"time": 0.3333,
+						"value": -127.66,
+						"curve": [ 0.472, -156.9, 0.793, -183.01 ]
+					},
+					{ "time": 0.9333, "value": -178.89 }
+				],
+				"translatey": [
+					{
+						"time": 0.05,
+						"value": -2.51,
+						"curve": [ 0.189, 476.34, 0.194, 715.77 ]
+					},
+					{
+						"time": 0.3333,
+						"value": 715.77,
+						"curve": [ 0.472, 715.77, 0.794, 489 ]
+					},
+					{ "time": 0.9333, "value": 35.46 }
+				]
+			}
+		}
+	}
+}
+}

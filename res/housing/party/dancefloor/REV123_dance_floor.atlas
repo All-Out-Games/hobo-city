@@ -1,0 +1,12 @@
+REV123_dance_floor.png
+	size: 1104, 368
+	filter: Linear, Linear
+Tiktok_Station/DanceFloor_Frames/DanceFloor1
+	bounds: 3, 3, 363, 361
+	offsets: 1, 1, 365, 363
+Tiktok_Station/DanceFloor_Frames/DanceFloor2
+	bounds: 369, 3, 363, 361
+	offsets: 1, 1, 365, 363
+Tiktok_Station/DanceFloor_Frames/DanceFloor3
+	bounds: 735, 3, 363, 361
+	offsets: 1, 1, 365, 363

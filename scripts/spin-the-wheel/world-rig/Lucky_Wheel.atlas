@@ -1,0 +1,26 @@
+Lucky_Wheel.png
+	size: 2300, 588
+	filter: Linear, Linear
+	scale: 0.5
+Lucky Wheel/led_off
+	bounds: 2249, 538, 43, 43
+Lucky Wheel/led_on
+	bounds: 2168, 506, 75, 75
+	offsets: 3, 3, 81, 81
+Lucky Wheel/lucky_wheel_background
+	bounds: 556, 47, 534, 534
+Lucky Wheel/lucky_wheel_frame
+	bounds: 6, 6, 544, 575
+Lucky Wheel/pointer
+	bounds: 2087, 479, 75, 102
+Lucky Wheel/shadow
+	bounds: 1539, 44, 537, 198
+	offsets: 11, 10, 559, 219
+	rotate: 90
+Lucky Wheel/spin_button
+	bounds: 1961, 452, 120, 129
+Lucky Wheel/stand
+	bounds: 1744, 247, 334, 211
+	rotate: 90
+Lucky Wheel/wheel
+	bounds: 1096, 142, 438, 439

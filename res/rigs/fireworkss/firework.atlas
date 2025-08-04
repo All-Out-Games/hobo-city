@@ -1,0 +1,40 @@
+28ed2c36b254b7304ed0a904b7d07a07.png
+	size: 784, 784
+	filter: Linear, Linear
+blue_firework/blue_firework_explosion_frame_1
+	bounds: 6, 75, 153, 151
+	offsets: 1, 1, 155, 153
+blue_firework/blue_firework_explosion_frame_2
+	bounds: 286, 6, 236, 234
+	offsets: 1, 1, 238, 236
+blue_firework/blue_firework_explosion_frame_3
+	bounds: 286, 515, 266, 263
+	offsets: 1, 1, 268, 265
+blue_firework/blue_firework_explosion_frame_4
+	bounds: 6, 508, 274, 270
+	offsets: 1, 1, 276, 272
+blue_firework/blue_firework_trail_frame_1
+	bounds: 558, 490, 17, 131
+	offsets: 1, 0, 19, 131
+blue_firework/blue_firework_trail_frame_2
+	bounds: 6, 52, 17, 134
+	offsets: 1, 6, 19, 140
+	rotate: 90
+orange_firework/orange_firework_explosion_frame_1
+	bounds: 558, 627, 153, 151
+	offsets: 1, 1, 155, 153
+orange_firework/orange_firework_explosion_frame_2
+	bounds: 528, 6, 236, 234
+	offsets: 1, 1, 238, 236
+orange_firework/orange_firework_explosion_frame_3
+	bounds: 286, 246, 266, 263
+	offsets: 1, 1, 268, 265
+orange_firework/orange_firework_explosion_frame_4
+	bounds: 6, 232, 274, 270
+	offsets: 1, 1, 276, 272
+orange_firework/orange_firework_trail_frame_1
+	bounds: 717, 647, 17, 131
+	offsets: 1, 0, 19, 131
+orange_firework/orange_firework_trail_frame_2
+	bounds: 165, 92, 17, 134
+	offsets: 1, 6, 19, 140

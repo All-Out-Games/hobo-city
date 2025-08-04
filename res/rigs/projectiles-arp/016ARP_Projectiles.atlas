@@ -1,0 +1,42 @@
+016ARP_Projectiles.png
+	size: 820, 80
+	filter: Linear, Linear
+	scale: 0.5
+air_fx
+	bounds: 811, 49, 24, 2
+	rotate: 90
+bullet
+	bounds: 753, 47, 26, 16
+	rotate: 90
+grenade
+	bounds: 615, 26, 45, 47
+hydro_dip_rocket
+	bounds: 6, 18, 165, 55
+pistol_bullet
+	bounds: 775, 52, 21, 12
+	rotate: 90
+projectile_spin
+	bounds: 327, 19, 75, 54
+	offsets: 0, 0, 75, 55
+rocket_fire/rocket_fire_1
+	bounds: 711, 32, 36, 41
+rocket_fire/rocket_fire_2
+	bounds: 565, 22, 44, 51
+rocket_fire/rocket_fire_3
+	bounds: 666, 25, 39, 48
+rocket_launcher_bullet
+	bounds: 408, 35, 92, 38
+smoke/smoke_particle_A
+	bounds: 177, 6, 67, 70
+	offsets: 1, 1, 69, 73
+	rotate: 90
+smoke/smoke_particle_B
+	bounds: 253, 8, 68, 65
+	offsets: 2, 2, 72, 69
+smoke/smoke_particle_C
+	bounds: 506, 12, 53, 61
+	offsets: 2, 1, 56, 64
+speed_trail
+	bounds: 793, 52, 21, 12
+	offsets: 0, 0, 30, 12
+	rotate: 90

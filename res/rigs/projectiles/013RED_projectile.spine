@@ -1,0 +1,162 @@
+{
+"skeleton": { "hash": "5Gfo22E0gmI", "spine": "4.0.64", "x": -95.5, "y": -11.5, "width": 191, "height": 23 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Projectile", "parent": "root" }
+],
+"slots": [
+	{ "name": "Projectile", "bone": "Projectile", "attachment": "Projectile" }
+],
+"skins": [
+	{
+		"name": "bullet",
+		"attachments": {
+			"Projectile": {
+				"Projectile": { "name": "MachineGunBullet", "width": 191, "height": 23 }
+			}
+		}
+	},
+	{
+		"name": "buzzsaw",
+		"attachments": {
+			"Projectile": {
+				"Projectile": { "name": "buzzsaw", "y": 3.67, "width": 215, "height": 217 }
+			}
+		}
+	},
+	{
+		"name": "cannonball",
+		"attachments": {
+			"Projectile": {
+				"Projectile": { "name": "cannonball", "width": 125, "height": 120 }
+			}
+		}
+	},
+	{
+		"name": "explosive_shell",
+		"attachments": {
+			"Projectile": {
+				"Projectile": { "name": "shotgun_bullet2", "width": 47, "height": 28 }
+			}
+		}
+	},
+	{
+		"name": "grenade",
+		"attachments": {
+			"Projectile": {
+				"Projectile": { "name": "grenade", "width": 89, "height": 94 }
+			}
+		}
+	},
+	{
+		"name": "laser_bolt",
+		"attachments": {
+			"Projectile": {
+				"Projectile": { "name": "OP[106]LaserBolt _Crewshia", "width": 153, "height": 23 }
+			}
+		}
+	},
+	{
+		"name": "water_balloon",
+		"attachments": {
+			"Projectile": {
+				"Projectile": { "name": "waterballoon", "x": -2.72, "y": -9.51, "width": 158, "height": 178 }
+			}
+		}
+	}
+],
+"animations": {
+	"013RED/Hit_Despawn": {
+		"slots": {
+			"Projectile": {
+				"rgba": [
+					{ "time": 0.15, "color": "ffffffff" },
+					{ "time": 0.2, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.2, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{},
+					{ "time": 0.0333, "x": 15.53 },
+					{ "time": 0.1, "x": 23.7, "y": 13 },
+					{ "time": 0.2 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.0333, "x": 0.575, "y": 1.327 },
+					{ "time": 0.1, "x": 0.447, "y": 1.562 },
+					{ "time": 0.2 }
+				]
+			}
+		}
+	},
+	"013RED/Hit_Despawn_Spinning": {
+		"slots": {
+			"Projectile": {
+				"rgba": [
+					{ "time": 0.15, "color": "ffffffff" },
+					{ "time": 0.2167, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.2167, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"Projectile": {
+				"rotate": [
+					{},
+					{ "time": 0.0667, "value": -91.48 }
+				],
+				"translate": [
+					{ "curve": "stepped" },
+					{ "time": 0.05 },
+					{ "time": 0.1, "x": 1.18, "y": -16.54 },
+					{ "time": 0.15, "x": 7.09, "y": -16.54 },
+					{ "time": 0.2167 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.05 },
+					{ "time": 0.1, "x": 1.26, "y": 0.633 },
+					{ "time": 0.15, "x": 1.543, "y": 0.588 },
+					{ "time": 0.2167 }
+				]
+			}
+		}
+	},
+	"013RED/Travel_Loop": {
+		"bones": {
+			"Projectile": {
+				"scale": [
+					{
+						"curve": [ 0.046, 1, 0.087, 1.228, 0.046, 1, 0.087, 0.688 ]
+					},
+					{
+						"time": 0.1333,
+						"x": 1.228,
+						"y": 0.688,
+						"curve": [ 0.18, 1.228, 0.22, 1, 0.18, 0.688, 0.22, 1 ]
+					},
+					{ "time": 0.2667 }
+				]
+			}
+		}
+	},
+	"013RED/Travel_Loop_Spinning": {
+		"bones": {
+			"Projectile": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -360 }
+				]
+			}
+		}
+	}
+}
+}

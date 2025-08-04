@@ -1,0 +1,685 @@
+{
+"skeleton": { "hash": "rGZeoXJSOaE", "spine": "4.0.64", "x": -348.35, "y": -194, "width": 689, "height": 470.38 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "explode", "parent": "root", "x": -46.41, "y": -19.86 },
+	{ "name": "shadow", "parent": "root", "y": -85 },
+	{ "name": "base", "parent": "root", "y": -85 },
+	{ "name": "car_tire_front", "parent": "base", "x": 185.11, "y": -37.22 },
+	{ "name": "car_body", "parent": "base", "x": -30.06, "y": 51.27 },
+	{ "name": "car_tire_back", "parent": "base", "x": -239.93, "y": -37.57 },
+	{ "name": "debris", "parent": "root", "x": 866.57, "y": 10.75 },
+	{ "name": "Car/car_debris/car_debris_04", "parent": "debris", "x": -84.93, "y": 160.16 },
+	{ "name": "Car/car_debris/car_debris_10", "parent": "debris", "x": -125.56, "y": 94.52 },
+	{ "name": "Car/car_debris/car_debris_11", "parent": "debris", "x": -132.86, "y": 21.59 },
+	{ "name": "Car/car_debris/car_debris_09", "parent": "debris", "x": -174.53, "y": -80.51 },
+	{ "name": "Car/car_debris/car_debris_12", "parent": "debris", "x": -91.18, "y": -63.84 },
+	{ "name": "Car/car_debris/car_debris_02", "parent": "debris", "x": 7.47, "y": 132.57 },
+	{ "name": "Car/car_debris/car_debris_03", "parent": "debris", "x": 105.73, "y": 185.16 },
+	{ "name": "Car/car_debris/car_debris_07", "parent": "debris", "x": 135.94, "y": 116.4 },
+	{ "name": "Car/car_debris/Layer 184", "parent": "debris", "x": 114.06, "y": 14.3 },
+	{ "name": "Car/car_debris/car_debris_06", "parent": "debris", "x": 96.35, "y": -69.05 },
+	{ "name": "Car/car_debris/car_debris_01", "parent": "debris", "x": 170.32, "y": -62.8 },
+	{ "name": "Car/car_debris/car_debris_08", "parent": "debris", "x": 91.14, "y": -146.15 },
+	{ "name": "Car/car_debris/car_debris_05", "parent": "debris", "x": 4.67, "y": -138.86 }
+],
+"slots": [
+	{ "name": "shadow", "bone": "shadow", "attachment": "Car/car/shadow_car_1" },
+	{ "name": "car_tire_front", "bone": "car_tire_front", "attachment": "Car/car/car_1_tire_1" },
+	{ "name": "car_tire_back", "bone": "car_tire_back", "attachment": "Car/car/car_1_tire_2" },
+	{ "name": "car_body", "bone": "car_body", "attachment": "Car/car/car_1" },
+	{ "name": "Car/car_debris/car_debris_01", "bone": "Car/car_debris/car_debris_01" },
+	{ "name": "Car/car_debris/car_debris_02", "bone": "Car/car_debris/car_debris_02" },
+	{ "name": "Car/car_debris/car_debris_03", "bone": "Car/car_debris/car_debris_03" },
+	{ "name": "Car/car_debris/car_debris_04", "bone": "Car/car_debris/car_debris_04" },
+	{ "name": "Car/car_debris/car_debris_05", "bone": "Car/car_debris/car_debris_05" },
+	{ "name": "Car/car_debris/car_debris_06", "bone": "Car/car_debris/car_debris_06" },
+	{ "name": "Car/car_debris/car_debris_07", "bone": "Car/car_debris/car_debris_07" },
+	{ "name": "Car/car_debris/car_debris_08", "bone": "Car/car_debris/car_debris_08" },
+	{ "name": "Car/car_debris/car_debris_09", "bone": "Car/car_debris/car_debris_09" },
+	{ "name": "Car/car_debris/car_debris_10", "bone": "Car/car_debris/car_debris_10" },
+	{ "name": "Car/car_debris/car_debris_11", "bone": "Car/car_debris/car_debris_11" },
+	{ "name": "Car/car_debris/car_debris_12", "bone": "Car/car_debris/car_debris_12" },
+	{ "name": "Car/car_debris/Layer 184", "bone": "Car/car_debris/Layer 184" },
+	{ "name": "Car/Explosion1/explosion1", "bone": "explode" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Car/car_debris/car_debris_01": {
+				"Car/car_debris/car_debris_01": { "x": -4.9, "y": -3.98, "width": 49, "height": 71 }
+			},
+			"Car/car_debris/car_debris_02": {
+				"Car/car_debris/car_debris_02": { "x": 3.61, "y": -5.4, "width": 93, "height": 87 }
+			},
+			"Car/car_debris/car_debris_03": {
+				"Car/car_debris/car_debris_03": { "x": 6.67, "y": 1.44, "width": 69, "height": 48 }
+			},
+			"Car/car_debris/car_debris_04": {
+				"Car/car_debris/car_debris_04": { "x": 5.1, "y": 7.1, "width": 81, "height": 87 }
+			},
+			"Car/car_debris/car_debris_05": {
+				"Car/car_debris/car_debris_05": { "x": 0.91, "y": -5.6, "width": 86, "height": 87 }
+			},
+			"Car/car_debris/car_debris_06": {
+				"Car/car_debris/car_debris_06": { "x": 3.79, "y": -1.2, "width": 40, "height": 51 }
+			},
+			"Car/car_debris/car_debris_07": {
+				"Car/car_debris/car_debris_07": { "x": 1.08, "y": -2.63, "width": 51, "height": 54 }
+			},
+			"Car/car_debris/car_debris_08": {
+				"Car/car_debris/car_debris_08": { "x": -3.14, "y": -4.25, "width": 67, "height": 61 }
+			},
+			"Car/car_debris/car_debris_09": {
+				"Car/car_debris/car_debris_09": { "x": 12.09, "y": -0.11, "width": 75, "height": 97 }
+			},
+			"Car/car_debris/car_debris_10": {
+				"Car/car_debris/car_debris_10": { "x": 2.81, "y": -0.07, "width": 60, "height": 48 }
+			},
+			"Car/car_debris/car_debris_11": {
+				"Car/car_debris/car_debris_11": { "x": -2.56, "y": -1.9, "width": 54, "height": 56 }
+			},
+			"Car/car_debris/car_debris_12": {
+				"Car/car_debris/car_debris_12": { "x": 0.64, "y": -0.83, "width": 58, "height": 40 }
+			},
+			"Car/car_debris/Layer 184": {
+				"Car/car_debris/Layer 184": { "x": 1.65, "y": -5.04, "width": 100, "height": 89 }
+			},
+			"Car/Explosion1/explosion1": {
+				"Car/Explosion1/explosion1": { "width": 421, "height": 445 },
+				"Car/Explosion1/explosion2": { "width": 421, "height": 445 },
+				"Car/Explosion1/explosion3": { "width": 421, "height": 445 },
+				"Car/Explosion1/explosion4": { "width": 421, "height": 445 },
+				"Car/Explosion1/explosion5": { "width": 421, "height": 445 },
+				"Car/Explosion1/explosion6": { "width": 421, "height": 445 },
+				"Car/Explosion1/explosion7": { "width": 421, "height": 445 },
+				"Car/Explosion1/explosion8": { "width": 421, "height": 445 },
+				"Car/Explosion1/explosion9": { "width": 421, "height": 445 }
+			},
+			"car_body": {
+				"Car/car/car_1": { "x": 26.21, "y": 96.61, "width": 689, "height": 427 },
+				"Car/car_wrecked/car_1_smashed": { "x": 39.92, "y": 40.64, "width": 745, "height": 452 }
+			},
+			"car_tire_back": {
+				"Car/car/car_1_tire_2": { "x": -0.78, "y": 1.88, "width": 133, "height": 133 }
+			},
+			"car_tire_front": {
+				"Car/car/car_1_tire_1": { "x": -0.83, "y": 1.61, "width": 133, "height": 133 }
+			},
+			"shadow": {
+				"Car/car/shadow_car_1": { "width": 668, "height": 218 },
+				"Car/car_wrecked/shadow_car_1_smashed": { "x": 0.5, "width": 731, "height": 260 }
+			}
+		}
+	}
+],
+"animations": {
+	"drive": {
+		"bones": {
+			"car_body": {
+				"translate": [
+					{
+						"y": 6.38,
+						"curve": [ 0.111, 0, 0.222, 0, 0.111, 6.38, 0.222, 0 ]
+					},
+					{
+						"time": 0.3333,
+						"curve": [ 0.444, 0, 0.556, 0, 0.444, 0, 0.556, 6.38 ]
+					},
+					{ "time": 0.6667, "y": 6.38 }
+				]
+			},
+			"base": {
+				"translate": [
+					{
+						"x": 0.39,
+						"curve": [ 0.029, 0.17, 0.056, 0, 0.029, 0, 0.056, 0 ]
+					},
+					{
+						"time": 0.0833,
+						"curve": [ 0.194, 0, 0.306, 2.45, 0.194, 0, 0.306, 0 ]
+					},
+					{
+						"time": 0.4167,
+						"x": 2.45,
+						"curve": [ 0.5, 2.45, 0.584, 1.08, 0.5, 0, 0.584, 0 ]
+					},
+					{ "time": 0.6667, "x": 0.39 }
+				],
+				"shear": [
+					{
+						"y": -0.31,
+						"curve": [ 0.029, 0, 0.056, 0, 0.029, -0.13, 0.056, 0 ]
+					},
+					{
+						"time": 0.0833,
+						"curve": [ 0.194, 0, 0.306, 0, 0.194, 0, 0.306, -1.97 ]
+					},
+					{
+						"time": 0.4167,
+						"y": -1.97,
+						"curve": [ 0.5, 0, 0.584, 0, 0.5, -1.97, 0.584, -0.87 ]
+					},
+					{ "time": 0.6667, "y": -0.31 }
+				]
+			},
+			"car_tire_back": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -360 },
+					{ "time": 0.6667, "value": -720 }
+				]
+			},
+			"car_tire_front": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -360 },
+					{ "time": 0.6667, "value": -720 }
+				]
+			}
+		}
+	},
+	"explode": {
+		"slots": {
+			"Car/car_debris/car_debris_01": {
+				"rgba": [
+					{ "time": 0.1667, "color": "ffffffff" },
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_01" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_02": {
+				"rgba": [
+					{
+						"time": 0.25,
+						"color": "ffffffff",
+						"curve": [ 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 0 ]
+					},
+					{ "time": 0.4167, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_02" },
+					{ "time": 0.4167, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_03": {
+				"rgba": [
+					{
+						"time": 0.1667,
+						"color": "ffffffff",
+						"curve": [ 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_03" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_04": {
+				"rgba": [
+					{
+						"time": 0.25,
+						"color": "ffffffff",
+						"curve": [ 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 0 ]
+					},
+					{ "time": 0.4167, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0833, "name": "Car/car_debris/car_debris_04" },
+					{ "time": 0.4167, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_05": {
+				"rgba": [
+					{
+						"time": 0.1667,
+						"color": "ffffffff",
+						"curve": [ 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_05" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_06": {
+				"rgba": [
+					{
+						"time": 0.1667,
+						"color": "ffffffff",
+						"curve": [ 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_06" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_07": {
+				"rgba": [
+					{
+						"time": 0.1667,
+						"color": "ffffffff",
+						"curve": [ 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_07" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_08": {
+				"rgba": [
+					{
+						"time": 0.25,
+						"color": "ffffffff",
+						"curve": [ 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 0 ]
+					},
+					{ "time": 0.4167, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_08" },
+					{ "time": 0.4167, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_09": {
+				"rgba": [
+					{
+						"time": 0.1667,
+						"color": "ffffffff",
+						"curve": [ 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_09" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_10": {
+				"rgba": [
+					{
+						"time": 0.1667,
+						"color": "ffffffff",
+						"curve": [ 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_10" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_11": {
+				"rgba": [
+					{
+						"time": 0.1667,
+						"color": "ffffffff",
+						"curve": [ 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_11" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/car_debris_12": {
+				"rgba": [
+					{
+						"time": 0.1667,
+						"color": "ffffffff",
+						"curve": [ 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 1, 0.222, 1, 0.278, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/car_debris_12" },
+					{ "time": 0.3333, "name": null }
+				]
+			},
+			"Car/car_debris/Layer 184": {
+				"rgba": [
+					{
+						"time": 0.25,
+						"color": "ffffffff",
+						"curve": [ 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 1, 0.306, 1, 0.361, 0 ]
+					},
+					{ "time": 0.4167, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_debris/Layer 184" },
+					{ "time": 0.4167, "name": null }
+				]
+			},
+			"Car/Explosion1/explosion1": {
+				"attachment": [
+					{ "name": "Car/Explosion1/explosion2" },
+					{ "time": 0.0833, "name": "Car/Explosion1/explosion3" },
+					{ "time": 0.1667, "name": "Car/Explosion1/explosion4" },
+					{ "time": 0.25, "name": "Car/Explosion1/explosion5" },
+					{ "time": 0.3333, "name": "Car/Explosion1/explosion6" },
+					{ "time": 0.4167, "name": "Car/Explosion1/explosion7" },
+					{ "time": 0.5, "name": "Car/Explosion1/explosion8" },
+					{ "time": 0.5833, "name": "Car/Explosion1/explosion9" }
+				]
+			},
+			"car_body": {
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_wrecked/car_1_smashed" }
+				]
+			},
+			"car_tire_back": {
+				"attachment": [
+					{ "time": 0.0417, "name": null }
+				]
+			},
+			"car_tire_front": {
+				"attachment": [
+					{ "time": 0.0417, "name": null }
+				]
+			},
+			"shadow": {
+				"attachment": [
+					{ "time": 0.0417, "name": "Car/car_wrecked/shadow_car_1_smashed" }
+				]
+			}
+		},
+		"bones": {
+			"car_body": {
+				"translate": [
+					{ "y": 6.38 }
+				]
+			},
+			"base": {
+				"translate": [
+					{ "x": 0.39 }
+				],
+				"shear": [
+					{ "y": -0.31 }
+				]
+			},
+			"shadow": {
+				"translate": [
+					{
+						"x": 0.39,
+						"curve": [ 0.031, 16.28, 0.018, 2.15, 0.028, 0, 0.014, 0 ]
+					},
+					{ "time": 0.0417, "x": 40.39 },
+					{
+						"time": 0.25,
+						"x": 70.64,
+						"curve": [ 0.306, 70.64, 0.361, 0.39, 0.306, 0, 0.361, 0 ]
+					},
+					{ "time": 0.4167, "x": 0.39 }
+				],
+				"scale": [
+					{
+						"curve": [ 0.028, 0.943, 0.015, 0.917, 0.028, 1.057, 0.013, 1.041 ]
+					},
+					{ "time": 0.0417, "x": 0.83, "y": 1.171 },
+					{
+						"time": 0.25,
+						"x": 0.767,
+						"y": 1.33,
+						"curve": [ 0.306, 0.846, 0.361, 1, 0.306, 1.25, 0.361, 1 ]
+					},
+					{ "time": 0.4167 }
+				]
+			},
+			"debris": {
+				"translate": [
+					{ "time": 0.0417, "x": -647.78, "y": -1.13 }
+				]
+			},
+			"Car/car_debris/car_debris_01": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.139, -36.17, 0.236, -54.25 ]
+					},
+					{ "time": 0.3333, "value": -54.25 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"x": -127.2,
+						"y": -94.93,
+						"curve": [ 0.139, 319.25, 0.236, 542.47, 0.139, -74.06, 0.234, -55.8 ]
+					},
+					{ "time": 0.3333, "x": 542.47, "y": -149.64 }
+				]
+			},
+			"Car/car_debris/car_debris_02": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"value": 26.28,
+						"curve": [ 0.167, -14.44, 0.292, -34.8 ]
+					},
+					{ "time": 0.4167, "value": -34.8 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.167, 365.34, 0.292, 680.01, 0.167, 320.88, 0.292, 547.32 ]
+					},
+					{ "time": 0.4167, "x": 680.01, "y": 547.32 }
+				]
+			},
+			"Car/car_debris/car_debris_03": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.139, -67.6, 0.236, -101.39 ]
+					},
+					{ "time": 0.3333, "value": -101.39 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"x": -2.11,
+						"y": -4.22,
+						"curve": [ 0.139, 511.67, 0.236, 768.56, 0.139, 218.42, 0.236, 329.74 ]
+					},
+					{ "time": 0.3333, "x": 768.56, "y": 329.74 }
+				]
+			},
+			"Car/car_debris/car_debris_04": {
+				"rotate": [
+					{
+						"time": 0.0833,
+						"curve": [ 0.194, 95.57, 0.306, 143.36 ]
+					},
+					{ "time": 0.4167, "value": 143.36 }
+				],
+				"translate": [
+					{
+						"time": 0.0833,
+						"x": -329.83,
+						"y": -333.62,
+						"curve": [ 0.194, -1199.98, 0.306, -1635.05, 0.194, -137.41, 0.306, -39.3 ]
+					},
+					{ "time": 0.4167, "x": -1635.05, "y": -39.3 }
+				]
+			},
+			"Car/car_debris/car_debris_05": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"value": 81.79,
+						"curve": [ 0.139, 170.85, 0.236, 215.38 ]
+					},
+					{ "time": 0.3333, "value": 215.38 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"x": -383.96,
+						"y": -48.36,
+						"curve": [ 0.139, -790.16, 0.236, -993.26, 0.139, -374.19, 0.236, -537.11 ]
+					},
+					{ "time": 0.3333, "x": -993.26, "y": -537.11 }
+				]
+			},
+			"Car/car_debris/car_debris_06": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.139, -103.85, 0.236, -155.77 ]
+					},
+					{ "time": 0.3333, "value": -155.77 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.141, 509.23, 0.237, 719.19, 0.139, 267, 0.236, 400.49 ]
+					},
+					{ "time": 0.3333, "x": 830.84, "y": 400.49 }
+				]
+			},
+			"Car/car_debris/car_debris_07": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.139, -45.23, 0.236, -67.85 ]
+					},
+					{ "time": 0.3333, "value": -67.85 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.139, 504.23, 0.237, 635.36, 0.138, 101.68, 0.238, 68.76 ]
+					},
+					{ "time": 0.3333, "x": 756.35, "y": 12.92 }
+				]
+			},
+			"Car/car_debris/car_debris_08": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"value": 22.9,
+						"curve": [ 0.167, -4.37, 0.292, -18 ]
+					},
+					{ "time": 0.4167, "value": -18 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"x": -49.45,
+						"y": 64.06,
+						"curve": [ 0.166, 466.37, 0.293, 702.88, 0.167, -73.16, 0.292, -141.77 ]
+					},
+					{ "time": 0.4167, "x": 806.79, "y": -141.77 }
+				]
+			},
+			"Car/car_debris/car_debris_09": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"value": 60.63,
+						"curve": [ 0.139, 100.33, 0.236, 120.18 ]
+					},
+					{ "time": 0.3333, "value": 120.18 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"x": -273.71,
+						"y": -60.8,
+						"curve": [ 0.139, -807.29, 0.236, -1074.08, 0.139, -33.25, 0.236, -19.47 ]
+					},
+					{ "time": 0.3333, "x": -1074.08, "y": -19.47 }
+				]
+			},
+			"Car/car_debris/car_debris_10": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.139, -25.4, 0.236, -38.1 ]
+					},
+					{ "time": 0.3333, "value": -38.1 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"x": 136.77,
+						"y": -48.27,
+						"curve": [ 0.139, 828.43, 0.236, 1174.27, 0.14, 120.4, 0.228, 208.44 ]
+					},
+					{ "time": 0.3333, "x": 1174.27, "y": 149.26 }
+				]
+			},
+			"Car/car_debris/car_debris_11": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.139, -37.72, 0.236, -56.57 ]
+					},
+					{ "time": 0.3333, "value": -56.57 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"x": 175.59,
+						"y": 159.26,
+						"curve": [ 0.141, 557.08, 0.234, 737.24, 0.139, 374.73, 0.236, 482.46 ]
+					},
+					{ "time": 0.3333, "x": 843.07, "y": 482.46 }
+				]
+			},
+			"Car/car_debris/car_debris_12": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.139, -37.81, 0.236, -56.71 ]
+					},
+					{ "time": 0.3333, "value": -56.71 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"x": 48.15,
+						"y": -24.08,
+						"curve": [ 0.139, 248.38, 0.236, 348.5, 0.139, -449.97, 0.236, -662.91 ]
+					},
+					{ "time": 0.3333, "x": 348.5, "y": -662.91 }
+				]
+			},
+			"Car/car_debris/Layer 184": {
+				"rotate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.167, -47.94, 0.292, -71.9 ]
+					},
+					{ "time": 0.4167, "value": -71.9 }
+				],
+				"translate": [
+					{
+						"time": 0.0417,
+						"curve": [ 0.167, 537.1, 0.292, 805.65, 0.166, 35.24, 0.291, -1.66 ]
+					},
+					{ "time": 0.4167, "x": 805.65, "y": -105.92 }
+				]
+			},
+			"explode": {
+				"translate": [
+					{ "x": 51.98, "y": 84.46 }
+				],
+				"scale": [
+					{ "x": 2.294, "y": 2.294 },
+					{ "time": 0.0833, "x": 3.274, "y": 3.274 }
+				]
+			}
+		}
+	}
+}
+}

@@ -1,0 +1,389 @@
+{
+"skeleton": { "hash": "l0eFW2kd+5Y", "spine": "4.0.64", "x": -435.93, "y": -189.67, "width": 873, "height": 855 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Steam", "parent": "root", "x": 4.79, "y": 455.73 },
+	{ "name": "mutated tasks/Steam_A", "parent": "Steam" },
+	{ "name": "mutated tasks/Steam_B", "parent": "Steam", "y": 66.05 },
+	{ "name": "mutated tasks/Steam_C", "parent": "Steam", "y": 66.05 },
+	{ "name": "mutated tasks/Steam_D", "parent": "Steam", "y": 66.05 },
+	{ "name": "mutated tasks/Steam_E", "parent": "Steam", "y": 66.05 },
+	{ "name": "mutated tasks/Steam_F", "parent": "Steam", "y": 66.05 }
+],
+"slots": [
+	{ "name": "nuclear_plant", "bone": "root", "attachment": "nuclear_plant/nuclear_plant" },
+	{ "name": "mutated tasks/Steam_A", "bone": "mutated tasks/Steam_A" },
+	{ "name": "mutated tasks/Steam_B", "bone": "mutated tasks/Steam_B" },
+	{ "name": "mutated tasks/Steam_C", "bone": "mutated tasks/Steam_C" },
+	{ "name": "mutated tasks/Steam_C2", "bone": "mutated tasks/Steam_F" },
+	{ "name": "mutated tasks/Steam_D", "bone": "mutated tasks/Steam_D" },
+	{ "name": "mutated tasks/Steam_E", "bone": "mutated tasks/Steam_E" },
+	{ "name": "nuclear_plant_overlay", "bone": "root", "attachment": "nuclear_plant/nuclear_plant_overlay" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"mutated tasks/Steam_A": {
+				"nuclear_plant/cloud/cloud_1": { "y": 8.54, "width": 260, "height": 234 }
+			},
+			"mutated tasks/Steam_B": {
+				"nuclear_plant/cloud/cloud_2": { "width": 390, "height": 248 }
+			},
+			"mutated tasks/Steam_C": {
+				"nuclear_plant/cloud/cloud_3": { "width": 370, "height": 245 }
+			},
+			"mutated tasks/Steam_C2": {
+				"nuclear_plant/cloud/cloud_3": { "width": 370, "height": 245 }
+			},
+			"mutated tasks/Steam_D": {
+				"nuclear_plant/cloud/cloud_1": { "width": 260, "height": 234 }
+			},
+			"mutated tasks/Steam_E": {
+				"nuclear_plant/cloud/cloud_2": { "width": 390, "height": 248 }
+			},
+			"nuclear_plant": {
+				"nuclear_plant/nuclear_plant": { "x": 0.57, "y": 237.83, "width": 873, "height": 855 }
+			},
+			"nuclear_plant_overlay": {
+				"nuclear_plant/nuclear_plant_broken": { "y": 4.16, "width": 878, "height": 389 },
+				"nuclear_plant/nuclear_plant_overlay": { "x": 0.57, "y": 192.33, "width": 873, "height": 764 }
+			}
+		}
+	}
+],
+"animations": {
+	"TOX119/idle": {
+		"slots": {
+			"mutated tasks/Steam_A": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 1.375, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2.875, "color": "ffffffff" },
+					{ "time": 5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "nuclear_plant/cloud/cloud_1" }
+				]
+			},
+			"mutated tasks/Steam_B": {
+				"rgba": [
+					{ "color": "ffffff76" },
+					{ "time": 0.875, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 1, "color": "ffffff00" },
+					{ "time": 1.4167, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 3.8333, "color": "ffffffff" },
+					{ "time": 5, "color": "ffffff76" }
+				],
+				"attachment": [
+					{ "name": "nuclear_plant/cloud/cloud_2" }
+				]
+			},
+			"mutated tasks/Steam_C": {
+				"rgba": [
+					{ "color": "ffffffee" },
+					{ "time": 1.875, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 2, "color": "ffffff00" },
+					{ "time": 2.5833, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 4.8333, "color": "ffffffff" },
+					{ "time": 5, "color": "ffffffee" }
+				],
+				"attachment": [
+					{ "name": "nuclear_plant/cloud/cloud_3" }
+				]
+			},
+			"mutated tasks/Steam_C2": {
+				"rgba": [
+					{ "color": "ffffff65" },
+					{ "time": 0.875, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 2.2917, "color": "ffffffff" },
+					{ "time": 4.3333, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 4.375, "color": "ffffff00" },
+					{ "time": 5, "color": "ffffff65" }
+				],
+				"attachment": [
+					{ "name": "nuclear_plant/cloud/cloud_3" }
+				]
+			},
+			"mutated tasks/Steam_D": {
+				"rgba": [
+					{ "color": "ffffffff", "curve": "stepped" },
+					{ "time": 0.875, "color": "ffffffff" },
+					{ "time": 2.875, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 3, "color": "ffffff00" },
+					{ "time": 3.5417, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 5, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "nuclear_plant/cloud/cloud_1" }
+				]
+			},
+			"mutated tasks/Steam_E": {
+				"rgba": [
+					{ "color": "ffffffb2" },
+					{ "time": 0.375, "color": "ffffffff", "curve": "stepped" },
+					{ "time": 1.875, "color": "ffffffff" },
+					{ "time": 3.875, "color": "ffffff00", "curve": "stepped" },
+					{ "time": 4, "color": "ffffff00" },
+					{ "time": 4.7917, "color": "ffffffb2" }
+				],
+				"attachment": [
+					{ "name": "nuclear_plant/cloud/cloud_2" }
+				]
+			}
+		},
+		"bones": {
+			"mutated tasks/Steam_A": {
+				"translatex": [
+					{
+						"curve": [ 0.708, 0, 1.414, 14.4 ]
+					},
+					{
+						"time": 2.125,
+						"value": 61.2,
+						"curve": [ 3.034, 121.01, 4.199, 332.94 ]
+					},
+					{ "time": 5, "value": 339.42 }
+				],
+				"translatey": [
+					{ "value": -70.21 },
+					{
+						"time": 2.125,
+						"value": 240.73,
+						"curve": [ 2.897, 340.22, 4.081, 419.62 ]
+					},
+					{ "time": 5, "value": 439.05 }
+				],
+				"scale": [
+					{ "x": 0.656, "y": 0.656, "curve": "stepped" },
+					{ "time": 1.375, "x": 0.656, "y": 0.656 },
+					{ "time": 3.5833, "curve": "stepped" },
+					{ "time": 5 }
+				]
+			},
+			"mutated tasks/Steam_B": {
+				"translatex": [
+					{ "value": 275.81 },
+					{ "time": 0.875, "value": 342.86 },
+					{ "time": 1, "value": 2.41 },
+					{
+						"time": 2.7083,
+						"curve": [ 3.361, 0, 4.226, 191.8 ]
+					},
+					{ "time": 5, "value": 275.81 }
+				],
+				"translatey": [
+					{ "value": 442.17 },
+					{ "time": 0.875, "value": 463.17 },
+					{ "time": 1, "value": -82.74 },
+					{
+						"time": 3.125,
+						"value": 240.73,
+						"curve": [ 3.576, 329.58, 4.303, 414.06 ]
+					},
+					{ "time": 5, "value": 442.17 }
+				],
+				"scale": [
+					{ "curve": "stepped" },
+					{ "time": 0.875 },
+					{ "time": 1, "x": 0.656, "y": 0.656, "curve": "stepped" },
+					{ "time": 2.375, "x": 0.656, "y": 0.656 },
+					{ "time": 4.5833, "curve": "stepped" },
+					{ "time": 5 }
+				]
+			},
+			"mutated tasks/Steam_C": {
+				"translatex": [
+					{ "value": 99.17 },
+					{ "time": 1.875, "value": 284.29 },
+					{
+						"time": 2,
+						"value": 1.79,
+						"curve": [ 2.713, 1.79, 2.996, 0 ]
+					},
+					{
+						"time": 3.7083,
+						"curve": [ 4.088, 0, 4.546, 44.59 ]
+					},
+					{ "time": 5, "value": 99.17 }
+				],
+				"translatey": [
+					{ "value": 351.91 },
+					{ "time": 1.875, "value": 435.6 },
+					{ "time": 2, "value": -142.17 },
+					{
+						"time": 4.125,
+						"value": 240.73,
+						"curve": [ 4.357, 286.47, 4.677, 322.51 ]
+					},
+					{ "time": 5, "value": 351.91 }
+				],
+				"scale": [
+					{ "x": 0.908, "y": 0.908 },
+					{
+						"time": 0.5833,
+						"curve": [ 0.993, 1.052, 1.444, 1.103, 0.993, 1.057, 1.444, 1.101 ]
+					},
+					{ "time": 1.875, "x": 1.103, "y": 1.101, "curve": "stepped" },
+					{ "time": 2, "x": 0.656, "y": 0.656, "curve": "stepped" },
+					{ "time": 3.375, "x": 0.656, "y": 0.656 },
+					{ "time": 5, "x": 0.908, "y": 0.908 }
+				]
+			},
+			"mutated tasks/Steam_D": {
+				"translatex": [
+					{ "value": 68.18 },
+					{ "time": 2.875, "value": 290.81 },
+					{
+						"time": 3,
+						"value": 1,
+						"curve": [ 3.713, 1, 4.903, 63.38 ]
+					},
+					{ "time": 5, "value": 68.18 }
+				],
+				"translatey": [
+					{ "value": 213.85 },
+					{
+						"time": 0.125,
+						"value": 240.73,
+						"curve": [ 0.832, 352.51, 1.925, 482.21 ]
+					},
+					{ "time": 2.875, "value": 482.21 },
+					{ "time": 3, "value": -76.31 },
+					{ "time": 5, "value": 213.85 }
+				],
+				"scale": [
+					{ "x": 0.778, "y": 0.778 },
+					{ "time": 1.5833, "x": 1.116, "y": 1.116, "curve": "stepped" },
+					{ "time": 3, "x": 0.656, "y": 0.656, "curve": "stepped" },
+					{ "time": 4.375, "x": 0.656, "y": 0.656 },
+					{ "time": 5, "x": 0.778, "y": 0.778 }
+				]
+			},
+			"mutated tasks/Steam_E": {
+				"translatex": [
+					{
+						"curve": [ 0.236, 0, 0.472, 8.62 ]
+					},
+					{
+						"time": 0.7083,
+						"value": 34.54,
+						"curve": [ 1.764, 150.39, 3.285, 413.07 ]
+					},
+					{ "time": 3.875, "value": 425.32 },
+					{
+						"time": 4,
+						"value": 3.54,
+						"curve": [ 4.425, 3.54, 4.701, 0 ]
+					},
+					{ "time": 5 }
+				],
+				"translatey": [
+					{ "value": 67.17 },
+					{
+						"time": 1.125,
+						"value": 240.73,
+						"curve": [ 1.853, 340.79, 3.111, 445.13 ]
+					},
+					{ "time": 3.875, "value": 497.28 },
+					{ "time": 4, "value": -110.01 },
+					{ "time": 5, "value": 67.17 }
+				],
+				"scale": [
+					{ "x": 0.656, "y": 0.656, "curve": "stepped" },
+					{ "time": 0.375, "x": 0.656, "y": 0.656 },
+					{
+						"time": 2.5833,
+						"x": 1.28,
+						"y": 1.28,
+						"curve": [ 3.014, 1.37, 3.542, 1.55, 3.014, 1.37, 3.542, 1.55 ]
+					},
+					{ "time": 3.875, "x": 1.55, "y": 1.55, "curve": "stepped" },
+					{ "time": 4, "x": 0.656, "y": 0.656, "curve": "stepped" },
+					{ "time": 5, "x": 0.656, "y": 0.656 }
+				]
+			},
+			"mutated tasks/Steam_F": {
+				"translatex": [
+					{
+						"curve": [ 0.389, 0, 0.778, 6.2 ]
+					},
+					{
+						"time": 1.1667,
+						"value": 31.71,
+						"curve": [ 2.222, 100.96, 3.495, 267.02 ]
+					},
+					{ "time": 4.3333, "value": 284.29 },
+					{ "time": 4.375, "curve": "stepped" },
+					{ "time": 5 }
+				],
+				"translatey": [
+					{ "value": 25.8 },
+					{
+						"time": 1.5833,
+						"value": 240.73,
+						"curve": [ 2.295, 332.32, 3.483, 418.34 ]
+					},
+					{ "time": 4.3333, "value": 435.6 },
+					{
+						"time": 4.375,
+						"curve": [ 4.553, 0, 4.803, 10.1 ]
+					},
+					{ "time": 5, "value": 25.8 }
+				],
+				"scale": [
+					{ "x": 0.656, "y": 0.656 },
+					{ "time": 0.875, "x": 0.741, "y": 0.741 },
+					{ "time": 3, "x": 1.085, "y": 1.085, "curve": "stepped" },
+					{ "time": 4.3333, "x": 1.085, "y": 1.085 },
+					{ "time": 4.375, "x": 0.656, "y": 0.656, "curve": "stepped" },
+					{ "time": 5, "x": 0.656, "y": 0.656 }
+				]
+			},
+			"Steam": {
+				"scale": [
+					{},
+					{
+						"time": 2.5,
+						"y": 1.037,
+						"curve": [ 3.333, 1, 4.167, 1, 3.333, 1.037, 4.167, 1 ]
+					},
+					{ "time": 5 }
+				],
+				"shear": [
+					{},
+					{
+						"time": 1.25,
+						"y": -2.03,
+						"curve": [ 1.672, 0, 2.078, 0, 1.672, -2.03, 2.078, 0 ]
+					},
+					{
+						"time": 2.5,
+						"curve": [ 2.911, 0, 3.339, 0, 2.911, 0, 3.339, -2.03 ]
+					},
+					{
+						"time": 3.75,
+						"y": -2.03,
+						"curve": [ 4.172, 0, 4.578, 0, 4.172, -2.03, 4.578, 0 ]
+					},
+					{ "time": 5 }
+				]
+			}
+		}
+	},
+	"TOX119/idle_broken": {
+		"slots": {
+			"nuclear_plant": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"nuclear_plant_overlay": {
+				"attachment": [
+					{ "name": "nuclear_plant/nuclear_plant_broken" }
+				]
+			}
+		}
+	}
+}
+}

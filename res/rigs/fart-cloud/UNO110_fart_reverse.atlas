@@ -1,0 +1,17 @@
+87e03a044d3657d3.png
+	size: 4096, 4096
+	filter: Linear, Linear
+shockwave
+	bounds: 6, 3815, 1054, 205
+	offsets: 1, 1, 1056, 207
+smoke_cloud/smoke_cloudA
+	bounds: 1066, 3334, 1396, 686
+	offsets: 1, 1, 1398, 688
+smoke_cloud/smoke_cloudB
+	bounds: 2468, 3110, 1552, 910
+	offsets: 1, 1, 1554, 912
+smoke_cloud/smoke_cloudC
+	bounds: 6, 2550, 2207, 778
+smoke_cloud/smoke_cloudE
+	bounds: 2219, 2247, 1790, 857
+	offsets: 1, 1, 1792, 859

@@ -1,0 +1,30 @@
+b823c52f7a7c2bf7.png
+	size: 1024, 1024
+	filter: Linear, Linear
+images/Bell
+	bounds: 6, 6, 107, 107
+	offsets: 1, 1, 109, 109
+images/DING 1
+	bounds: 262, 275, 308, 271
+	offsets: 1, 1, 310, 273
+images/DING 2
+	bounds: 236, 552, 399, 342
+	offsets: 1, 1, 401, 344
+images/Round 1a
+	bounds: 236, 534, 9, 12
+	offsets: 1, 1, 11, 14
+images/Round 2a
+	bounds: 231, 97, 16, 25
+	offsets: 1, 1, 18, 27
+	rotate: 90
+images/Round 3a
+	bounds: 195, 88, 25, 30
+	offsets: 1, 1, 27, 31
+	rotate: 90
+images/Slider
+	bounds: 119, 75, 38, 70
+	offsets: 1, 1, 40, 71
+	rotate: 90
+images/Strenght Tower
+	bounds: 6, 119, 224, 775
+	offsets: 1, 1, 226, 776

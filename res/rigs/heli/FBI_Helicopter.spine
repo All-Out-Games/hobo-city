@@ -1,0 +1,177 @@
+{
+"skeleton": { "hash": "ksR87hNGEeI", "spine": "4.0.64", "x": -506.18, "y": -179.22, "width": 1046, "height": 566.5 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "helicopter_root", "parent": "root", "y": -85 },
+	{ "name": "SmallPropeller_1", "parent": "helicopter_root", "x": -453.49, "y": 315.29 },
+	{ "name": "BigPropeller_1", "parent": "helicopter_root", "x": 16.76, "y": 402.27 },
+	{ "name": "PropellerPiece", "parent": "BigPropeller_1", "x": 1.58, "y": 30.72 }
+],
+"slots": [
+	{ "name": "FBI_Helicopter", "bone": "helicopter_root", "attachment": "FBI_Helicopter" },
+	{ "name": "BigPropeller_1", "bone": "BigPropeller_1", "attachment": "BigPropeller_1" },
+	{ "name": "PropellerPiece", "bone": "PropellerPiece", "attachment": "PropellerPiece" },
+	{ "name": "SmallPropeller_1", "bone": "SmallPropeller_1", "attachment": "SmallPropeller_1" }
+],
+"skins": [
+	{
+		"name": "Apache",
+		"attachments": {
+			"BigPropeller_1": {
+				"BigPropeller_1": { "name": "Apache Helicopter/BigPropeller_1", "x": 0.06, "y": 4.51, "width": 1046, "height": 131 },
+				"BigPropeller_2": { "name": "Apache Helicopter/BigPropeller_2", "x": 0.06, "y": 6.12, "width": 1046, "height": 135 },
+				"BigPropeller_3": { "name": "Apache Helicopter/BigPropeller_3", "x": 0.06, "y": 0.36, "width": 1046, "height": 142 }
+			},
+			"FBI_Helicopter": {
+				"FBI_Helicopter": { "name": "Apache Helicopter/Helicopter", "x": 26.43, "y": 150.78, "width": 932, "height": 490 }
+			},
+			"PropellerPiece": {
+				"PropellerPiece": { "name": "Apache Helicopter/PropelerPiece", "x": -2.52, "y": 1.79, "width": 83, "height": 72 }
+			},
+			"SmallPropeller_1": {
+				"SmallPropeller_1": { "name": "Apache Helicopter/SmallPropeller_1", "x": 11.58, "y": -6.84, "width": 125, "height": 140 },
+				"SmallPropeller_2": { "name": "Apache Helicopter/SmallPropeller_2", "x": 11.58, "y": -6.84, "width": 125, "height": 135 },
+				"SmallPropeller_3": { "name": "Apache Helicopter/SmallPropeller_3", "x": 11.58, "y": -1.68, "width": 125, "height": 139 }
+			}
+		}
+	},
+	{
+		"name": "FBI",
+		"attachments": {
+			"BigPropeller_1": {
+				"BigPropeller_1": { "x": 0.06, "y": 4.51, "width": 1047, "height": 133 },
+				"BigPropeller_2": { "x": 0.06, "y": 1.51, "width": 1047, "height": 142 },
+				"BigPropeller_3": { "x": 0.06, "y": 6.51, "width": 1047, "height": 137 }
+			},
+			"FBI_Helicopter": {
+				"FBI_Helicopter": { "x": -56.18, "y": 150.78, "width": 778, "height": 490 }
+			},
+			"PropellerPiece": {
+				"PropellerPiece": { "x": -2.52, "y": 1.79, "width": 83, "height": 72 }
+			},
+			"SmallPropeller_1": {
+				"SmallPropeller_1": { "x": -0.69, "y": 0.49, "width": 126, "height": 140 },
+				"SmallPropeller_2": { "x": -0.69, "y": 4.99, "width": 126, "height": 139 },
+				"SmallPropeller_3": { "x": -0.69, "y": 0.49, "width": 126, "height": 136 }
+			}
+		}
+	}
+],
+"animations": {
+	"flying": {
+		"slots": {
+			"BigPropeller_1": {
+				"attachment": [
+					{ "name": "BigPropeller_1" },
+					{ "time": 0.0667, "name": "BigPropeller_2" },
+					{ "time": 0.1333, "name": "BigPropeller_3" },
+					{ "time": 0.2, "name": "BigPropeller_1" },
+					{ "time": 0.2667, "name": "BigPropeller_2" },
+					{ "time": 0.3333, "name": "BigPropeller_3" },
+					{ "time": 0.4, "name": "BigPropeller_1" },
+					{ "time": 0.4667, "name": "BigPropeller_2" },
+					{ "time": 0.5333, "name": "BigPropeller_3" },
+					{ "time": 0.6, "name": "BigPropeller_2" },
+					{ "time": 0.6667, "name": "BigPropeller_2" }
+				]
+			},
+			"SmallPropeller_1": {
+				"attachment": [
+					{ "name": "SmallPropeller_1" },
+					{ "time": 0.0667, "name": "SmallPropeller_2" },
+					{ "time": 0.1333, "name": "SmallPropeller_3" },
+					{ "time": 0.2, "name": "SmallPropeller_1" },
+					{ "time": 0.2667, "name": "SmallPropeller_2" },
+					{ "time": 0.3333, "name": "SmallPropeller_3" },
+					{ "time": 0.4, "name": "SmallPropeller_1" },
+					{ "time": 0.4667, "name": "SmallPropeller_2" },
+					{ "time": 0.5333, "name": "SmallPropeller_3" },
+					{ "time": 0.6, "name": "SmallPropeller_2" },
+					{ "time": 0.6667, "name": "SmallPropeller_1" }
+				]
+			}
+		},
+		"bones": {
+			"helicopter_root": {
+				"rotate": [
+					{
+						"value": -10.26,
+						"curve": [ 0.089, -9.92, 0.179, -9.1 ]
+					},
+					{
+						"time": 0.2667,
+						"value": -9.1,
+						"curve": [ 0.377, -9.1, 0.49, -10.39 ]
+					},
+					{
+						"time": 0.6,
+						"value": -10.39,
+						"curve": [ 0.622, -10.39, 0.645, -10.34 ]
+					},
+					{ "time": 0.6667, "value": -10.26 }
+				],
+				"translate": [
+					{
+						"curve": [ 0.11, 0, 0.223, 0, 0.11, 0, 0.223, 29.53 ]
+					},
+					{
+						"time": 0.3333,
+						"y": 29.53,
+						"curve": [ 0.443, 0, 0.557, 0, 0.443, 29.53, 0.557, 0 ]
+					},
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"idle": {
+		"slots": {
+			"BigPropeller_1": {
+				"attachment": [
+					{ "name": "BigPropeller_1" },
+					{ "time": 0.0667, "name": "BigPropeller_2" },
+					{ "time": 0.1333, "name": "BigPropeller_3" },
+					{ "time": 0.2, "name": "BigPropeller_1" },
+					{ "time": 0.2667, "name": "BigPropeller_2" },
+					{ "time": 0.3333, "name": "BigPropeller_3" },
+					{ "time": 0.4, "name": "BigPropeller_1" },
+					{ "time": 0.4667, "name": "BigPropeller_2" },
+					{ "time": 0.5333, "name": "BigPropeller_3" },
+					{ "time": 0.6, "name": "BigPropeller_2" },
+					{ "time": 0.6667, "name": "BigPropeller_2" }
+				]
+			},
+			"SmallPropeller_1": {
+				"attachment": [
+					{ "name": "SmallPropeller_1" },
+					{ "time": 0.0667, "name": "SmallPropeller_2" },
+					{ "time": 0.1333, "name": "SmallPropeller_3" },
+					{ "time": 0.2, "name": "SmallPropeller_1" },
+					{ "time": 0.2667, "name": "SmallPropeller_2" },
+					{ "time": 0.3333, "name": "SmallPropeller_3" },
+					{ "time": 0.4, "name": "SmallPropeller_1" },
+					{ "time": 0.4667, "name": "SmallPropeller_2" },
+					{ "time": 0.5333, "name": "SmallPropeller_3" },
+					{ "time": 0.6, "name": "SmallPropeller_2" },
+					{ "time": 0.6667, "name": "SmallPropeller_1" }
+				]
+			}
+		},
+		"bones": {
+			"helicopter_root": {
+				"translate": [
+					{
+						"curve": [ 0.11, 0, 0.223, 0, 0.11, 0, 0.223, 29.53 ]
+					},
+					{
+						"time": 0.3333,
+						"y": 29.53,
+						"curve": [ 0.443, 0, 0.557, 0, 0.443, 29.53, 0.557, 0 ]
+					},
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	}
+}
+}

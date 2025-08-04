@@ -1,0 +1,262 @@
+{
+"skeleton": { "hash": "4d1ll+VTD5Y", "spine": "4.0.64", "x": -111.55, "y": -116.81, "width": 226, "height": 776 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "strength_test_root", "parent": "root", "y": -85 },
+	{ "name": "images/Slider", "parent": "strength_test_root", "x": -0.27, "y": 49.89 },
+	{ "name": "images/Bell", "parent": "strength_test_root", "x": -0.26, "y": 632.65 },
+	{ "name": "images/DING 1", "parent": "strength_test_root", "x": -2.29, "y": 661.83 },
+	{ "name": "images/Round 2a", "parent": "strength_test_root", "rotation": 32.08, "x": -72.38, "y": 606.58 },
+	{ "name": "images/Round 1a", "parent": "strength_test_root", "rotation": -44.09, "x": 59.42, "y": 594.94 },
+	{ "name": "images/Round 3a", "parent": "strength_test_root", "rotation": 44.66, "x": 44.3, "y": 694.73 }
+],
+"slots": [
+	{ "name": "images/Strenght Tower", "bone": "strength_test_root", "attachment": "images/Strenght Tower" },
+	{ "name": "images/Slider", "bone": "images/Slider", "attachment": "images/Slider" },
+	{ "name": "images/Bell", "bone": "images/Bell", "attachment": "images/Bell" },
+	{ "name": "images/Round 1a", "bone": "images/Round 1a" },
+	{ "name": "images/Round 2a", "bone": "images/Round 2a" },
+	{ "name": "images/Round 3a", "bone": "images/Round 3a" },
+	{ "name": "images/DING 1", "bone": "images/DING 1" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"images/Bell": {
+				"images/Bell": { "x": 0.65, "y": 0.4, "width": 109, "height": 109 }
+			},
+			"images/DING 1": {
+				"images/DING 1": { "x": 2.29, "y": 2.37, "width": 310, "height": 273 },
+				"images/DING 2": { "x": -8.44, "y": 22.49, "width": 401, "height": 344 }
+			},
+			"images/Round 1a": {
+				"images/Round 1a": { "x": -0.56, "y": 1.32, "rotation": 91.9, "width": 11, "height": 14 }
+			},
+			"images/Round 2a": {
+				"images/Round 2a": { "x": 0.94, "y": 0.81, "rotation": -2.21, "width": 18, "height": 27 }
+			},
+			"images/Round 3a": {
+				"images/Round 3a": { "x": -1.77, "y": -0.7, "rotation": 31.08, "width": 27, "height": 31 }
+			},
+			"images/Slider": {
+				"images/Slider": { "x": 0.27, "y": 23.56, "width": 40, "height": 71 }
+			},
+			"images/Strenght Tower": {
+				"images/Strenght Tower": { "x": 1.45, "y": 356.19, "width": 226, "height": 776 }
+			}
+		}
+	}
+],
+"animations": {
+	"hit": {
+		"slots": {
+			"images/DING 1": {
+				"attachment": [
+					{ "time": 0.3, "name": "images/DING 1" },
+					{ "time": 0.3667, "name": "images/DING 2" },
+					{ "time": 0.4333, "name": null }
+				]
+			},
+			"images/Round 1a": {
+				"attachment": [
+					{ "time": 0.3, "name": "images/Round 1a" },
+					{ "time": 0.4333, "name": null }
+				]
+			},
+			"images/Round 2a": {
+				"attachment": [
+					{ "time": 0.3, "name": "images/Round 2a" },
+					{ "time": 0.4333, "name": null }
+				]
+			},
+			"images/Round 3a": {
+				"attachment": [
+					{ "time": 0.3, "name": "images/Round 3a" },
+					{ "time": 0.4333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"strength_test_root": {
+				"scale": [
+					{
+						"curve": [ 0.011, 1, 0.022, 1, 0.011, 1, 0.022, 0.964 ]
+					},
+					{
+						"time": 0.0333,
+						"y": 0.964,
+						"curve": [ 0.044, 1, 0.056, 1, 0.044, 0.964, 0.056, 1 ]
+					},
+					{ "time": 0.0667, "curve": "stepped" },
+					{
+						"time": 0.2667,
+						"curve": [ 0.278, 1, 0.289, 1, 0.278, 1, 0.289, 1.021 ]
+					},
+					{
+						"time": 0.3,
+						"y": 1.021,
+						"curve": [ 0.311, 1, 0.322, 1, 0.311, 1.021, 0.322, 1.007 ]
+					},
+					{ "time": 0.3333 }
+				]
+			},
+			"images/Slider": {
+				"translate": [
+					{
+						"time": 0.0333,
+						"curve": [ 0.089, 0, 0.244, 0, 0.089, 76.27, 0.184, 500.52 ]
+					},
+					{
+						"time": 0.3,
+						"y": 499.24,
+						"curve": [ 0.356, 0, 0.511, 0, 0.424, 497.89, 0.511, 0 ]
+					},
+					{ "time": 0.5667 },
+					{ "time": 0.6, "y": 13 },
+					{ "time": 0.6333 },
+					{ "time": 0.6667, "y": 4.08 },
+					{ "time": 0.7 }
+				]
+			},
+			"images/Bell": {
+				"translate": [
+					{
+						"time": 0.2667,
+						"curve": [ 0.278, 0, 0.289, 0, 0.278, 5.2, 0.289, 15.59 ]
+					},
+					{
+						"time": 0.3,
+						"y": 15.59,
+						"curve": [ 0.322, 0, 0.344, 0, 0.322, 15.59, 0.344, 5.2 ]
+					},
+					{ "time": 0.3667 }
+				],
+				"scale": [
+					{
+						"time": 0.2667,
+						"curve": [ 0.278, 1.11, 0.289, 1.331, 0.278, 0.937, 0.289, 0.812 ]
+					},
+					{
+						"time": 0.3,
+						"x": 1.331,
+						"y": 0.812,
+						"curve": [ 0.322, 1.331, 0.344, 1.11, 0.322, 0.812, 0.344, 0.937 ]
+					},
+					{ "time": 0.3667 }
+				]
+			},
+			"images/DING 1": {
+				"scale": [
+					{
+						"time": 0.3,
+						"curve": [ 0.344, 1, 0.389, 1.186, 0.344, 1, 0.389, 1.186 ]
+					},
+					{ "time": 0.4333, "x": 1.186, "y": 1.186 }
+				]
+			},
+			"images/Round 1a": {
+				"translate": [
+					{ "time": 0.3, "x": -16.93, "y": 16.4 },
+					{ "time": 0.4, "x": 36.96, "y": -35.81 }
+				],
+				"scale": [
+					{ "time": 0.3 },
+					{ "time": 0.4, "x": 1.461, "y": 1.461 }
+				]
+			},
+			"images/Round 2a": {
+				"translate": [
+					{ "time": 0.3, "x": 22.98, "y": 14.4 },
+					{ "time": 0.4, "x": -25.23, "y": -15.81 }
+				],
+				"scale": [
+					{ "time": 0.3 },
+					{ "time": 0.4, "x": 1.461, "y": 1.461 }
+				]
+			},
+			"images/Round 3a": {
+				"translate": [
+					{ "time": 0.3, "x": -7.23, "y": -7.14 },
+					{ "time": 0.4, "x": 43.34, "y": 42.83 }
+				],
+				"scale": [
+					{ "time": 0.3 },
+					{ "time": 0.4, "x": 1.461, "y": 1.461 }
+				]
+			}
+		}
+	},
+	"idle": {},
+	"miss_low": {
+		"bones": {
+			"strength_test_root": {
+				"scale": [
+					{
+						"curve": [ 0.011, 1, 0.022, 1, 0.011, 1, 0.022, 0.978 ]
+					},
+					{
+						"time": 0.0333,
+						"y": 0.978,
+						"curve": [ 0.044, 1, 0.056, 1, 0.044, 0.978, 0.056, 1 ]
+					},
+					{ "time": 0.0667 }
+				]
+			},
+			"images/Slider": {
+				"translate": [
+					{
+						"time": 0.0333,
+						"curve": [ 0.089, 0, 0.178, 0, 0.089, 76.27, 0.117, 205.53 ]
+					},
+					{
+						"time": 0.2333,
+						"y": 204.25,
+						"curve": [ 0.289, 0, 0.378, 0, 0.357, 202.89, 0.378, 0 ]
+					},
+					{ "time": 0.4333 },
+					{ "time": 0.4667, "y": 13 },
+					{ "time": 0.5 },
+					{ "time": 0.5333, "y": 4.08 },
+					{ "time": 0.5667 }
+				]
+			}
+		}
+	},
+	"miss_medium": {
+		"bones": {
+			"strength_test_root": {
+				"scale": [
+					{
+						"curve": [ 0.011, 1, 0.022, 1, 0.011, 1, 0.022, 0.978 ]
+					},
+					{
+						"time": 0.0333,
+						"y": 0.978,
+						"curve": [ 0.044, 1, 0.056, 1, 0.044, 0.978, 0.056, 1 ]
+					},
+					{ "time": 0.0667 }
+				]
+			},
+			"images/Slider": {
+				"translate": [
+					{
+						"time": 0.0333,
+						"curve": [ 0.089, 0, 0.211, 0, 0.089, 76.27, 0.15, 406.6 ]
+					},
+					{
+						"time": 0.2667,
+						"y": 405.32,
+						"curve": [ 0.322, 0, 0.444, 0, 0.39, 403.97, 0.444, 0 ]
+					},
+					{ "time": 0.5 },
+					{ "time": 0.5333, "y": 13 },
+					{ "time": 0.5667 },
+					{ "time": 0.6, "y": 4.08 },
+					{ "time": 0.6333 }
+				]
+			}
+		}
+	}
+}
+}

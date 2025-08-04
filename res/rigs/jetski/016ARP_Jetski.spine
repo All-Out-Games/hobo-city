@@ -1,0 +1,206 @@
+{
+"skeleton": { "hash": "ZNq+DvWY7tQ", "spine": "4.0.64", "x": -276.5, "y": -25.5, "width": 577, "height": 321 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Jetski", "parent": "root" },
+	{ "name": "Water_Back", "parent": "Jetski", "x": 96.15, "y": 76.63 },
+	{ "name": "Water_Front", "parent": "Jetski", "x": 148.6, "y": -21.71 }
+],
+"slots": [
+	{ "name": "Water_Back", "bone": "Water_Back" },
+	{ "name": "Jetski", "bone": "Jetski", "attachment": "Jetski/jetski" },
+	{ "name": "Jetski/jet_ski_water_wake/water_wake_front_1", "bone": "Water_Front" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"Jetski": {
+				"Jetski/jetski": { "x": 12, "y": 135, "width": 577, "height": 321 }
+			},
+			"Jetski/jet_ski_water_wake/water_wake_front_1": {
+				"Jetski/jet_ski_water_wake/water_wake_front_1": { "x": -18.16, "y": 35.41, "width": 317, "height": 96 },
+				"Jetski/jet_ski_water_wake/water_wake_front_2": { "x": -18.16, "y": 35.41, "width": 342, "height": 98 },
+				"Jetski/jet_ski_water_wake/water_wake_front_3": { "x": -18.16, "y": 35.41, "width": 319, "height": 103 }
+			},
+			"Water_Back": {
+				"Jetski/jet_ski_water_wake/water_wake_back_1": { "x": -86.87, "y": 49.47, "width": 577, "height": 144 },
+				"Jetski/jet_ski_water_wake/water_wake_back_2": { "x": -86.87, "y": 49.47, "width": 575, "height": 137 },
+				"Jetski/jet_ski_water_wake/water_wake_back_3": { "x": -86.87, "y": 49.47, "width": 577, "height": 141 }
+			}
+		}
+	}
+],
+"animations": {
+	"016ARP/Idle": {
+		"bones": {
+			"Jetski": {
+				"rotate": [
+					{
+						"curve": [ 0.113, 0.5, 0.223, 1.01 ]
+					},
+					{
+						"time": 0.3333,
+						"value": 1.01,
+						"curve": [ 0.556, 1.01, 0.777, -1.01 ]
+					},
+					{
+						"time": 1,
+						"value": -1.01,
+						"curve": [ 1.112, -1.01, 1.223, -0.51 ]
+					},
+					{ "time": 1.3333 }
+				],
+				"translate": [
+					{
+						"curve": [ 0.223, 0, 0.444, 0, 0.223, 0, 0.444, -12.18 ]
+					},
+					{
+						"time": 0.6667,
+						"y": -12.18,
+						"curve": [ 0.89, 0, 1.11, 0, 0.89, -12.18, 1.11, 0 ]
+					},
+					{ "time": 1.3333 }
+				]
+			}
+		}
+	},
+	"016ARP/Run": {
+		"slots": {
+			"Jetski/jet_ski_water_wake/water_wake_front_1": {
+				"attachment": [
+					{ "name": "Jetski/jet_ski_water_wake/water_wake_front_1" },
+					{ "time": 0.0833, "name": "Jetski/jet_ski_water_wake/water_wake_front_2" },
+					{ "time": 0.1667, "name": "Jetski/jet_ski_water_wake/water_wake_front_3" },
+					{ "time": 0.25, "name": "Jetski/jet_ski_water_wake/water_wake_front_1" },
+					{ "time": 0.3333, "name": "Jetski/jet_ski_water_wake/water_wake_front_2" },
+					{ "time": 0.4167, "name": "Jetski/jet_ski_water_wake/water_wake_front_3" },
+					{ "time": 0.5, "name": "Jetski/jet_ski_water_wake/water_wake_front_1" },
+					{ "time": 0.5833, "name": "Jetski/jet_ski_water_wake/water_wake_front_2" },
+					{ "time": 0.6667, "name": "Jetski/jet_ski_water_wake/water_wake_front_3" },
+					{ "time": 0.75, "name": "Jetski/jet_ski_water_wake/water_wake_front_1" },
+					{ "time": 0.8333, "name": "Jetski/jet_ski_water_wake/water_wake_front_2" },
+					{ "time": 0.9167, "name": "Jetski/jet_ski_water_wake/water_wake_front_3" },
+					{ "time": 1, "name": "Jetski/jet_ski_water_wake/water_wake_front_1" }
+				]
+			},
+			"Water_Back": {
+				"attachment": [
+					{ "name": "Jetski/jet_ski_water_wake/water_wake_back_1" },
+					{ "time": 0.0833, "name": "Jetski/jet_ski_water_wake/water_wake_back_2" },
+					{ "time": 0.1667, "name": "Jetski/jet_ski_water_wake/water_wake_back_3" },
+					{ "time": 0.25, "name": "Jetski/jet_ski_water_wake/water_wake_back_1" },
+					{ "time": 0.3333, "name": "Jetski/jet_ski_water_wake/water_wake_back_2" },
+					{ "time": 0.4167, "name": "Jetski/jet_ski_water_wake/water_wake_back_3" },
+					{ "time": 0.5, "name": "Jetski/jet_ski_water_wake/water_wake_back_1" },
+					{ "time": 0.5833, "name": "Jetski/jet_ski_water_wake/water_wake_back_2" },
+					{ "time": 0.6667, "name": "Jetski/jet_ski_water_wake/water_wake_back_3" },
+					{ "time": 0.75, "name": "Jetski/jet_ski_water_wake/water_wake_back_1" },
+					{ "time": 0.8333, "name": "Jetski/jet_ski_water_wake/water_wake_back_2" },
+					{ "time": 0.9167, "name": "Jetski/jet_ski_water_wake/water_wake_back_3" },
+					{ "time": 1, "name": "Jetski/jet_ski_water_wake/water_wake_back_1" }
+				]
+			}
+		},
+		"bones": {
+			"Water_Back": {
+				"translate": [
+					{ "x": -101.27, "y": -20.92 }
+				],
+				"scale": [
+					{ "x": 1.5, "y": 1.6 }
+				]
+			},
+			"Water_Front": {
+				"translate": [
+					{ "x": -60.53, "y": 6.79 }
+				],
+				"scale": [
+					{ "x": 1.5, "y": 1.5 }
+				]
+			},
+			"Jetski": {
+				"rotate": [
+					{
+						"curve": [ 0.023, 0, 0.138, 1.88 ]
+					},
+					{
+						"time": 0.25,
+						"value": 1.88,
+						"curve": [ 0.366, 1.88, 0.417, 0 ]
+					},
+					{
+						"time": 0.5,
+						"curve": [ 0.523, 0, 0.638, 1.88 ]
+					},
+					{
+						"time": 0.75,
+						"value": 1.88,
+						"curve": [ 0.866, 1.88, 0.979, 0 ]
+					},
+					{ "time": 1 }
+				],
+				"translate": [
+					{
+						"curve": [ 0.083, 0, 0.167, 0, 0.083, 0, 0.167, -16.46 ]
+					},
+					{
+						"time": 0.25,
+						"y": -16.46,
+						"curve": [ 0.333, 0, 0.417, 0, 0.333, -16.46, 0.417, 0 ]
+					},
+					{
+						"time": 0.5,
+						"curve": [ 0.583, 0, 0.667, 0, 0.583, 0, 0.667, 7.61 ]
+					},
+					{
+						"time": 0.75,
+						"y": 7.61,
+						"curve": [ 0.833, 0, 0.917, 0, 0.833, 7.61, 0.917, 0 ]
+					},
+					{ "time": 1 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.05, "x": 1.023, "y": 0.977 },
+					{ "time": 0.1 },
+					{ "time": 0.15, "x": 1.023, "y": 0.977 },
+					{ "time": 0.2 },
+					{ "time": 0.25, "x": 1.023, "y": 0.977 },
+					{ "time": 0.3 },
+					{ "time": 0.35, "x": 1.023, "y": 0.977 },
+					{ "time": 0.4 },
+					{ "time": 0.45, "x": 1.023, "y": 0.977 },
+					{ "time": 0.5 },
+					{ "time": 0.55, "x": 1.023, "y": 0.977 },
+					{ "time": 0.6 },
+					{ "time": 0.65, "x": 1.023, "y": 0.977 },
+					{ "time": 0.7 },
+					{ "time": 0.75, "x": 1.023, "y": 0.977 },
+					{ "time": 0.8 },
+					{ "time": 0.85, "x": 1.023, "y": 0.977 },
+					{ "time": 0.9 },
+					{ "time": 0.95, "x": 1.023, "y": 0.977 },
+					{ "time": 1 }
+				],
+				"shear": [
+					{
+						"curve": [ 0.018, 0, 0.248, 0, 0.018, 0, 0.248, -7.41 ]
+					},
+					{
+						"time": 0.2833,
+						"y": -7.41,
+						"curve": [ 0.416, 0, 0.565, 0, 0.416, -7.41, 0.565, -10.32 ]
+					},
+					{
+						"time": 0.6,
+						"y": -10.32,
+						"curve": [ 0.733, 0, 0.935, 0, 0.733, -10.32, 0.935, 0 ]
+					},
+					{ "time": 1 }
+				]
+			}
+		}
+	}
+}
+}

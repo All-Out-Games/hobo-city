@@ -1,0 +1,80 @@
+014ANT_Big_Explosion.png
+	size: 4084, 916
+	filter: Linear, Linear
+	scale: 0.5
+[014ANT]oblivion_explosion/big_ring
+	bounds: 751, 304, 738, 603
+	offsets: 8, 8, 754, 619
+[014ANT]oblivion_explosion/circle_fade
+	bounds: 3988, 170, 95, 87
+	rotate: 90
+[014ANT]oblivion_explosion/circle_glow
+	bounds: 3887, 178, 95, 87
+[014ANT]oblivion_explosion/cloud
+	bounds: 3884, 523, 189, 189
+[014ANT]oblivion_explosion/explosion_flare
+	bounds: 2695, 310, 597, 589
+	rotate: 90
+[014ANT]oblivion_explosion/explosion_flash
+	bounds: 1495, 309, 595, 598
+	offsets: 0, 4, 595, 602
+[014ANT]oblivion_explosion/flare
+	bounds: 3291, 95, 590, 209
+	offsets: 4, 0, 598, 209
+[014ANT]oblivion_explosion/glow
+	bounds: 2540, 187, 114, 114
+	offsets: 3, 3, 120, 120
+[014ANT]oblivion_explosion/ground_glow
+	bounds: 240, 197, 115, 99
+	offsets: 2, 2, 119, 103
+[014ANT]oblivion_explosion/ribbon1
+	bounds: 751, 129, 415, 169
+	offsets: 5, 0, 420, 169
+[014ANT]oblivion_explosion/ribbon2
+	bounds: 1495, 6, 297, 319
+	offsets: 12, 0, 309, 319
+	rotate: 90
+[014ANT]oblivion_explosion/spark_particle_B
+	bounds: 123, 192, 111, 104
+	offsets: 3, 3, 118, 111
+explosion/big_ring
+	bounds: 6, 302, 739, 605
+	offsets: 6, 7, 751, 619
+explosion/circle_fade
+	bounds: 581, 209, 95, 87
+explosion/circle_glow
+	bounds: 480, 209, 95, 87
+explosion/cloud
+	bounds: 3884, 718, 189, 189
+explosion/explosion_flare
+	bounds: 3290, 310, 597, 588
+	offsets: 0, 0, 597, 589
+	rotate: 90
+explosion/flare
+	bounds: 2695, 95, 590, 209
+	offsets: 4, 0, 598, 209
+explosion/glow
+	bounds: 3887, 271, 114, 114
+	offsets: 3, 3, 120, 120
+explosion/ground_fissure
+	bounds: 1172, 62, 292, 236
+	offsets: 6, 6, 303, 248
+explosion/ground_fissure_glow
+	bounds: 3884, 391, 148, 126
+	offsets: 2, 1, 152, 129
+explosion/ground_glow
+	bounds: 361, 197, 113, 99
+	offsets: 3, 3, 119, 104
+explosion/halftone_explosion
+	bounds: 2096, 307, 593, 600
+	offsets: 0, 5, 595, 605
+explosion/ribbon
+	bounds: 1820, 11, 291, 312
+	offsets: 10, 11, 309, 327
+	rotate: 90
+explosion/ribbon2
+	bounds: 2138, 91, 396, 210
+	offsets: 11, 51, 420, 270
+explosion/spark_particle_B
+	bounds: 6, 192, 111, 104
+	offsets: 3, 3, 118, 111

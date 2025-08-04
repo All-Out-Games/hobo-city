@@ -1,0 +1,232 @@
+{ "skeleton": { "images": "C:/Kat/trabajo/DJ_DoubleJump/2T/[016ARP]all out rp/images/map/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "template", "bone": "root", "attachment": "template" },
+	{ "name": "columns/column_wall", "bone": "root", "attachment": "columns/column_wall" },
+	{ "name": "columns/column_wall_outlined", "bone": "root", "attachment": "columns/column_wall_outlined" },
+	{ "name": "columns/column_hall", "bone": "root", "attachment": "columns/column_hall" },
+	{ "name": "columns/column_entrance", "bone": "root", "attachment": "columns/column_entrance" },
+	{ "name": "columns/arch_entrance", "bone": "root", "attachment": "columns/arch_entrance" },
+	{ "name": "curtains/curtain_green_top_4", "bone": "root", "attachment": "curtains/curtain_green_top_4" },
+	{ "name": "curtains/curtain_green_top_3", "bone": "root", "attachment": "curtains/curtain_green_top_3" },
+	{ "name": "curtains/curtain_green_top_2", "bone": "root", "attachment": "curtains/curtain_green_top_2" },
+	{ "name": "curtains/curtain_green_top_1", "bone": "root", "attachment": "curtains/curtain_green_top_1" },
+	{ "name": "curtains/curtain_green_window", "bone": "root", "attachment": "curtains/curtain_green_window" },
+	{ "name": "curtains/curtain_green_vertical_3_outline", "bone": "root", "attachment": "curtains/curtain_green_vertical_3_outline" },
+	{ "name": "curtains/curtain_green_vertical_3", "bone": "root", "attachment": "curtains/curtain_green_vertical_3" },
+	{ "name": "curtains/curtain_green_vertical_2_outline", "bone": "root", "attachment": "curtains/curtain_green_vertical_2_outline" },
+	{ "name": "curtains/curtain_green_vertical_2", "bone": "root", "attachment": "curtains/curtain_green_vertical_2" },
+	{ "name": "curtains/curtain_green_vertical_1", "bone": "root", "attachment": "curtains/curtain_green_vertical_1" },
+	{ "name": "windows/window_brown", "bone": "root", "attachment": "windows/window_brown" },
+	{ "name": "windows/window_green", "bone": "root", "attachment": "windows/window_green" },
+	{ "name": "windows/window_diagonal_1", "bone": "root", "attachment": "windows/window_diagonal_1" },
+	{ "name": "windows/window_diagonal_2", "bone": "root", "attachment": "windows/window_diagonal_2" },
+	{ "name": "windows/window_diagonal_3", "bone": "root", "attachment": "windows/window_diagonal_3" },
+	{ "name": "windows/window_exterior_3", "bone": "root", "attachment": "windows/window_exterior_3" },
+	{ "name": "windows/window_exterior_2", "bone": "root", "attachment": "windows/window_exterior_2" },
+	{ "name": "windows/window_exterior_1", "bone": "root", "attachment": "windows/window_exterior_1" },
+	{ "name": "walls/wall_oval_1", "bone": "root", "attachment": "walls/wall_oval_1" },
+	{ "name": "walls/wall_oval_2", "bone": "root", "attachment": "walls/wall_oval_2" },
+	{ "name": "walls/wall_ext_2", "bone": "root", "attachment": "walls/wall_ext_2" },
+	{ "name": "walls/wall_ext_1", "bone": "root", "attachment": "walls/wall_ext_1" },
+	{ "name": "walls/wall_int_green_2", "bone": "root", "attachment": "walls/wall_int_green_2" },
+	{ "name": "walls/wall_int_green_1", "bone": "root", "attachment": "walls/wall_int_green_1" },
+	{ "name": "walls/wall_int_yellow_3", "bone": "root", "attachment": "walls/wall_int_yellow_3" },
+	{ "name": "walls/wall_int_yellow_2", "bone": "root", "attachment": "walls/wall_int_yellow_2" },
+	{ "name": "walls/wall_int_yellow_1", "bone": "root", "attachment": "walls/wall_int_yellow_1" },
+	{ "name": "walls/wall_int_green_3", "bone": "root", "attachment": "walls/wall_int_green_3" },
+	{ "name": "walls/wall_vertical", "bone": "root", "attachment": "walls/wall_vertical" },
+	{ "name": "decor/candelabra/candelabra", "bone": "root", "attachment": "decor/candelabra/candelabra" },
+	{ "name": "decor/candelabra/glow", "bone": "root", "attachment": "decor/candelabra/glow" },
+	{ "name": "decor/candelabra/candelabra_glow", "bone": "root", "attachment": "decor/candelabra/candelabra_glow" },
+	{ "name": "decor/painting/painting_old_2", "bone": "root", "attachment": "decor/painting/painting_old_2" },
+	{ "name": "decor/painting/painting_old_1", "bone": "root", "attachment": "decor/painting/painting_old_1" },
+	{ "name": "decor/bench/bench_luxury_1", "bone": "root", "attachment": "decor/bench/bench_luxury_1" },
+	{ "name": "decor/bench/bench_luxury", "bone": "root", "attachment": "decor/bench/bench_luxury" },
+	{ "name": "decor/chimney/chimney_luxury", "bone": "root", "attachment": "decor/chimney/chimney_luxury" },
+	{ "name": "decor/chimney/chimney_whitehouse", "bone": "root", "attachment": "decor/chimney/chimney_whitehouse" },
+	{ "name": "decor/chimney/chimney_whitehouse_outilned", "bone": "root", "attachment": "decor/chimney/chimney_whitehouse_outilned" },
+	{ "name": "decor/chimney/bust_lincoln", "bone": "root", "attachment": "decor/chimney/bust_lincoln" },
+	{ "name": "floor/marble_floor_tile", "bone": "root", "attachment": "floor/marble_floor_tile" },
+	{ "name": "floor/wooden_floor_tile", "bone": "root", "attachment": "floor/wooden_floor_tile" },
+	{ "name": "floor/stairs/stairs_2", "bone": "root", "attachment": "floor/stairs/stairs_2" },
+	{ "name": "floor/stairs/stairs_1", "bone": "root", "attachment": "floor/stairs/stairs_1" },
+	{ "name": "floor/carpets/carpet_red/carpet_red_3", "bone": "root", "attachment": "floor/carpets/carpet_red/carpet_red_3" },
+	{ "name": "floor/carpets/carpet_red/carpet_red_2", "bone": "root", "attachment": "floor/carpets/carpet_red/carpet_red_2" },
+	{ "name": "floor/carpets/carpet_red/carpet_red_1", "bone": "root", "attachment": "floor/carpets/carpet_red/carpet_red_1" },
+	{ "name": "floor/carpets/carpet_reen", "bone": "root", "attachment": "floor/carpets/carpet_reen" },
+	{ "name": "floor/carpets/carpet_oval", "bone": "root", "attachment": "floor/carpets/carpet_oval" }
+],
+"skins": {
+	"default": {
+		"template": {
+			"template": { "x": 6760, "y": -5000, "width": 13522, "height": 10002 }
+		},
+		"columns/column_wall": {
+			"columns/column_wall": { "x": 749, "y": -4477, "width": 172, "height": 404 }
+		},
+		"columns/column_wall_outlined": {
+			"columns/column_wall_outlined": { "x": 526, "y": -4502, "width": 172, "height": 404 }
+		},
+		"columns/column_hall": {
+			"columns/column_hall": { "x": 1076, "y": -4461.5, "width": 224, "height": 647 }
+		},
+		"columns/column_entrance": {
+			"columns/column_entrance": { "x": 1469, "y": -4483.5, "width": 224, "height": 723 }
+		},
+		"columns/arch_entrance": {
+			"columns/arch_entrance": { "x": 1813, "y": -4472, "width": 196, "height": 604 }
+		},
+		"curtains/curtain_green_top_4": {
+			"curtains/curtain_green_top_4": { "x": 2164, "y": -1566.5, "width": 212, "height": 215 }
+		},
+		"curtains/curtain_green_top_3": {
+			"curtains/curtain_green_top_3": { "x": 2208, "y": -1286.5, "width": 238, "height": 183 }
+		},
+		"curtains/curtain_green_top_2": {
+			"curtains/curtain_green_top_2": { "x": 1749.5, "y": -1339, "width": 231, "height": 160 }
+		},
+		"curtains/curtain_green_top_1": {
+			"curtains/curtain_green_top_1": { "x": 1948, "y": -1331.5, "width": 76, "height": 159 }
+		},
+		"curtains/curtain_green_window": {
+			"curtains/curtain_green_window": { "x": 1126, "y": -2298, "width": 324, "height": 440 }
+		},
+		"curtains/curtain_green_vertical_3_outline": {
+			"curtains/curtain_green_vertical_3_outline": { "x": 2161.5, "y": -2150, "width": 143, "height": 560 }
+		},
+		"curtains/curtain_green_vertical_3": {
+			"curtains/curtain_green_vertical_3": { "x": 2379.5, "y": -2120, "width": 143, "height": 560 }
+		},
+		"curtains/curtain_green_vertical_2_outline": {
+			"curtains/curtain_green_vertical_2_outline": { "x": 1916.5, "y": -2026.5, "width": 143, "height": 611 }
+		},
+		"curtains/curtain_green_vertical_2": {
+			"curtains/curtain_green_vertical_2": { "x": 375.5, "y": -1692.5, "width": 139, "height": 607 }
+		},
+		"curtains/curtain_green_vertical_1": {
+			"curtains/curtain_green_vertical_1": { "x": 593, "y": -1678, "width": 114, "height": 468 }
+		},
+		"windows/window_brown": {
+			"windows/window_brown": { "x": 1105, "y": -2804, "width": 222, "height": 292 }
+		},
+		"windows/window_green": {
+			"windows/window_green": { "x": 838, "y": -3304, "width": 222, "height": 292 }
+		},
+		"windows/window_diagonal_1": {
+			"windows/window_diagonal_1": { "x": 2775, "y": -1468.5, "width": 210, "height": 349 }
+		},
+		"windows/window_diagonal_2": {
+			"windows/window_diagonal_2": { "x": 2750.5, "y": -1934.5, "width": 201, "height": 389 }
+		},
+		"windows/window_diagonal_3": {
+			"windows/window_diagonal_3": { "x": 2809.5, "y": -2360, "width": 161, "height": 422 }
+		},
+		"windows/window_exterior_3": {
+			"windows/window_exterior_3": { "x": 1784, "y": -3644, "width": 224, "height": 374 }
+		},
+		"windows/window_exterior_2": {
+			"windows/window_exterior_2": { "x": 2106, "y": -3641.5, "width": 222, "height": 379 }
+		},
+		"windows/window_exterior_1": {
+			"windows/window_exterior_1": { "x": 1475, "y": -3626, "width": 222, "height": 292 }
+		},
+		"walls/wall_oval_1": {
+			"walls/wall_oval_1": { "x": 6248, "y": -755, "width": 1708, "height": 1270 }
+		},
+		"walls/wall_oval_2": {
+			"walls/wall_oval_2": { "x": 5094, "y": -764.5, "width": 450, "height": 791 }
+		},
+		"walls/wall_ext_2": {
+			"walls/wall_ext_2": { "x": 8315.5, "y": -591.5, "width": 529, "height": 633 }
+		},
+		"walls/wall_ext_1": {
+			"walls/wall_ext_1": { "x": 7688, "y": -591.5, "width": 432, "height": 633 }
+		},
+		"walls/wall_int_green_2": {
+			"walls/wall_int_green_2": { "x": 4436.5, "y": -1016, "width": 525, "height": 526 }
+		},
+		"walls/wall_int_green_1": {
+			"walls/wall_int_green_1": { "x": 3836, "y": -1016, "width": 434, "height": 526 }
+		},
+		"walls/wall_int_yellow_3": {
+			"walls/wall_int_yellow_3": { "x": 4436.5, "y": -418, "width": 525, "height": 526 }
+		},
+		"walls/wall_int_yellow_2": {
+			"walls/wall_int_yellow_2": { "x": 3836, "y": -418, "width": 434, "height": 526 }
+		},
+		"walls/wall_int_yellow_1": {
+			"walls/wall_int_yellow_1": { "x": 3312.5, "y": -420, "width": 477, "height": 526 }
+		},
+		"walls/wall_int_green_3": {
+			"walls/wall_int_green_3": { "x": 3300.5, "y": -1020, "width": 477, "height": 526 }
+		},
+		"walls/wall_vertical": {
+			"walls/wall_vertical": { "x": 2822, "y": -754, "width": 136, "height": 496 }
+		},
+		"decor/candelabra/candelabra": {
+			"decor/candelabra/candelabra": { "x": 1525, "y": -1898, "width": 170, "height": 172 }
+		},
+		"decor/candelabra/glow": {
+			"decor/candelabra/glow": { "x": 1530, "y": -2163, "width": 304, "height": 306 }
+		},
+		"decor/candelabra/candelabra_glow": {
+			"decor/candelabra/candelabra_glow": { "x": 1486, "y": -1610, "width": 304, "height": 306 }
+		},
+		"decor/painting/painting_old_2": {
+			"decor/painting/painting_old_2": { "x": 555.5, "y": -2278, "width": 223, "height": 232 }
+		},
+		"decor/painting/painting_old_1": {
+			"decor/painting/painting_old_1": { "x": 548.5, "y": -2598, "width": 217, "height": 310 }
+		},
+		"decor/bench/bench_luxury_1": {
+			"decor/bench/bench_luxury_1": { "x": 983, "y": -1613, "width": 402, "height": 178 }
+		},
+		"decor/bench/bench_luxury": {
+			"decor/bench/bench_luxury": { "x": 982, "y": -1844, "width": 402, "height": 178 }
+		},
+		"decor/chimney/chimney_luxury": {
+			"decor/chimney/chimney_luxury": { "x": 1313, "y": -628.5, "width": 484, "height": 409 }
+		},
+		"decor/chimney/chimney_whitehouse": {
+			"decor/chimney/chimney_whitehouse": { "x": 735, "y": -417.5, "width": 484, "height": 409 }
+		},
+		"decor/chimney/chimney_whitehouse_outilned": {
+			"decor/chimney/chimney_whitehouse_outilned": { "x": 722, "y": -852.5, "width": 484, "height": 409 }
+		},
+		"decor/chimney/bust_lincoln": {
+			"decor/chimney/bust_lincoln": { "x": 1111.5, "y": -310.5, "width": 111, "height": 159 }
+		},
+		"floor/marble_floor_tile": {
+			"floor/marble_floor_tile": { "x": 4306, "y": -4333, "width": 722, "height": 722 }
+		},
+		"floor/wooden_floor_tile": {
+			"floor/wooden_floor_tile": { "x": 3431, "y": -4321, "width": 722, "height": 722 }
+		},
+		"floor/stairs/stairs_2": {
+			"floor/stairs/stairs_2": { "x": 2765, "y": -4230, "width": 300, "height": 294 }
+		},
+		"floor/stairs/stairs_1": {
+			"floor/stairs/stairs_1": { "x": 2366.5, "y": -4221.5, "width": 413, "height": 295 }
+		},
+		"floor/carpets/carpet_red/carpet_red_3": {
+			"floor/carpets/carpet_red/carpet_red_3": { "x": 3147.5, "y": -3233, "width": 767, "height": 726 }
+		},
+		"floor/carpets/carpet_red/carpet_red_2": {
+			"floor/carpets/carpet_red/carpet_red_2": { "x": 4071, "y": -3170.5, "width": 604, "height": 601 }
+		},
+		"floor/carpets/carpet_red/carpet_red_1": {
+			"floor/carpets/carpet_red/carpet_red_1": { "x": 4860, "y": -3170.5, "width": 500, "height": 601 }
+		},
+		"floor/carpets/carpet_reen": {
+			"floor/carpets/carpet_reen": { "x": 4420, "y": -2103.5, "width": 1808, "height": 1101 }
+		},
+		"floor/carpets/carpet_oval": {
+			"floor/carpets/carpet_oval": { "x": 6939.5, "y": -1967.5, "width": 2379, "height": 1945 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

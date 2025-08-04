@@ -1,0 +1,20 @@
+e96a0b73ab55f740.png
+	size: 296, 296
+	filter: Linear, Linear
+particleA
+	bounds: 6, 213, 74, 74
+	offsets: 3, 3, 80, 80
+particleB
+	bounds: 86, 209, 78, 79
+	offsets: 4, 4, 86, 86
+	rotate: 90
+particleC
+	bounds: 127, 85, 118, 110
+	offsets: 4, 4, 127, 117
+particleD
+	bounds: 171, 201, 86, 116
+	offsets: 3, 4, 93, 124
+	rotate: 90
+particleE
+	bounds: 6, 97, 115, 106
+	offsets: 4, 4, 124, 114

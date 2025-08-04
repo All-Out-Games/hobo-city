@@ -1,0 +1,95 @@
+{
+"skeleton": { "hash": "5NyVat0RMos", "spine": "4.0.64", "x": -59.27, "y": -57, "width": 124, "height": 114 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "position", "parent": "root" },
+	{ "name": "particles_all", "parent": "position" },
+	{ "name": "particle_1", "parent": "particles_all" },
+	{ "name": "particle_2", "parent": "particles_all" },
+	{ "name": "particle_3", "parent": "particles_all" },
+	{ "name": "particle_4", "parent": "particles_all" },
+	{ "name": "particle_5", "parent": "particles_all" }
+],
+"slots": [
+	{ "name": "particleE", "bone": "particle_5", "attachment": "particleE" },
+	{ "name": "particleA", "bone": "particle_1" },
+	{ "name": "particleB", "bone": "particle_2" },
+	{ "name": "particleC", "bone": "particle_3" },
+	{ "name": "particleD", "bone": "particle_4" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"particleA": {
+				"particleA": { "width": 80, "height": 80 }
+			},
+			"particleB": {
+				"particleB": { "width": 86, "height": 86 }
+			},
+			"particleC": {
+				"particleC": { "width": 127, "height": 117 }
+			},
+			"particleD": {
+				"particleD": { "width": 93, "height": 124 }
+			},
+			"particleE": {
+				"particleE": { "x": 2.73, "width": 124, "height": 114 }
+			}
+		}
+	}
+],
+"animations": {
+	"scary_particle_burst": {
+		"slots": {
+			"particleA": {
+				"attachment": [
+					{ "name": "particleA" },
+					{ "time": 0.0667, "name": null }
+				]
+			},
+			"particleB": {
+				"attachment": [
+					{ "time": 0.0667, "name": "particleB" },
+					{ "time": 0.1333, "name": null }
+				]
+			},
+			"particleC": {
+				"rgba": [
+					{ "time": 0.6, "color": "ffffffff" },
+					{ "time": 0.7333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.1333, "name": "particleC" }
+				]
+			},
+			"particleE": {
+				"rgba": [
+					{ "time": 0.6, "color": "ffffffff" },
+					{ "time": 0.7333, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"particle_5": {
+				"scale": [
+					{},
+					{ "time": 0.7333, "x": 2.2, "y": 2.2 }
+				]
+			},
+			"particles_all": {
+				"scale": [
+					{ "x": 0.5, "y": 0.5 },
+					{ "time": 0.7333, "x": 3, "y": 3 }
+				]
+			},
+			"particle_3": {
+				"scale": [
+					{ "time": 0.1333 },
+					{ "time": 0.7333, "x": 1.126, "y": 1.126 }
+				]
+			}
+		}
+	}
+}
+}

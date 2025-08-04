@@ -1,0 +1,195 @@
+016ARP_Cop.png
+	size: 4088, 232
+	filter: Linear, Linear
+	scale: 0.5
+016ARP/Cop/glasses
+	bounds: 2437, 121, 102, 53
+	rotate: 90
+016ARP/Cop/hat
+	bounds: 2309, 140, 83, 70
+	rotate: 90
+016ARP/Cop/leg_L
+	bounds: 3859, 179, 34, 44
+	offsets: 18, 13, 69, 71
+016ARP/Cop/leg_R
+	bounds: 3709, 179, 35, 44
+	offsets: 18, 15, 69, 71
+016ARP/Cop/top
+	bounds: 1147, 107, 112, 116
+	offsets: 35, 25, 179, 179
+016ARP/baton
+	bounds: 1535, 108, 68, 115
+	offsets: 3, 3, 118, 118
+016ARP/donut/donut
+	bounds: 6, 6, 218, 217
+016ARP/donut/donut_crumb1
+	bounds: 3031, 167, 56, 54
+	rotate: 90
+016ARP/donut/donut_crumb2
+	bounds: 1361, 128, 83, 95
+016ARP/donut/donut_crumb3
+	bounds: 2870, 155, 58, 68
+016ARP/donut/donut_halfeaten
+	bounds: 230, 13, 210, 173
+	offsets: 8, 0, 218, 217
+	rotate: 90
+016ARP/dream_clouds/dream_cloud_big
+	bounds: 725, 63, 160, 149
+	rotate: 90
+016ARP/dream_clouds/dream_cloud_small1
+	bounds: 1680, 128, 95, 81
+	rotate: 90
+016ARP/dream_clouds/dream_cloud_small2
+	bounds: 1981, 133, 90, 75
+	rotate: 90
+016ARP/dream_clouds/dream_cloud_small3
+	bounds: 2496, 152, 71, 71
+016ARP/exclamation_point
+	bounds: 1070, 83, 71, 140
+016ARP/eyebrow
+	bounds: 988, 71, 152, 76
+	rotate: 90
+016ARP/moustache
+	bounds: 3593, 163, 60, 26
+	rotate: 90
+016ARP/vision cone/vision_cone
+	bounds: 880, 102, 121, 102
+	rotate: 90
+100_buttons/vfx/weapon_swings/swipe333
+	bounds: 409, 73, 150, 311
+	rotate: 90
+100_buttons/weapons/foam_hand
+	bounds: 1767, 128, 79, 95
+2.0.1_additions/eyes/crying/lid_watery_L
+	bounds: 2976, 161, 62, 49
+	rotate: 90
+2.0.1_additions/eyes/crying/lid_watery_R
+	bounds: 3238, 154, 69, 34
+	rotate: 90
+2.0.1_additions/eyes/crying/lighteye_watery_L
+	bounds: 3192, 161, 62, 40
+	rotate: 90
+2.0.1_additions/eyes/crying/lighteye_watery_R
+	bounds: 3192, 161, 62, 40
+	rotate: 90
+2.0.1_additions/eyes/crying/tear_watery_L
+	bounds: 3935, 182, 41, 29
+	rotate: 90
+2.0.1_additions/eyes/crying/tear_watery_R
+	bounds: 3625, 153, 33, 27
+2.0.1_additions/eyes/lid_rage_L
+	bounds: 2062, 141, 82, 81
+	rotate: 90
+2.0.1_additions/eyes/lid_rage_R
+	bounds: 2149, 142, 80, 81
+2.0.1_additions/mouths/mouth_cheesy_grin
+	bounds: 1609, 104, 119, 65
+	rotate: 90
+2.0.1_additions/mouths/mouth_closed_teeth_pain
+	bounds: 466, 195, 64, 28
+2.0.1_additions/mouths/mouth_concentration
+	bounds: 2934, 128, 95, 36
+	rotate: 90
+2.0.1_additions/mouths/mouth_grimace
+	bounds: 2721, 121, 102, 40
+	rotate: 90
+2.0.1_additions/mouths/mouth_open_scream1
+	bounds: 3418, 163, 60, 30
+	rotate: 90
+2.0.1_additions/mouths/mouth_open_scream2
+	bounds: 3278, 169, 54, 38
+	rotate: 90
+2.0.1_additions/mouths/mouth_rage
+	bounds: 2385, 97, 126, 46
+	rotate: 90
+2.0.1_additions/mouths/mouth_slack_jawed
+	bounds: 2810, 149, 74, 54
+	rotate: 90
+2.0.1_additions/mouths/mouth_smug
+	bounds: 2767, 113, 110, 37
+	offsets: 0, 1, 110, 38
+	rotate: 90
+2.0.1_additions/mouths/mouth_starstruck
+	bounds: 2235, 131, 92, 68
+	rotate: 90
+2.0.1_additions/mouths/punched_mouth
+	bounds: 1852, 100, 123, 58
+	rotate: 90
+2.0.1_additions/puffy_cheek
+	bounds: 2647, 154, 68, 69
+2.0.1_additions/puffy_cheek_sick
+	bounds: 2573, 154, 68, 69
+EMOTE_VFX/SmarthPhone/phone_selfie
+	bounds: 3140, 168, 46, 55
+	offsets: 4, 0, 50, 60
+EMOTE_VFX/blush
+	bounds: 409, 206, 32, 17
+	offsets: 1, 0, 33, 17
+EMOTE_VFX/money/wallet_closed
+	bounds: 3322, 178, 44, 45
+EMOTE_VFX/money/wallet_open
+	bounds: 3091, 160, 63, 43
+	rotate: 90
+base_colours/crewchsia/body_base
+	bounds: 1263, 112, 92, 111
+	offsets: 42, 31, 179, 180
+base_colours/crewchsia/eyeball_L
+	bounds: 3547, 181, 40, 42
+	offsets: 1, 0, 42, 42
+base_colours/crewchsia/eyeball_R
+	bounds: 3454, 182, 41, 41
+base_colours/crewchsia/eyelids/lid_angry
+	bounds: 3970, 185, 38, 30
+	offsets: 0, 0, 39, 30
+	rotate: 90
+base_colours/crewchsia/eyelids/lid_blink
+	bounds: 3501, 181, 40, 42
+	offsets: 1, 0, 42, 42
+base_colours/crewchsia/eyelids/lid_happy
+	bounds: 4034, 184, 39, 23
+	offsets: 1, 0, 41, 23
+	rotate: 90
+base_colours/crewchsia/eyelids/lid_sad
+	bounds: 3372, 174, 40, 49
+	offsets: 1, 0, 42, 49
+base_colours/crewchsia/finger_L
+	bounds: 4063, 180, 19, 19
+base_colours/crewchsia/hand_L_fist
+	bounds: 3667, 186, 37, 36
+	rotate: 90
+base_colours/crewchsia/hand_L_palm
+	bounds: 3625, 186, 37, 36
+	rotate: 90
+base_colours/crewchsia/hand_R_fist
+	bounds: 3780, 186, 37, 35
+	rotate: 90
+base_colours/crewchsia/leg_L
+	bounds: 3898, 180, 33, 43
+	offsets: 18, 14, 69, 72
+base_colours/crewchsia/leg_R
+	bounds: 3821, 176, 34, 47
+	offsets: 18, 14, 69, 72
+base_colours/crewchsia/mouth_flat
+	bounds: 3664, 169, 31, 11
+base_colours/crewchsia/mouth_sleep_closed
+	bounds: 3780, 164, 18, 16
+base_colours/crewchsia/mouth_sleep_open
+	bounds: 3749, 171, 52, 25
+	rotate: 90
+base_colours/crewchsia/mouth_teethygrin
+	bounds: 4006, 174, 49, 22
+	rotate: 90
+base_colours/crewchsia/pupil_L
+	bounds: 688, 204, 18, 19
+	offsets: 0, 0, 19, 19
+base_colours/crewchsia/pupil_R
+	bounds: 4063, 205, 18, 18
+base_colours/crewchsia/thumb_L
+	bounds: 536, 202, 20, 21
+hand_pointing
+	bounds: 1450, 124, 99, 79
+	rotate: 90
+shadow
+	bounds: 1916, 107, 116, 59
+	offsets: 3, 3, 122, 64
+	rotate: 90

@@ -1,0 +1,49 @@
+016ARP_Destructible_Items_Big.png
+	size: 4092, 2696
+	filter: Linear, Linear
+	scale: 0.5
+big items/Plane_1
+	bounds: 6, 869, 2763, 1819
+	offsets: 12, 6, 2787, 1825
+big items/Plane_2
+	bounds: 2775, 1155, 1533, 1150
+	offsets: 6, 6, 1539, 1156
+	rotate: 90
+big items/Plane_3
+	bounds: 2775, 6, 1143, 1150
+	offsets: 6, 6, 1149, 1156
+	rotate: 90
+break_particles/break_particle_1
+	bounds: 4049, 2624, 27, 26
+break_particles/break_particle_2
+	bounds: 4049, 2656, 30, 32
+break_particles/break_particle_3
+	bounds: 4030, 2401, 46, 49
+brown_button_poof/brown_button_poof_A
+	bounds: 271, 645, 239, 218
+	offsets: 1, 1, 241, 220
+brown_button_poof/brown_button_poof_B
+	bounds: 516, 649, 236, 214
+	offsets: 1, 1, 238, 216
+brown_button_poof/brown_button_poof_C
+	bounds: 6, 621, 259, 242
+	offsets: 1, 1, 261, 244
+hit spark
+	bounds: 758, 767, 96, 228
+	offsets: 0, 0, 97, 228
+	rotate: 90
+hit_fx/hit_effect1
+	bounds: 4025, 2280, 60, 62
+hit_fx/hit_effect2
+	bounds: 3931, 2163, 80, 82
+hit_fx/hit_effect3
+	bounds: 3931, 2251, 88, 91
+smoke/smoke_particle_A
+	bounds: 3931, 2574, 112, 114
+	offsets: 2, 2, 116, 118
+smoke/smoke_particle_B
+	bounds: 3931, 2456, 110, 112
+	offsets: 3, 3, 116, 118
+smoke/smoke_particle_C
+	bounds: 3931, 2348, 93, 102
+	offsets: 2, 2, 97, 106

@@ -1,0 +1,62 @@
+55c6cca2b7daf2d8.png
+	size: 2104, 2068
+	filter: Linear, Linear
+images/Explosion1/explosion1
+	bounds: 6, 321, 419, 422
+	offsets: 2, 2, 421, 445
+images/Explosion1/explosion2
+	bounds: 431, 6, 347, 347
+	offsets: 32, 77, 421, 445
+images/Explosion1/explosion3
+	bounds: 431, 359, 395, 384
+	offsets: 9, 60, 421, 445
+images/Explosion1/explosion4
+	bounds: 6, 13, 318, 302
+	offsets: 51, 69, 421, 445
+images/Explosion1/explosion5
+	bounds: 784, 21, 332, 325
+	offsets: 40, 56, 421, 445
+	rotate: 90
+images/Explosion1/explosion6
+	bounds: 832, 388, 355, 349
+	offsets: 25, 45, 421, 445
+	rotate: 90
+images/Explosion1/explosion7
+	bounds: 1187, 467, 350, 350
+	offsets: 32, 45, 421, 445
+images/Explosion1/explosion8
+	bounds: 1543, 486, 348, 331
+	offsets: 35, 58, 421, 445
+images/Explosion1/explosion9
+	bounds: 1187, 139, 342, 322
+	offsets: 41, 65, 421, 445
+images/broken_piece_1
+	bounds: 1005, 775, 43, 36
+	offsets: 1, 1, 45, 38
+images/broken_piece_2
+	bounds: 1897, 772, 63, 45
+	offsets: 1, 1, 65, 47
+images/broken_piece_3
+	bounds: 330, 254, 75, 61
+	offsets: 1, 1, 77, 63
+images/broken_plane
+	bounds: 1161, 891, 1171, 935
+	offsets: 1, 1, 1173, 937
+	rotate: 90
+images/broken_wing
+	bounds: 1543, 156, 329, 324
+	offsets: 1, 1, 331, 326
+images/plane
+	bounds: 6, 817, 1149, 1245
+	offsets: 1, 1, 1151, 1247
+images/plane_tip
+	bounds: 922, 749, 77, 62
+	offsets: 1, 1, 79, 64
+images/propeller_1
+	bounds: 6, 749, 62, 910
+	offsets: 1, 0, 64, 910
+	rotate: 90
+images/propeller_2
+	bounds: 1161, 823, 62, 910
+	offsets: 1, 0, 64, 910
+	rotate: 90

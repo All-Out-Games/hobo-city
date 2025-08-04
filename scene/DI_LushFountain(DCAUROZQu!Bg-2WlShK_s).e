@@ -1,0 +1,72 @@
+13
+6339371728899
+853242786976814 1747354226822262700
+{
+  "name": "DI_LushFountain",
+  "local_enabled": true,
+  "local_position": {
+    "X": 46.1982879638671875,
+    "Y": -39.0420074462890625
+  },
+  "local_rotation": 0,
+  "local_scale": {
+    "X": 1,
+    "Y": 1
+  },
+  "previous_sibling": "749117776238565:1749610577417545400",
+  "next_sibling": "580938527170723:1745628445284822100",
+  "parent": "572739174724627:1745626489395237700",
+  "spawn_as_networked_entity": true,
+  "linked_prefab": "DI_LushFountain.prefab"
+},
+{
+  "cid": 1,
+  "aoid": "853242787323708:1747354226822358400",
+  "component_type": "Mono_Component",
+  "mono_component_type": "Destructable",
+  "data": {
+    "MaxHealth": 240,
+    "skin": "lush_fountain",
+    "RespawnTime": 30,
+    "CashReward": 17
+  }
+},
+{
+  "cid": 2,
+  "aoid": "853242787363114:1747354226822369300",
+  "component_type": "Internal_Component",
+  "internal_component_type": "Spine_Animator",
+  "data": {
+    "skeleton_data_asset": "rigs/destructible-item-2/016ARP_Destructible_Items_2.spine",
+    "ordered_skins": [
+      "lush_fountain"
+    ],
+    "depth_offset": 0.8560333251953125
+  }
+},
+{
+  "cid": 3,
+  "aoid": "853242787401676:1747354226822380000",
+  "component_type": "Internal_Component",
+  "internal_component_type": "Polygon_Collider",
+  "data": {
+    "points": [
+      {
+        "X": -1.4421081542968750,
+        "Y": 1.4180355072021484
+      },
+      {
+        "X": -1.4514770507812500,
+        "Y": 0.0145511627197266
+      },
+      {
+        "X": 1.4329833984375000,
+        "Y": 0.0141716003417969
+      },
+      {
+        "X": 1.4490509033203125,
+        "Y": 1.4229488372802734
+      }
+    ]
+  }
+}

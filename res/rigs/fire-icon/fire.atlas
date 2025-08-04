@@ -1,0 +1,20 @@
+b47debf6eaff15b140a8add8fe1b36d4.png
+	size: 512, 512
+	filter: Linear, Linear
+Flame 1/fire_1
+	bounds: 184, 327, 176, 304
+	offsets: 1, 2, 178, 307
+	rotate: 90
+Flame 1/fire_2
+	bounds: 6, 190, 172, 313
+	offsets: 1, 1, 174, 315
+Flame 1/fire_3
+	bounds: 311, 31, 175, 290
+	offsets: 1, 1, 178, 292
+Flame 1/fire_4
+	bounds: 6, 6, 178, 299
+	offsets: 1, 1, 180, 301
+	rotate: 90
+Smoke1
+	bounds: 184, 239, 80, 82
+	offsets: 1, 1, 82, 84

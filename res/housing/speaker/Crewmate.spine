@@ -1,0 +1,191 @@
+{
+"skeleton": { "hash": "MI0ecaIXATU", "spine": "4.0-from-4.1-from-4.2.37" },
+"bones": [
+	{ "name": "root", "x": 2.4, "y": -1.2 },
+	{ "name": "FX", "parent": "root", "x": 0.9, "y": -120.93 },
+	{ "name": "speaker", "parent": "FX", "x": 0.67, "y": 60.65 },
+	{ "name": "speaker_scale", "parent": "speaker", "x": -1.87, "y": -0.68 },
+	{ "name": "sound_L", "parent": "speaker", "rotation": 180, "x": -288.59, "y": 189.09, "transform": "noScale" },
+	{
+		"name": "sound_R",
+		"parent": "speaker",
+		"rotation": 180,
+		"x": 302.73,
+		"y": 189.09,
+		"scaleX": -1,
+		"transform": "noScale"
+	}
+],
+"slots": [
+	{ "name": "speaker-speaker_L", "bone": "speaker_scale" },
+	{ "name": "speaker-speaker_R", "bone": "speaker_scale" },
+	{ "name": "speaker-speaker_mid", "bone": "speaker_scale" },
+	{ "name": "soundwave", "bone": "sound_L" },
+	{ "name": "soundwave2", "bone": "sound_R" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"soundwave": {
+				"speaker/sound/wave1": { "x": 35.42, "y": -34.23, "rotation": 180, "width": 143, "height": 128 },
+				"speaker/sound/wave2": { "x": 63.26, "y": -76.33, "rotation": 180, "width": 195, "height": 210 },
+				"speaker/sound/wave3": { "x": 109.05, "y": -113.99, "rotation": 180, "width": 287, "height": 287 }
+			},
+			"soundwave2": {
+				"speaker/sound/wave1": { "x": 35.42, "y": -34.23, "rotation": 180, "width": 143, "height": 128 },
+				"speaker/sound/wave2": { "x": 63.26, "y": -76.33, "rotation": 180, "width": 195, "height": 210 },
+				"speaker/sound/wave3": { "x": 109.05, "y": -113.99, "rotation": 180, "width": 287, "height": 287 }
+			},
+			"speaker-speaker_L": {
+				"speaker/speaker_L": { "x": -183.21, "y": 75.28, "width": 126, "height": 155 }
+			},
+			"speaker-speaker_mid": {
+				"speaker/speaker_mid": { "x": -1.59, "y": 117.63, "width": 309, "height": 265 }
+			},
+			"speaker-speaker_R": {
+				"speaker/speaker_R": { "x": 178.69, "y": 74.6, "width": 126, "height": 155 }
+			}
+		}
+	}
+],
+"animations": {
+	"speaker_on": {
+		"slots": {
+			"soundwave": {
+				"attachment": [
+					{ "name": "speaker/sound/wave2" },
+					{ "time": 0.0833, "name": "speaker/sound/wave3" },
+					{ "time": 0.1667, "name": null },
+					{ "time": 0.25, "name": "speaker/sound/wave1" },
+					{ "time": 0.3333, "name": "speaker/sound/wave2" },
+					{ "time": 0.4167, "name": "speaker/sound/wave3" },
+					{ "time": 0.5, "name": null },
+					{ "time": 0.5833, "name": "speaker/sound/wave1" },
+					{ "time": 0.6667, "name": "speaker/sound/wave2" },
+					{ "time": 0.75, "name": "speaker/sound/wave3" },
+					{ "time": 0.8333, "name": null },
+					{ "time": 0.9167, "name": "speaker/sound/wave1" },
+					{ "time": 1, "name": "speaker/sound/wave2" }
+				]
+			},
+			"soundwave2": {
+				"attachment": [
+					{ "name": "speaker/sound/wave2" },
+					{ "time": 0.0833, "name": "speaker/sound/wave3" },
+					{ "time": 0.1667, "name": null },
+					{ "time": 0.25, "name": "speaker/sound/wave1" },
+					{ "time": 0.3333, "name": "speaker/sound/wave2" },
+					{ "time": 0.4167, "name": "speaker/sound/wave3" },
+					{ "time": 0.5, "name": null },
+					{ "time": 0.5833, "name": "speaker/sound/wave1" },
+					{ "time": 0.6667, "name": "speaker/sound/wave2" },
+					{ "time": 0.75, "name": "speaker/sound/wave3" },
+					{ "time": 0.8333, "name": null },
+					{ "time": 0.9167, "name": "speaker/sound/wave1" },
+					{ "time": 1, "name": "speaker/sound/wave2" }
+				]
+			},
+			"speaker-speaker_L": {
+				"attachment": [
+					{ "name": "speaker/speaker_L" }
+				]
+			},
+			"speaker-speaker_mid": {
+				"attachment": [
+					{ "name": "speaker/speaker_mid" }
+				]
+			},
+			"speaker-speaker_R": {
+				"attachment": [
+					{ "name": "speaker/speaker_R" }
+				]
+			}
+		},
+		"bones": {
+			"speaker_scale": {
+				"scalex": [
+					{
+						"value": 1.03,
+						"curve": [ 0.056, 1.03, 0.153, 0.985 ]
+					},
+					{
+						"time": 0.2083,
+						"value": 0.985,
+						"curve": [ 0.264, 0.985, 0.292, 1.03 ]
+					},
+					{
+						"time": 0.3333,
+						"value": 1.03,
+						"curve": [ 0.389, 1.03, 0.486, 0.985 ]
+					},
+					{
+						"time": 0.5417,
+						"value": 0.985,
+						"curve": [ 0.597, 0.985, 0.625, 1.03 ]
+					},
+					{
+						"time": 0.6667,
+						"value": 1.03,
+						"curve": [ 0.722, 1.03, 0.819, 0.985 ]
+					},
+					{
+						"time": 0.875,
+						"value": 0.985,
+						"curve": [ 0.931, 0.985, 0.944, 1.03 ]
+					},
+					{ "time": 1, "value": 1.03 }
+				],
+				"scaley": [
+					{
+						"value": 0.97,
+						"curve": [ 0.056, 0.97, 0.111, 1.119 ]
+					},
+					{
+						"time": 0.1667,
+						"value": 1.119,
+						"curve": [ 0.222, 1.119, 0.278, 0.97 ]
+					},
+					{
+						"time": 0.3333,
+						"value": 0.97,
+						"curve": [ 0.389, 0.97, 0.444, 1.119 ]
+					},
+					{
+						"time": 0.5,
+						"value": 1.119,
+						"curve": [ 0.556, 1.119, 0.611, 0.97 ]
+					},
+					{
+						"time": 0.6667,
+						"value": 0.97,
+						"curve": [ 0.722, 0.97, 0.778, 1.119 ]
+					},
+					{
+						"time": 0.8333,
+						"value": 1.119,
+						"curve": [ 0.889, 1.119, 0.944, 0.97 ]
+					},
+					{ "time": 1, "value": 0.97 }
+				]
+			},
+			"sound_L": {
+				"rotate": [
+					{ "value": 17.2 }
+				],
+				"translate": [
+					{ "x": 72.44, "y": -32.72 }
+				]
+			},
+			"sound_R": {
+				"rotate": [
+					{ "value": -7.98 }
+				],
+				"translate": [
+					{ "x": -106.64, "y": -63.53 }
+				]
+			}
+		}
+	}
+}
+}

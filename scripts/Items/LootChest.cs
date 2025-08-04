@@ -1,0 +1,261 @@
+using System.Collections;
+using System.Data;
+using AO;
+
+namespace ReusableWeapons
+{
+    /// <summary>
+    /// The system for the loot chest that is in Red Sun
+    /// Has a normal and a 'legendary' variant
+    /// The legendary variant has a higher chance of spawning good loot, and also has a unique skin and animations
+    /// 
+    /// The chest can be interacted with by players to open it
+    /// When opened, it will randomly select a loot table based on the chest tier and roll for each item in the set
+    /// The loot tables are defined below
+    /// 
+    /// The chest will despawn after a short duration after being opened
+    /// </summary>
+    public partial class LootChest : Component
+    {
+        private const float BASIC_OPEN_DURATION = 0.15f;
+        private const float EXCITING_OPEN_DURATION = 1.75f;
+
+        private const float LEGENDARY_CHEST_CHANCE = 0.15f;
+
+        #region Loot Table Randomizations
+        /// <summary>
+        /// Defines the information of a single item in the loot table
+        /// </summary>
+        public struct LootChestDrop
+        {
+            public CustomItemDefinition ItemDef;
+            public int MinQuantity;
+            public int MaxQuantity;
+
+            public LootChestDrop(CustomItemDefinition def, int min = 1, int max = 1)
+            {
+                ItemDef = def;
+                MinQuantity = min;
+                MaxQuantity = max;
+            }
+        }
+
+        /// <summary>
+        /// The loot table for weapons
+        /// Can add as many weapons as you want here, and also add other loot tables like this
+        /// The number is the weighting for that item in the table
+        /// The weights are relative to each other, so if you want a weapon to drop more often than another, you can set it higher
+        /// If all the weights are the same, the chances for each weapon will be identical
+        /// </summary>
+        private static readonly WeightedList<LootChestDrop> WeaponLootTable = new()
+        {
+            {new LootChestDrop(GameManager.Instance.GameItems.Blunderbuss), 1},
+            {new LootChestDrop(GameManager.Instance.GameItems.AssaultRifle), 2},
+        };
+
+        /// <summary>
+        /// The loot table for ammo
+        /// Works the same way as the weapon loot table
+        /// </summary>
+        public static readonly WeightedList<LootChestDrop> AmmoLootTable = new()
+        {
+            {new LootChestDrop(GameManager.Instance.GameItems.LightAmmo), 3},
+            {new LootChestDrop(GameManager.Instance.GameItems.MediumAmmo), 3},
+            {new LootChestDrop(GameManager.Instance.GameItems.HeavyAmmo), 3},
+            {new LootChestDrop(GameManager.Instance.GameItems.ShotgunShells), 3},
+        };
+        #endregion
+
+        [Serialized] public Interactable Interactable;
+        [Serialized] public Spine_Animator Skeleton;
+
+        private SyncVar<int> _chestTier = new(0);
+        public ItemRarity ChestTier
+        {
+            get => (ItemRarity)_chestTier.Value;
+            set
+            {
+                if (Network.IsServer)
+                {
+                    _chestTier.Set((int)value);
+                }
+            }
+        }
+
+        public override void Awake()
+        {
+            Interactable.OnInteract += OnInteract;
+
+            Skeleton.Awaken();
+            var sm = StateMachine.Make();
+            Skeleton.SpineInstance.SetStateMachine(sm, Entity);
+
+            var baseLayer = sm.CreateLayer("main");
+
+            // Basic chests (under gold tier)
+            var basicIdleState = baseLayer.CreateState("idle_loop", 0, true);
+            baseLayer.CreateGlobalTransition(basicIdleState).CreateTriggerCondition(sm.CreateVariable("idle_basic", StateMachineVariableKind.TRIGGER));
+
+            var baseOpeningState = baseLayer.CreateState("open", 0, false);
+            baseLayer.CreateTransition(basicIdleState, baseOpeningState, false).CreateTriggerCondition(sm.CreateVariable("open_basic", StateMachineVariableKind.TRIGGER));
+
+            // Exciting chests (gold, diamond tier)
+            var excitingIdleState = baseLayer.CreateState("fall_loop_sparkle", 0, true);
+            baseLayer.CreateGlobalTransition(excitingIdleState).CreateTriggerCondition(sm.CreateVariable("idle_exciting", StateMachineVariableKind.TRIGGER));
+
+            var excitingOpeningState = baseLayer.CreateState("open_long", 0, false);
+            baseLayer.CreateTransition(excitingIdleState, excitingOpeningState, false).CreateTriggerCondition(sm.CreateVariable("open_exciting", StateMachineVariableKind.TRIGGER));
+
+            baseLayer.InitialState = basicIdleState;
+
+            _chestTier.OnSync += (_, _) =>
+            {
+                Skeleton.SpineInstance.SetSkin(ChestTier == ItemRarity.Legendary ? "gold" : "iron");
+                Skeleton.SpineInstance.RefreshSkins();
+
+                Skeleton.SpineInstance.StateMachine.SetTrigger(ChestTier == ItemRarity.Legendary ? "idle_exciting" : "idle_basic");
+            };
+        }
+
+        [ClientRpc]
+        public void SpawnChest(Vector2 position)
+        {
+            Entity.Position = position;
+            Interactable.LocalEnabled = true;
+        }
+
+        [ClientRpc]
+        public void DespawnChest()
+        {
+            Entity.Position = Vector2.One * 1000;
+        }
+
+        public void ServerRandomizeChestType()
+        {
+            if (!Network.IsServer) return;
+
+            ChestTier = Random.Shared.NextFloat() <= LEGENDARY_CHEST_CHANCE ? ItemRarity.Legendary : ItemRarity.Common;
+        }
+
+        private void OnInteract(Player player)
+        {
+            var myPlayer = (MyPlayer)player;
+            Interactable.LocalEnabled = false;
+
+            Coroutine.Start(myPlayer.Entity, DoOpenSequence());
+            IEnumerator DoOpenSequence()
+            {
+                Skeleton.SpineInstance.StateMachine.SetTrigger(ChestTier == ItemRarity.Legendary ? "open_exciting" : "open_basic");
+
+                SFX.Play(Assets.GetAsset<AudioAsset>(ChestTier == ItemRarity.Legendary ? "sounds/reusable-weapons/open_chest_long.wav" : "sounds/reusable-weapons/open_chest_default.wav"), new SFX.PlaySoundDesc() { Position = Entity.Position, Positional = true });
+
+                var openTime = ChestTier == ItemRarity.Legendary ? EXCITING_OPEN_DURATION : BASIC_OPEN_DURATION;
+
+                yield return new WaitForSeconds(openTime);
+
+                if (Network.IsServer)
+                {
+                    ServerDetermineLoot(myPlayer);
+                }
+
+                yield return new WaitForSeconds(1f);
+
+                if (Network.IsServer)
+                {
+                    CallClient_DespawnChest();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Actually defines the loot that will be dropped by this chest
+        /// For Red Sun, it was setup so that the chests would drop at least 1 weapon and 1 ammo
+        /// The weights of the loot tables can be modified to affect the chances of dropping things
+        /// ---> Ex: Notice that the first dropped item is always a weapon, and then it is significantly less likely to drop a second weapon after that, but it is possible
+        /// </summary>
+        private void ServerDetermineLoot(MyPlayer player)
+        {
+            if (!Network.IsServer) return;
+
+            // How many sets of loot to pull from the table
+            // Note that this set may contain more than 1 item instance, if the quantity for the set is greater than 1
+            // This means that this number does not always equal the number of actual grabbable items from the ground
+            int numSetsOfLoot = 2;
+            int weaponsSpawned = 0;
+
+            for (int lootSetIndex = 0; lootSetIndex < numSetsOfLoot; lootSetIndex++)
+            {
+                var tableWeighting = new WeightedList<WeightedList<LootChestDrop>>()
+                {
+                    {WeaponLootTable, 100},
+                    {AmmoLootTable, 50},
+                };
+
+                switch (weaponsSpawned)
+                {
+                    case 0:
+                        tableWeighting.SetWeightOrRemove(WeaponLootTable, 100);
+                        tableWeighting.SetWeightOrRemove(AmmoLootTable, 0);
+                        break;
+                    case 1:
+                        tableWeighting.SetWeightOrRemove(WeaponLootTable, 5);
+                        tableWeighting.SetWeightOrRemove(AmmoLootTable, 44);
+                        break;
+                    default:
+                        tableWeighting.SetWeightOrRemove(WeaponLootTable, 0);
+                        tableWeighting.SetWeightOrRemove(AmmoLootTable, 47);
+                        break;
+                }
+
+                var table = tableWeighting.Next();
+
+                var clonedTable = new WeightedList<LootChestDrop>();
+                clonedTable.Add(table);
+
+                if (table == WeaponLootTable)
+                {
+                    weaponsSpawned++;
+                }
+
+                LootChestDrop lootDrop = clonedTable.Next();
+                ItemRarity? forceRarity = null;
+
+                for (int itemInstanceIndex = 0; itemInstanceIndex < Random.Shared.Next(lootDrop.MinQuantity, lootDrop.MaxQuantity); itemInstanceIndex++)
+                {
+                    SpawnLootInstance(lootDrop.ItemDef, forceRarity);
+                }
+            }
+        }
+
+        private void SpawnLootInstance(CustomItemDefinition itemDef, ItemRarity? forcedItemRarity = null)
+        {
+            ItemRarity? rarity = null;
+            var itemCategory = itemDef.ItemCategory;
+            if (itemCategory == ItemCategory.Weapon)
+            {
+                rarity = forcedItemRarity ?? GetScaledRarities().Next();
+            }
+
+            GameItems.SpawnLootInstance(itemDef, Entity.Position, true, true, rarity);
+        }
+
+        /// <summary>
+        /// The likelihood of the weapons having a specific rarity
+        /// Can modify these weights at runtime based on some value (ex: in Red Sun, it is based on the Day Count) to make higher value weapons more likely to drop later on
+        /// </summary>
+        private WeightedList<ItemRarity> GetScaledRarities()
+        {
+            WeightedList<ItemRarity> table = new()
+            {
+                {ItemRarity.Common, 1 },
+                {ItemRarity.Uncommon, 1 },
+                {ItemRarity.Rare, 1 },
+                {ItemRarity.Epic, 1 },
+                {ItemRarity.Legendary, 1 },
+                //{ItemRarity.Mythic, 1 }, // Uncomment if you want to be able to get mythic items from chests
+            };
+
+            return table;
+        }
+    }
+}

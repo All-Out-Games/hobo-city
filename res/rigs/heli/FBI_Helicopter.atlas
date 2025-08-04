@@ -1,0 +1,52 @@
+FBI_Helicopter.png
+	size: 4080, 256
+	filter: Linear, Linear
+	scale: 0.5
+Apache Helicopter/BigPropeller_1
+	bounds: 3511, 187, 521, 63
+	offsets: 1, 1, 523, 66
+Apache Helicopter/BigPropeller_2
+	bounds: 2456, 184, 521, 66
+	offsets: 1, 1, 523, 68
+Apache Helicopter/BigPropeller_3
+	bounds: 1401, 183, 521, 67
+	offsets: 1, 1, 523, 71
+Apache Helicopter/Helicopter
+	bounds: 6, 6, 466, 244
+	offsets: 0, 1, 466, 245
+Apache Helicopter/PropelerPiece
+	bounds: 4038, 160, 42, 36
+	rotate: 90
+Apache Helicopter/SmallPropeller_1
+	bounds: 3579, 113, 62, 68
+	offsets: 0, 1, 63, 70
+Apache Helicopter/SmallPropeller_2
+	bounds: 3781, 115, 62, 66
+	offsets: 0, 1, 63, 68
+Apache Helicopter/SmallPropeller_3
+	bounds: 3511, 113, 62, 68
+	offsets: 0, 1, 63, 70
+BigPropeller_1
+	bounds: 2983, 186, 522, 64
+	offsets: 1, 1, 524, 67
+BigPropeller_2
+	bounds: 873, 183, 522, 67
+	offsets: 1, 1, 524, 71
+BigPropeller_3
+	bounds: 1928, 184, 522, 66
+	offsets: 1, 2, 524, 69
+FBI_Helicopter
+	bounds: 478, 6, 389, 244
+	offsets: 0, 1, 389, 245
+PropellerPiece
+	bounds: 4038, 208, 42, 36
+	rotate: 90
+SmallPropeller_1
+	bounds: 3714, 113, 61, 68
+	offsets: 1, 1, 63, 70
+SmallPropeller_2
+	bounds: 3647, 113, 61, 68
+	offsets: 1, 1, 63, 70
+SmallPropeller_3
+	bounds: 3849, 115, 61, 66
+	offsets: 1, 1, 63, 68

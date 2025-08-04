@@ -1,0 +1,634 @@
+{
+"skeleton": { "hash": "KgCGoel+etw", "spine": "4.0.64", "x": -555.25, "y": -246.3, "width": 1118, "height": 1528.58 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Stand", "parent": "root", "length": 383.77, "rotation": 90.42, "x": 13.24, "y": -162.91 },
+	{ "name": "Wheel", "parent": "Stand", "x": 838.16, "y": 1.63 },
+	{ "name": "pointer", "parent": "Stand", "length": 71.12, "rotation": -179.64, "x": 1329.67, "y": -0.71 }
+],
+"slots": [
+	{ "name": "shadow", "bone": "root", "attachment": "Lucky Wheel/shadow" },
+	{ "name": "Stand", "bone": "Stand", "attachment": "Lucky Wheel/stand" },
+	{ "name": "lucky_wheel_background", "bone": "Stand", "attachment": "Lucky Wheel/lucky_wheel_background" },
+	{ "name": "wheel", "bone": "Wheel", "attachment": "Lucky Wheel/wheel" },
+	{ "name": "lucky_wheel_frame", "bone": "Stand", "attachment": "Lucky Wheel/lucky_wheel_frame" },
+	{ "name": "led_1", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_2", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_3", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_4", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_5", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_6", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_7", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_8", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_9", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_10", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "led_11", "bone": "Stand", "attachment": "Lucky Wheel/led_off" },
+	{ "name": "spin_button", "bone": "Stand", "attachment": "Lucky Wheel/spin_button" },
+	{ "name": "pointer", "bone": "pointer", "attachment": "Lucky Wheel/pointer" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"led_1": {
+				"Lucky Wheel/led_off": { "x": 1263.74, "y": -253.45, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 1263.74, "y": -253.45, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_2": {
+				"Lucky Wheel/led_off": { "x": 1080.3, "y": -439.79, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 1080.3, "y": -439.79, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_3": {
+				"Lucky Wheel/led_off": { "x": 830.55, "y": -499.6, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 830.55, "y": -499.6, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_4": {
+				"Lucky Wheel/led_off": { "x": 576.16, "y": -427.71, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 576.16, "y": -427.71, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_5": {
+				"Lucky Wheel/led_off": { "x": 398.16, "y": -252.73, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 398.16, "y": -252.73, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_6": {
+				"Lucky Wheel/led_off": { "x": 324.43, "y": 8.32, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 324.43, "y": 8.32, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_7": {
+				"Lucky Wheel/led_off": { "x": 396.34, "y": 265.51, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 396.34, "y": 265.51, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_8": {
+				"Lucky Wheel/led_off": { "x": 579.68, "y": 437.85, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 579.68, "y": 437.85, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_9": {
+				"Lucky Wheel/led_off": { "x": 837.91, "y": 508.8, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 837.91, "y": 508.8, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_10": {
+				"Lucky Wheel/led_off": { "x": 1083.9, "y": 436.97, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 1083.89, "y": 436.97, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"led_11": {
+				"Lucky Wheel/led_off": { "x": 1267.44, "y": 253.55, "rotation": -90.42, "width": 85, "height": 85 },
+				"Lucky Wheel/led_on": { "x": 1267.44, "y": 253.55, "rotation": -90.42, "width": 161, "height": 161 }
+			},
+			"lucky_wheel_background": {
+				"Lucky Wheel/lucky_wheel_background": { "x": 835.16, "y": 3.89, "rotation": -90.42, "width": 1067, "height": 1067 }
+			},
+			"lucky_wheel_frame": {
+				"Lucky Wheel/lucky_wheel_frame": { "x": 870.73, "y": 3.14, "rotation": -90.42, "width": 1088, "height": 1149 }
+			},
+			"pointer": {
+				"Lucky Wheel/pointer": { "x": 29.03, "y": -0.39, "rotation": 89.23, "width": 149, "height": 204 }
+			},
+			"shadow": {
+				"Lucky Wheel/shadow": { "x": 3.75, "y": -27.3, "width": 1118, "height": 438 }
+			},
+			"spin_button": {
+				"Lucky Wheel/spin_button": { "x": 826.66, "y": 4.46, "rotation": -90.42, "width": 240, "height": 258 }
+			},
+			"Stand": {
+				"Lucky Wheel/stand": { "x": 215.67, "y": 7.92, "rotation": -90.42, "width": 668, "height": 422 }
+			},
+			"wheel": {
+				"Lucky Wheel/wheel": { "rotation": -90.42, "width": 876, "height": 877 }
+			}
+		}
+	}
+],
+"animations": {
+	"Idle": {
+		"slots": {
+			"led_1": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 1, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_2": {
+				"attachment": [
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_3": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 1, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_4": {
+				"attachment": [
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_5": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 1, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_6": {
+				"attachment": [
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_7": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 1, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_8": {
+				"attachment": [
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_9": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 1, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_10": {
+				"attachment": [
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_11": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 1, "name": "Lucky Wheel/led_on" }
+				]
+			}
+		}
+	},
+	"Spin_End": {
+		"slots": {
+			"led_1": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" },
+					{ "time": 2.1667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_2": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_3": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" },
+					{ "time": 2.1667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_4": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_5": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" },
+					{ "time": 2.1667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_6": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_7": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" },
+					{ "time": 2.1667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_8": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_9": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" },
+					{ "time": 2.1667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_10": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_11": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" },
+					{ "time": 1, "name": "Lucky Wheel/led_off" },
+					{ "time": 1.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 1.6667, "name": "Lucky Wheel/led_off" },
+					{ "time": 2.1667, "name": "Lucky Wheel/led_on" }
+				]
+			}
+		},
+		"bones": {
+			"Wheel": {
+				"rotate": [
+					{},
+					{ "time": 0.5833, "value": -366.94 },
+					{ "time": 0.8333, "value": -360.06 }
+				]
+			},
+			"pointer": {
+				"rotate": [
+					{},
+					{ "time": 0.0333, "value": -12.76 },
+					{ "time": 0.0667 },
+					{ "time": 0.1, "value": -12.76 },
+					{ "time": 0.1333 },
+					{ "time": 0.1667, "value": -12.76 },
+					{ "time": 0.2 },
+					{ "time": 0.2333, "value": -12.76 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "value": -12.76 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "value": -12.76 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "value": -12.76 },
+					{ "time": 0.4667 },
+					{ "time": 0.5, "value": -12.76 },
+					{ "time": 0.5333 },
+					{ "time": 0.6833, "value": -12.76 },
+					{ "time": 0.8333, "value": 4.45 },
+					{ "time": 1 }
+				]
+			},
+			"Stand": {
+				"scale": [
+					{},
+					{ "time": 0.0833, "x": 0.99 },
+					{ "time": 0.1667 },
+					{ "time": 0.25, "x": 0.99 },
+					{ "time": 0.3333 },
+					{ "time": 0.45, "x": 0.99 },
+					{ "time": 0.5833 }
+				]
+			}
+		}
+	},
+	"Spin_Loop": {
+		"slots": {
+			"led_1": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_2": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_3": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_4": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_5": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_6": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_7": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_8": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_9": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_10": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_11": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			}
+		},
+		"bones": {
+			"Wheel": {
+				"rotate": [
+					{},
+					{ "time": 0.3333, "value": -360.06 },
+					{ "time": 0.6667, "value": -720 }
+				]
+			},
+			"pointer": {
+				"rotate": [
+					{},
+					{ "time": 0.0333, "value": -12.76 },
+					{ "time": 0.0667 },
+					{ "time": 0.1, "value": -12.76 },
+					{ "time": 0.1333 },
+					{ "time": 0.1667, "value": -12.76 },
+					{ "time": 0.2 },
+					{ "time": 0.2333, "value": -12.76 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "value": -12.76 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "value": -12.76 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "value": -12.76 },
+					{ "time": 0.4667 },
+					{ "time": 0.5, "value": -12.76 },
+					{ "time": 0.5333 },
+					{ "time": 0.5667, "value": -12.76 },
+					{ "time": 0.6 },
+					{ "time": 0.6333, "value": -12.76 },
+					{ "time": 0.6667 }
+				]
+			},
+			"Stand": {
+				"scale": [
+					{},
+					{ "time": 0.0833, "x": 0.99 },
+					{ "time": 0.1667 },
+					{ "time": 0.25, "x": 0.99 },
+					{ "time": 0.3333 },
+					{ "time": 0.4167, "x": 0.99 },
+					{ "time": 0.5 },
+					{ "time": 0.5833, "x": 0.99 },
+					{ "time": 0.6667 }
+				]
+			}
+		}
+	},
+	"Spin_Start": {
+		"slots": {
+			"led_1": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_2": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_3": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_4": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_5": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_6": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_7": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_8": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_9": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			},
+			"led_10": {
+				"attachment": [
+					{ "time": 0.1667, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_off" }
+				]
+			},
+			"led_11": {
+				"attachment": [
+					{ "name": "Lucky Wheel/led_on" },
+					{ "time": 0.1667, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.3333, "name": "Lucky Wheel/led_on" },
+					{ "time": 0.5, "name": "Lucky Wheel/led_off" },
+					{ "time": 0.6667, "name": "Lucky Wheel/led_on" }
+				]
+			}
+		},
+		"bones": {
+			"Stand": {
+				"scale": [
+					{},
+					{ "time": 0.05, "x": 0.91, "y": 1.188 },
+					{ "time": 0.1, "x": 1.047, "y": 0.953 },
+					{ "time": 0.15 },
+					{ "time": 0.2333, "x": 0.99 },
+					{ "time": 0.3333 },
+					{ "time": 0.4167, "x": 0.99 },
+					{ "time": 0.5 },
+					{ "time": 0.5833, "x": 0.99 },
+					{ "time": 0.6667 }
+				]
+			},
+			"pointer": {
+				"rotate": [
+					{ "time": 0.2 },
+					{ "time": 0.2333, "value": -12.76 },
+					{ "time": 0.2667 },
+					{ "time": 0.3, "value": -12.76 },
+					{ "time": 0.3333 },
+					{ "time": 0.3667, "value": -12.76 },
+					{ "time": 0.4 },
+					{ "time": 0.4333, "value": -12.76 },
+					{ "time": 0.4667 },
+					{ "time": 0.5, "value": -12.76 },
+					{ "time": 0.5333 },
+					{ "time": 0.5667, "value": -12.76 },
+					{ "time": 0.6 },
+					{ "time": 0.6333, "value": -12.76 },
+					{ "time": 0.6667 }
+				]
+			},
+			"Wheel": {
+				"rotate": [
+					{ "time": 0.1667 },
+					{ "time": 0.6667, "value": -360.06 }
+				]
+			}
+		}
+	}
+}
+}

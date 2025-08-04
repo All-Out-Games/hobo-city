@@ -1,0 +1,64 @@
+307c7b80fd12e7be.png
+	size: 1056, 128
+	filter: Linear, Linear
+	scale: 0.5
+gorilla/expressions/eyes_roar
+	bounds: 921, 89, 33, 21
+	rotate: 90
+gorilla/expressions/mouth_roar
+	bounds: 692, 67, 55, 38
+	rotate: 90
+gorilla/eyes_neutral
+	bounds: 1002, 93, 29, 18
+	rotate: 90
+gorilla/foot_l
+	bounds: 876, 81, 39, 41
+gorilla/foot_r
+	bounds: 831, 81, 41, 39
+	rotate: 90
+gorilla/forearm_l
+	bounds: 433, 70, 49, 52
+gorilla/forearm_r
+	bounds: 377, 70, 51, 52
+gorilla/hand_neutral_l
+	bounds: 488, 73, 48, 49
+gorilla/hand_neutral_r
+	bounds: 644, 75, 42, 47
+gorilla/hands/hand_fist_down_l
+	bounds: 593, 77, 45, 45
+	offsets: 0, 1, 45, 46
+gorilla/hands/hand_fist_down_r
+	bounds: 736, 79, 43, 42
+	rotate: 90
+gorilla/hands/hand_fist_up_l
+	bounds: 542, 73, 45, 49
+gorilla/hands/hand_fist_up_r
+	bounds: 784, 78, 44, 41
+	offsets: 0, 1, 44, 42
+	rotate: 90
+gorilla/head
+	bounds: 6, 27, 80, 95
+	offsets: 5, 0, 86, 95
+gorilla/mouth_neutral
+	bounds: 977, 94, 28, 19
+	offsets: 0, 1, 29, 20
+	rotate: 90
+gorilla/pupil_l
+	bounds: 92, 115, 6, 7
+gorilla/pupil_r
+	bounds: 92, 115, 6, 7
+gorilla/thigh_l
+	bounds: 1026, 98, 21, 24
+gorilla/thigh_r
+	bounds: 948, 98, 24, 23
+	rotate: 90
+gorilla/torso
+	bounds: 92, 27, 95, 95
+gorilla/upperarm_l
+	bounds: 258, 63, 52, 59
+gorilla/upperarm_r
+	bounds: 316, 67, 55, 55
+shadow
+	bounds: 193, 6, 116, 59
+	offsets: 3, 3, 122, 64
+	rotate: 90

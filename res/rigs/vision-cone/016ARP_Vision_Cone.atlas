@@ -1,0 +1,6 @@
+016ARP_Vision_Cone.png
+	size: 136, 116
+	filter: Linear, Linear
+	scale: 0.5
+vision_cone
+	bounds: 6, 6, 121, 102

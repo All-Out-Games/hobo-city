@@ -1,0 +1,32 @@
+HYDR113_screen_effect.png
+	size: 2048, 2048
+	filter: Linear, Linear
+disco light screen/LightHydroDipCone
+	bounds: 6, 439, 646, 986
+	offsets: 20, 5, 681, 992
+	rotate: 90
+disco light screen/RadiantHydroDipCircle
+	bounds: 539, 1671, 551, 269
+	offsets: 26, 14, 591, 284
+disco light screen/RadiantHydroDipCircleBack
+	bounds: 462, 1091, 931, 465
+	offsets: 24, 15, 986, 481
+disco light screen/Shadow
+	bounds: 6, 1739, 527, 201
+	offsets: 1, 1, 529, 203
+disco light screen/blue
+	bounds: 1096, 1562, 418, 378
+	offsets: 42, 22, 479, 422
+disco light screen/orange
+	bounds: 1520, 1521, 420, 419
+	offsets: 26, 60, 471, 491
+disco light screen/pink
+	bounds: 6, 1312, 421, 450
+	offsets: 74, 77, 511, 541
+	rotate: 90
+
+HYDR113_screen_effect_2.png
+	size: 2048, 2048
+	filter: Linear, Linear
+wonky screen/WonkyScreen
+	bounds: 6, 846, 1922, 1082

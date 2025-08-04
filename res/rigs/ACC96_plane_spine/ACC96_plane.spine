@@ -1,0 +1,427 @@
+{
+"skeleton": { "hash": "xaPwtOcbHPA", "spine": "4.0.64", "x": -679.19, "y": -637.31, "width": 1194.44, "height": 1247 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "images/broken_plane", "parent": "root", "x": -1.76, "y": -78.14 },
+	{ "name": "images/propeller_1", "parent": "images/broken_plane", "x": 485.02, "y": 31.94 },
+	{ "name": "images/broken_wing", "parent": "root", "x": -6.59, "y": -717.29 },
+	{ "name": "images/broken_wing3", "parent": "images/broken_wing", "x": 272.29, "y": 251.42 },
+	{ "name": "images/broken_piece_2", "parent": "images/broken_wing", "x": -412.88, "y": 360.07 },
+	{ "name": "images/broken_piece_1", "parent": "images/broken_wing", "x": -230.64, "y": 920.83 },
+	{ "name": "images/broken_piece_3", "parent": "images/broken_wing", "x": -425.15, "y": 1039.99 },
+	{ "name": "images/plane_tip", "parent": "images/broken_wing", "x": 247.76, "y": 1041.74 },
+	{ "name": "bone", "parent": "root", "x": -15.28, "y": -38.04 }
+],
+"slots": [
+	{ "name": "images/broken_piece_1", "bone": "images/broken_piece_1" },
+	{ "name": "images/broken_piece_2", "bone": "images/broken_piece_2" },
+	{ "name": "images/broken_piece_3", "bone": "images/broken_piece_3" },
+	{ "name": "images/broken_wing", "bone": "images/broken_wing3" },
+	{ "name": "images/plane", "bone": "images/broken_plane", "attachment": "images/plane" },
+	{ "name": "images/plane_tip", "bone": "images/plane_tip" },
+	{ "name": "images/propeller_1", "bone": "images/propeller_1", "attachment": "images/propeller_1" },
+	{ "name": "images/Explosion1/explosion1", "bone": "bone" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"images/broken_piece_1": {
+				"images/broken_piece_1": { "x": -3.26, "y": -0.87, "width": 45, "height": 38 }
+			},
+			"images/broken_piece_2": {
+				"images/broken_piece_2": { "x": -6.7, "y": -2.19, "width": 65, "height": 47 }
+			},
+			"images/broken_piece_3": {
+				"images/broken_piece_3": { "x": -0.23, "y": 6.07, "width": 77, "height": 63 }
+			},
+			"images/broken_wing": {
+				"images/broken_wing": { "x": 14.16, "y": 6.81, "width": 331, "height": 326 }
+			},
+			"images/Explosion1/explosion1": {
+				"images/Explosion1/explosion1": { "width": 421, "height": 445 },
+				"images/Explosion1/explosion2": { "width": 421, "height": 445 },
+				"images/Explosion1/explosion3": { "width": 421, "height": 445 },
+				"images/Explosion1/explosion4": { "width": 421, "height": 445 },
+				"images/Explosion1/explosion5": { "width": 421, "height": 445 },
+				"images/Explosion1/explosion6": { "width": 421, "height": 445 },
+				"images/Explosion1/explosion7": { "width": 421, "height": 445 },
+				"images/Explosion1/explosion8": { "width": 421, "height": 445 },
+				"images/Explosion1/explosion9": { "width": 421, "height": 445 }
+			},
+			"images/plane": {
+				"images/broken_plane": { "x": -49.91, "y": -75.87, "width": 1173, "height": 937 },
+				"images/plane": { "x": -101.92, "y": 64.33, "width": 1151, "height": 1247 }
+			},
+			"images/plane_tip": {
+				"images/plane_tip": { "x": 6.41, "y": -5.94, "width": 79, "height": 64 }
+			},
+			"images/propeller_1": {
+				"images/propeller_1": { "y": 6.08, "width": 64, "height": 910 },
+				"images/propeller_2": { "y": 6.08, "width": 64, "height": 910 }
+			}
+		}
+	}
+],
+"animations": {
+	"crash": {
+		"slots": {
+			"images/broken_piece_1": {
+				"attachment": [
+					{ "time": 0.8, "name": "images/broken_piece_1" },
+					{ "time": 1.0333, "name": null }
+				]
+			},
+			"images/broken_piece_2": {
+				"attachment": [
+					{ "time": 0.8, "name": "images/broken_piece_2" },
+					{ "time": 1.0333, "name": null }
+				]
+			},
+			"images/broken_piece_3": {
+				"attachment": [
+					{ "time": 0.8, "name": "images/broken_piece_3" },
+					{ "time": 1.0333, "name": null }
+				]
+			},
+			"images/broken_wing": {
+				"attachment": [
+					{ "time": 0.8, "name": "images/broken_wing" }
+				]
+			},
+			"images/Explosion1/explosion1": {
+				"attachment": [
+					{ "time": 0.7667, "name": "images/Explosion1/explosion1" },
+					{ "time": 0.8, "name": "images/Explosion1/explosion2" },
+					{ "time": 0.8333, "name": "images/Explosion1/explosion3" },
+					{ "time": 0.8667, "name": "images/Explosion1/explosion4" },
+					{ "time": 0.9, "name": "images/Explosion1/explosion5" },
+					{ "time": 0.9333, "name": "images/Explosion1/explosion6" },
+					{ "time": 0.9667, "name": "images/Explosion1/explosion7" },
+					{ "time": 1, "name": "images/Explosion1/explosion8" },
+					{ "time": 1.0333, "name": "images/Explosion1/explosion9" },
+					{ "time": 1.0667, "name": null }
+				]
+			},
+			"images/plane": {
+				"attachment": [
+					{ "time": 0.8, "name": "images/broken_plane" }
+				]
+			},
+			"images/plane_tip": {
+				"attachment": [
+					{ "time": 0.8, "name": "images/plane_tip" },
+					{ "time": 1.0333, "name": null }
+				]
+			},
+			"images/propeller_1": {
+				"attachment": [
+					{ "time": 0.0667, "name": "images/propeller_2" },
+					{ "time": 0.1333, "name": "images/propeller_1" },
+					{ "time": 0.2, "name": "images/propeller_2" },
+					{ "time": 0.2667, "name": "images/propeller_1" },
+					{ "time": 0.3333, "name": "images/propeller_2" },
+					{ "time": 0.4, "name": "images/propeller_1" },
+					{ "time": 0.4667, "name": "images/propeller_2" },
+					{ "time": 0.5333, "name": "images/propeller_1" },
+					{ "time": 0.6, "name": "images/propeller_2" },
+					{ "time": 0.7667, "name": "images/propeller_1" },
+					{ "time": 0.8, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"images/broken_plane": {
+				"rotate": [
+					{ "value": -0.05, "curve": "stepped" },
+					{
+						"time": 0.3333,
+						"value": -0.05,
+						"curve": [ 0.556, -0.05, 0.544, -29.19 ]
+					},
+					{
+						"time": 0.7667,
+						"value": -29.19,
+						"curve": [ 0.778, -29.19, 0.789, 0 ]
+					},
+					{ "time": 0.8 }
+				],
+				"translate": [
+					{
+						"x": 22.41,
+						"y": 949.04,
+						"curve": [ 0.222, 22.41, 0.222, 22.41, 0.222, 949.04, 0.222, 857.02 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 22.41,
+						"y": 857.02,
+						"curve": [ 0.556, 22.41, 0.544, 22.41, 0.556, 857.02, 0.544, 65.04 ]
+					},
+					{
+						"time": 0.7667,
+						"x": 22.41,
+						"y": 65.04,
+						"curve": [ 0.778, 22.41, 0.789, 6.57, 0.778, 65.04, 0.789, -3.29 ]
+					},
+					{ "time": 0.8, "x": 6.57, "y": -3.29 }
+				],
+				"scale": [
+					{},
+					{ "time": 0.0667, "y": 0.934 },
+					{ "time": 0.1333 },
+					{ "time": 0.2, "y": 0.934 },
+					{ "time": 0.2667, "curve": "stepped" },
+					{ "time": 0.3333 },
+					{ "time": 0.4, "y": 0.934 },
+					{ "time": 0.4667 },
+					{ "time": 0.5333, "y": 0.934 },
+					{ "time": 0.6 },
+					{ "time": 0.6667, "y": 0.934 },
+					{ "time": 0.7333 },
+					{ "time": 0.7667, "x": 0.946, "y": 1.061 }
+				]
+			},
+			"bone": {
+				"translate": [
+					{ "time": 0.7667, "x": 91.53 }
+				],
+				"scale": [
+					{ "time": 0.7667, "x": 3.041, "y": 3.041 }
+				]
+			},
+			"images/broken_piece_1": {
+				"translate": [
+					{
+						"time": 0.8,
+						"x": 599.43,
+						"y": -352.83,
+						"curve": [ 0.878, 1684.23, 0.956, 2226.62, 0.878, -387.66, 0.956, -405.08 ]
+					},
+					{ "time": 1.0333, "x": 2226.62, "y": -405.08 }
+				]
+			},
+			"images/broken_piece_2": {
+				"translate": [
+					{
+						"time": 0.8,
+						"x": 102.01,
+						"y": -12.44,
+						"curve": [ 0.878, -934.68, 0.956, -1453.03, 0.878, -594.65, 0.956, -885.75 ]
+					},
+					{ "time": 1.0333, "x": -1453.03, "y": -885.75 }
+				]
+			},
+			"images/broken_piece_3": {
+				"translate": [
+					{
+						"time": 0.8,
+						"x": 149.28,
+						"y": -156.75,
+						"curve": [ 0.878, -706.61, 0.956, -1134.56, 0.873, 1197.66, 0.928, 1227.05 ]
+					},
+					{ "time": 1.0333, "x": -1134.56, "y": 671.78 }
+				]
+			},
+			"images/broken_wing3": {
+				"rotate": [
+					{
+						"time": 0.8,
+						"value": -60.48,
+						"curve": [ 0.944, -60.48, 1.089, 0 ]
+					},
+					{ "time": 1.2333 }
+				],
+				"translate": [
+					{
+						"time": 0.8,
+						"x": -181.63,
+						"y": 783.74,
+						"curve": [ 0.878, -23.09, 0.956, 45.87, 0.878, 1008.82, 0.956, 1458.97 ]
+					},
+					{
+						"time": 1.0333,
+						"x": 204.4,
+						"y": 1458.97,
+						"curve": [ 1.1, 340.29, 1.167, 612.07, 1.1, 1458.97, 1.167, 390.63 ]
+					},
+					{
+						"time": 1.2333,
+						"x": 612.07,
+						"y": 390.63,
+						"curve": [ 1.256, 612.07, 1.278, 623.19, 1.256, 390.63, 1.278, 442.88 ]
+					},
+					{
+						"time": 1.3,
+						"x": 634.46,
+						"y": 442.88,
+						"curve": [ 1.323, 645.58, 1.345, 656.85, 1.323, 442.88, 1.345, 390.63 ]
+					},
+					{ "time": 1.3667, "x": 656.85, "y": 390.63 }
+				]
+			},
+			"images/plane_tip": {
+				"translate": [
+					{
+						"time": 0.8,
+						"x": 191.58,
+						"y": -266.22,
+						"curve": [ 0.878, 1239.89, 0.956, 1764.04, 0.878, 799.42, 0.927, 948.13 ]
+					},
+					{ "time": 1.0333, "x": 1764.04, "y": 649.39 }
+				]
+			}
+		}
+	},
+	"fly_idle": {
+		"slots": {
+			"images/propeller_1": {
+				"attachment": [
+					{ "time": 0.0667, "name": "images/propeller_2" },
+					{ "time": 0.1333, "name": "images/propeller_1" },
+					{ "time": 0.2, "name": "images/propeller_2" },
+					{ "time": 0.2667, "name": "images/propeller_1" },
+					{ "time": 0.3333, "name": "images/propeller_2" },
+					{ "time": 0.4, "name": "images/propeller_1" },
+					{ "time": 0.4667, "name": "images/propeller_2" },
+					{ "time": 0.5333, "name": "images/propeller_1" },
+					{ "time": 0.6, "name": "images/propeller_2" },
+					{ "time": 0.6667, "name": "images/propeller_1" }
+				]
+			}
+		},
+		"bones": {
+			"images/broken_plane": {
+				"rotate": [
+					{
+						"value": -0.05,
+						"curve": [ 0.023, -0.09, 0.045, -0.12 ]
+					},
+					{
+						"time": 0.0667,
+						"value": -0.12,
+						"curve": [ 0.178, -0.12, 0.289, 0.51 ]
+					},
+					{
+						"time": 0.4,
+						"value": 0.51,
+						"curve": [ 0.489, 0.51, 0.579, 0.11 ]
+					},
+					{ "time": 0.6667, "value": -0.05 }
+				],
+				"translate": [
+					{
+						"x": 22.41,
+						"y": 949.04,
+						"curve": [ 0.111, 22.41, 0.222, 22.43, 0.111, 949.04, 0.222, 963.26 ]
+					},
+					{
+						"time": 0.3333,
+						"x": 22.43,
+						"y": 963.26,
+						"curve": [ 0.444, 22.43, 0.556, 22.41, 0.444, 963.26, 0.556, 949.04 ]
+					},
+					{ "time": 0.6667, "x": 22.41, "y": 949.04 }
+				]
+			}
+		}
+	},
+	"ilde": {},
+	"lift": {
+		"slots": {
+			"images/propeller_1": {
+				"attachment": [
+					{ "time": 0.0667, "name": "images/propeller_2" },
+					{ "time": 0.1333, "name": "images/propeller_1" },
+					{ "time": 0.2, "name": "images/propeller_2" },
+					{ "time": 0.2667, "name": "images/propeller_1" },
+					{ "time": 0.3333, "name": "images/propeller_2" },
+					{ "time": 0.4, "name": "images/propeller_1" },
+					{ "time": 0.4667, "name": "images/propeller_2" },
+					{ "time": 0.5333, "name": "images/propeller_1" },
+					{ "time": 0.6, "name": "images/propeller_2" },
+					{ "time": 0.6667, "name": "images/propeller_1" },
+					{ "time": 0.7333, "name": "images/propeller_2" },
+					{ "time": 0.8, "name": "images/propeller_1" },
+					{ "time": 0.8667, "name": "images/propeller_2" },
+					{ "time": 0.9333, "name": "images/propeller_1" },
+					{ "time": 1, "name": "images/propeller_2" },
+					{ "time": 1.0667, "name": "images/propeller_1" },
+					{ "time": 1.1333, "name": "images/propeller_2" },
+					{ "time": 1.2, "name": "images/propeller_1" },
+					{ "time": 1.2667, "name": "images/propeller_2" },
+					{ "time": 1.3333, "name": "images/propeller_1" }
+				]
+			}
+		},
+		"bones": {
+			"images/broken_plane": {
+				"rotate": [
+					{
+						"time": 0.2333,
+						"curve": [ 0.267, 0, 0.333, -2.57 ]
+					},
+					{
+						"time": 0.3667,
+						"value": -2.57,
+						"curve": [ 0.42, -2.57, 0.537, 6.75 ]
+					},
+					{
+						"time": 0.6667,
+						"value": 8,
+						"curve": [ 0.863, 9.88, 1.087, 3.95 ]
+					},
+					{
+						"time": 1.1667,
+						"value": 3.95,
+						"curve": [ 1.222, 3.95, 1.311, -0.12 ]
+					},
+					{ "time": 1.3667, "value": -0.12 }
+				],
+				"translate": [
+					{
+						"curve": [ 0.033, 0, 0.178, 0.12, 0.033, 0, 0.179, 2.57 ]
+					},
+					{
+						"time": 0.2333,
+						"curve": [ 0.267, -0.07, 0.3, -0.21, 0.267, -1.57, 0.3, -4.7 ]
+					},
+					{
+						"time": 0.3333,
+						"x": -0.21,
+						"y": -4.7,
+						"curve": [ 0.467, -0.21, 0.967, 10.6, 0.467, -4.7, 0.967, 1060.42 ]
+					},
+					{
+						"time": 1.1,
+						"x": 15.54,
+						"y": 1060.42,
+						"curve": [ 1.167, 18, 1.267, 20.46, 1.167, 1060.42, 1.267, 986.15 ]
+					},
+					{ "time": 1.3333, "x": 22.92, "y": 949.01 }
+				],
+				"scale": [
+					{
+						"curve": [ 0.011, 1, 0.022, 1, 0.011, 1, 0.022, 0.966 ]
+					},
+					{
+						"time": 0.0333,
+						"y": 0.966,
+						"curve": [ 0.044, 1, 0.056, 1, 0.044, 0.966, 0.056, 1 ]
+					},
+					{
+						"time": 0.0667,
+						"curve": [ 0.078, 1, 0.089, 1, 0.078, 1, 0.089, 0.966 ]
+					},
+					{
+						"time": 0.1,
+						"y": 0.966,
+						"curve": [ 0.111, 1, 0.122, 1, 0.111, 0.966, 0.122, 0.989 ]
+					},
+					{ "time": 0.1333 }
+				]
+			}
+		}
+	}
+}
+}

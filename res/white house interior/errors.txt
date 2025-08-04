@@ -1,0 +1,7 @@
+Multiple layers for the "default" skin have the same name:
+curtains/curtain_green_top_3
+Rename or use the [path:name] or [ignore] tag for these layers.
+---
+Multiple layers for the "default" skin have the same name:
+walls/wall_int_green_1
+Rename or use the [path:name] or [ignore] tag for these layers.

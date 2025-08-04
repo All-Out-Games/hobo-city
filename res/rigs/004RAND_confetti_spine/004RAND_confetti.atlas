@@ -1,0 +1,26 @@
+780497170cf31971.png
+	size: 1332, 300
+	filter: Linear, Linear
+confetti_bunch_A
+	bounds: 6, 32, 259, 259
+	offsets: 1, 1, 261, 261
+confetti_bunch_B
+	bounds: 271, 27, 249, 264
+	offsets: 1, 1, 251, 266
+confetti_bunch_C
+	bounds: 526, 27, 261, 231
+	offsets: 1, 1, 263, 233
+	rotate: 90
+confetti_bunch_D
+	bounds: 1160, 6, 165, 122
+	offsets: 1, 1, 167, 124
+confetti_bunch_E
+	bounds: 763, 84, 197, 204
+	offsets: 1, 1, 199, 206
+confetti_bunch_F
+	bounds: 966, 97, 188, 194
+	offsets: 1, 1, 190, 195
+confetti_bunch_G
+	bounds: 1160, 134, 157, 142
+	offsets: 1, 1, 159, 144
+	rotate: 90

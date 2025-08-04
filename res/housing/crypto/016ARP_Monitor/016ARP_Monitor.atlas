@@ -1,0 +1,15 @@
+016ARP_Monitor.png
+	size: 760, 328
+	filter: Linear, Linear
+	scale: 0.5
+images/monitor/monitor
+	bounds: 6, 6, 315, 316
+images/monitor/post_it
+	bounds: 704, 267, 50, 55
+images/monitor/screen
+	bounds: 327, 24, 298, 235
+	rotate: 90
+images/monitor/shadow
+	bounds: 568, 38, 284, 130
+	offsets: 15, 11, 314, 152
+	rotate: 90

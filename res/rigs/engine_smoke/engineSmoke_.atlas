@@ -1,0 +1,14 @@
+engineSmoke_.png
+	size: 540, 540
+	filter: Linear, Linear
+SmokeErupt_A
+	bounds: 6, 414, 120, 125
+	offsets: 1, 1, 122, 126
+	rotate: 90
+SmokeErupt_B
+	bounds: 343, 363, 191, 171
+	offsets: 1, 1, 193, 173
+SmokeErupt_C
+	bounds: 137, 364, 170, 200
+	offsets: 1, 1, 172, 202
+	rotate: 90

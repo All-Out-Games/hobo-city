@@ -1,0 +1,104 @@
+{
+"skeleton": { "hash": "3m8xQVpxjqg", "spine": "4.0.49", "x": -154, "y": -103, "width": 308, "height": 423.92 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "air", "parent": "root", "x": -2.19, "y": 26.12 },
+	{ "name": "fan", "parent": "root", "x": -1.19, "y": -86.02 }
+],
+"slots": [
+	{ "name": "fan", "bone": "fan", "attachment": "ｆａｎ　２" },
+	{ "name": "air", "bone": "air", "attachment": "ｕｐｌｉｆｔ　１" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"air": {
+				"ｕｐｌｉｆｔ　１": { "x": 2.19, "y": 95.3, "width": 308, "height": 399 },
+				"ｕｐｌｉｆｔ　２": { "x": 2.69, "y": 85.16, "width": 295, "height": 430 }
+			},
+			"fan": {
+				"ｆａｎ　１": { "x": 1.19, "y": 86.52, "width": 308, "height": 207 },
+				"ｆａｎ　２": { "x": 1.19, "y": 86.52, "width": 308, "height": 207 },
+				"ｆａｎ　３": { "x": 1.19, "y": 86.52, "width": 308, "height": 207 }
+			}
+		}
+	}
+],
+"animations": {
+	"fan_off": {
+		"slots": {
+			"air": {
+				"attachment": [
+					{ "name": null }
+				]
+			},
+			"fan": {
+				"attachment": [
+					{ "name": "ｆａｎ　１" }
+				]
+			}
+		}
+	},
+	"fan_on": {
+		"slots": {
+			"air": {
+				"rgba": [
+					{ "color": "ffffff00" },
+					{ "time": 0.0833, "color": "ffffff83" },
+					{ "time": 0.5, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "time": 0.0833, "name": "ｕｐｌｉｆｔ　２" },
+					{ "time": 0.1667, "name": "ｕｐｌｉｆｔ　１" },
+					{ "time": 0.25, "name": "ｕｐｌｉｆｔ　２" },
+					{ "time": 0.3333, "name": "ｕｐｌｉｆｔ　１" },
+					{ "time": 0.4167, "name": "ｕｐｌｉｆｔ　２" },
+					{ "time": 0.5, "name": "ｕｐｌｉｆｔ　１" }
+				]
+			},
+			"fan": {
+				"attachment": [
+					{ "time": 0.0833, "name": "ｆａｎ　３" },
+					{ "time": 0.1667, "name": "ｆａｎ　２" },
+					{ "time": 0.25, "name": "ｆａｎ　３" },
+					{ "time": 0.3333, "name": "ｆａｎ　２" },
+					{ "time": 0.4167, "name": "ｆａｎ　３" },
+					{ "time": 0.5, "name": "ｆａｎ　２" }
+				]
+			}
+		},
+		"bones": {
+			"air": {
+				"translate": [
+					{
+						"y": -11.17,
+						"curve": [ 0.153, 0, 0.347, 0, 0.153, 60.01, 0.347, 95.6 ]
+					},
+					{ "time": 0.5, "y": 95.6 }
+				],
+				"scale": [
+					{
+						"y": 0.503,
+						"curve": [ 0.153, 1, 0.347, 1, 0.153, 0.945, 0.347, 1.166 ]
+					},
+					{ "time": 0.5, "y": 1.166 }
+				]
+			},
+			"fan": {
+				"rotate": [
+					{ "value": 0.26 },
+					{ "time": 0.0417, "value": -1.7 },
+					{ "time": 0.125, "value": 0.83 },
+					{ "time": 0.1667, "value": -0.9 },
+					{ "time": 0.25, "value": 0.26 },
+					{ "time": 0.2917, "value": -1.7 },
+					{ "time": 0.375, "value": 0.83 },
+					{ "time": 0.4167, "value": -0.9 },
+					{ "time": 0.5, "value": 0.26 }
+				]
+			}
+		}
+	}
+}
+}

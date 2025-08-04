@@ -1,0 +1,347 @@
+008BED_Infected_Sky.png
+	size: 4096, 3816
+	filter: Linear, Linear
+corruption_vfx/corruption_cloud_vfx_1/cc_vfx_1_cloud
+	bounds: 2857, 2593, 83, 78
+	offsets: 2, 3, 87, 84
+corruption_vfx/corruption_cloud_vfx_1/cc_vfx_1_spark_1
+	bounds: 3933, 1967, 90, 49
+	offsets: 2, 2, 94, 53
+corruption_vfx/corruption_cloud_vfx_1/cc_vfx_1_spark_2
+	bounds: 2857, 2545, 45, 45
+	offsets: 2, 2, 49, 49
+corruption_vfx/corruption_cloud_vfx_1/cc_vfx_1_spark_3
+	bounds: 3965, 3316, 53, 51
+	offsets: 2, 2, 57, 55
+corruption_vfx/corruption_cloud_vfx_2/cc_vfx_2_cloud
+	bounds: 3965, 3370, 117, 113
+	offsets: 2, 3, 122, 119
+corruption_vfx/corruption_cloud_vfx_2/cc_vfx_2_spark_1
+	bounds: 2025, 2152, 71, 79
+	offsets: 2, 2, 75, 83
+corruption_vfx/corruption_cloud_vfx_2/cc_vfx_2_spark_2
+	bounds: 3369, 2488, 46, 44
+	offsets: 2, 2, 50, 48
+corruption_vfx/corruption_cloud_vfx_2/cc_vfx_2_spark_3
+	bounds: 2025, 2616, 81, 109
+	offsets: 3, 2, 86, 113
+corruption_vfx/corruption_cloud_vfx_2/cc_vfx_2_spark_4
+	bounds: 2857, 2389, 47, 32
+	offsets: 3, 2, 52, 37
+corruption_vfx/corruption_cloud_vfx_2/cc_vfx_2_spark_5
+	bounds: 4040, 3037, 51, 45
+	offsets: 2, 2, 55, 50
+corruption_vfx/corruption_cloud_vfx_3/cc_vfx_3_cloud
+	bounds: 3598, 3, 192, 187
+	offsets: 3, 3, 198, 192
+corruption_vfx/corruption_cloud_vfx_3/cc_vfx_3_spark_1
+	bounds: 3491, 2324, 87, 67
+	offsets: 2, 2, 91, 72
+corruption_vfx/corruption_cloud_vfx_3/cc_vfx_3_spark_2
+	bounds: 3802, 3274, 63, 75
+	offsets: 3, 3, 68, 80
+corruption_vfx/corruption_cloud_vfx_3/cc_vfx_3_spark_3
+	bounds: 2857, 2674, 77, 120
+	offsets: 2, 2, 81, 123
+corruption_vfx/corruption_cloud_vfx_3/cc_vfx_3_spark_4
+	bounds: 1833, 1903, 80, 66
+	offsets: 3, 2, 85, 71
+corruption_vfx/corruption_cloud_vfx_3/cc_vfx_3_spark_5
+	bounds: 3965, 3486, 99, 155
+	offsets: 2, 2, 103, 159
+corruption_vfx/corruption_spew/corruption_blast
+	bounds: 2814, 913, 406, 888
+	rotate: 90
+corruption_vfx/corruption_spew/corruption_smoke_1
+	bounds: 2232, 189, 228, 219
+	offsets: 3, 3, 234, 225
+corruption_vfx/corruption_spew/corruption_smoke_10
+	bounds: 2463, 64, 210, 203
+	offsets: 3, 4, 216, 211
+corruption_vfx/corruption_spew/corruption_smoke_11
+	bounds: 3437, 2394, 130, 138
+	offsets: 4, 3, 137, 144
+corruption_vfx/corruption_spew/corruption_smoke_12
+	bounds: 3928, 2019, 133, 126
+	offsets: 3, 3, 139, 132
+corruption_vfx/corruption_spew/corruption_smoke_2
+	bounds: 1347, 235, 260, 234
+	offsets: 4, 4, 268, 242
+corruption_vfx/corruption_spew/corruption_smoke_3
+	bounds: 1976, 175, 233, 253
+	offsets: 4, 4, 241, 261
+	rotate: 90
+corruption_vfx/corruption_spew/corruption_smoke_4
+	bounds: 3359, 89, 236, 175
+	offsets: 3, 3, 243, 181
+corruption_vfx/corruption_spew/corruption_smoke_5
+	bounds: 1610, 89, 234, 190
+	offsets: 3, 3, 240, 196
+corruption_vfx/corruption_spew/corruption_smoke_6
+	bounds: 1005, 65, 216, 189
+	offsets: 3, 4, 222, 196
+corruption_vfx/corruption_spew/corruption_smoke_7
+	bounds: 2888, 53, 199, 184
+	offsets: 4, 3, 207, 190
+	rotate: 90
+corruption_vfx/corruption_spew/corruption_smoke_8
+	bounds: 1224, 35, 198, 197
+	offsets: 4, 3, 205, 203
+corruption_vfx/corruption_spew/corruption_smoke_9
+	bounds: 644, 50, 207, 197
+	offsets: 3, 3, 213, 204
+corruption_vfx/corruption_spew/corruption_trail_1
+	bounds: 1688, 282, 252, 285
+	offsets: 3, 3, 258, 292
+	rotate: 90
+corruption_vfx/corruption_spew/corruption_trail_2
+	bounds: 3879, 1222, 214, 234
+	offsets: 3, 4, 220, 242
+corruption_vfx/corruption_spew/corruption_trail_3
+	bounds: 3889, 49, 204, 199
+	offsets: 4, 3, 211, 205
+corruption_vfx/corruption_spew/corruption_trail_4
+	bounds: 3928, 2148, 143, 142
+	offsets: 3, 4, 149, 150
+eject_fuel_vfx/eject_bg
+	bounds: 3, 2593, 1324, 1217
+	offsets: 95, 90, 1523, 1469
+eject_fuel_vfx/eject_blast_bg_1
+	bounds: 1330, 2728, 1082, 797
+	offsets: 1, 1, 1084, 799
+	rotate: 90
+eject_fuel_vfx/eject_blast_bg_2
+	bounds: 2975, 2535, 604, 1275
+	offsets: 1, 1, 606, 1277
+eject_fuel_vfx/eject_blast_bg_3
+	bounds: 2130, 2797, 1013, 842
+	offsets: 1, 1, 1015, 844
+	rotate: 90
+eject_fuel_vfx/eject_blast_fg_1
+	bounds: 257, 56, 287, 125
+	offsets: 1, 1, 289, 127
+eject_fuel_vfx/eject_blast_fg_10
+	bounds: 3, 659, 287, 125
+	offsets: 1, 1, 289, 127
+eject_fuel_vfx/eject_blast_fg_2
+	bounds: 623, 250, 379, 160
+	offsets: 1, 1, 381, 162
+eject_fuel_vfx/eject_blast_fg_3
+	bounds: 3802, 3352, 458, 160
+	offsets: 1, 1, 460, 162
+	rotate: 90
+eject_fuel_vfx/eject_blast_fg_4
+	bounds: 3, 33, 244, 143
+	offsets: 1, 1, 246, 145
+eject_fuel_vfx/eject_blast_fg_5
+	bounds: 1847, 79, 259, 93
+	offsets: 1, 1, 261, 95
+eject_fuel_vfx/eject_blast_fg_6
+	bounds: 3, 1571, 264, 144
+	offsets: 1, 1, 266, 146
+eject_fuel_vfx/eject_blast_fg_7
+	bounds: 1854, 1007, 244, 143
+	offsets: 1, 1, 246, 145
+eject_fuel_vfx/eject_blast_fg_8
+	bounds: 547, 413, 458, 160
+	offsets: 1, 1, 460, 162
+eject_fuel_vfx/eject_blast_fg_9
+	bounds: 3705, 1029, 380, 160
+	offsets: 1, 1, 382, 162
+eject_fuel_vfx/eject_blast_spark_1
+	bounds: 2772, 2147, 73, 51
+	offsets: 6, 3, 85, 57
+eject_fuel_vfx/eject_blast_spark_2
+	bounds: 3466, 1717, 117, 57
+	offsets: 5, 3, 127, 63
+eject_fuel_vfx/eject_fuel_base
+	bounds: 3, 2149, 909, 441
+	offsets: 6, 6, 921, 453
+eject_fuel_vfx/eject_fuel_ring_1
+	bounds: 918, 1686, 912, 424
+	offsets: 1, 1, 914, 426
+eject_fuel_vfx/eject_fuel_ring_2
+	bounds: 3, 1718, 912, 428
+	offsets: 1, 1, 914, 430
+flame_blast_vfx/flame_blast_1
+	bounds: 2130, 2201, 593, 724
+	offsets: 4, 3, 601, 730
+	rotate: 90
+flame_blast_vfx/flame_blast_2
+	bounds: 1330, 2113, 612, 692
+	offsets: 4, 3, 619, 698
+	rotate: 90
+flame_blast_vfx/flame_blast_charge_1
+	bounds: 3928, 2293, 147, 164
+flame_blast_vfx/flame_blast_charge_2
+	bounds: 3965, 3644, 98, 166
+flame_blast_vfx/flame_blast_charge_3
+	bounds: 915, 2308, 381, 282
+flame_blast_vfx/flame_blast_charge_4
+	bounds: 3928, 2460, 144, 172
+flame_blast_vfx/flame_blast_charge_5
+	bounds: 2676, 69, 209, 198
+flame_blast_vfx/flame_blast_charge_6
+	bounds: 3196, 1642, 167, 145
+flame_blast_vfx/flame_blast_whoosh_1
+	bounds: 3, 179, 251, 222
+	offsets: 1, 1, 253, 224
+flame_blast_vfx/flame_blast_whoosh_2
+	bounds: 551, 707, 492, 290
+	offsets: 1, 1, 494, 292
+flame_blast_vfx/flame_impact_1
+	bounds: 1976, 411, 379, 209
+	offsets: 1, 1, 381, 211
+flame_blast_vfx/flame_impact_2
+	bounds: 2231, 1585, 252, 20
+	offsets: 1, 1, 254, 22
+flame_blast_vfx/flame_impact_3
+	bounds: 918, 2120, 350, 185
+	offsets: 1, 1, 352, 187
+flame_blast_vfx/flame_impact_4
+	bounds: 380, 1110, 306, 45
+	offsets: 1, 1, 308, 47
+flame_blast_vfx/flame_torrent
+	bounds: 3582, 2630, 217, 1180
+flame_blast_vfx/flame_torrent_blast_1
+	bounds: 3582, 2092, 535, 343
+	offsets: 3, 2, 541, 349
+	rotate: 90
+flame_blast_vfx/flame_torrent_blast_2
+	bounds: 2103, 912, 514, 350
+	offsets: 3, 2, 520, 356
+flame_blast_vfx/flame_torrent_extra_1
+	bounds: 3802, 2635, 280, 172
+	offsets: 2, 2, 284, 176
+flame_blast_vfx/flame_torrent_extra_2
+	bounds: 2472, 270, 269, 262
+	offsets: 2, 2, 273, 266
+infected_sky_form1/arm_L
+	bounds: 2795, 255, 304, 336
+	rotate: 270
+infected_sky_form1/arm_R
+	bounds: 3079, 139, 288, 297
+	rotate: 180
+infected_sky_form1/body
+	bounds: 1887, 1504, 694, 755
+	rotate: 90
+infected_sky_form1/finger_L_1
+	bounds: 2025, 2353, 86, 135
+infected_sky_form1/finger_L_2
+	bounds: 2108, 1487, 122, 156
+infected_sky_form1/finger_L_3
+	bounds: 2477, 1648, 142, 139
+infected_sky_form1/finger_R_1
+	bounds: 2989, 1856, 79, 128
+	offsets: 0, 1, 79, 131
+infected_sky_form1/finger_R_2
+	bounds: 3942, 885, 111, 141
+infected_sky_form1/finger_R_3
+	bounds: 3167, 905, 129, 126
+infected_sky_form1/hand_L
+	bounds: 3933, 1541, 160, 117
+infected_sky_form2/hand_L
+	bounds: 3933, 1541, 160, 117
+infected_sky_form1/hand_R
+	bounds: 2639, 1833, 145, 106
+infected_sky_form2/hand_R
+	bounds: 2639, 1833, 145, 106
+infected_sky_form1/head_jaw
+	bounds: 3802, 2810, 539, 260
+	rotate: 90
+infected_sky_form1/head_top
+	bounds: 2013, 1273, 513, 305
+infected_sky_form1/leg_L
+	bounds: 1329, 781, 416, 545
+	rotate: 270
+infected_sky_form1/leg_R
+	bounds: 2371, 533, 376, 491
+	rotate: 270
+infected_sky_form1/tail
+	bounds: 3597, 1652, 437, 422
+	rotate: 90
+infected_sky_form1/tail_end
+	bounds: 284, 178, 357, 358
+infected_sky_form2/arm_L
+	bounds: 1008, 256, 304, 336
+	rotate: 270
+infected_sky_form2/arm_R
+	bounds: 2642, 1910, 288, 297
+	rotate: 270
+infected_sky_form2/body
+	bounds: 774, 1000, 683, 755
+	rotate: 90
+infected_sky_form2/finger_L_1
+	bounds: 2025, 2478, 86, 135
+infected_sky_form2/finger_L_2
+	bounds: 2857, 2423, 122, 156
+infected_sky_form2/finger_L_3
+	bounds: 3657, 1735, 142, 139
+infected_sky_form2/finger_R_1
+	bounds: 2025, 2233, 79, 128
+	offsets: 0, 1, 79, 131
+infected_sky_form2/finger_R_2
+	bounds: 3976, 1875, 111, 141
+infected_sky_form2/finger_R_3
+	bounds: 48, 1367, 129, 126
+infected_sky_form2/head_jaw
+	bounds: 3, 403, 740, 301
+infected_sky_form2/head_top
+	bounds: 1188, 472, 706, 312
+	rotate: 180
+infected_sky_form2/leg_L
+	bounds: 3, 787, 416, 545
+	rotate: 270
+infected_sky_form2/leg_R
+	bounds: 957, 563, 376, 491
+	rotate: 180
+infected_sky_form2/tail
+	bounds: 1454, 1109, 646, 569
+	rotate: 180
+infected_sky_form2/wing_L
+	bounds: 3, 1124, 880, 591
+infected_sky_form2/wing_R
+	bounds: 2422, 1265, 771, 641
+infected_sky_form3/wing_R
+	bounds: 2422, 1265, 771, 641
+infected_sky_form3/arm_L
+	bounds: 3345, 267, 304, 336
+	rotate: 270
+infected_sky_form3/arm_R
+	bounds: 886, 1386, 288, 297
+infected_sky_form3/body
+	bounds: 2852, 1777, 806, 755
+infected_sky_form3/finger_L_1
+	bounds: 3802, 2924, 86, 135
+infected_sky_form3/finger_L_2
+	bounds: 3966, 3211, 122, 156
+infected_sky_form3/finger_L_3
+	bounds: 1833, 1971, 142, 139
+infected_sky_form3/finger_R_1
+	bounds: 4014, 3084, 79, 128
+	offsets: 0, 1, 79, 131
+infected_sky_form3/finger_R_2
+	bounds: 2858, 2284, 111, 141
+infected_sky_form3/finger_R_3
+	bounds: 3, 1442, 129, 126
+infected_sky_form3/hand_L
+	bounds: 726, 1598, 160, 117
+infected_sky_form3/hand_R
+	bounds: 3802, 2813, 145, 106
+infected_sky_form3/head_jaw
+	bounds: 3667, 192, 426, 274
+infected_sky_form3/head_top
+	bounds: 3308, 636, 631, 381
+infected_sky_form3/leg_L
+	bounds: 2620, 838, 416, 545
+	rotate: 270
+infected_sky_form3/leg_R
+	bounds: 1877, 622, 376, 491
+	rotate: 270
+infected_sky_form3/tail
+	bounds: 3575, 424, 437, 422
+	rotate: 180
+infected_sky_form3/tail_end
+	bounds: 2927, 421, 427, 448
+infected_sky_form3/wing_L
+	bounds: 3063, 1192, 880, 591

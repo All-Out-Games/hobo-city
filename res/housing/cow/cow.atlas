@@ -1,0 +1,69 @@
+e1dd273feaede75d.png
+	size: 692, 692
+	filter: Linear, Linear
+cow_dying/body
+	bounds: 307, 180, 302, 178
+	offsets: 1, 1, 304, 180
+	rotate: 90
+cow_dying/head
+	bounds: 307, 488, 290, 198
+	offsets: 1, 1, 292, 200
+cow_dying/leg 1
+	bounds: 603, 424, 68, 121
+	offsets: 1, 1, 70, 123
+cow_dying/leg 2
+	bounds: 545, 9, 60, 101
+	offsets: 1, 1, 62, 103
+cow_dying/leg 3
+	bounds: 368, 113, 61, 104
+	offsets: 1, 1, 63, 106
+	rotate: 90
+cow_dying/leg 4
+	bounds: 491, 425, 57, 84
+	offsets: 1, 1, 59, 86
+	rotate: 90
+cow_dying/meat/cow meat
+	bounds: 603, 551, 135, 72
+	offsets: 1, 1, 137, 74
+	rotate: 90
+cow_dying/smoke 1/big_smoke_puff
+	bounds: 6, 423, 295, 263
+	offsets: 1, 1, 297, 265
+cow_dying/smoke 1/small_smokepuff1
+	bounds: 140, 157, 74, 58
+	offsets: 1, 1, 76, 60
+	rotate: 90
+cow_dying/smoke 1/small_smokepuff2
+	bounds: 6, 153, 78, 65
+	offsets: 1, 1, 80, 67
+	rotate: 90
+cow_dying/smoke 1/small_smokepuff3
+	bounds: 368, 56, 57, 51
+	offsets: 1, 1, 59, 53
+cow_dying/tail
+	bounds: 294, 14, 60, 33
+	offsets: 1, 1, 62, 35
+cow_normal/body
+	bounds: 491, 116, 302, 178
+	offsets: 1, 1, 304, 180
+	rotate: 90
+cow_normal/head
+	bounds: 6, 237, 290, 180
+	offsets: 1, 1, 292, 182
+cow_normal/leg 1
+	bounds: 294, 53, 68, 121
+	offsets: 1, 1, 70, 123
+cow_normal/leg 2
+	bounds: 611, 9, 60, 101
+	offsets: 1, 1, 62, 103
+cow_normal/leg 3
+	bounds: 478, 6, 61, 104
+	offsets: 1, 1, 63, 106
+cow_normal/leg 4
+	bounds: 77, 147, 57, 84
+	offsets: 1, 1, 59, 86
+cow_normal/shadow
+	bounds: 6, 24, 282, 86
+cow_normal/tail
+	bounds: 360, 14, 60, 33
+	offsets: 1, 1, 62, 35

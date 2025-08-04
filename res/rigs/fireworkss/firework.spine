@@ -1,0 +1,120 @@
+{
+"skeleton": { "hash": "KrzK3bOees8", "spine": "4.0.64", "x": -138, "y": -136, "width": 276, "height": 272 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "position", "parent": "root" },
+	{ "name": "fire_work_explosion", "parent": "position" },
+	{ "name": "trail_firework", "parent": "position" }
+],
+"slots": [
+	{ "name": "blue_firework/blue_firework_explosion_frame_1", "bone": "fire_work_explosion", "attachment": "orange_firework/orange_firework_explosion_frame_4" },
+	{ "name": "blue_firework/blue_firework_trail_frame_1", "bone": "trail_firework", "attachment": "orange_firework/orange_firework_trail_frame_2" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"blue_firework/blue_firework_explosion_frame_1": {
+				"blue_firework/blue_firework_explosion_frame_1": { "x": 1, "y": 4, "width": 155, "height": 153 },
+				"blue_firework/blue_firework_explosion_frame_2": { "x": 1, "y": 4, "width": 238, "height": 236 },
+				"blue_firework/blue_firework_explosion_frame_3": { "x": -1, "y": 3, "width": 268, "height": 265 },
+				"blue_firework/blue_firework_explosion_frame_4": { "y": 5, "width": 276, "height": 272 },
+				"orange_firework/orange_firework_explosion_frame_1": { "x": 0.5, "y": 0.5, "width": 155, "height": 153 },
+				"orange_firework/orange_firework_explosion_frame_2": { "width": 238, "height": 236 },
+				"orange_firework/orange_firework_explosion_frame_3": { "y": 0.5, "width": 268, "height": 265 },
+				"orange_firework/orange_firework_explosion_frame_4": { "width": 276, "height": 272 }
+			},
+			"blue_firework/blue_firework_trail_frame_1": {
+				"blue_firework/blue_firework_trail_frame_1": { "x": 2, "y": 10, "width": 19, "height": 131 },
+				"blue_firework/blue_firework_trail_frame_2": { "x": 2, "y": 9, "width": 19, "height": 140 },
+				"orange_firework/orange_firework_trail_frame_1": { "x": 0.5, "y": 0.5, "width": 19, "height": 131 },
+				"orange_firework/orange_firework_trail_frame_2": { "x": 0.5, "width": 19, "height": 140 }
+			}
+		}
+	}
+],
+"animations": {
+	"blue firework": {
+		"slots": {
+			"blue_firework/blue_firework_explosion_frame_1": {
+				"rgba": [
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.1333, "name": "blue_firework/blue_firework_explosion_frame_1" },
+					{ "time": 0.2, "name": "blue_firework/blue_firework_explosion_frame_2" },
+					{ "time": 0.2667, "name": "blue_firework/blue_firework_explosion_frame_3" },
+					{ "time": 0.3333, "name": "blue_firework/blue_firework_explosion_frame_4" }
+				]
+			},
+			"blue_firework/blue_firework_trail_frame_1": {
+				"attachment": [
+					{ "name": "blue_firework/blue_firework_trail_frame_1" },
+					{ "time": 0.0667, "name": "blue_firework/blue_firework_trail_frame_2" },
+					{ "time": 0.1333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"trail_firework": {
+				"translate": [
+					{},
+					{ "time": 0.1333, "y": 99 }
+				]
+			},
+			"fire_work_explosion": {
+				"translate": [
+					{ "y": 136 }
+				],
+				"scale": [
+					{ "time": 0.1333 },
+					{ "time": 0.6667, "x": 1.5, "y": 1.5 }
+				]
+			}
+		}
+	},
+	"orange firework": {
+		"slots": {
+			"blue_firework/blue_firework_explosion_frame_1": {
+				"rgba": [
+					{ "time": 0.5, "color": "ffffffff" },
+					{ "time": 0.6667, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": null },
+					{ "time": 0.1333, "name": "orange_firework/orange_firework_explosion_frame_1" },
+					{ "time": 0.2, "name": "orange_firework/orange_firework_explosion_frame_2" },
+					{ "time": 0.2667, "name": "orange_firework/orange_firework_explosion_frame_3" },
+					{ "time": 0.3333, "name": "orange_firework/orange_firework_explosion_frame_4" }
+				]
+			},
+			"blue_firework/blue_firework_trail_frame_1": {
+				"attachment": [
+					{ "name": "orange_firework/orange_firework_trail_frame_1" },
+					{ "time": 0.0667, "name": "orange_firework/orange_firework_trail_frame_2" },
+					{ "time": 0.1333, "name": null }
+				]
+			}
+		},
+		"bones": {
+			"trail_firework": {
+				"translate": [
+					{},
+					{ "time": 0.1333, "y": 99 }
+				]
+			},
+			"fire_work_explosion": {
+				"translate": [
+					{ "y": 136 }
+				],
+				"scale": [
+					{ "time": 0.1333 },
+					{ "time": 0.6667, "x": 1.5, "y": 1.5 }
+				]
+			}
+		}
+	}
+}
+}

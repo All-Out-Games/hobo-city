@@ -1,0 +1,82 @@
+DINO104_Velociraptor.png
+	size: 364, 364
+	filter: Linear, Linear
+Velociraptor_Pupil
+	bounds: 227, 11, 9, 12
+	offsets: 1, 1, 11, 13
+Velociraptor_arm_left
+	bounds: 334, 201, 22, 39
+	offsets: 1, 1, 24, 41
+Velociraptor_arm_right
+	bounds: 331, 67, 30, 37
+	offsets: 1, 1, 32, 38
+Velociraptor_body
+	bounds: 205, 100, 85, 77
+	offsets: 1, 1, 87, 79
+	rotate: 90
+Velociraptor_foot_left
+	bounds: 227, 25, 48, 34
+	offsets: 1, 1, 50, 36
+Velociraptor_foot_right
+	bounds: 227, 61, 52, 37
+	offsets: 1, 1, 54, 39
+Velociraptor_forearm_left
+	bounds: 281, 40, 30, 41
+	offsets: 1, 1, 32, 42
+	rotate: 90
+Velociraptor_forearm_right
+	bounds: 284, 72, 45, 32
+	offsets: 1, 1, 47, 34
+Velociraptor_hand_left
+	bounds: 324, 31, 34, 35
+	offsets: 1, 1, 36, 37
+	rotate: 90
+Velociraptor_hand_right
+	bounds: 277, 5, 33, 39
+	offsets: 1, 1, 35, 41
+	rotate: 90
+Velociraptor_head_happy
+	bounds: 286, 242, 120, 76
+	offsets: 1, 1, 122, 78
+	rotate: 90
+Velociraptor_head_sad
+	bounds: 2, 166, 120, 81
+	offsets: 1, 1, 122, 83
+Velociraptor_head_shocked
+	bounds: 2, 85, 120, 79
+	offsets: 1, 1, 122, 81
+Velociraptor_leg_left
+	bounds: 261, 193, 47, 71
+	offsets: 1, 1, 49, 73
+	rotate: 90
+Velociraptor_leg_right
+	bounds: 284, 106, 64, 85
+	offsets: 1, 1, 66, 87
+Velociraptor_mouth
+	bounds: 190, 9, 83, 35
+	offsets: 1, 1, 85, 37
+	rotate: 90
+Velociraptor_pupil_shocked
+	bounds: 261, 187, 4, 6
+	offsets: 1, 1, 6, 8
+	rotate: 90
+Velociraptor_sclera
+	bounds: 318, 3, 26, 35
+	offsets: 1, 1, 28, 37
+	rotate: 90
+Velociraptor_tail
+	bounds: 124, 187, 135, 60
+dust/Bigger dust particle (2)
+	bounds: 2, 249, 282, 113
+	offsets: 1, 1, 284, 115
+velociraptor_running_f1
+	bounds: 2, 2, 81, 92
+	offsets: 1, 1, 83, 94
+	rotate: 90
+velociraptor_running_f2
+	bounds: 124, 94, 79, 91
+	offsets: 1, 1, 81, 93
+velociraptor_running_f3
+	bounds: 96, 2, 81, 92
+	offsets: 1, 1, 83, 94
+	rotate: 90

@@ -1,0 +1,46 @@
+pet_toy_bunny.png
+	size: 780, 780
+	filter: Linear, Linear
+	scale: 0.5
+rabbit_chibi/arm_L
+	bounds: 702, 703, 59, 69
+	offsets: 7, 8, 77, 100
+	rotate: 180
+rabbit_chibi/arm_R
+	bounds: 704, 650, 57, 68
+	offsets: 14, 10, 77, 100
+	rotate: 90
+rabbit_chibi/body
+	bounds: 382, 689, 83, 78
+	offsets: 26, 49, 135, 175
+	rotate: 90
+rabbit_chibi/ear_L
+	bounds: 276, 656, 100, 116
+rabbit_chibi/ear_R
+	bounds: 145, 653, 125, 119
+	offsets: 0, 0, 154, 159
+rabbit_chibi/eyes_default
+	bounds: 524, 682, 90, 55
+	rotate: 90
+rabbit_chibi/head
+	bounds: 6, 659, 135, 113
+	offsets: 13, 33, 152, 196
+rabbit_chibi/leg_L
+	bounds: 585, 702, 59, 70
+	offsets: 6, 15, 77, 100
+rabbit_chibi/leg_R
+	bounds: 643, 701, 62, 69
+	offsets: 9, 17, 77, 100
+	rotate: 180
+rabbit_chibi/mouth
+	bounds: 465, 677, 95, 54
+	offsets: 15, 6, 123, 65
+	rotate: 90
+rabbit_chibi/nose
+	bounds: 145, 658, 22, 14
+rabbit_chibi/pendant
+	bounds: 382, 662, 26, 33
+	offsets: 10, 6, 44, 43
+rabbit_chibi/tail
+	bounds: 582, 644, 56, 53
+	offsets: 41, 19, 102, 128

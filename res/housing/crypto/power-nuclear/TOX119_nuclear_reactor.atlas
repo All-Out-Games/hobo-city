@@ -1,0 +1,16 @@
+ddb4b207ba3d20c2.png
+	size: 1024, 1024
+	filter: Linear, Linear
+nuclear_reactor/nuclear_reactor
+	bounds: 6, 380, 368, 592
+	offsets: 1, 1, 370, 593
+nuclear_reactor/nuclear_reactor_cracked
+	bounds: 6, 6, 368, 592
+	offsets: 1, 1, 370, 593
+	rotate: 90
+nuclear_reactor/nuclear_reactor_green_cracked
+	bounds: 380, 380, 368, 592
+	offsets: 1, 1, 370, 593
+nuclear_reactor/radiation_glow
+	bounds: 604, 122, 254, 252
+	offsets: 6, 4, 266, 261

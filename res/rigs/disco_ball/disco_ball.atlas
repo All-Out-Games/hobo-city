@@ -1,0 +1,33 @@
+disco_ball.png
+	size: 336, 1448
+	filter: Linear, Linear
+	scale: 0.5
+ball_frame_1
+	bounds: 6, 569, 286, 286
+ball_frame_2
+	bounds: 6, 861, 286, 286
+ball_frame_3
+	bounds: 6, 1153, 286, 286
+ball_hinge
+	bounds: 6, 6, 74, 95
+	offsets: 0, 0, 74, 96
+	rotate: 90
+ball_rope
+	bounds: 298, 350, 30, 318
+floor_1
+	bounds: 6, 86, 171, 140
+	offsets: 2, 2, 175, 144
+floor_2
+	bounds: 227, 232, 112, 91
+	offsets: 2, 2, 116, 95
+	rotate: 90
+floor_3
+	bounds: 6, 232, 215, 163
+	offsets: 2, 2, 219, 167
+floor_4
+	bounds: 183, 85, 141, 116
+	offsets: 2, 2, 145, 120
+	rotate: 90
+floor_5
+	bounds: 6, 401, 220, 162
+	offsets: 2, 2, 224, 166

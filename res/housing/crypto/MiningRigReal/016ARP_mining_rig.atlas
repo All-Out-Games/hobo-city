@@ -1,0 +1,122 @@
+016ARP_mining_rig.png
+	size: 2048, 2048
+	filter: Linear, Linear
+images/GPUs/gpu_1/fan
+	bounds: 1968, 1628, 75, 74
+	offsets: 1, 1, 77, 76
+	rotate: 90
+images/coolers/fan/fan
+	bounds: 1968, 1628, 75, 74
+	offsets: 1, 1, 77, 76
+	rotate: 90
+images/GPUs/gpu_1/gpu
+	bounds: 946, 1149, 105, 187
+	offsets: 1, 1, 107, 189
+images/GPUs/gpu_2/fan
+	bounds: 1968, 1547, 75, 74
+	offsets: 1, 1, 77, 76
+	rotate: 90
+images/GPUs/gpu_2/gpu
+	bounds: 455, 1232, 115, 235
+	offsets: 1, 1, 117, 237
+images/GPUs/gpu_2/light
+	bounds: 581, 1840, 48, 47
+	offsets: 1, 1, 50, 49
+images/GPUs/gpu_3/fan
+	bounds: 1968, 1466, 75, 74
+	offsets: 1, 1, 77, 76
+	rotate: 90
+images/GPUs/gpu_3/gpu
+	bounds: 1443, 1223, 130, 295
+	offsets: 1, 1, 132, 297
+images/GPUs/gpu_3/led_lights
+	bounds: 1119, 1272, 131, 285
+	offsets: 1, 1, 133, 286
+	rotate: 90
+images/GPUs/gpu_4/fan
+	bounds: 575, 1078, 75, 74
+	offsets: 1, 1, 77, 76
+images/GPUs/gpu_4/gpu
+	bounds: 6, 1291, 176, 306
+	offsets: 1, 1, 178, 308
+	rotate: 90
+images/GPUs/gpu_4/led_lights
+	bounds: 318, 1182, 131, 285
+	offsets: 1, 1, 133, 286
+images/GPUs/gpu_4/light
+	bounds: 581, 1787, 48, 47
+	offsets: 1, 1, 50, 49
+images/cables/cables_A
+	bounds: 804, 1207, 136, 216
+	offsets: 1, 1, 138, 218
+images/cables/cables_B
+	bounds: 455, 1022, 114, 204
+	offsets: 1, 1, 116, 206
+images/cables/cables_c
+	bounds: 1119, 1561, 77, 116
+	offsets: 1, 1, 79, 118
+images/coolers/fan/fan_support
+	bounds: 798, 1096, 105, 115
+	offsets: 1, 1, 107, 117
+	rotate: 90
+images/coolers/water_cooler/bubble_particle
+	bounds: 581, 1733, 48, 48
+	offsets: 1, 1, 50, 50
+images/coolers/water_cooler/cables
+	bounds: 1119, 1409, 318, 109
+	offsets: 1, 1, 320, 111
+images/coolers/water_cooler/fan
+	bounds: 656, 1078, 75, 74
+	offsets: 1, 1, 77, 76
+images/coolers/water_cooler/fans_lights
+	bounds: 576, 1305, 222, 118
+	offsets: 1, 1, 224, 120
+images/coolers/water_cooler/fans_support
+	bounds: 576, 1158, 216, 141
+	offsets: 1, 1, 218, 143
+images/coolers/water_cooler/shadow
+	bounds: 6, 1058, 272, 227
+	offsets: 1, 1, 274, 229
+images/coolers/water_cooler/tank_lights
+	bounds: 581, 1429, 126, 321
+	offsets: 1, 1, 128, 322
+	rotate: 90
+images/coolers/water_cooler/water_tank
+	bounds: 951, 1342, 162, 335
+	offsets: 1, 1, 164, 337
+images/coolers/water_cooler/water_tank_glass
+	bounds: 284, 980, 125, 196
+	offsets: 1, 1, 127, 198
+images/racks/light
+	bounds: 737, 1105, 48, 47
+	offsets: 1, 1, 50, 49
+images/racks/rack_1/rack
+	bounds: 1597, 1489, 365, 214
+	offsets: 1, 1, 367, 216
+images/racks/rack_1/rack_front
+	bounds: 581, 1561, 364, 116
+	offsets: 1, 1, 366, 118
+images/racks/rack_1/shadow
+	bounds: 1213, 1893, 419, 149
+	offsets: 1, 1, 421, 151
+images/racks/rack_2/rack
+	bounds: 1638, 1709, 378, 333
+	offsets: 1, 1, 380, 335
+images/racks/rack_2/rack_front
+	bounds: 1213, 1764, 378, 123
+	offsets: 1, 1, 380, 125
+images/racks/rack_2/rack_middle
+	bounds: 1213, 1524, 378, 234
+	offsets: 1, 1, 380, 236
+images/racks/rack_3/rack
+	bounds: 638, 1683, 569, 359
+	offsets: 1, 1, 571, 361
+images/racks/rack_3/rack_front
+	bounds: 6, 1738, 569, 149
+	offsets: 1, 1, 571, 151
+images/racks/rack_3/rack_middle
+	bounds: 6, 1473, 569, 259
+	offsets: 1, 1, 571, 261
+images/racks/rack_3/shadow
+	bounds: 6, 1893, 626, 149
+	offsets: 1, 1, 628, 151

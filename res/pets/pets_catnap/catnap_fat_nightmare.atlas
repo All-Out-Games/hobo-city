@@ -1,0 +1,59 @@
+catnap_fat_nightmare.png
+	size: 1024, 1024
+	filter: Linear, Linear
+	scale: 0.5
+catnap_fat_nightmare/arm_L
+	bounds: 876, 921, 89, 97
+	offsets: 23, 37, 133, 172
+	rotate: 180
+catnap_fat_nightmare/arm_R
+	bounds: 853, 846, 93, 91
+	offsets: 20, 41, 133, 172
+	rotate: 270
+catnap_fat_nightmare/body
+	bounds: 6, 876, 184, 142
+	offsets: 20, 42, 226, 228
+catnap_fat_nightmare/ear_L
+	bounds: 952, 876, 66, 66
+	offsets: 19, 12, 103, 87
+catnap_fat_nightmare/ear_R
+	bounds: 762, 863, 60, 65
+	offsets: 21, 12, 103, 87
+catnap_fat_nightmare/eyes_angry
+	bounds: 382, 869, 68, 33
+	offsets: 5, 5, 79, 45
+catnap_fat_nightmare/eyes_concerned
+	bounds: 636, 876, 70, 34
+	offsets: 5, 3, 79, 45
+catnap_fat_nightmare/eyes_dazed
+	bounds: 307, 874, 69, 36
+	offsets: 5, 3, 79, 45
+catnap_fat_nightmare/eyes_default
+	bounds: 518, 874, 67, 35
+	offsets: 6, 4, 79, 45
+catnap_fat_nightmare/hand_L
+	bounds: 599, 913, 94, 105
+	offsets: 8, 10, 105, 154
+	rotate: 180
+catnap_fat_nightmare/hand_R
+	bounds: 782, 913, 94, 105
+	offsets: 8, 14, 105, 154
+	rotate: 180
+catnap_fat_nightmare/head
+	bounds: 195, 874, 144, 108
+	offsets: 7, 19, 162, 137
+	rotate: 90
+catnap_fat_nightmare/leg_L
+	bounds: 510, 914, 89, 104
+	offsets: 26, 30, 142, 166
+catnap_fat_nightmare/leg_R
+	bounds: 692, 914, 92, 104
+	offsets: 29, 30, 142, 166
+	rotate: 180
+catnap_fat_nightmare/mouth
+	bounds: 422, 976, 77, 42
+	offsets: 10, 7, 96, 54
+catnap_fat_nightmare/tail
+	bounds: 307, 868, 150, 205
+	offsets: 26, 67, 217, 272
+	rotate: 90

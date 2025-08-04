@@ -1,0 +1,21 @@
+79aa387a8b9f2fb5.png
+	size: 752, 752
+	filter: Linear, Linear
+ｆａｎ　１
+	bounds: 6, 6, 306, 205
+	offsets: 1, 1, 308, 207
+	rotate: 90
+ｆａｎ　２
+	bounds: 217, 6, 306, 205
+	offsets: 1, 1, 308, 207
+	rotate: 90
+ｆａｎ　３
+	bounds: 428, 37, 306, 205
+	offsets: 1, 1, 308, 207
+	rotate: 90
+ｕｐｌｉｆｔ　１
+	bounds: 305, 349, 306, 397
+	offsets: 1, 1, 308, 399
+ｕｐｌｉｆｔ　２
+	bounds: 6, 318, 293, 428
+	offsets: 1, 1, 295, 430

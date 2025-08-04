@@ -1,0 +1,1270 @@
+98079a188b8f4b3d.png
+	size: 2048, 2048
+	filter: Linear, Linear
+GOAT NPCs/Goat Farmer/run/leg_L_run1
+	bounds: 159, 1565, 97, 68
+	offsets: 1, 1, 99, 70
+GOAT NPCs/Goat Farmer/run/leg_L_run2
+	bounds: 1318, 1295, 112, 78
+	offsets: 1, 1, 114, 80
+GOAT NPCs/Goat Farmer/run/leg_L_run3
+	bounds: 1192, 1757, 78, 60
+	offsets: 2, 1, 81, 62
+GOAT NPCs/Goat Farmer/run/leg_L_run4
+	bounds: 1892, 1817, 74, 58
+	offsets: 1, 1, 76, 60
+GOAT NPCs/Goat Farmer/run/leg_R_run1
+	bounds: 852, 1472, 93, 71
+	offsets: 1, 1, 95, 73
+GOAT NPCs/Goat Farmer/run/leg_R_run2
+	bounds: 1094, 1542, 94, 69
+	offsets: 1, 1, 96, 71
+GOAT NPCs/Goat Farmer/run/leg_R_run3
+	bounds: 262, 1562, 90, 68
+	offsets: 2, 1, 93, 70
+GOAT NPCs/Goat Farmer/run/leg_R_run4
+	bounds: 1596, 1610, 69, 67
+	offsets: 1, 1, 71, 69
+GOAT NPCs/Goat Farmer/stand/body_stand
+	bounds: 1409, 742, 120, 158
+	offsets: 82, 72, 284, 301
+	rotate: 90
+GOAT NPCs/Pitchfork
+	bounds: 896, 313, 145, 393
+	offsets: 1, 1, 147, 398
+	rotate: 90
+GOAT NPCs/Samwhich/hand sandwich r
+	bounds: 416, 1836, 55, 57
+	offsets: 1, 1, 57, 59
+	rotate: 90
+GOAT NPCs/Samwhich/sandwich
+	bounds: 635, 1016, 103, 116
+	offsets: 1, 1, 105, 117
+	rotate: 90
+GOAT NPCs/sleeping_effect
+	bounds: 1802, 1998, 55, 44
+	offsets: 1, 1, 57, 46
+GOAT NPCs/tranq/tranq gun
+	bounds: 276, 794, 195, 115
+	offsets: 1, 1, 197, 117
+GOAT NPCs/tranq/tranq gun hand
+	bounds: 1194, 1542, 82, 69
+	offsets: 1, 1, 84, 71
+MOD/ConstructionHelmet
+	bounds: 508, 902, 140, 108
+	offsets: 1, 1, 142, 110
+MOD/Marine_skin/stand/Marine Top
+	bounds: 688, 483, 142, 172
+	offsets: 72, 58, 284, 301
+	rotate: 90
+MOD/Marine_skin/stand/Marine hat
+	bounds: 6, 1569, 147, 66
+	offsets: 1, 1, 149, 68
+MOD/Marine_skin/stand/leg_L_stand_M
+	bounds: 1671, 1609, 67, 73
+	offsets: 39, 9, 135, 114
+	rotate: 90
+MOD/Marine_skin/stand/leg_R_stand_M
+	bounds: 1282, 1542, 69, 93
+	offsets: 48, 18, 157, 144
+	rotate: 90
+MOD/goat_skin/run/leg_L_run1
+	bounds: 379, 1771, 87, 59
+	offsets: 1, 1, 89, 62
+MOD/goat_skin/run/leg_L_run2
+	bounds: 88, 1411, 98, 73
+	offsets: 1, 1, 100, 75
+MOD/goat_skin/run/leg_L_run3
+	bounds: 1658, 1753, 63, 62
+	offsets: 1, 1, 65, 64
+MOD/goat_skin/run/leg_L_run4
+	bounds: 444, 1953, 71, 47
+	offsets: 1, 1, 73, 49
+MOD/goat_skin/run/leg_R_run1
+	bounds: 580, 1627, 82, 64
+	offsets: 1, 1, 85, 66
+MOD/goat_skin/run/leg_R_run2
+	bounds: 670, 1831, 83, 56
+	offsets: 1, 1, 85, 58
+MOD/goat_skin/run/leg_R_run3
+	bounds: 759, 1829, 85, 56
+	offsets: 2, 1, 88, 58
+MOD/goat_skin/run/leg_R_run4
+	bounds: 1789, 1882, 54, 66
+	offsets: 1, 1, 56, 68
+	rotate: 90
+MOD/goat_skin/stand/horns_skewer
+	bounds: 1614, 1095, 94, 389
+	offsets: 1, 0, 96, 389
+	rotate: 90
+MOD/goat_skin/visors/visor_chomp_1
+	bounds: 602, 1949, 95, 47
+	offsets: 1, 1, 97, 49
+MOD/goat_skin/visors/visor_chomp_2
+	bounds: 84, 1777, 98, 58
+	offsets: 1, 1, 100, 60
+MOD/goat_skin/visors/visor_foot_stuck
+	bounds: 1924, 1997, 94, 45
+	offsets: 1, 1, 96, 47
+MOD/goat_skin/visors/visor_headbonk_tie
+	bounds: 1801, 1942, 93, 50
+	offsets: 1, 1, 95, 52
+MOD/goat_skin/visors/visor_push_poop_1
+	bounds: 1861, 1881, 96, 54
+	offsets: 1, 1, 98, 56
+MOD/goat_skin/visors/visor_push_poop_2
+	bounds: 668, 1627, 106, 64
+	offsets: 1, 1, 108, 66
+MOD/lugwrench/l hand
+	bounds: 1381, 1540, 69, 73
+	offsets: 1, 1, 71, 75
+	rotate: 90
+MOD/lugwrench/lug wrench
+	bounds: 524, 497, 158, 141
+	offsets: 1, 1, 160, 143
+MOD/lugwrench/lug wrench 2
+	bounds: 1495, 454, 147, 149
+	offsets: 1, 1, 149, 150
+	rotate: 90
+MOD/lugwrench/r hand
+	bounds: 1802, 1750, 70, 62
+	offsets: 1, 1, 72, 64
+MOD/night_vision_goggles
+	bounds: 688, 325, 202, 152
+	offsets: 1, 1, 204, 154
+MOD/pirate/Blox_pirate_leg_L
+	bounds: 6, 1330, 76, 79
+	offsets: 29, 3, 135, 114
+MOD/pirate/Blox_pirate_leg_R
+	bounds: 290, 1484, 70, 91
+	offsets: 44, 20, 157, 144
+	rotate: 90
+MOD/pirate/hat
+	bounds: 1195, 989, 257, 102
+	offsets: 1, 1, 259, 104
+MOD/shoes/shoe l
+	bounds: 518, 1894, 75, 52
+	offsets: 1, 1, 77, 54
+MOD/shoes/shoe r
+	bounds: 521, 1952, 75, 48
+	offsets: 1, 1, 77, 50
+MOD/spare tire/left hand
+	bounds: 6, 1960, 45, 70
+	offsets: 1, 1, 47, 71
+	rotate: 90
+MOD/spare tire/right hand
+	bounds: 479, 1833, 84, 55
+	offsets: 1, 1, 86, 57
+MOD/spare tire/sparetire 2
+	bounds: 1603, 866, 114, 130
+	offsets: 1, 1, 116, 132
+	rotate: 90
+MOD/speed_lines/speed_lines1
+	bounds: 758, 1116, 135, 97
+	offsets: 1, 1, 137, 99
+MOD/speed_lines/speed_lines2
+	bounds: 899, 1113, 161, 97
+	offsets: 1, 1, 163, 99
+MOD/speed_lines/speed_lines3
+	bounds: 1066, 1106, 149, 98
+	offsets: 1, 1, 151, 100
+SIMP127/simp_skin/run/leg_L_run1
+	bounds: 1113, 1464, 94, 72
+	offsets: 1, 1, 96, 74
+SIMP127/simp_skin/run/leg_L_run2
+	bounds: 1382, 1379, 104, 75
+	offsets: 1, 1, 107, 77
+SIMP127/simp_skin/run/leg_L_run3
+	bounds: 1972, 1814, 70, 61
+	offsets: 1, 1, 72, 63
+SIMP127/simp_skin/run/leg_L_run4
+	bounds: 1276, 1757, 71, 60
+	offsets: 1, 1, 73, 62
+SIMP127/simp_skin/run/leg_R_run1
+	bounds: 1460, 1538, 87, 69
+	offsets: 1, 2, 89, 72
+SIMP127/simp_skin/run/leg_R_run2
+	bounds: 1032, 1619, 90, 65
+	offsets: 1, 1, 92, 67
+SIMP127/simp_skin/run/leg_R_run3
+	bounds: 1504, 1613, 86, 66
+	offsets: 1, 1, 88, 68
+SIMP127/simp_skin/run/leg_R_run4
+	bounds: 472, 1699, 63, 75
+	offsets: 1, 1, 65, 77
+	rotate: 90
+SIMP127/simp_skin/stand/body_skin
+	bounds: 1176, 464, 146, 153
+	offsets: 74, 77, 284, 301
+	rotate: 90
+SIMP127/simp_skin/stand/body_stand
+	bounds: 1573, 740, 120, 158
+	offsets: 82, 72, 284, 301
+	rotate: 90
+SIMP127/simp_skin/stand/leg_L_stand_M
+	bounds: 88, 1329, 81, 76
+	offsets: 25, 6, 135, 114
+SIMP127/simp_skin/stand/leg_R_stand_M
+	bounds: 395, 1229, 80, 94
+	offsets: 34, 17, 157, 144
+	rotate: 90
+SIMP127/simp_skin/stand/pack
+	bounds: 1271, 873, 110, 139
+	offsets: 32, 34, 197, 191
+	rotate: 90
+VFX/Stunned/stunned_ring
+	bounds: 447, 2006, 151, 36
+	offsets: 1, 1, 153, 38
+VFX/Stunned/stunned_star
+	bounds: 604, 2004, 41, 38
+	offsets: 1, 1, 43, 40
+VFX/acid/acid_dissolve/acid_dissolve_f1
+	bounds: 1737, 738, 162, 120
+	offsets: 1, 1, 164, 122
+VFX/acid/acid_dissolve/acid_dissolve_f2
+	bounds: 352, 512, 166, 135
+	offsets: 1, 1, 168, 137
+VFX/acid/acid_dissolve/acid_dissolve_f3
+	bounds: 426, 173, 175, 157
+	offsets: 1, 1, 177, 159
+VFX/acid/acid_dissolve/acid_dissolve_f5
+	bounds: 1803, 121, 171, 163
+	offsets: 1, 1, 173, 165
+VFX/acid/acid_dissolve/acid_dissolve_f6
+	bounds: 1739, 864, 189, 114
+	offsets: 1, 1, 191, 116
+VFX/acid/acid_dissolve/acid_dissolve_f7
+	bounds: 657, 1697, 226, 61
+	offsets: 1, 1, 228, 63
+VFX/acid/acid_dissolve/acid_dissolve_f8
+	bounds: 703, 1949, 224, 46
+	offsets: 1, 1, 226, 48
+VFX/acid/body_skel_liedown
+	bounds: 201, 28, 210, 163
+	offsets: 1, 1, 212, 165
+VFX/acid/skel_body
+	bounds: 135, 800, 115, 135
+	offsets: 1, 1, 117, 137
+	rotate: 90
+VFX/acid/skel_head
+	bounds: 1458, 986, 108, 105
+	offsets: 1, 1, 111, 107
+VFX/beartrap/shadow
+	bounds: 163, 2009, 136, 33
+	offsets: 1, 1, 138, 35
+VFX/beartrap/spurt1
+	bounds: 889, 1695, 77, 63
+	offsets: 1, 1, 79, 65
+VFX/beartrap/spurt2
+	bounds: 495, 1229, 120, 80
+	offsets: 1, 1, 122, 82
+VFX/beartrap/spurt3
+	bounds: 1436, 1292, 105, 78
+	offsets: 1, 1, 107, 80
+VFX/beartrap/spurt4
+	bounds: 569, 1832, 55, 95
+	offsets: 1, 1, 57, 97
+	rotate: 90
+VFX/beartrap/spurt5
+	bounds: 153, 1841, 54, 110
+	offsets: 1, 1, 56, 112
+	rotate: 90
+VFX/beartrap/trap_triggered
+	bounds: 163, 375, 178, 148
+VFX/blood splat/bloot_splat2
+	bounds: 1686, 290, 329, 154
+	offsets: 1, 1, 331, 156
+VFX/blood_n_viscera/blood/directional_blood_spurt_1
+	bounds: 6, 45, 189, 163
+	offsets: 1, 1, 191, 165
+VFX/blood_n_viscera/blood/directional_blood_spurt_2
+	bounds: 607, 162, 197, 157
+	offsets: 1, 1, 199, 159
+VFX/blood_n_viscera/blood/directional_blood_spurt_3
+	bounds: 1481, 291, 199, 153
+	offsets: 1, 1, 201, 155
+VFX/blood_n_viscera/particles/bone_piece_a
+	bounds: 302, 1900, 51, 63
+	offsets: 1, 1, 53, 65
+	rotate: 90
+VFX/blood_n_viscera/particles/bone_piece_c
+	bounds: 1863, 1998, 55, 44
+	offsets: 1, 1, 57, 46
+VFX/blood_n_viscera/particles/brain_particle_a
+	bounds: 6, 1641, 66, 65
+	offsets: 1, 1, 68, 67
+VFX/blood_n_viscera/particles/viscera_particle_a
+	bounds: 1878, 1749, 85, 62
+	offsets: 1, 1, 87, 64
+VFX/blood_n_viscera/particles/viscera_particle_b
+	bounds: 1731, 1943, 50, 64
+	offsets: 1, 1, 52, 66
+	rotate: 90
+VFX/blood_n_viscera/particles/visor_piece_a
+	bounds: 371, 1897, 53, 57
+	offsets: 1, 1, 55, 59
+	rotate: 90
+VFX/blood_n_viscera/particles/visor_piece_b
+	bounds: 1963, 1881, 54, 56
+	offsets: 1, 1, 56, 58
+	rotate: 90
+VFX/explosion/Smoke1
+	bounds: 277, 1319, 80, 82
+	offsets: 1, 1, 82, 84
+	rotate: 90
+VFX/explosion/convert_smoke1
+	bounds: 990, 884, 132, 109
+	offsets: 1, 1, 134, 111
+VFX/explosion/convert_smoke2
+	bounds: 456, 1397, 80, 74
+	offsets: 1, 1, 82, 76
+VFX/explosion/convert_smoke3
+	bounds: 1481, 1199, 111, 86
+	offsets: 1, 1, 113, 88
+VFX/fart/SmallFartCould_A
+	bounds: 387, 1480, 83, 70
+	offsets: 1, 1, 85, 72
+VFX/fart/SmallFartCould_B
+	bounds: 1235, 1886, 53, 54
+	offsets: 1, 1, 55, 56
+	rotate: 90
+VFX/fart/fart0000
+	bounds: 1794, 1195, 88, 87
+	offsets: 1, 1, 90, 89
+VFX/fart/fart0001
+	bounds: 1905, 738, 129, 120
+	offsets: 1, 1, 131, 122
+VFX/fart/fart0002
+	bounds: 1335, 458, 154, 146
+	offsets: 1, 1, 156, 148
+VFX/fire_burnup/ashes/ashes_1
+	bounds: 329, 915, 173, 107
+	offsets: 1, 1, 175, 109
+VFX/fire_burnup/ashes/ashes_2
+	bounds: 1572, 986, 163, 103
+	offsets: 1, 1, 165, 106
+VFX/fire_burnup/ashes/ashes_3
+	bounds: 334, 667, 136, 121
+	offsets: 1, 1, 138, 123
+VFX/fire_burnup/ashes/ashes_4
+	bounds: 908, 760, 118, 156
+	offsets: 1, 1, 120, 159
+	rotate: 90
+VFX/fire_burnup/ashes/ashes_5
+	bounds: 654, 892, 108, 161
+	offsets: 1, 1, 110, 163
+	rotate: 90
+VFX/fire_burnup/ashes/ashes_6
+	bounds: 1416, 868, 112, 181
+	offsets: 1, 1, 114, 183
+	rotate: 90
+VFX/fire_burnup/crew_blasted1
+	bounds: 1389, 124, 161, 221
+	offsets: 1, 1, 163, 223
+	rotate: 90
+VFX/fire_burnup/crew_blasted2
+	bounds: 639, 772, 114, 263
+	offsets: 1, 1, 116, 264
+	rotate: 90
+VFX/fire_burnup/crew_blasted3
+	bounds: 757, 1006, 101, 270
+	offsets: 1, 1, 103, 271
+	rotate: 90
+VFX/fire_burnup/crew_blasted4
+	bounds: 256, 1136, 87, 298
+	offsets: 1, 0, 89, 298
+	rotate: 90
+VFX/fire_burnup/crew_blasted5
+	bounds: 1295, 1886, 52, 286
+	offsets: 1, 1, 54, 288
+	rotate: 90
+VFX/fire_burnup/crew_burning1
+	bounds: 6, 214, 155, 199
+	offsets: 1, 1, 157, 201
+	rotate: 90
+VFX/fire_burnup/crew_burning2
+	bounds: 211, 197, 155, 209
+	offsets: 1, 1, 157, 211
+	rotate: 90
+VFX/frozen/crew_frozen_shatter
+	bounds: 1900, 1941, 64, 50
+	offsets: 1, 45, 292, 153
+VFX/frozen/crew_frozen_shatter2
+	bounds: 1213, 1464, 86, 72
+	offsets: 126, 80, 292, 153
+VFX/frozen/crew_frozen_shatter3
+	bounds: 1439, 1944, 49, 76
+	offsets: 242, 30, 292, 153
+	rotate: 90
+VFX/frozen/crew_frozen_shatter4
+	bounds: 381, 1956, 57, 47
+	offsets: 100, 1, 292, 153
+VFX/generic/hit_spark_1
+	bounds: 6, 927, 124, 107
+	offsets: 10, 4, 136, 114
+VFX/generic/swipe_trail_1
+	bounds: 1070, 749, 118, 203
+	rotate: 90
+VFX/hair_on_fire/hair_fire_1
+	bounds: 635, 644, 122, 138
+	offsets: 1, 1, 124, 140
+	rotate: 90
+VFX/hair_on_fire/hair_fire_2
+	bounds: 1209, 616, 126, 147
+	offsets: 1, 1, 128, 149
+	rotate: 90
+VFX/hair_on_fire/hair_fire_3
+	bounds: 1057, 619, 124, 146
+	offsets: 1, 1, 126, 148
+	rotate: 90
+VFX/hair_on_fire/hair_fire_4
+	bounds: 476, 653, 121, 153
+	offsets: 1, 1, 123, 155
+	rotate: 90
+VFX/head pop/exploded_head1
+	bounds: 6, 1149, 98, 90
+	offsets: 1, 1, 100, 92
+VFX/head pop/exploded_head2
+	bounds: 1547, 1291, 78, 100
+	offsets: 1, 1, 80, 102
+	rotate: 90
+VFX/head pop/pop_vfx
+	bounds: 110, 1147, 140, 89
+	offsets: 1, 1, 143, 91
+VFX/losevote_angrycloud
+	bounds: 745, 1223, 92, 81
+	offsets: 1, 1, 94, 83
+VFX/rubble/dirt_divot
+	bounds: 933, 1947, 243, 46
+	offsets: 1, 1, 245, 48
+VFX/rubble/rubble1
+	bounds: 6, 1245, 116, 78
+	offsets: 1, 1, 118, 80
+VFX/rubble/rubble2
+	bounds: 1221, 1099, 101, 122
+	offsets: 1, 1, 103, 124
+	rotate: 90
+VFX/rubble/rubble3
+	bounds: 1362, 610, 139, 126
+	offsets: 1, 1, 141, 128
+VFX/severed_limbs/severed_leg_L
+	bounds: 476, 1477, 70, 70
+	offsets: 1, 1, 72, 72
+VFX/severed_limbs/severed_leg_R
+	bounds: 1509, 1755, 68, 61
+	offsets: 1, 1, 70, 63
+VFX/shocked/electric_3
+	bounds: 1741, 984, 267, 105
+	offsets: 1, 1, 269, 107
+VFX/vomit/eaten_spine
+	bounds: 272, 1232, 117, 79
+	offsets: 1, 1, 119, 81
+VFX/vomit/eaten_visor
+	bounds: 1182, 1945, 93, 48
+	offsets: 1, 1, 95, 50
+VFX/vomit/puddle
+	bounds: 599, 1893, 191, 50
+	offsets: 1, 1, 193, 52
+VFX/vomit/vomit stream 1
+	bounds: 1305, 1462, 112, 72
+	offsets: 1, 1, 114, 74
+VFX/vomit/vomit stream 2
+	bounds: 1423, 1460, 112, 72
+	offsets: 1, 1, 114, 74
+VFX/vomit/vomit stream 3
+	bounds: 542, 1397, 112, 74
+	offsets: 1, 1, 114, 76
+VFX/vomit/vomit stream_end1
+	bounds: 188, 1776, 85, 58
+	offsets: 1, 1, 87, 60
+VFX/vomit/vomit stream_end2
+	bounds: 222, 1957, 58, 46
+	offsets: 1, 1, 60, 48
+VFX/water/bubbles
+	bounds: 59, 2011, 44, 31
+VFX/water/peak
+	bounds: 1279, 748, 119, 124
+	offsets: 1, 1, 121, 126
+	rotate: 90
+VFX/water/spray_1
+	bounds: 785, 2001, 133, 41
+	offsets: 1, 2, 135, 44
+VFX/water/spray_2
+	bounds: 924, 2001, 133, 41
+	offsets: 1, 1, 135, 43
+VFX/water/spray_3
+	bounds: 651, 2002, 128, 40
+	offsets: 1, 1, 130, 42
+VFX/water/sweat
+	bounds: 13, 2014, 28, 40
+	offsets: 1, 1, 30, 41
+	rotate: 90
+VFX/water/water_outline
+	bounds: 538, 1553, 285, 68
+	offsets: 1, 1, 287, 70
+VFX/water/water_outline top
+	bounds: 796, 1891, 285, 50
+	offsets: 1, 1, 287, 70
+VFX/water/water_shadow
+	bounds: 1349, 1097, 259, 94
+VFX/water/water_wake
+	bounds: 1724, 1532, 116, 69
+	offsets: 1, 1, 118, 71
+crewmate/full pose/body_katana_bottom
+	bounds: 6, 1040, 143, 101
+	offsets: 1, 1, 145, 103
+crewmate/full pose/body_katana_top
+	bounds: 347, 358, 148, 167
+	offsets: 1, 1, 150, 169
+	rotate: 90
+crewmate/full pose/body_katana_top_ground
+	bounds: 1128, 874, 137, 109
+	offsets: 1, 1, 139, 111
+crewmate/full pose/crew_bottomhalf
+	bounds: 866, 483, 142, 149
+	offsets: 1, 1, 144, 151
+	rotate: 90
+crewmate/full pose/crew_bottomhalf_floor
+	bounds: 167, 529, 179, 132
+	offsets: 1, 1, 181, 134
+crewmate/full pose/crew_crushed
+	bounds: 136, 921, 187, 105
+	offsets: 1, 1, 189, 107
+crewmate/full pose/crew_poop_ball
+	bounds: 1197, 131, 186, 160
+	offsets: 1, 1, 188, 162
+crewmate/full pose/crew_poop_pile
+	bounds: 810, 150, 189, 157
+	offsets: 1, 1, 191, 159
+crewmate/full pose/crewmate_exploded_bottom
+	bounds: 1021, 469, 149, 144
+	offsets: 1, 1, 151, 146
+crewmate/full pose/crewmate_exploded_fallen
+	bounds: 1507, 607, 158, 127
+	offsets: 1, 1, 160, 129
+crewmate/full pose/head
+	bounds: 1811, 602, 130, 179
+	offsets: 2, 2, 133, 182
+	rotate: 90
+crewmate/full pose/torsohalf
+	bounds: 1671, 603, 129, 134
+	offsets: 1, 2, 132, 137
+	rotate: 90
+crewmate/hands/hand_L_angryfist
+	bounds: 1643, 1683, 73, 64
+	offsets: 1, 1, 75, 66
+crewmate/hands/hand_L_backhurt
+	bounds: 1130, 1824, 57, 80
+	offsets: 1, 1, 59, 82
+	rotate: 90
+crewmate/hands/hand_L_clutch
+	bounds: 1969, 1746, 72, 62
+	offsets: 1, 1, 74, 64
+crewmate/hands/hand_L_fist
+	bounds: 780, 1627, 76, 64
+crewmate/hands/hand_L_flat
+	bounds: 6, 1904, 100, 50
+	offsets: 1, 1, 102, 52
+crewmate/hands/hand_L_grab_bucket
+	bounds: 560, 1129, 92, 93
+	offsets: 1, 1, 94, 95
+	rotate: 90
+crewmate/hands/hand_L_heartattack
+	bounds: 1553, 1535, 87, 69
+	offsets: 1, 1, 89, 71
+crewmate/hands/hand_L_hip
+	bounds: 951, 1468, 75, 71
+	offsets: 1, 1, 77, 73
+crewmate/hands/hand_L_hold
+	bounds: 1646, 1534, 72, 69
+	offsets: 1, 1, 74, 71
+crewmate/hands/hand_L_inair
+	bounds: 1492, 1376, 80, 75
+	offsets: 1, 1, 82, 77
+crewmate/hands/hand_L_insane
+	bounds: 6, 1415, 73, 76
+	offsets: 1, 1, 75, 78
+	rotate: 90
+crewmate/hands/hand_L_reachout
+	bounds: 266, 1705, 97, 62
+	offsets: 1, 1, 99, 64
+crewmate/hands/hand_L_shock
+	bounds: 192, 1408, 85, 73
+	offsets: 1, 2, 87, 76
+crewmate/hands/hand_L_throw
+	bounds: 1216, 1823, 87, 57
+	offsets: 1, 1, 89, 59
+crewmate/hands/hand_L_throwdown
+	bounds: 862, 1625, 64, 79
+	offsets: 1, 1, 66, 81
+	rotate: 90
+crewmate/hands/hand_L_wave
+	bounds: 1598, 1197, 86, 92
+	offsets: 1, 1, 88, 93
+	rotate: 90
+crewmate/hands/hand_R_fist
+	bounds: 1583, 1754, 69, 61
+	offsets: 1, 1, 71, 63
+crewmate/hands/hand_R_fist_4
+	bounds: 660, 1397, 74, 74
+	offsets: 1, 1, 76, 76
+crewmate/hands/hand_R_fist_angry
+	bounds: 1087, 1889, 68, 52
+	offsets: 1, 1, 70, 54
+crewmate/hands/hand_R_flat
+	bounds: 1587, 1885, 95, 53
+	offsets: 1, 1, 97, 55
+crewmate/hands/hand_R_gun
+	bounds: 358, 1560, 89, 68
+	offsets: 1, 1, 91, 70
+crewmate/hands/hand_R_hip
+	bounds: 1750, 1607, 68, 67
+	offsets: 1, 1, 70, 69
+crewmate/hands/hand_R_hold
+	bounds: 1578, 1375, 75, 77
+	offsets: 1, 1, 77, 79
+	rotate: 90
+crewmate/hands/hand_R_inair
+	bounds: 740, 1395, 81, 74
+	offsets: 1, 1, 83, 76
+crewmate/hands/hand_R_insane
+	bounds: 1541, 1457, 74, 72
+	offsets: 1, 1, 77, 74
+crewmate/hands/hand_R_point
+	bounds: 1128, 1617, 86, 65
+	offsets: 1, 1, 88, 67
+crewmate/hands/hand_R_point2
+	bounds: 972, 1693, 92, 63
+	offsets: 1, 1, 94, 65
+crewmate/hands/hand_R_reach
+	bounds: 365, 1317, 84, 78
+	offsets: 1, 1, 86, 80
+crewmate/hands/hand_R_reachout
+	bounds: 1621, 1456, 87, 72
+	offsets: 1, 1, 89, 74
+crewmate/hands/hand_R_slap_down
+	bounds: 472, 1768, 59, 83
+	offsets: 1, 1, 62, 86
+	rotate: 90
+crewmate/hands/hand_R_slap_up
+	bounds: 453, 1556, 68, 79
+	offsets: 2, 1, 71, 80
+	rotate: 90
+crewmate/hands/hand_R_throw
+	bounds: 827, 1392, 83, 74
+	offsets: 1, 1, 85, 76
+crewmate/hands/hand_R_walkingstick
+	bounds: 1353, 1757, 72, 60
+	offsets: 1, 1, 74, 62
+crewmate/hands/hand_R_wave
+	bounds: 1076, 1213, 83, 87
+	offsets: 1, 1, 85, 89
+	rotate: 90
+crewmate/mouths/KissyLips
+	bounds: 1970, 1941, 50, 56
+	offsets: 1, 1, 52, 58
+	rotate: 90
+crewmate/mouths/Tongue
+	bounds: 561, 1767, 97, 59
+	offsets: 1, 1, 99, 61
+crewmate/mouths/mouth_closed
+	bounds: 1063, 1999, 73, 43
+crewmate/mouths/mouth_open
+	bounds: 1281, 1945, 73, 48
+crewmate/mouths/mouth_puff
+	bounds: 1521, 1944, 99, 49
+crewmate/mouths/mouth_vomit
+	bounds: 850, 1829, 66, 56
+crewmate/run/leg_L_run1
+	bounds: 1309, 1823, 81, 57
+	offsets: 1, 1, 83, 59
+crewmate/run/leg_L_run2
+	bounds: 552, 1477, 95, 70
+	offsets: 1, 1, 97, 72
+crewmate/run/leg_L_run3
+	bounds: 922, 1829, 62, 56
+	offsets: 1, 1, 64, 58
+crewmate/run/leg_L_run4
+	bounds: 82, 1960, 64, 45
+	offsets: 1, 1, 66, 47
+crewmate/run/leg_R_run1
+	bounds: 664, 1766, 78, 59
+	offsets: 1, 1, 80, 61
+crewmate/run/leg_R_run2
+	bounds: 112, 1902, 78, 50
+	offsets: 1, 1, 80, 52
+crewmate/run/leg_R_run3
+	bounds: 6, 1844, 74, 54
+	offsets: 1, 1, 76, 56
+crewmate/run/leg_R_run4
+	bounds: 86, 1842, 54, 61
+	offsets: 1, 1, 56, 62
+	rotate: 90
+crewmate/search/body
+	bounds: 477, 780, 116, 156
+	offsets: 1, 1, 118, 158
+	rotate: 90
+crewmate/search/pack
+	bounds: 843, 1219, 81, 103
+	offsets: 1, 1, 83, 105
+	rotate: 90
+crewmate/shadow
+	bounds: 305, 2009, 136, 33
+	offsets: 1, 1, 138, 35
+crewmate/stand/body_stand
+	bounds: 6, 674, 120, 158
+	offsets: 82, 72, 284, 301
+	rotate: 90
+crewmate/stand/hat_attach
+	bounds: 6, 2041, 1, 1
+crewmate/stand/leg_L_stand_M
+	bounds: 1396, 1823, 57, 68
+	offsets: 39, 14, 135, 114
+	rotate: 90
+crewmate/stand/leg_R_stand_M
+	bounds: 748, 1764, 59, 83
+	offsets: 49, 28, 157, 144
+	rotate: 90
+crewmate/stand/pack
+	bounds: 621, 1227, 80, 118
+	offsets: 62, 34, 197, 191
+	rotate: 90
+crewmate/visors/visor
+	bounds: 1070, 1690, 88, 63
+	offsets: 1, 1, 90, 65
+crewmate/visors/visor_angry2
+	bounds: 1164, 1688, 97, 63
+	offsets: 1, 1, 99, 65
+crewmate/visors/visor_angry3
+	bounds: 175, 1326, 96, 76
+	offsets: 1, 1, 98, 78
+crewmate/visors/visor_begging_1
+	bounds: 1005, 148, 159, 186
+	offsets: 72, 0, 231, 186
+	rotate: 90
+crewmate/visors/visor_begging_2
+	bounds: 1650, 450, 146, 173
+	offsets: 75, 0, 221, 173
+	rotate: 90
+crewmate/visors/visor_broken2
+	bounds: 1267, 1688, 88, 63
+	offsets: 1, 1, 90, 65
+crewmate/visors/visor_closed
+	bounds: 1361, 1688, 88, 63
+	offsets: 1, 1, 90, 65
+crewmate/visors/visor_cold
+	bounds: 286, 1957, 89, 46
+	offsets: 1, 1, 91, 48
+crewmate/visors/visor_constipated
+	bounds: 455, 1315, 97, 76
+	offsets: 1, 1, 99, 78
+crewmate/visors/visor_cracked
+	bounds: 1455, 1686, 88, 63
+	offsets: 1, 1, 90, 65
+crewmate/visors/visor_cracked2
+	bounds: 837, 1764, 87, 59
+	offsets: 1, 1, 89, 61
+crewmate/visors/visor_cry
+	bounds: 1714, 1454, 96, 72
+	offsets: 1, 1, 98, 74
+crewmate/visors/visor_destroyed
+	bounds: 1549, 1685, 88, 63
+	offsets: 1, 1, 90, 65
+crewmate/visors/visor_disgust
+	bounds: 279, 1773, 94, 58
+	offsets: 1, 1, 96, 60
+crewmate/visors/visor_drained
+	bounds: 916, 1388, 104, 74
+	offsets: 1, 1, 106, 76
+crewmate/visors/visor_eyelid
+	bounds: 1801, 1680, 92, 63
+	offsets: 1, 1, 102, 65
+crewmate/visors/visor_flinch
+	bounds: 558, 1315, 94, 76
+	offsets: 1, 1, 96, 78
+crewmate/visors/visor_happy
+	bounds: 84, 1710, 96, 61
+	offsets: 1, 1, 98, 63
+crewmate/visors/visor_joke
+	bounds: 653, 1477, 92, 70
+	offsets: 1, 1, 94, 72
+crewmate/visors/visor_joke2
+	bounds: 658, 1313, 90, 76
+	offsets: 1, 1, 92, 78
+crewmate/visors/visor_sad
+	bounds: 1106, 1384, 94, 74
+	offsets: 1, 1, 96, 76
+crewmate/visors/visor_sad2
+	bounds: 1846, 1529, 97, 69
+	offsets: 1, 1, 99, 71
+crewmate/visors/visor_sad2_blink1
+	bounds: 6, 1494, 97, 69
+	offsets: 1, 1, 99, 71
+crewmate/visors/visor_sad2_blink2
+	bounds: 109, 1490, 97, 69
+	offsets: 1, 1, 99, 71
+crewmate/visors/visor_scared
+	bounds: 6, 805, 123, 116
+	offsets: 1, 1, 125, 118
+crewmate/visors/visor_squint
+	bounds: 1169, 1210, 91, 83
+	offsets: 1, 1, 93, 85
+crewmate/visors/visor_squint2
+	bounds: 553, 1699, 98, 62
+	offsets: 1, 1, 100, 64
+crewmate/visors/visor_squint3
+	bounds: 1220, 1617, 90, 65
+	offsets: 1, 1, 92, 67
+crewmate/visors/visor_squinting
+	bounds: 1899, 1677, 88, 63
+	offsets: 1, 1, 90, 65
+crewmate/visors/visor_squinting_blink
+	bounds: 78, 1641, 88, 63
+	offsets: 1, 1, 90, 65
+crewmate/visors/visor_strain
+	bounds: 413, 1028, 102, 105
+	offsets: 1, 1, 104, 106
+	rotate: 90
+crewmate/visors/visor_weary
+	bounds: 467, 1630, 107, 63
+	offsets: 1, 1, 109, 65
+crewmate/visors/visor_worry
+	bounds: 1266, 1206, 116, 83
+	offsets: 1, 1, 118, 87
+crewmate_twochsia/hands/hand_L_angryfist
+	bounds: 1722, 1682, 73, 64
+	offsets: 1, 1, 75, 66
+crewmate_twochsia/hands/hand_L_backhurt
+	bounds: 1470, 1823, 57, 80
+	offsets: 1, 1, 59, 82
+	rotate: 90
+crewmate_twochsia/hands/hand_L_clutch
+	bounds: 6, 1712, 72, 62
+	offsets: 1, 1, 74, 64
+crewmate_twochsia/hands/hand_L_fist
+	bounds: 186, 1708, 74, 62
+	offsets: 1, 1, 76, 64
+crewmate_twochsia/hands/hand_L_flat
+	bounds: 196, 1901, 100, 50
+	offsets: 1, 1, 102, 52
+crewmate_twochsia/hands/hand_L_grab_bucket
+	bounds: 659, 1125, 92, 93
+	offsets: 1, 1, 94, 95
+	rotate: 90
+crewmate_twochsia/hands/hand_L_grip
+	bounds: 829, 1551, 79, 68
+	offsets: 1, 1, 81, 70
+crewmate_twochsia/hands/hand_L_gun
+	bounds: 1898, 1604, 79, 67
+	offsets: 1, 1, 81, 69
+crewmate_twochsia/hands/hand_L_heartattack
+	bounds: 1949, 1529, 87, 69
+	offsets: 1, 1, 89, 71
+crewmate_twochsia/hands/hand_L_hip
+	bounds: 1032, 1465, 75, 71
+	offsets: 1, 1, 77, 73
+crewmate_twochsia/hands/hand_L_hold
+	bounds: 212, 1487, 72, 69
+	offsets: 1, 1, 74, 71
+crewmate_twochsia/hands/hand_L_inair
+	bounds: 1661, 1373, 80, 75
+	offsets: 1, 1, 82, 77
+crewmate_twochsia/hands/hand_L_insane
+	bounds: 283, 1405, 73, 76
+	offsets: 1, 1, 75, 78
+	rotate: 90
+crewmate_twochsia/hands/hand_L_reachout
+	bounds: 369, 1703, 97, 62
+	offsets: 1, 1, 99, 64
+crewmate_twochsia/hands/hand_L_shock
+	bounds: 365, 1401, 85, 73
+	offsets: 1, 2, 87, 76
+crewmate_twochsia/hands/hand_L_throw
+	bounds: 1556, 1822, 87, 57
+	offsets: 1, 1, 89, 59
+crewmate_twochsia/hands/hand_L_throwdown
+	bounds: 947, 1623, 64, 79
+	offsets: 1, 1, 66, 81
+	rotate: 90
+crewmate_twochsia/hands/hand_L_wave
+	bounds: 1696, 1196, 86, 92
+	offsets: 1, 1, 88, 93
+	rotate: 90
+crewmate_twochsia/hands/hand_R_fist
+	bounds: 1727, 1752, 69, 61
+	offsets: 1, 1, 71, 63
+crewmate_twochsia/hands/hand_R_fist_4
+	bounds: 1026, 1385, 74, 74
+	offsets: 1, 1, 76, 76
+crewmate_twochsia/hands/hand_R_fist_angry
+	bounds: 1161, 1887, 68, 52
+	offsets: 1, 1, 70, 54
+crewmate_twochsia/hands/hand_R_flat
+	bounds: 1688, 1884, 95, 53
+	offsets: 1, 1, 97, 55
+crewmate_twochsia/hands/hand_R_gun
+	bounds: 914, 1549, 89, 68
+	offsets: 1, 1, 91, 70
+crewmate_twochsia/hands/hand_R_hip
+	bounds: 1824, 1607, 68, 67
+	offsets: 1, 1, 70, 69
+crewmate_twochsia/hands/hand_R_hold
+	bounds: 1747, 1370, 75, 77
+	offsets: 1, 1, 77, 79
+	rotate: 90
+crewmate_twochsia/hands/hand_R_inair
+	bounds: 1206, 1384, 81, 74
+	offsets: 1, 1, 83, 76
+crewmate_twochsia/hands/hand_R_insane
+	bounds: 1816, 1451, 74, 72
+	offsets: 1, 1, 77, 74
+crewmate_twochsia/hands/hand_R_point
+	bounds: 1316, 1617, 86, 65
+	offsets: 1, 1, 88, 67
+crewmate_twochsia/hands/hand_R_reach
+	bounds: 1653, 1289, 84, 78
+	offsets: 1, 1, 86, 80
+crewmate_twochsia/hands/hand_R_reachout
+	bounds: 1896, 1451, 87, 72
+	offsets: 1, 1, 89, 74
+crewmate_twochsia/hands/hand_R_slap_down
+	bounds: 930, 1764, 59, 83
+	offsets: 1, 1, 62, 86
+	rotate: 90
+crewmate_twochsia/hands/hand_R_slap_up
+	bounds: 1009, 1545, 68, 79
+	offsets: 2, 1, 71, 80
+	rotate: 90
+crewmate_twochsia/hands/hand_R_supportgun
+	bounds: 1649, 1821, 76, 57
+	offsets: 1, 1, 78, 59
+crewmate_twochsia/hands/hand_R_throw
+	bounds: 1293, 1382, 83, 74
+	offsets: 1, 1, 85, 76
+crewmate_twochsia/hands/hand_R_walkingstick
+	bounds: 1431, 1757, 72, 60
+	offsets: 1, 1, 74, 62
+crewmate_twochsia/hands/hand_R_wave
+	bounds: 1388, 1203, 83, 87
+	offsets: 1, 1, 85, 89
+	rotate: 90
+crewmate_twochsia/mouths/mouth_closed
+	bounds: 1142, 1999, 73, 43
+crewmate_twochsia/mouths/mouth_open
+	bounds: 1360, 1945, 73, 48
+crewmate_twochsia/mouths/mouth_puff
+	bounds: 1626, 1944, 99, 49
+crewmate_twochsia/mouths/mouth_vomit
+	bounds: 990, 1829, 66, 56
+crewmate_twochsia/run/leg_L_run1
+	bounds: 1731, 1819, 81, 57
+	offsets: 1, 1, 83, 59
+crewmate_twochsia/run/leg_L_run2
+	bounds: 751, 1475, 95, 70
+	offsets: 1, 1, 97, 72
+crewmate_twochsia/run/leg_L_run3
+	bounds: 1062, 1827, 62, 56
+	offsets: 1, 1, 64, 58
+crewmate_twochsia/run/leg_L_run4
+	bounds: 152, 1958, 64, 45
+	offsets: 1, 1, 66, 47
+crewmate_twochsia/run/leg_R_run1
+	bounds: 1019, 1762, 78, 59
+	offsets: 1, 1, 80, 61
+crewmate_twochsia/run/leg_R_run2
+	bounds: 434, 1897, 78, 50
+	offsets: 1, 1, 80, 52
+crewmate_twochsia/run/leg_R_run3
+	bounds: 269, 1840, 74, 54
+	offsets: 1, 1, 76, 56
+crewmate_twochsia/run/leg_R_run4
+	bounds: 349, 1837, 54, 61
+	offsets: 1, 1, 56, 62
+	rotate: 90
+crewmate_twochsia/stand/body_stand
+	bounds: 170, 668, 120, 158
+	offsets: 82, 72, 284, 301
+	rotate: 90
+crewmate_twochsia/stand/leg_L_stand_M
+	bounds: 1818, 1818, 57, 68
+	offsets: 39, 14, 135, 114
+	rotate: 90
+crewmate_twochsia/stand/leg_R_stand_M
+	bounds: 1103, 1759, 59, 83
+	offsets: 49, 28, 157, 144
+	rotate: 90
+crewmate_twochsia/stand/pack
+	bounds: 952, 1216, 80, 118
+	offsets: 62, 34, 197, 191
+	rotate: 90
+crewmate_twochsia/visors/visor_angry2
+	bounds: 266, 1636, 97, 63
+	offsets: 1, 1, 99, 65
+crewmate_twochsia/visors/visor_angry3
+	bounds: 754, 1310, 96, 76
+	offsets: 1, 1, 98, 78
+crewmate_twochsia/visors/visor_closed
+	bounds: 172, 1639, 88, 63
+	offsets: 1, 1, 90, 65
+crewmate_twochsia/visors/visor_eyelid
+	bounds: 369, 1634, 92, 63
+	offsets: 1, 1, 102, 65
+crewmate_twochsia/visors/visor_flinch
+	bounds: 856, 1306, 94, 76
+	offsets: 1, 1, 96, 78
+crewmate_twochsia/visors/visor_squint3
+	bounds: 1408, 1615, 90, 65
+	offsets: 1, 1, 92, 67
+crewmate_twochsia/visors/visor_strain
+	bounds: 524, 1021, 102, 105
+	offsets: 1, 1, 104, 106
+	rotate: 90
+generator/Gen_BoxBG
+	bounds: 1616, 123, 181, 161
+generator/Gen_DropShadow
+	bounds: 956, 1302, 252, 76
+generator/Gen_Engine
+	bounds: 1033, 999, 156, 101
+generator/chord
+	bounds: 1289, 1999, 507, 43
+	offsets: 19, 23, 543, 105
+generator/chord-base
+	bounds: 1221, 1999, 43, 62
+	offsets: 11, 16, 68, 99
+	rotate: 90
+generator/gen-engine
+	bounds: 821, 892, 163, 108
+	offsets: 1, 1, 165, 110
+generator/generator-broken/gen-boxbg
+	bounds: 1829, 450, 178, 146
+	offsets: 1, 1, 180, 148
+generator/generator-broken/gen-dropshadow
+	bounds: 1743, 1288, 252, 76
+	offsets: 1, 1, 254, 78
+generator/handle
+	bounds: 6, 537, 131, 155
+	offsets: 17, 25, 206, 194
+	rotate: 90
+generator/handle-grab
+	bounds: 1295, 297, 180, 155
+	offsets: 17, 25, 206, 194
+generator/handle-pull
+	bounds: 520, 336, 162, 155
+	offsets: 17, 25, 206, 194
+projectiles/grenade
+	bounds: 1888, 1195, 87, 92
+	offsets: 1, 1, 89, 94
+	rotate: 90
+props/flame
+	bounds: 109, 2011, 31, 48
+	offsets: 1, 1, 33, 49
+	rotate: 90
+props/lighter
+	bounds: 1214, 1299, 98, 77
+	offsets: 1, 1, 100, 79
+search/items/item1
+	bounds: 6, 1780, 72, 58
+	offsets: 1, 1, 74, 60
+search/shine_finditem
+	bounds: 6, 380, 151, 151
+weapons/assault_rifle
+	bounds: 779, 631, 272, 123
+	offsets: 1, 1, 274, 125
+weapons/flashlight
+	bounds: 128, 1242, 138, 78
+	offsets: 1, 1, 140, 80
+weapons/muzzle_flash_2
+	bounds: 1830, 1370, 75, 147
+	offsets: 0, 0, 75, 148
+	rotate: 90
+weapons/sword
+	bounds: 155, 1032, 98, 252
+	offsets: 1, 1, 100, 254
+	rotate: 90
+
+39e7d7c9555dcb7e.png
+	size: 2048, 2048
+	filter: Linear, Linear
+MOD/pirate/Blox_pirate_shirt
+	bounds: 182, 1850, 167, 188
+	offsets: 58, 42, 284, 301
+	rotate: 90
+MOD/pirate/pack
+	bounds: 244, 1462, 195, 189
+	offsets: 1, 1, 197, 191
+VFX/acid/acid splash/splash1
+	bounds: 6, 1472, 232, 188
+	offsets: 1, 1, 234, 190
+VFX/acid/acid splash/splash2
+	bounds: 1460, 752, 405, 261
+	offsets: 1, 1, 407, 263
+VFX/acid/acid splash/splash3
+	bounds: 641, 459, 467, 300
+	offsets: 1, 1, 469, 302
+VFX/acid/acid_dissolve/acid_dissolve_f4
+	bounds: 611, 1844, 173, 178
+	offsets: 1, 1, 175, 179
+	rotate: 90
+VFX/beartrap/trap_set
+	bounds: 361, 1657, 201, 187
+	offsets: 1, 1, 203, 189
+VFX/blood splat/bloot_splat1
+	bounds: 376, 1850, 229, 167
+	offsets: 1, 1, 231, 169
+VFX/blood splat/bloot_splat3
+	bounds: 1443, 1448, 464, 193
+	offsets: 1, 1, 466, 195
+VFX/blood splat/bloot_splat4
+	bounds: 294, 1253, 517, 195
+	offsets: 1, 1, 519, 197
+VFX/blood splat/bloot_splat5
+	bounds: 1369, 1647, 536, 186
+	offsets: 1, 1, 538, 188
+VFX/blood_n_viscera/blood/blood_puddle
+	bounds: 1160, 1022, 354, 211
+	offsets: 1, 1, 356, 213
+VFX/blood_n_viscera/blood/circular_blood_spurt_1
+	bounds: 891, 765, 274, 251
+	offsets: 1, 1, 276, 253
+VFX/blood_n_viscera/blood/circular_blood_spurt_2
+	bounds: 6, 508, 306, 281
+	offsets: 1, 1, 308, 283
+VFX/blood_n_viscera/blood/circular_blood_spurt_3
+	bounds: 318, 486, 317, 292
+	offsets: 1, 1, 319, 294
+VFX/blood_n_viscera/blood/upwards_blood_spurt_1
+	bounds: 817, 1247, 273, 200
+	offsets: 1, 1, 275, 202
+VFX/blood_n_viscera/blood/upwards_blood_spurt_2
+	bounds: 850, 1027, 304, 210
+	offsets: 1, 1, 306, 212
+VFX/blood_n_viscera/blood/upwards_blood_spurt_3
+	bounds: 1520, 1019, 317, 213
+	offsets: 1, 1, 319, 215
+VFX/blood_puddle2
+	bounds: 795, 1840, 375, 177
+	offsets: 1, 1, 377, 179
+VFX/explosion/Ex_Orange
+	bounds: 1294, 79, 364, 411
+	rotate: 90
+VFX/explosion/Ex_Yellow
+	bounds: 1171, 765, 251, 283
+	rotate: 90
+VFX/explosion/ExplosionResidue
+	bounds: 6, 161, 448, 319
+	offsets: 3, 31, 465, 361
+VFX/explosion/UP_SmokeLine
+	bounds: 1114, 449, 903, 297
+VFX/fire_burnup/fire1
+	bounds: 1096, 1243, 200, 277
+	offsets: 1, 1, 202, 279
+	rotate: 90
+VFX/fire_burnup/fire2
+	bounds: 1653, 1238, 204, 285
+	offsets: 1, 1, 206, 287
+	rotate: 90
+VFX/fire_burnup/fire3
+	bounds: 258, 1040, 207, 293
+	offsets: 1, 1, 209, 295
+	rotate: 90
+VFX/fire_burnup/fire4
+	bounds: 557, 1033, 208, 287
+	offsets: 1, 1, 210, 289
+	rotate: 90
+VFX/frozen/crew_frozen
+	bounds: 1544, 1839, 349, 178
+	offsets: 1, 1, 351, 180
+VFX/frozen/crew_frozen_cracks
+	bounds: 6, 1666, 349, 178
+	offsets: 1, 1, 351, 180
+VFX/frozen/crew_frozen_dust
+	bounds: 257, 795, 303, 232
+	offsets: 12, 9, 329, 249
+VFX/generic/hit_spark_2
+	bounds: 6, 1852, 170, 165
+	offsets: 13, 16, 197, 198
+VFX/shocked/electric_1
+	bounds: 6, 1042, 213, 246
+	offsets: 1, 1, 215, 247
+	rotate: 90
+VFX/shocked/electric_2
+	bounds: 652, 1454, 191, 281
+	offsets: 1, 1, 193, 283
+	rotate: 90
+VFX/shocked/electrocute_2
+	bounds: 460, 129, 324, 434
+	offsets: 0, 39, 355, 500
+	rotate: 90
+VFX/shocked/electrocute_3
+	bounds: 900, 105, 338, 388
+	offsets: 19, 17, 357, 450
+	rotate: 90
+VFX/shocked/electrocute_crew
+	bounds: 939, 1453, 192, 247
+	offsets: 0, 1, 192, 248
+	rotate: 90
+VFX/shocked/electrocute_crew_3
+	bounds: 1192, 1449, 192, 245
+	offsets: 0, 2, 192, 248
+	rotate: 90
+VFX/water/splash
+	bounds: 1176, 1840, 177, 362
+	offsets: 1, 1, 179, 363
+	rotate: 90
+crewmate/full pose/crew_fallen
+	bounds: 6, 814, 245, 222
+	offsets: 1, 1, 247, 224
+generator/Gen_Box
+	bounds: 1379, 1239, 268, 203
+generator/generator-broken/gen-box
+	bounds: 6, 1261, 282, 195
+	offsets: 1, 1, 284, 197
+props/voting_sign
+	bounds: 568, 1651, 183, 261
+	offsets: 1, 1, 185, 263
+	rotate: 90
+props/voting_sign3
+	bounds: 835, 1651, 183, 261
+	offsets: 1, 1, 185, 263
+	rotate: 90
+props/voting_sign_pass
+	bounds: 1102, 1651, 183, 261
+	offsets: 1, 1, 185, 263
+	rotate: 90
+weapons/flashlight_glow
+	bounds: 445, 1456, 189, 201
+	offsets: 5, 4, 206, 209
+	rotate: 90
+weapons/swipe
+	bounds: 566, 784, 319, 237
+
+133be55c73177ce4.png
+	size: 2048, 2048
+	filter: Linear, Linear
+VFX/explode/cracked_floor
+	bounds: 6, 1443, 1143, 410
+	offsets: 1, 1, 1145, 412
+VFX/explosion/Ex_Red
+	bounds: 6, 143, 546, 615
+	offsets: 1, 2, 551, 623
+VFX/shocked/electrocute_1
+	bounds: 569, 1073, 375, 364
+	offsets: 10, 48, 400, 460
+generator/ElectricBurst_1
+	bounds: 558, 6, 522, 448
+	offsets: 8, 8, 537, 463
+generator/ElectricBurst_2
+	bounds: 1281, 424, 589, 504
+	offsets: 1, 8, 591, 513
+	rotate: 90
+generator/ElectricBurst_3
+	bounds: 6, 764, 673, 557
+	offsets: 5, 1, 683, 563
+	rotate: 90
+generator/ElectricBurst_4
+	bounds: 569, 460, 706, 553
+	offsets: 5, 5, 716, 562
+generator/ElectricBurst_5
+	bounds: 1155, 1019, 834, 653
+	offsets: 5, 5, 845, 663
+	rotate: 90

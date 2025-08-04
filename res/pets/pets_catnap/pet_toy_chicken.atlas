@@ -1,0 +1,44 @@
+pet_toy_chicken.png
+	size: 616, 616
+	filter: Linear, Linear
+	scale: 0.5
+chicken_chibi/arm_L
+	bounds: 491, 535, 62, 74
+	offsets: 5, 5, 77, 100
+	rotate: 180
+chicken_chibi/arm_R
+	bounds: 503, 475, 58, 68
+	offsets: 13, 10, 77, 102
+	rotate: 270
+chicken_chibi/body
+	bounds: 379, 533, 76, 76
+	offsets: 30, 50, 135, 175
+chicken_chibi/eyes_default
+	bounds: 318, 519, 90, 55
+	rotate: 90
+chicken_chibi/hair
+	bounds: 147, 486, 123, 109
+	offsets: 13, 24, 142, 133
+	rotate: 90
+chicken_chibi/head
+	bounds: 6, 491, 136, 118
+	offsets: 12, 32, 152, 196
+chicken_chibi/leg_L
+	bounds: 449, 480, 56, 68
+	offsets: 8, 16, 77, 100
+chicken_chibi/leg_R
+	bounds: 379, 475, 56, 70
+	offsets: 11, 17, 77, 100
+	rotate: 270
+chicken_chibi/mouth
+	bounds: 260, 512, 97, 53
+	offsets: 14, 8, 123, 65
+	rotate: 90
+chicken_chibi/nose
+	bounds: 294, 487, 39, 21
+chicken_chibi/pendant
+	bounds: 259, 477, 31, 31
+	offsets: 8, 7, 44, 43
+chicken_chibi/tail
+	bounds: 553, 549, 56, 60
+	offsets: 40, 20, 102, 128

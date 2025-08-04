@@ -1,0 +1,73 @@
+{
+"skeleton": { "hash": "A3MGpwrs0NQ", "spine": "4.0.64", "x": -72.5, "y": -18.5, "width": 145, "height": 169 },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "gas_can", "bone": "root", "attachment": "gas_can" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"gas_can": {
+				"gas_can": { "y": 66, "width": 145, "height": 169 }
+			}
+		}
+	}
+],
+"animations": {
+	"gas_can_idle": {
+		"bones": {
+			"root": {
+				"translate": [
+					{ "time": 0.0333 }
+				]
+			}
+		}
+	},
+	"gas_can_pickup": {
+		"slots": {
+			"gas_can": {
+				"rgba": [
+					{
+						"time": 0.2,
+						"color": "ffffffff",
+						"curve": [ 0.3, 1, 0.4, 1, 0.3, 1, 0.4, 1, 0.3, 1, 0.4, 1, 0.3, 1, 0.4, 0 ]
+					},
+					{ "time": 0.5, "color": "ffffff00" }
+				]
+			}
+		},
+		"bones": {
+			"root": {
+				"translate": [
+					{
+						"time": 0.1667,
+						"curve": [ 0.278, 0, 0.389, 0, 0.278, 0, 0.389, 148.8 ]
+					},
+					{ "time": 0.5, "y": 148.8 }
+				],
+				"scale": [
+					{
+						"curve": [ 0.033, 1, 0.067, 1.112, 0.033, 1, 0.067, 0.914 ]
+					},
+					{
+						"time": 0.1,
+						"x": 1.112,
+						"y": 0.914,
+						"curve": [ 0.167, 1.112, 0.233, 0.914, 0.167, 0.914, 0.233, 1.124 ]
+					},
+					{
+						"time": 0.3,
+						"x": 0.914,
+						"y": 1.124,
+						"curve": [ 0.367, 0.914, 0.433, 1, 0.367, 1.124, 0.433, 1 ]
+					},
+					{ "time": 0.5 }
+				]
+			}
+		}
+	}
+}
+}

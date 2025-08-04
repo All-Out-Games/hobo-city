@@ -1,0 +1,51 @@
+CAP99_npc_capybara.png
+	size: 292, 292
+	filter: Linear, Linear
+arm l
+	bounds: 76, 15, 39, 59
+	rotate: 90
+arm r
+	bounds: 6, 19, 35, 64
+	rotate: 90
+body
+	bounds: 6, 181, 159, 105
+ear l
+	bounds: 195, 56, 37, 38
+	offsets: 1, 1, 39, 40
+ear r
+	bounds: 150, 55, 39, 37
+	offsets: 1, 1, 41, 39
+eye
+	bounds: 238, 63, 22, 18
+	offsets: 1, 1, 24, 20
+eye blink
+	bounds: 241, 87, 23, 12
+	offsets: 1, 1, 25, 14
+foot l
+	bounds: 195, 100, 40, 54
+foot r
+	bounds: 141, 6, 43, 47
+	rotate: 90
+head
+	bounds: 6, 85, 137, 90
+	offsets: 1, 1, 139, 92
+leg l
+	bounds: 149, 98, 40, 56
+	offsets: 1, 1, 42, 58
+leg r
+	bounds: 240, 165, 44, 46
+	offsets: 1, 1, 46, 47
+	rotate: 90
+shadow
+	bounds: 6, 60, 138, 19
+	offsets: 1, 1, 140, 21
+sleep fx/z_2
+	bounds: 241, 105, 41, 54
+	offsets: 1, 1, 43, 56
+sleep fx/z_3
+	bounds: 171, 160, 49, 63
+	offsets: 1, 2, 51, 65
+	rotate: 90
+tranq
+	bounds: 171, 215, 103, 71
+	offsets: 0, 0, 120, 71

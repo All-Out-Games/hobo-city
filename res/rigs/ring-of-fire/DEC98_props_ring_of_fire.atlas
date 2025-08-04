@@ -1,0 +1,28 @@
+DEC98_props_ring_of_fire.png
+	size: 956, 956
+	filter: Linear, Linear
+Small Fire 2/SmallFire_1
+	bounds: 255, 633, 243, 316
+	offsets: 38, 54, 309, 390
+Small Fire 2/SmallFire_2
+	bounds: 6, 10, 259, 324
+	offsets: 21, 52, 309, 390
+	rotate: 90
+Small Fire 2/SmallFire_3
+	bounds: 6, 275, 265, 331
+	offsets: 17, 51, 309, 390
+Small Fire 2/SmallFire_4
+	bounds: 6, 612, 243, 337
+	offsets: 38, 50, 309, 390
+Small Fire 2/SmallFire_5
+	bounds: 530, 340, 243, 297
+	offsets: 29, 51, 309, 390
+Small Fire 2/SmallFire_6
+	bounds: 504, 643, 234, 306
+	offsets: 32, 50, 309, 390
+Small Fire 2/SmallFire_7
+	bounds: 336, 6, 246, 306
+	offsets: 31, 52, 309, 390
+Small Fire 2/SmallFire_8
+	bounds: 277, 318, 247, 309
+	offsets: 31, 51, 309, 390

@@ -1,0 +1,61 @@
+pet_toy_elephant.png
+	size: 900, 900
+	filter: Linear, Linear
+	scale: 0.5
+elephant_chibi/arm_L
+	bounds: 653, 800, 65, 77
+	offsets: 3, 4, 77, 100
+	rotate: 180
+elephant_chibi/arm_R
+	bounds: 763, 817, 58, 67
+	offsets: 13, 10, 77, 100
+elephant_chibi/body
+	bounds: 446, 791, 74, 73
+	offsets: 31, 51, 135, 175
+	rotate: 90
+elephant_chibi/ear_L
+	bounds: 226, 776, 96, 118
+	offsets: 13, 25, 126, 159
+elephant_chibi/ear_R
+	bounds: 132, 779, 88, 115
+	offsets: 19, 26, 126, 159
+elephant_chibi/eyes_angry
+	bounds: 822, 773, 73, 34
+	offsets: 10, 10, 89, 47
+	rotate: 270
+elephant_chibi/eyes_concerned
+	bounds: 722, 776, 73, 36
+	offsets: 9, 9, 89, 47
+	rotate: 180
+elephant_chibi/eyes_dazed
+	bounds: 721, 822, 72, 36
+	offsets: 10, 10, 89, 47
+	rotate: 90
+elephant_chibi/eyes_default
+	bounds: 385, 804, 90, 55
+	rotate: 90
+elephant_chibi/head
+	bounds: 6, 782, 122, 112
+	offsets: 20, 34, 152, 196
+elephant_chibi/leg_L
+	bounds: 598, 773, 52, 66
+	offsets: 11, 17, 77, 100
+	rotate: 90
+elephant_chibi/leg_R
+	bounds: 600, 827, 53, 67
+	offsets: 13, 18, 77, 100
+elephant_chibi/mouth
+	bounds: 327, 799, 95, 53
+	offsets: 14, 7, 123, 65
+	rotate: 90
+elephant_chibi/nose
+	bounds: 834, 843, 51, 60
+	offsets: 14, 10, 78, 81
+	rotate: 90
+elephant_chibi/pendant
+	bounds: 524, 785, 27, 32
+	offsets: 534, 215, 1094, 465
+elephant_chibi/tail
+	bounds: 522, 806, 88, 77
+	offsets: 13, 11, 102, 128
+	rotate: 90

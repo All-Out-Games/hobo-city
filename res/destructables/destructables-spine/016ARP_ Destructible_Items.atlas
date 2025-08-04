@@ -1,0 +1,79 @@
+016ARP_ Destructible_Items.png
+	size: 2656, 256
+	filter: Linear, Linear
+	scale: 0.5
+Bus
+	bounds: 715, 11, 237, 157
+	rotate: 90
+Car
+	bounds: 1124, 33, 215, 89
+	offsets: 0, 0, 216, 89
+	rotate: 90
+Dumpster
+	bounds: 1758, 151, 97, 88
+	rotate: 90
+Street_Lamp
+	bounds: 2392, 149, 36, 99
+Trash can
+	bounds: 1670, 136, 82, 112
+blue_car
+	bounds: 2028, 141, 107, 68
+	rotate: 90
+break_particles/break_particle_1
+	bounds: 2624, 221, 27, 26
+	rotate: 90
+break_particles/break_particle_2
+	bounds: 2588, 216, 30, 32
+break_particles/break_particle_3
+	bounds: 2536, 199, 46, 49
+brown_button_poof/brown_button_poof_A
+	bounds: 271, 9, 239, 218
+	offsets: 1, 1, 241, 220
+	rotate: 90
+brown_button_poof/brown_button_poof_B
+	bounds: 495, 12, 236, 214
+	offsets: 1, 1, 238, 216
+	rotate: 90
+brown_button_poof/brown_button_poof_C
+	bounds: 6, 6, 259, 242
+	offsets: 1, 1, 261, 244
+burrito_truck
+	bounds: 980, 92, 156, 138
+	rotate: 90
+bush2
+	bounds: 2434, 184, 64, 49
+	rotate: 90
+car2
+	bounds: 2188, 144, 104, 62
+	rotate: 90
+hit spark
+	bounds: 878, 20, 96, 228
+	offsets: 0, 0, 97, 228
+hit_fx/hit_effect1
+	bounds: 2326, 186, 60, 62
+hit_fx/hit_effect2
+	bounds: 2102, 166, 80, 82
+hit_fx/hit_effect3
+	bounds: 1934, 157, 88, 91
+park_bench
+	bounds: 2489, 193, 55, 41
+	rotate: 90
+red_car
+	bounds: 2256, 155, 93, 64
+	rotate: 90
+smoke/smoke_particle_A
+	bounds: 1337, 134, 112, 114
+	offsets: 2, 2, 116, 118
+smoke/smoke_particle_B
+	bounds: 1455, 136, 110, 112
+	offsets: 3, 3, 116, 118
+smoke/smoke_particle_C
+	bounds: 1571, 146, 93, 102
+	offsets: 2, 2, 97, 106
+tow_truck
+	bounds: 1852, 136, 112, 76
+	offsets: 0, 0, 112, 78
+	rotate: 90
+trees 6
+	bounds: 1219, 90, 112, 158
+	offsets: 0, 1, 113, 159

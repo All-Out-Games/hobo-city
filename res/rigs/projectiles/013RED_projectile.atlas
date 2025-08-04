@@ -1,0 +1,24 @@
+013RED_projectile.png
+	size: 380, 124
+	filter: Linear, Linear
+	scale: 0.5
+MachineGunBullet
+	bounds: 321, 23, 92, 12
+	offsets: 1, 0, 96, 12
+	rotate: 90
+OP[106]LaserBolt _Crewshia
+	bounds: 339, 38, 77, 12
+	rotate: 90
+buzzsaw
+	bounds: 6, 6, 108, 109
+cannonball
+	bounds: 204, 52, 63, 60
+	rotate: 90
+grenade
+	bounds: 270, 68, 45, 47
+shotgun_bullet2
+	bounds: 357, 91, 24, 14
+	rotate: 90
+waterballoon
+	bounds: 120, 26, 78, 89
+	offsets: 1, 0, 79, 89

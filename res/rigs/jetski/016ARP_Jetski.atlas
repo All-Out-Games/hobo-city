@@ -1,0 +1,22 @@
+016ARP_Jetski.png
+	size: 1352, 184
+	filter: Linear, Linear
+	scale: 0.5
+Jetski/jet_ski_water_wake/water_wake_back_1
+	bounds: 301, 104, 289, 72
+Jetski/jet_ski_water_wake/water_wake_back_2
+	bounds: 891, 107, 288, 69
+Jetski/jet_ski_water_wake/water_wake_back_3
+	bounds: 596, 105, 289, 71
+Jetski/jet_ski_water_wake/water_wake_front_1
+	bounds: 1298, 17, 159, 48
+	rotate: 90
+Jetski/jet_ski_water_wake/water_wake_front_2
+	bounds: 1185, 6, 170, 49
+	offsets: 1, 0, 171, 49
+	rotate: 90
+Jetski/jet_ski_water_wake/water_wake_front_3
+	bounds: 1240, 16, 160, 52
+	rotate: 90
+Jetski/jetski
+	bounds: 6, 15, 289, 161

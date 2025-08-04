@@ -1,0 +1,12 @@
+cfceaf1ce21fb8cc.png
+	size: 220, 220
+	filter: Linear, Linear
+void_particles/void_particle
+	bounds: 134, 134, 83, 83
+	offsets: 2, 2, 87, 87
+void_particles/void_particle_2
+	bounds: 63, 148, 69, 69
+	offsets: 2, 2, 73, 73
+void_particles/void_particle_3
+	bounds: 2, 158, 59, 59
+	offsets: 2, 2, 63, 63

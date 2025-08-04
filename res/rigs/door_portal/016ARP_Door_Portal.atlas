@@ -1,0 +1,23 @@
+016ARP_Door_Portal.png
+	size: 600, 344
+	filter: Linear, Linear
+	scale: 0.5
+Door Portal/images/door
+	bounds: 349, 137, 102, 200
+Door Portal/images/door_shadow
+	bounds: 457, 189, 148, 86
+	offsets: 6, 10, 161, 99
+	rotate: 90
+Door Portal/images/dust_particle_A
+	bounds: 574, 316, 21, 19
+	offsets: 1, 2, 23, 23
+	rotate: 90
+Door Portal/images/dust_particle_B
+	bounds: 549, 316, 21, 19
+	offsets: 1, 2, 23, 23
+	rotate: 90
+Door Portal/images/frame
+	bounds: 210, 153, 133, 184
+Door Portal/images/light
+	bounds: 6, 6, 198, 331
+	offsets: 21, 13, 222, 362

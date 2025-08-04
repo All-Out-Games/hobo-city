@@ -1,0 +1,2653 @@
+{
+"skeleton": { "hash": "YpoqCbgorJU", "spine": "4.0.64", "x": -341.2, "y": -84.11, "width": 682.22, "height": 416.86 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "Rack", "parent": "root" },
+	{ "name": "Rack_Shadow", "parent": "root" },
+	{ "name": "Fan", "parent": "root", "x": -401.62, "y": 97.4 },
+	{ "name": "Fan_Blade", "parent": "Fan", "x": 1.39, "y": 7.88 },
+	{ "name": "WaterCoolerFan", "parent": "root", "x": -401.9, "y": -56.24 },
+	{ "name": "water_cooler_fan1", "parent": "WaterCoolerFan", "x": -52.54, "y": 8.38 },
+	{ "name": "water_cooler_fan2", "parent": "WaterCoolerFan", "x": 51.55, "y": 8.38 },
+	{ "name": "WaterCooler", "parent": "root", "x": 641.21, "y": 5.18 },
+	{ "name": "Cooler_Bubbles", "parent": "WaterCooler", "x": 0.57, "y": 13.9 },
+	{ "name": "bubble_particle1", "parent": "Cooler_Bubbles", "x": -31.64 },
+	{ "name": "bubble_particle2", "parent": "Cooler_Bubbles", "x": -13.25, "y": -8.83 },
+	{ "name": "bubble_particle3", "parent": "Cooler_Bubbles", "x": 22.81 },
+	{ "name": "bubble_particle4", "parent": "Cooler_Bubbles" },
+	{ "name": "GPUs", "parent": "root", "x": -186.45, "y": -174.2 },
+	{ "name": "GPUslot1", "parent": "GPUs", "x": -477.03, "y": -16.75 },
+	{ "name": "gpu1_fan1", "parent": "GPUslot1", "x": 9.17, "y": -94.07 },
+	{ "name": "gpu1_fan2", "parent": "GPUslot1", "x": 0.27, "y": -139.16 },
+	{ "name": "gpu1_fan3", "parent": "GPUslot1", "x": -1.4, "y": -206.88 },
+	{ "name": "gpu1_ring_lights", "parent": "GPUslot1", "x": -0.53, "y": -134.61 },
+	{ "name": "gpu1_lights", "parent": "GPUslot1", "x": 47.81, "y": -131.23 },
+	{ "name": "GPUslot2", "parent": "GPUs", "x": -288.27, "y": -16.75 },
+	{ "name": "gpu2_fan1", "parent": "GPUslot2", "x": 9.17, "y": -94.07 },
+	{ "name": "gpu2_fan2", "parent": "GPUslot2", "x": 0.27, "y": -139.16 },
+	{ "name": "gpu2_fan3", "parent": "GPUslot2", "x": -1.4, "y": -206.88 },
+	{ "name": "gpu2_ring_lights", "parent": "GPUslot2", "x": -0.53, "y": -134.61 },
+	{ "name": "gpu2_lights", "parent": "GPUslot2", "x": 47.81, "y": -131.23 },
+	{ "name": "GPUslot3", "parent": "GPUs", "x": -99.51, "y": -16.75 },
+	{ "name": "gpu3_fan1", "parent": "GPUslot3", "x": 9.17, "y": -94.07 },
+	{ "name": "gpu3_fan2", "parent": "GPUslot3", "x": 0.27, "y": -139.16 },
+	{ "name": "gpu3_fan3", "parent": "GPUslot3", "x": -1.4, "y": -206.88 },
+	{ "name": "gpu3_ring_lights", "parent": "GPUslot3", "x": -0.53, "y": -134.61 },
+	{ "name": "gpu3_lights", "parent": "GPUslot3", "x": 47.81, "y": -131.23 },
+	{ "name": "GPUslot4", "parent": "GPUs", "x": 91.8, "y": -16.75 },
+	{ "name": "gpu4_fan1", "parent": "GPUslot4", "x": 9.17, "y": -94.07 },
+	{ "name": "gpu4_fan2", "parent": "GPUslot4", "x": 0.27, "y": -139.16 },
+	{ "name": "gpu4_fan3", "parent": "GPUslot4", "x": -1.4, "y": -206.88 },
+	{ "name": "gpu4_ring_lights", "parent": "GPUslot4", "x": -0.53, "y": -134.61 },
+	{ "name": "gpu4_lights", "parent": "GPUslot4", "x": 47.81, "y": -131.23 },
+	{ "name": "GPUslot5", "parent": "GPUs", "x": 280.55, "y": -16.75 },
+	{ "name": "gpu5_fan1", "parent": "GPUslot5", "x": 9.17, "y": -94.07 },
+	{ "name": "gpu5_fan2", "parent": "GPUslot5", "x": 0.27, "y": -139.16 },
+	{ "name": "gpu5_fan3", "parent": "GPUslot5", "x": -1.4, "y": -206.88 },
+	{ "name": "gpu5_ring_lights", "parent": "GPUslot5", "x": -0.53, "y": -134.61 },
+	{ "name": "gpu5_lights", "parent": "GPUslot5", "x": 47.81, "y": -131.23 },
+	{ "name": "GPUslot6", "parent": "GPUs", "x": 469.31, "y": -16.75 },
+	{ "name": "gpu6_fan1", "parent": "GPUslot6", "x": 9.17, "y": -94.07 },
+	{ "name": "gpu6_fan2", "parent": "GPUslot6", "x": 0.27, "y": -139.16 },
+	{ "name": "gpu6_fan3", "parent": "GPUslot6", "x": -1.4, "y": -206.88 },
+	{ "name": "gpu6_ring_lights", "parent": "GPUslot6", "x": -0.53, "y": -134.61 },
+	{ "name": "gpu6_lights", "parent": "GPUslot6", "x": 47.81, "y": -131.23 },
+	{ "name": "rack1Slot1", "parent": "Rack", "x": -86, "y": 62.54, "skin": true },
+	{ "name": "rack1Slot2", "parent": "Rack", "x": 90.45, "y": 61.68, "skin": true },
+	{ "name": "rack2Slot3", "parent": "Rack", "x": -116.4, "y": 172.74, "skin": true },
+	{ "name": "rack2Slot4", "parent": "Rack", "x": 62.28, "y": 172.74, "skin": true },
+	{ "name": "rack3Slot5", "parent": "Rack", "x": 213.81, "y": 55.28, "skin": true },
+	{ "name": "rack3Slot6", "parent": "Rack", "x": 147.54, "y": 166.89, "skin": true },
+	{ "name": "rack2Slot1", "parent": "Rack", "x": -59.31, "y": 62.28, "skin": true },
+	{ "name": "rack2Slot2", "parent": "Rack", "x": 120.11, "y": 62.28, "skin": true },
+	{ "name": "rack3Slot1", "parent": "Rack", "x": -139.38, "y": 55.91, "skin": true },
+	{ "name": "rack3Slot2", "parent": "Rack", "x": 37.07, "y": 55.91, "skin": true },
+	{ "name": "rack3Slot3", "parent": "Rack", "x": -207.59, "y": 166.38, "skin": true },
+	{ "name": "rack3Slot4", "parent": "Rack", "x": -30.4, "y": 166.38, "skin": true },
+	{ "name": "rack1Fan", "parent": "Rack", "x": -106.46, "y": 135.41, "skin": true },
+	{ "name": "rack1WaterCooler", "parent": "root", "x": 326.44, "y": 20.02, "skin": true },
+	{ "name": "rack2Fan", "parent": "Rack", "x": -104.28, "y": 243.31, "skin": true },
+	{ "name": "rack2WaterCoolerFan", "parent": "Rack", "x": 49.25, "y": 244.59, "skin": true },
+	{ "name": "rack3Fan", "parent": "Rack", "x": -165.21, "y": 239.71, "skin": true },
+	{ "name": "rack3WaterCoolerFan", "parent": "Rack", "x": 141.83, "y": 242.93, "skin": true },
+	{ "name": "rack1WaterCoolerFan", "parent": "Rack", "x": 52.75, "y": 140.87, "skin": true },
+	{ "name": "rack2WaterCooler", "parent": "root", "x": 326.52, "y": 20.21, "skin": true },
+	{ "name": "rack3WaterCooler", "parent": "root", "x": 442.75, "y": 10.11, "skin": true },
+	{ "name": "gpu1fan1lvl2", "parent": "GPUslot1", "x": 0.48, "y": -61.29, "skin": true },
+	{ "name": "gpu1fan1lvl3", "parent": "GPUslot1", "y": -51.79, "skin": true },
+	{ "name": "gpu1fan1lvl4", "parent": "GPUslot1", "x": 0.48, "y": -56.54, "skin": true },
+	{ "name": "gpu2fan1lvl4", "parent": "GPUslot2", "x": 0.43, "y": -56.25, "skin": true },
+	{ "name": "gpu2fan1lvl2", "parent": "GPUslot2", "x": 0.43, "y": -61.25, "skin": true },
+	{ "name": "gpu2fan1lvl3", "parent": "GPUslot2", "x": -1.44, "y": -52.5, "skin": true },
+	{ "name": "gpu3fan1lvl4", "parent": "GPUslot3", "x": -0.55, "y": -56.71, "skin": true },
+	{ "name": "gpu3fan1lvl2", "parent": "GPUslot3", "x": -0.55, "y": -61.71, "skin": true },
+	{ "name": "gpu3fan1lvl3", "parent": "GPUslot3", "x": -1.17, "y": -52.34, "skin": true },
+	{ "name": "gpu4fan1lvl4", "parent": "GPUslot4", "x": -0.23, "y": -56.71, "skin": true },
+	{ "name": "gpu4fan1lvl2", "parent": "GPUslot4", "x": -0.23, "y": -61.71, "skin": true },
+	{ "name": "gpu4fan1lvl3", "parent": "GPUslot4", "x": -1.48, "y": -52.34, "skin": true },
+	{ "name": "gpu5fan1lvl4", "parent": "GPUslot5", "x": -0.04, "y": -56.88, "skin": true },
+	{ "name": "gpu5fan1lvl2", "parent": "GPUslot5", "x": -0.04, "y": -61.25, "skin": true },
+	{ "name": "gpu5fan1lvl3", "parent": "GPUslot5", "x": -1.29, "y": -51.88, "skin": true },
+	{ "name": "gpu6fan1lvl4", "parent": "GPUslot6", "x": -0.65, "y": -56.6, "skin": true },
+	{ "name": "gpu6fan1lvl2", "parent": "GPUslot6", "x": -0.65, "y": -61.6, "skin": true },
+	{ "name": "gpu6fan1lvl3", "parent": "GPUslot6", "x": -1.28, "y": -52.22, "skin": true },
+	{ "name": "gpu1fan2lvl3", "parent": "GPUslot1", "x": -1.43, "y": -129.71, "skin": true },
+	{ "name": "gpu1fan2lvl4", "parent": "GPUslot1", "x": -0.48, "y": -133.98, "skin": true },
+	{ "name": "gpu2fan2lvl3", "parent": "GPUslot2", "x": -1.44, "y": -130.01, "skin": true },
+	{ "name": "gpu2fan2lvl4", "parent": "GPUslot2", "x": -0.19, "y": -133.76, "skin": true },
+	{ "name": "gpu3fan2lvl3", "parent": "GPUslot3", "x": -1.17, "y": -129.22, "skin": true },
+	{ "name": "gpu3fan2lvl4", "parent": "GPUslot3", "x": -0.55, "y": -134.22, "skin": true },
+	{ "name": "gpu4fan2lvl4", "parent": "GPUslot4", "x": -0.85, "y": -133.59, "skin": true },
+	{ "name": "gpu4fan2lvl3", "parent": "GPUslot4", "x": -1.48, "y": -129.84, "skin": true },
+	{ "name": "gpu5fan2lvl3", "parent": "GPUslot5", "x": -1.29, "y": -130.01, "skin": true },
+	{ "name": "gpu5fan2lvl4", "parent": "GPUslot5", "x": -0.67, "y": -133.76, "skin": true },
+	{ "name": "gpu6fan2lvl3", "parent": "GPUslot6", "x": -1.9, "y": -129.1, "skin": true },
+	{ "name": "gpu6fan2lvl4", "parent": "GPUslot6", "x": -0.65, "y": -134.1, "skin": true },
+	{ "name": "gpu1fan3lvl4", "parent": "GPUslot1", "x": -0.48, "y": -211.42, "skin": true },
+	{ "name": "gpu2fan3lvl4", "parent": "GPUslot2", "x": -0.19, "y": -211.26, "skin": true },
+	{ "name": "gpu3fan3lvl4", "parent": "GPUslot3", "x": -0.55, "y": -211.72, "skin": true },
+	{ "name": "gpu4fan3lvl4", "parent": "GPUslot4", "x": -0.85, "y": -211.72, "skin": true },
+	{ "name": "gpu5fan3lvl4", "parent": "GPUslot5", "x": -0.67, "y": -211.89, "skin": true },
+	{ "name": "gpu6fan3lvl4", "parent": "GPUslot6", "x": -0.65, "y": -211.61, "skin": true },
+	{ "name": "Cables", "parent": "Rack" },
+	{ "name": "Cable1", "parent": "Cables", "x": -171.67, "y": 106.71 },
+	{ "name": "Cable2", "parent": "Cables", "x": 173.22, "y": 98.98 },
+	{ "name": "Cable3", "parent": "Cables", "x": -41.76, "y": 176.31 },
+	{ "name": "rack2Cable1", "parent": "Rack", "x": -170.12, "y": 140.74, "skin": true },
+	{ "name": "rack2Cable2", "parent": "Rack", "x": 184.04, "y": 139.19, "skin": true },
+	{ "name": "rack2Cable3", "parent": "Rack", "x": -47.94, "y": 283.02, "skin": true },
+	{ "name": "rack3Cable1", "parent": "Rack", "x": -272.2, "y": 159.3, "skin": true },
+	{ "name": "rack3Cable2", "parent": "Rack", "x": 283.02, "y": 145.38, "skin": true },
+	{ "name": "rack3Cable3", "parent": "Rack", "x": -92.79, "y": 273.74, "skin": true }
+],
+"slots": [
+	{ "name": "water_cooler_shadow", "bone": "WaterCooler", "attachment": "images/coolers/water_cooler/shadow" },
+	{ "name": "water_tank", "bone": "WaterCooler", "attachment": "images/coolers/water_cooler/water_tank" },
+	{ "name": "water_cooler_cables", "bone": "WaterCooler", "attachment": "images/coolers/water_cooler/cables" },
+	{ "name": "bubble_particle1", "bone": "bubble_particle1" },
+	{ "name": "bubble_particle2", "bone": "bubble_particle2" },
+	{ "name": "bubble_particle3", "bone": "bubble_particle3" },
+	{ "name": "bubble_particle4", "bone": "bubble_particle4" },
+	{ "name": "water_tank_glass", "bone": "WaterCooler", "attachment": "images/coolers/water_cooler/water_tank_glass" },
+	{ "name": "water_cooler_tank_lights", "bone": "WaterCooler", "attachment": "images/coolers/water_cooler/tank_lights" },
+	{ "name": "rack_shadow", "bone": "Rack_Shadow", "attachment": "rack_shadow" },
+	{ "name": "cables1", "bone": "Cable1", "attachment": "images/cables/cables_A" },
+	{ "name": "cables2", "bone": "Cable2", "attachment": "images/cables/cables_B" },
+	{ "name": "cables3", "bone": "Cable3", "attachment": "images/cables/cables_c" },
+	{ "name": "rack", "bone": "Rack", "attachment": "rack" },
+	{ "name": "rack_on_light1", "bone": "Rack" },
+	{ "name": "rack_on_light2", "bone": "Rack" },
+	{ "name": "gpu1", "bone": "GPUslot1", "attachment": "gpu" },
+	{ "name": "gpu1_ring_lights", "bone": "gpu1_ring_lights" },
+	{ "name": "gpu1_fan1", "bone": "gpu1_fan1", "attachment": "gpu_fan1" },
+	{ "name": "gpu1_fan2", "bone": "gpu1_fan2", "attachment": "gpu_fan2" },
+	{ "name": "gpu1_fan3", "bone": "gpu1_fan3", "attachment": "gpu_fan3" },
+	{ "name": "gpu1_light1", "bone": "gpu1_lights" },
+	{ "name": "gpu1_light2", "bone": "gpu1_lights" },
+	{ "name": "gpu1_light3", "bone": "gpu1_lights" },
+	{ "name": "gpu2", "bone": "GPUslot2", "attachment": "gpu" },
+	{ "name": "gpu2_ring_lights", "bone": "gpu2_ring_lights" },
+	{ "name": "gpu2_fan1", "bone": "gpu2_fan1", "attachment": "gpu_fan1" },
+	{ "name": "gpu2_fan2", "bone": "gpu2_fan2", "attachment": "gpu_fan2" },
+	{ "name": "gpu2_fan3", "bone": "gpu2_fan3", "attachment": "gpu_fan3" },
+	{ "name": "gpu2_light1", "bone": "gpu2_lights" },
+	{ "name": "gpu2_light2", "bone": "gpu2_lights" },
+	{ "name": "gpu2_light3", "bone": "gpu2_lights" },
+	{ "name": "gpu5", "bone": "GPUslot5", "attachment": "gpu" },
+	{ "name": "gpu5_ring_lights", "bone": "gpu5_ring_lights" },
+	{ "name": "gpu5_fan1", "bone": "gpu5_fan1", "attachment": "gpu_fan1" },
+	{ "name": "gpu5_fan2", "bone": "gpu5_fan2", "attachment": "gpu_fan2" },
+	{ "name": "gpu5_fan3", "bone": "gpu5_fan3", "attachment": "gpu_fan3" },
+	{ "name": "gpu5_light1", "bone": "gpu5_lights" },
+	{ "name": "gpu5_light2", "bone": "gpu5_lights" },
+	{ "name": "gpu5_light3", "bone": "gpu5_lights" },
+	{ "name": "rack_middle", "bone": "Rack", "attachment": "rack_middle" },
+	{ "name": "gpu3", "bone": "GPUslot3", "attachment": "gpu" },
+	{ "name": "gpu3_ring_lights", "bone": "gpu3_ring_lights" },
+	{ "name": "gpu3_fan1", "bone": "gpu3_fan1", "attachment": "gpu_fan1" },
+	{ "name": "gpu3_fan2", "bone": "gpu3_fan2", "attachment": "gpu_fan2" },
+	{ "name": "gpu3_fan3", "bone": "gpu3_fan3", "attachment": "gpu_fan3" },
+	{ "name": "gpu3_light1", "bone": "gpu3_lights" },
+	{ "name": "gpu3_light2", "bone": "gpu3_lights" },
+	{ "name": "gpu3_light3", "bone": "gpu3_lights" },
+	{ "name": "gpu4", "bone": "GPUslot4", "attachment": "gpu" },
+	{ "name": "gpu4_ring_lights", "bone": "gpu4_ring_lights" },
+	{ "name": "gpu4_fan1", "bone": "gpu4_fan1", "attachment": "gpu_fan1" },
+	{ "name": "gpu4_fan2", "bone": "gpu4_fan2", "attachment": "gpu_fan2" },
+	{ "name": "gpu4_fan3", "bone": "gpu4_fan3", "attachment": "gpu_fan3" },
+	{ "name": "gpu4_light1", "bone": "gpu4_lights" },
+	{ "name": "gpu4_light2", "bone": "gpu4_lights" },
+	{ "name": "gpu4_light3", "bone": "gpu4_lights" },
+	{ "name": "gpu6", "bone": "GPUslot6", "attachment": "gpu" },
+	{ "name": "gpu6_ring_lights", "bone": "gpu6_ring_lights" },
+	{ "name": "gpu6_fan1", "bone": "gpu6_fan1", "attachment": "gpu_fan1" },
+	{ "name": "gpu6_fan2", "bone": "gpu6_fan2", "attachment": "gpu_fan2" },
+	{ "name": "gpu6_fan3", "bone": "gpu6_fan3", "attachment": "gpu_fan3" },
+	{ "name": "gpu6_light1", "bone": "gpu6_lights" },
+	{ "name": "gpu6_light2", "bone": "gpu6_lights" },
+	{ "name": "gpu6_light3", "bone": "gpu6_lights" },
+	{ "name": "rack_front", "bone": "Rack", "attachment": "rack_front" },
+	{ "name": "rack_on_light3", "bone": "Rack" },
+	{ "name": "rack_on_light4", "bone": "Rack" },
+	{ "name": "rack_on_light5", "bone": "Rack" },
+	{ "name": "rack_on_light6", "bone": "Rack" },
+	{ "name": "fan_body", "bone": "Fan", "attachment": "images/coolers/fan/fan_support" },
+	{ "name": "Fan_Blade", "bone": "Fan_Blade", "attachment": "images/coolers/fan/fan" },
+	{ "name": "water_cooler_fans_body", "bone": "WaterCoolerFan", "attachment": "images/coolers/water_cooler/fans_support" },
+	{ "name": "water_cooler_body_lights", "bone": "WaterCoolerFan" },
+	{ "name": "water_cooler_fan1", "bone": "water_cooler_fan1", "attachment": "images/coolers/fan/fan" },
+	{ "name": "water_cooler_fan_light1", "bone": "water_cooler_fan1" },
+	{ "name": "water_cooler_fan2", "bone": "water_cooler_fan2", "attachment": "images/coolers/fan/fan" },
+	{ "name": "water_cooler_fan_light2", "bone": "water_cooler_fan2" }
+],
+"transform": [
+	{
+		"name": "gpu1fan1lvl2Constraint",
+		"order": 27,
+		"skin": true,
+		"bones": [ "gpu1_fan1" ],
+		"target": "gpu1fan1lvl2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu1fan1lvl3Constraint",
+		"order": 33,
+		"skin": true,
+		"bones": [ "gpu1_fan1" ],
+		"target": "gpu1fan1lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu1fan1lvl4Constraint",
+		"order": 45,
+		"skin": true,
+		"bones": [ "gpu1_fan1" ],
+		"target": "gpu1fan1lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu1fan2lvl3Constraint",
+		"order": 34,
+		"skin": true,
+		"bones": [ "gpu1_fan2" ],
+		"target": "gpu1fan2lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu1fan2lvl4Constraint",
+		"order": 46,
+		"skin": true,
+		"bones": [ "gpu1_fan2" ],
+		"target": "gpu1fan2lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu1fan3lvl4Constraint",
+		"order": 47,
+		"skin": true,
+		"bones": [ "gpu1_fan3" ],
+		"target": "gpu1fan3lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu2fan1lvl2Constraint",
+		"order": 28,
+		"skin": true,
+		"bones": [ "gpu2_fan1" ],
+		"target": "gpu2fan1lvl2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu2fan1lvl3Constraint",
+		"order": 35,
+		"skin": true,
+		"bones": [ "gpu2_fan1" ],
+		"target": "gpu2fan1lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu2fan1lvl4Constraint",
+		"order": 48,
+		"skin": true,
+		"bones": [ "gpu2_fan1" ],
+		"target": "gpu2fan1lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu2fan2lvl3Constraint",
+		"order": 36,
+		"skin": true,
+		"bones": [ "gpu2_fan2" ],
+		"target": "gpu2fan2lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu2fan2lvl4Constraint",
+		"order": 49,
+		"skin": true,
+		"bones": [ "gpu2_fan2" ],
+		"target": "gpu2fan2lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu2fan3lvl4Constraint",
+		"order": 50,
+		"skin": true,
+		"bones": [ "gpu2_fan3" ],
+		"target": "gpu2fan3lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu3fan1lvl2Constraint",
+		"order": 29,
+		"skin": true,
+		"bones": [ "gpu3_fan1" ],
+		"target": "gpu3fan1lvl2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu3fan1lvl3Constraint",
+		"order": 37,
+		"skin": true,
+		"bones": [ "gpu3_fan1" ],
+		"target": "gpu3fan1lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu3fan1lvl4Constraint",
+		"order": 51,
+		"skin": true,
+		"bones": [ "gpu3_fan1" ],
+		"target": "gpu3fan1lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu3fan2lvl3Constraint",
+		"order": 38,
+		"skin": true,
+		"bones": [ "gpu3_fan2" ],
+		"target": "gpu3fan2lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu3fan2lvl4Constraint",
+		"order": 52,
+		"skin": true,
+		"bones": [ "gpu3_fan2" ],
+		"target": "gpu3fan2lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu3fan3lvl4Constraint",
+		"order": 53,
+		"skin": true,
+		"bones": [ "gpu3_fan3" ],
+		"target": "gpu3fan3lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu4fan1lvl2Constraint",
+		"order": 30,
+		"skin": true,
+		"bones": [ "gpu4_fan1" ],
+		"target": "gpu4fan1lvl2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu4fan1lvl3Constraint",
+		"order": 39,
+		"skin": true,
+		"bones": [ "gpu4_fan1" ],
+		"target": "gpu4fan1lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu4fan1lvl4Constraint",
+		"order": 54,
+		"skin": true,
+		"bones": [ "gpu4_fan1" ],
+		"target": "gpu4fan1lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu4fan2lvl3Constraint",
+		"order": 40,
+		"skin": true,
+		"bones": [ "gpu4_fan2" ],
+		"target": "gpu4fan2lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu4fan2lvl4Constraint",
+		"order": 55,
+		"skin": true,
+		"bones": [ "gpu4_fan2" ],
+		"target": "gpu4fan2lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu4fan3lvl4Constraint",
+		"order": 56,
+		"skin": true,
+		"bones": [ "gpu4_fan3" ],
+		"target": "gpu4fan3lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu5fan1lvl2Constraint",
+		"order": 31,
+		"skin": true,
+		"bones": [ "gpu5_fan1" ],
+		"target": "gpu5fan1lvl2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu5fan1lvl3Constraint",
+		"order": 41,
+		"skin": true,
+		"bones": [ "gpu5_fan1" ],
+		"target": "gpu5fan1lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu5fan1lvl4Constraint",
+		"order": 57,
+		"skin": true,
+		"bones": [ "gpu5_fan1" ],
+		"target": "gpu5fan1lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu5fan2lvl3Constraint",
+		"order": 42,
+		"skin": true,
+		"bones": [ "gpu5_fan2" ],
+		"target": "gpu5fan2lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu5fan2lvl4Constraint",
+		"order": 58,
+		"skin": true,
+		"bones": [ "gpu5_fan2" ],
+		"target": "gpu5fan2lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu5fan3lvl4Constraint",
+		"order": 59,
+		"skin": true,
+		"bones": [ "gpu5_fan3" ],
+		"target": "gpu5fan3lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu6fan1lvl2Constraint",
+		"order": 32,
+		"skin": true,
+		"bones": [ "gpu6_fan1" ],
+		"target": "gpu6fan1lvl2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu6fan1lvl3Constraint",
+		"order": 43,
+		"skin": true,
+		"bones": [ "gpu6_fan1" ],
+		"target": "gpu6fan1lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu6fan1lvl4Constraint",
+		"order": 60,
+		"skin": true,
+		"bones": [ "gpu6_fan1" ],
+		"target": "gpu6fan1lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu6fan2lvl3Constraint",
+		"order": 44,
+		"skin": true,
+		"bones": [ "gpu6_fan2" ],
+		"target": "gpu6fan2lvl3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu6fan2lvl4Constraint",
+		"order": 61,
+		"skin": true,
+		"bones": [ "gpu6_fan2" ],
+		"target": "gpu6fan2lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "gpu6fan3lvl4Constraint",
+		"order": 62,
+		"skin": true,
+		"bones": [ "gpu6_fan3" ],
+		"target": "gpu6fan3lvl4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack1FanConstraint",
+		"order": 4,
+		"skin": true,
+		"bones": [ "Fan" ],
+		"target": "rack1Fan",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack1Slot1Constraint",
+		"skin": true,
+		"bones": [ "GPUslot1" ],
+		"target": "rack1Slot1",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack1Slot2Constraint",
+		"order": 1,
+		"skin": true,
+		"bones": [ "GPUslot2" ],
+		"target": "rack1Slot2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack1WaterCoolerConstraint",
+		"order": 3,
+		"skin": true,
+		"bones": [ "WaterCooler" ],
+		"target": "rack1WaterCooler",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack1WaterCoolerFanConstraint",
+		"order": 2,
+		"skin": true,
+		"bones": [ "WaterCoolerFan" ],
+		"target": "rack1WaterCoolerFan",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2Cable1Constraint",
+		"order": 12,
+		"skin": true,
+		"bones": [ "Cable1" ],
+		"target": "rack2Cable1",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2Cable2Constraint",
+		"order": 13,
+		"skin": true,
+		"bones": [ "Cable2" ],
+		"target": "rack2Cable2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2Cable3Constraint",
+		"order": 14,
+		"skin": true,
+		"bones": [ "Cable3" ],
+		"target": "rack2Cable3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2FanConstraint",
+		"order": 11,
+		"skin": true,
+		"bones": [ "Fan" ],
+		"target": "rack2Fan",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2Slot1Constraint",
+		"order": 5,
+		"skin": true,
+		"bones": [ "GPUslot1" ],
+		"target": "rack2Slot1",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2Slot2Constraint",
+		"order": 6,
+		"skin": true,
+		"bones": [ "GPUslot2" ],
+		"target": "rack2Slot2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2Slot3Constraint",
+		"order": 7,
+		"skin": true,
+		"bones": [ "GPUslot3" ],
+		"target": "rack2Slot3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2Slot4Constraint",
+		"order": 8,
+		"skin": true,
+		"bones": [ "GPUslot4" ],
+		"target": "rack2Slot4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2WaterCoolerConstraint",
+		"order": 10,
+		"skin": true,
+		"bones": [ "WaterCooler" ],
+		"target": "rack2WaterCooler",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack2WaterCoolerFanConstraint",
+		"order": 9,
+		"skin": true,
+		"bones": [ "WaterCoolerFan" ],
+		"target": "rack2WaterCoolerFan",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Cable1Constraint",
+		"order": 24,
+		"skin": true,
+		"bones": [ "Cable1" ],
+		"target": "rack3Cable1",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Cable2Constraint",
+		"order": 25,
+		"skin": true,
+		"bones": [ "Cable2" ],
+		"target": "rack3Cable2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Cable3Constraint",
+		"order": 26,
+		"skin": true,
+		"bones": [ "Cable3" ],
+		"target": "rack3Cable3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3FanConstraint",
+		"order": 23,
+		"skin": true,
+		"bones": [ "Fan" ],
+		"target": "rack3Fan",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Slot1Constraint",
+		"order": 15,
+		"skin": true,
+		"bones": [ "GPUslot1" ],
+		"target": "rack3Slot1",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Slot2Constraint",
+		"order": 16,
+		"skin": true,
+		"bones": [ "GPUslot2" ],
+		"target": "rack3Slot2",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Slot3Constraint",
+		"order": 17,
+		"skin": true,
+		"bones": [ "GPUslot3" ],
+		"target": "rack3Slot3",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Slot4Constraint",
+		"order": 18,
+		"skin": true,
+		"bones": [ "GPUslot4" ],
+		"target": "rack3Slot4",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Slot5Constraint",
+		"order": 19,
+		"skin": true,
+		"bones": [ "GPUslot5" ],
+		"target": "rack3Slot5",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3Slot6Constraint",
+		"order": 20,
+		"skin": true,
+		"bones": [ "GPUslot6" ],
+		"target": "rack3Slot6",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3WaterCoolerConstraint",
+		"order": 22,
+		"skin": true,
+		"bones": [ "WaterCooler" ],
+		"target": "rack3WaterCooler",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	},
+	{
+		"name": "rack3WaterCoolerFanConstraint",
+		"order": 21,
+		"skin": true,
+		"bones": [ "WaterCoolerFan" ],
+		"target": "rack3WaterCoolerFan",
+		"mixRotate": 0,
+		"mixScaleX": 0,
+		"mixShearY": 0
+	}
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"cables1": {
+				"images/cables/cables_A": { "width": 138, "height": 218 }
+			},
+			"cables2": {
+				"images/cables/cables_B": { "width": 116, "height": 206 }
+			},
+			"cables3": {
+				"images/cables/cables_c": { "x": 0.5, "width": 79, "height": 118 }
+			}
+		}
+	},
+	{
+		"name": "rack/1",
+		"bones": [ "rack1Fan", "rack1Slot1", "rack1Slot2", "rack1WaterCooler", "rack1WaterCoolerFan" ],
+		"transform": [ "rack1FanConstraint", "rack1Slot1Constraint", "rack1Slot2Constraint", "rack1WaterCoolerConstraint", "rack1WaterCoolerFanConstraint" ],
+		"attachments": {
+			"rack": {
+				"rack": { "name": "images/racks/rack_1/rack", "x": 0.5, "y": 61.56, "width": 367, "height": 216 }
+			},
+			"rack_front": {
+				"rack_front": { "name": "images/racks/rack_1/rack_front", "y": 111.43, "width": 366, "height": 118 }
+			},
+			"rack_on_light1": {
+				"images/racks/light": { "x": -34.09, "y": 23.68, "width": 50, "height": 49 }
+			},
+			"rack_on_light2": {
+				"images/racks/light": { "x": 143.84, "y": 23.68, "width": 50, "height": 49 }
+			},
+			"rack_shadow": {
+				"rack_shadow": { "name": "images/racks/rack_1/shadow", "x": 0.5, "y": -14.92, "width": 421, "height": 151 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot1/1",
+		"attachments": {
+			"gpu1": {
+				"gpu": { "name": "images/GPUs/gpu_1/gpu", "x": 8.89, "y": -76.89, "width": 107, "height": 189 }
+			},
+			"gpu1_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_1/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot2/1",
+		"attachments": {
+			"gpu2": {
+				"gpu": { "name": "images/GPUs/gpu_1/gpu", "x": 8.89, "y": -76.89, "width": 107, "height": 189 }
+			},
+			"gpu2_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_1/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot3/1",
+		"attachments": {
+			"gpu3": {
+				"gpu": { "name": "images/GPUs/gpu_1/gpu", "x": 8.89, "y": -76.89, "width": 107, "height": 189 }
+			},
+			"gpu3_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_1/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot5/1",
+		"attachments": {
+			"gpu5": {
+				"gpu": { "name": "images/GPUs/gpu_1/gpu", "x": 8.89, "y": -76.89, "width": 107, "height": 189 }
+			},
+			"gpu5_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_1/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot4/1",
+		"attachments": {
+			"gpu4": {
+				"gpu": { "name": "images/GPUs/gpu_1/gpu", "x": 8.89, "y": -76.89, "width": 107, "height": 189 }
+			},
+			"gpu4_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_1/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot6/1",
+		"attachments": {
+			"gpu6": {
+				"gpu": { "name": "images/GPUs/gpu_1/gpu", "x": 8.89, "y": -76.89, "width": 107, "height": 189 }
+			},
+			"gpu6_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_1/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			}
+		}
+	},
+	{
+		"name": "rack/2",
+		"bones": [ "rack2Cable1", "rack2Cable2", "rack2Cable3", "rack2Fan", "rack2Slot1", "rack2Slot2", "rack2Slot3", "rack2Slot4", "rack2WaterCooler", "rack2WaterCoolerFan" ],
+		"transform": [ "rack2Cable1Constraint", "rack2Cable2Constraint", "rack2Cable3Constraint", "rack2FanConstraint", "rack2Slot1Constraint", "rack2Slot2Constraint", "rack2Slot3Constraint", "rack2Slot4Constraint", "rack2WaterCoolerConstraint", "rack2WaterCoolerFanConstraint" ],
+		"attachments": {
+			"rack": {
+				"rack": { "name": "images/racks/rack_2/rack", "y": 116.97, "width": 380, "height": 335 }
+			},
+			"rack_front": {
+				"rack_front": { "name": "images/racks/rack_2/rack_front", "y": 222.29, "width": 380, "height": 125 }
+			},
+			"rack_middle": {
+				"rack_middle": { "name": "images/racks/rack_2/rack_middle", "y": 167.11, "width": 380, "height": 236 }
+			},
+			"rack_on_light1": {
+				"images/racks/light": { "x": -113.17, "y": 23.68, "width": 50, "height": 49 }
+			},
+			"rack_on_light2": {
+				"images/racks/light": { "x": 64.76, "y": 23.68, "width": 50, "height": 49 }
+			},
+			"rack_on_light3": {
+				"images/racks/light": { "x": -63.4, "y": 135.48, "width": 50, "height": 49 }
+			},
+			"rack_on_light4": {
+				"images/racks/light": { "x": 114.53, "y": 135.48, "width": 50, "height": 49 }
+			},
+			"rack_shadow": {
+				"rack_shadow": { "name": "images/racks/rack_1/shadow", "x": 0.5, "y": -14.92, "width": 421, "height": 151 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot1/2",
+		"bones": [ "gpu1fan1lvl2" ],
+		"transform": [ "gpu1fan1lvl2Constraint" ],
+		"attachments": {
+			"gpu1": {
+				"gpu": { "name": "images/GPUs/gpu_2/gpu", "x": -0.82, "y": -100.91, "width": 117, "height": 237 }
+			},
+			"gpu1_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_2/fan2", "path": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu1_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu1_light1": {
+				"images/GPUs/gpu_2/light": { "x": -17.51, "y": 107.01, "width": 50, "height": 49 }
+			},
+			"gpu1_light2": {
+				"images/GPUs/gpu_2/light": { "x": -18.07, "y": 31, "width": 50, "height": 49 }
+			},
+			"gpu1_light3": {
+				"images/GPUs/gpu_2/light": { "x": -18.63, "y": -42.44, "width": 50, "height": 49 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot2/2",
+		"bones": [ "gpu2fan1lvl2" ],
+		"transform": [ "gpu2fan1lvl2Constraint" ],
+		"attachments": {
+			"gpu2": {
+				"gpu": { "name": "images/GPUs/gpu_2/gpu", "x": -0.82, "y": -100.91, "width": 117, "height": 237 }
+			},
+			"gpu2_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_2/fan2", "path": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu2_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu2_light1": {
+				"images/GPUs/gpu_2/light": { "x": -17.51, "y": 107.01, "width": 50, "height": 49 }
+			},
+			"gpu2_light2": {
+				"images/GPUs/gpu_2/light": { "x": -18.07, "y": 31, "width": 50, "height": 49 }
+			},
+			"gpu2_light3": {
+				"images/GPUs/gpu_2/light": { "x": -18.63, "y": -42.44, "width": 50, "height": 49 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot3/2",
+		"bones": [ "gpu3fan1lvl2" ],
+		"transform": [ "gpu3fan1lvl2Constraint" ],
+		"attachments": {
+			"gpu3": {
+				"gpu": { "name": "images/GPUs/gpu_2/gpu", "x": -0.82, "y": -100.91, "width": 117, "height": 237 }
+			},
+			"gpu3_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_2/fan2", "path": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu3_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu3_light1": {
+				"images/GPUs/gpu_2/light": { "x": -17.51, "y": 107.01, "width": 50, "height": 49 }
+			},
+			"gpu3_light2": {
+				"images/GPUs/gpu_2/light": { "x": -18.07, "y": 31, "width": 50, "height": 49 }
+			},
+			"gpu3_light3": {
+				"images/GPUs/gpu_2/light": { "x": -18.63, "y": -42.44, "width": 50, "height": 49 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot5/2",
+		"bones": [ "gpu5fan1lvl2" ],
+		"transform": [ "gpu5fan1lvl2Constraint" ],
+		"attachments": {
+			"gpu5": {
+				"gpu": { "name": "images/GPUs/gpu_2/gpu", "x": -0.82, "y": -100.91, "width": 117, "height": 237 }
+			},
+			"gpu5_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_2/fan2", "path": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu5_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu5_light1": {
+				"images/GPUs/gpu_2/light": { "x": -17.51, "y": 107.01, "width": 50, "height": 49 }
+			},
+			"gpu5_light2": {
+				"images/GPUs/gpu_2/light": { "x": -18.07, "y": 31, "width": 50, "height": 49 }
+			},
+			"gpu5_light3": {
+				"images/GPUs/gpu_2/light": { "x": -18.63, "y": -42.44, "width": 50, "height": 49 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot4/2",
+		"bones": [ "gpu4fan1lvl2" ],
+		"transform": [ "gpu4fan1lvl2Constraint" ],
+		"attachments": {
+			"gpu4": {
+				"gpu": { "name": "images/GPUs/gpu_2/gpu", "x": -0.82, "y": -100.91, "width": 117, "height": 237 }
+			},
+			"gpu4_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_2/fan2", "path": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu4_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu4_light1": {
+				"images/GPUs/gpu_2/light": { "x": -17.51, "y": 107.01, "width": 50, "height": 49 }
+			},
+			"gpu4_light2": {
+				"images/GPUs/gpu_2/light": { "x": -18.07, "y": 31, "width": 50, "height": 49 }
+			},
+			"gpu4_light3": {
+				"images/GPUs/gpu_2/light": { "x": -18.63, "y": -42.44, "width": 50, "height": 49 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot6/2",
+		"bones": [ "gpu6fan1lvl2" ],
+		"transform": [ "gpu6fan1lvl2Constraint" ],
+		"attachments": {
+			"gpu6": {
+				"gpu": { "name": "images/GPUs/gpu_2/gpu", "x": -0.82, "y": -100.91, "width": 117, "height": 237 }
+			},
+			"gpu6_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_2/fan2", "path": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu6_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_2/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu6_light1": {
+				"images/GPUs/gpu_2/light": { "x": -17.51, "y": 107.01, "width": 50, "height": 49 }
+			},
+			"gpu6_light2": {
+				"images/GPUs/gpu_2/light": { "x": -18.07, "y": 31, "width": 50, "height": 49 }
+			},
+			"gpu6_light3": {
+				"images/GPUs/gpu_2/light": { "x": -18.63, "y": -42.44, "width": 50, "height": 49 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot6/3",
+		"bones": [ "gpu6fan1lvl3", "gpu6fan2lvl3" ],
+		"transform": [ "gpu6fan1lvl3Constraint", "gpu6fan2lvl3Constraint" ],
+		"attachments": {
+			"gpu6": {
+				"gpu": { "name": "images/GPUs/gpu_3/gpu", "x": -0.82, "y": -130.75, "width": 132, "height": 297 }
+			},
+			"gpu6_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu6_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu6_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu6_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_3/led_lights2", "path": "images/GPUs/gpu_3/led_lights", "x": -1.11, "y": 4.45, "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot4/3",
+		"bones": [ "gpu4fan1lvl3", "gpu4fan2lvl3" ],
+		"transform": [ "gpu4fan1lvl3Constraint", "gpu4fan2lvl3Constraint" ],
+		"attachments": {
+			"gpu4": {
+				"gpu": { "name": "images/GPUs/gpu_3/gpu", "x": -0.82, "y": -130.75, "width": 132, "height": 297 }
+			},
+			"gpu4_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu4_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu4_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu4_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_3/led_lights2", "path": "images/GPUs/gpu_3/led_lights", "x": -1.11, "y": 4.45, "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "rack/3",
+		"bones": [ "rack3Cable1", "rack3Cable2", "rack3Cable3", "rack3Fan", "rack3Slot1", "rack3Slot2", "rack3Slot3", "rack3Slot4", "rack3Slot5", "rack3Slot6", "rack3WaterCooler", "rack3WaterCoolerFan" ],
+		"transform": [ "rack3Cable1Constraint", "rack3Cable2Constraint", "rack3Cable3Constraint", "rack3FanConstraint", "rack3Slot1Constraint", "rack3Slot2Constraint", "rack3Slot3Constraint", "rack3Slot4Constraint", "rack3Slot5Constraint", "rack3Slot6Constraint", "rack3WaterCoolerConstraint", "rack3WaterCoolerFanConstraint" ],
+		"attachments": {
+			"rack": {
+				"rack": { "name": "images/racks/rack_3/rack", "y": 129.12, "width": 571, "height": 361 }
+			},
+			"rack_front": {
+				"rack_front": { "name": "images/racks/rack_3/rack_front", "x": -0.24, "y": 234.45, "width": 571, "height": 151 }
+			},
+			"rack_middle": {
+				"rack_middle": { "name": "images/racks/rack_3/rack_middle", "x": -0.51, "y": 178.75, "width": 571, "height": 261 }
+			},
+			"rack_on_light1": {
+				"images/racks/light": { "x": -194.97, "y": 23, "width": 50, "height": 49 }
+			},
+			"rack_on_light2": {
+				"images/racks/light": { "x": -17.04, "y": 23, "width": 50, "height": 49 }
+			},
+			"rack_on_light3": {
+				"images/racks/light": { "x": 160.89, "y": 23.68, "width": 50, "height": 49 }
+			},
+			"rack_on_light4": {
+				"images/racks/light": { "x": -155.43, "y": 134.8, "width": 50, "height": 49 }
+			},
+			"rack_on_light5": {
+				"images/racks/light": { "x": 197.7, "y": 135.48, "width": 50, "height": 49 }
+			},
+			"rack_on_light6": {
+				"images/racks/light": { "x": 19.77, "y": 135.48, "width": 50, "height": 49 }
+			},
+			"rack_shadow": {
+				"rack_shadow": { "name": "images/racks/rack_3/shadow", "y": -8.61, "width": 628, "height": 151 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot1/3",
+		"bones": [ "gpu1fan1lvl3", "gpu1fan2lvl3" ],
+		"transform": [ "gpu1fan1lvl3Constraint", "gpu1fan2lvl3Constraint" ],
+		"attachments": {
+			"gpu1": {
+				"gpu": { "name": "images/GPUs/gpu_3/gpu", "x": -0.82, "y": -130.75, "width": 132, "height": 297 }
+			},
+			"gpu1_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu1_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu1_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu1_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_3/led_lights2", "path": "images/GPUs/gpu_3/led_lights", "x": -1.11, "y": 4.45, "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot2/3",
+		"bones": [ "gpu2fan1lvl3", "gpu2fan2lvl3" ],
+		"transform": [ "gpu2fan1lvl3Constraint", "gpu2fan2lvl3Constraint" ],
+		"attachments": {
+			"gpu2": {
+				"gpu": { "name": "images/GPUs/gpu_3/gpu", "x": -0.82, "y": -130.75, "width": 132, "height": 297 }
+			},
+			"gpu2_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu2_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu2_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu2_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_3/led_lights2", "path": "images/GPUs/gpu_3/led_lights", "x": -1.11, "y": 4.45, "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot3/3",
+		"bones": [ "gpu3fan1lvl3", "gpu3fan2lvl3" ],
+		"transform": [ "gpu3fan1lvl3Constraint", "gpu3fan2lvl3Constraint" ],
+		"attachments": {
+			"gpu3": {
+				"gpu": { "name": "images/GPUs/gpu_3/gpu", "x": -0.82, "y": -130.75, "width": 132, "height": 297 }
+			},
+			"gpu3_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu3_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu3_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu3_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_3/led_lights2", "path": "images/GPUs/gpu_3/led_lights", "x": -1.11, "y": 4.45, "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot5/3",
+		"bones": [ "gpu5fan1lvl3", "gpu5fan2lvl3" ],
+		"transform": [ "gpu5fan1lvl3Constraint", "gpu5fan2lvl3Constraint" ],
+		"attachments": {
+			"gpu5": {
+				"gpu": { "name": "images/GPUs/gpu_3/gpu", "x": -0.82, "y": -130.75, "width": 132, "height": 297 }
+			},
+			"gpu5_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu5_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_3/fan2", "path": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu5_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_3/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu5_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_3/led_lights2", "path": "images/GPUs/gpu_3/led_lights", "x": -1.11, "y": 4.45, "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot6/4",
+		"bones": [ "gpu6fan1lvl4", "gpu6fan2lvl4", "gpu6fan3lvl4" ],
+		"transform": [ "gpu6fan1lvl4Constraint", "gpu6fan2lvl4Constraint", "gpu6fan3lvl4Constraint" ],
+		"attachments": {
+			"gpu6": {
+				"gpu": { "name": "images/GPUs/gpu_4/gpu", "x": -0.82, "y": -136.34, "width": 178, "height": 308 }
+			},
+			"gpu6_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu6_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu6_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu6_light2": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -2.49, "y": 32.11, "width": 50, "height": 49 }
+			},
+			"gpu6_light3": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -3.05, "y": -36.32, "width": 50, "height": 49 }
+			},
+			"gpu6_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_4/led_lights", "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot4/4",
+		"bones": [ "gpu4fan1lvl4", "gpu4fan2lvl4", "gpu4fan3lvl4" ],
+		"transform": [ "gpu4fan1lvl4Constraint", "gpu4fan2lvl4Constraint", "gpu4fan3lvl4Constraint" ],
+		"attachments": {
+			"gpu4": {
+				"gpu": { "name": "images/GPUs/gpu_4/gpu", "x": -0.82, "y": -136.34, "width": 178, "height": 308 }
+			},
+			"gpu4_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu4_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu4_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu4_light2": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -2.49, "y": 32.11, "width": 50, "height": 49 }
+			},
+			"gpu4_light3": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -3.05, "y": -36.32, "width": 50, "height": 49 }
+			},
+			"gpu4_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_4/led_lights", "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot1/4",
+		"bones": [ "gpu1fan1lvl4", "gpu1fan2lvl4", "gpu1fan3lvl4" ],
+		"transform": [ "gpu1fan1lvl4Constraint", "gpu1fan2lvl4Constraint", "gpu1fan3lvl4Constraint" ],
+		"attachments": {
+			"gpu1": {
+				"gpu": { "name": "images/GPUs/gpu_4/gpu", "x": -0.82, "y": -136.34, "width": 178, "height": 308 }
+			},
+			"gpu1_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu1_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu1_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu1_light2": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -2.49, "y": 32.11, "width": 50, "height": 49 }
+			},
+			"gpu1_light3": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -3.05, "y": -36.32, "width": 50, "height": 49 }
+			},
+			"gpu1_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_4/led_lights", "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot2/4",
+		"bones": [ "gpu2fan1lvl4", "gpu2fan2lvl4", "gpu2fan3lvl4" ],
+		"transform": [ "gpu2fan1lvl4Constraint", "gpu2fan2lvl4Constraint", "gpu2fan3lvl4Constraint" ],
+		"attachments": {
+			"gpu2": {
+				"gpu": { "name": "images/GPUs/gpu_4/gpu", "x": -0.82, "y": -136.34, "width": 178, "height": 308 }
+			},
+			"gpu2_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu2_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu2_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu2_light2": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -2.49, "y": 32.11, "width": 50, "height": 49 }
+			},
+			"gpu2_light3": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -3.05, "y": -36.32, "width": 50, "height": 49 }
+			},
+			"gpu2_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_4/led_lights", "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot3/4",
+		"bones": [ "gpu3fan1lvl4", "gpu3fan2lvl4", "gpu3fan3lvl4" ],
+		"transform": [ "gpu3fan1lvl4Constraint", "gpu3fan2lvl4Constraint", "gpu3fan3lvl4Constraint" ],
+		"attachments": {
+			"gpu3": {
+				"gpu": { "name": "images/GPUs/gpu_4/gpu", "x": -0.82, "y": -136.34, "width": 178, "height": 308 }
+			},
+			"gpu3_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu3_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu3_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu3_light2": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -2.49, "y": 32.11, "width": 50, "height": 49 }
+			},
+			"gpu3_light3": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -3.05, "y": -36.32, "width": 50, "height": 49 }
+			},
+			"gpu3_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_4/led_lights", "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "gpu/slot5/4",
+		"bones": [ "gpu5fan1lvl4", "gpu5fan2lvl4", "gpu5fan3lvl4" ],
+		"transform": [ "gpu5fan1lvl4Constraint", "gpu5fan2lvl4Constraint", "gpu5fan3lvl4Constraint" ],
+		"attachments": {
+			"gpu5": {
+				"gpu": { "name": "images/GPUs/gpu_4/gpu", "x": -0.82, "y": -136.34, "width": 178, "height": 308 }
+			},
+			"gpu5_fan1": {
+				"gpu_fan1": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu5_fan2": {
+				"gpu_fan2": { "name": "images/GPUs/gpu_4/fan2", "path": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu5_fan3": {
+				"gpu_fan3": { "name": "images/GPUs/gpu_4/fan", "x": -0.37, "y": 0.74, "width": 77, "height": 76 }
+			},
+			"gpu5_light2": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -2.49, "y": 32.11, "width": 50, "height": 49 }
+			},
+			"gpu5_light3": {
+				"images/GPUs/gpu_2/light": { "name": "images/GPUs/gpu_4/light", "x": -3.05, "y": -36.32, "width": 50, "height": 49 }
+			},
+			"gpu5_ring_lights": {
+				"led_ring_lights": { "name": "images/GPUs/gpu_4/led_lights", "width": 133, "height": 286 }
+			}
+		}
+	},
+	{
+		"name": "fan/normal",
+		"attachments": {
+			"Fan_Blade": {
+				"images/coolers/fan/fan": { "y": 0.99, "width": 77, "height": 76 }
+			},
+			"fan_body": {
+				"images/coolers/fan/fan_support": { "x": 0.5, "y": 0.5, "width": 107, "height": 117 }
+			}
+		}
+	},
+	{
+		"name": "watercooler/normal",
+		"attachments": {
+			"bubble_particle1": {
+				"images/coolers/water_cooler/bubble_particle": { "width": 50, "height": 50 }
+			},
+			"bubble_particle2": {
+				"images/coolers/water_cooler/bubble_particle": { "width": 50, "height": 50 }
+			},
+			"bubble_particle3": {
+				"images/coolers/water_cooler/bubble_particle": { "width": 50, "height": 50 }
+			},
+			"bubble_particle4": {
+				"images/coolers/water_cooler/bubble_particle": { "width": 50, "height": 50 }
+			},
+			"water_cooler_body_lights": {
+				"images/coolers/water_cooler/fans_lights": { "x": 0.64, "y": -8.8, "width": 224, "height": 120 }
+			},
+			"water_cooler_cables": {
+				"images/coolers/water_cooler/cables": { "x": -189.59, "y": -5.03, "width": 320, "height": 111 }
+			},
+			"water_cooler_fan1": {
+				"images/coolers/fan/fan": { "x": -0.23, "y": 0.81, "width": 77, "height": 76 }
+			},
+			"water_cooler_fan2": {
+				"images/coolers/fan/fan": { "x": -0.23, "y": 0.81, "width": 77, "height": 76 }
+			},
+			"water_cooler_fans_body": {
+				"images/coolers/water_cooler/fans_support": { "y": 0.5, "width": 218, "height": 143 }
+			},
+			"water_cooler_fan_light1": {
+				"images/coolers/water_cooler/fan": { "x": -0.23, "y": 0.81, "width": 77, "height": 76 }
+			},
+			"water_cooler_fan_light2": {
+				"images/coolers/water_cooler/fan": { "x": -0.23, "y": 0.81, "width": 77, "height": 76 }
+			},
+			"water_cooler_shadow": {
+				"images/coolers/water_cooler/shadow": { "x": 2.56, "y": -3.33, "width": 274, "height": 229 }
+			},
+			"water_cooler_tank_lights": {
+				"images/coolers/water_cooler/tank_lights": { "x": 7.25, "y": 90.84, "width": 128, "height": 322 }
+			},
+			"water_tank": {
+				"images/coolers/water_cooler/water_tank": { "y": 95.09, "width": 164, "height": 337 }
+			},
+			"water_tank_glass": {
+				"images/coolers/water_cooler/water_tank_glass": { "x": -0.42, "y": 72.34, "width": 127, "height": 198 }
+			}
+		}
+	}
+],
+"animations": {
+	"off": {
+		"bones": {
+			"Rack": {
+				"translate": [
+					{}
+				]
+			}
+		}
+	},
+	"on": {
+		"slots": {
+			"bubble_particle1": {
+				"rgba": [
+					{
+						"color": "ffffff00",
+						"curve": [ 0.083, 1, 0.167, 1, 0.083, 1, 0.167, 1, 0.083, 1, 0.167, 1, 0.083, 0, 0.167, 0.33 ]
+					},
+					{ "time": 0.25, "color": "ffffffff", "curve": "stepped" },
+					{
+						"time": 0.75,
+						"color": "ffffffff",
+						"curve": [ 0.778, 1, 0.806, 1, 0.778, 1, 0.806, 1, 0.778, 1, 0.806, 1, 0.778, 0.33, 0.806, 0 ]
+					},
+					{ "time": 0.8333, "color": "ffffff00" }
+				],
+				"attachment": [
+					{ "name": "images/coolers/water_cooler/bubble_particle" },
+					{ "time": 0.8333, "name": null },
+					{ "time": 1, "name": "images/coolers/water_cooler/bubble_particle" }
+				]
+			},
+			"bubble_particle2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.028, 1, 0.056, 1, 0.028, 1, 0.056, 1, 0.028, 1, 0.056, 1, 0.028, 0.33, 0.056, 0 ]
+					},
+					{ "time": 0.0833, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.25,
+						"color": "ffffff00",
+						"curve": [ 0.333, 1, 0.417, 1, 0.333, 1, 0.417, 1, 0.333, 1, 0.417, 1, 0.333, 0, 0.417, 0.33 ]
+					},
+					{ "time": 0.5, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/coolers/water_cooler/bubble_particle" },
+					{ "time": 0.0833, "name": null },
+					{ "time": 0.25, "name": "images/coolers/water_cooler/bubble_particle" },
+					{ "time": 1, "name": "images/coolers/water_cooler/bubble_particle" }
+				]
+			},
+			"bubble_particle3": {
+				"rgba": [
+					{
+						"time": 0.25,
+						"color": "ffffffff",
+						"curve": [ 0.278, 1, 0.306, 1, 0.278, 1, 0.306, 1, 0.278, 1, 0.306, 1, 0.278, 0.33, 0.306, 0 ]
+					},
+					{ "time": 0.3333, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.5,
+						"color": "ffffff00",
+						"curve": [ 0.583, 1, 0.667, 1, 0.583, 1, 0.667, 1, 0.583, 1, 0.667, 1, 0.583, 0, 0.667, 0.33 ]
+					},
+					{ "time": 0.75, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/coolers/water_cooler/bubble_particle" },
+					{ "time": 0.3333, "name": null },
+					{ "time": 0.5, "name": "images/coolers/water_cooler/bubble_particle" },
+					{ "time": 1, "name": "images/coolers/water_cooler/bubble_particle" }
+				]
+			},
+			"bubble_particle4": {
+				"rgba": [
+					{
+						"time": 0.5,
+						"color": "ffffffff",
+						"curve": [ 0.528, 1, 0.556, 1, 0.528, 1, 0.556, 1, 0.528, 1, 0.556, 1, 0.528, 0.33, 0.556, 0 ]
+					},
+					{ "time": 0.5833, "color": "ffffff00", "curve": "stepped" },
+					{
+						"time": 0.75,
+						"color": "ffffff00",
+						"curve": [ 0.833, 1, 0.917, 1, 0.833, 1, 0.917, 1, 0.833, 1, 0.917, 1, 0.833, 0, 0.917, 0.33 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/coolers/water_cooler/bubble_particle" },
+					{ "time": 0.5833, "name": null },
+					{ "time": 0.75, "name": "images/coolers/water_cooler/bubble_particle" },
+					{ "time": 1, "name": "images/coolers/water_cooler/bubble_particle" }
+				]
+			},
+			"gpu1_light1": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu1_light2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu1_light3": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu1_ring_lights": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "led_ring_lights" }
+				]
+			},
+			"gpu2_light1": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu2_light2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu2_light3": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu2_ring_lights": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "led_ring_lights" }
+				]
+			},
+			"gpu3_light1": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu3_light2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu3_light3": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu3_ring_lights": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "led_ring_lights" }
+				]
+			},
+			"gpu4_light1": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu4_light2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu4_light3": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu4_ring_lights": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "led_ring_lights" }
+				]
+			},
+			"gpu5_light1": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu5_light2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu5_light3": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu5_ring_lights": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "led_ring_lights" }
+				]
+			},
+			"gpu6_light1": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu6_light2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu6_light3": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/GPUs/gpu_2/light" }
+				]
+			},
+			"gpu6_ring_lights": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.61 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9b",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.61, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "led_ring_lights" }
+				]
+			},
+			"rack_on_light1": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 0.62 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9e",
+						"curve": [ 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 0.62, 0.834, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"rack_on_light2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 0.62 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9e",
+						"curve": [ 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 0.62, 0.834, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"rack_on_light3": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 0.62 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9e",
+						"curve": [ 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 0.62, 0.834, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"rack_on_light4": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 0.62 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9e",
+						"curve": [ 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 0.62, 0.834, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"rack_on_light5": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 0.62 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9e",
+						"curve": [ 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 0.62, 0.834, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"rack_on_light6": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 0.62 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff9e",
+						"curve": [ 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 0.62, 0.834, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				]
+			},
+			"water_cooler_body_lights": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.47 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff77",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.47, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/coolers/water_cooler/fans_lights" }
+				]
+			},
+			"water_cooler_fan_light1": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 0.51 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff81",
+						"curve": [ 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 0.51, 0.834, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/coolers/water_cooler/fan" },
+					{ "time": 1, "name": "images/coolers/water_cooler/fan" }
+				]
+			},
+			"water_cooler_fan_light2": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 1, 0.166, 1, 0.334, 0.51 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff81",
+						"curve": [ 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 1, 0.834, 1, 0.666, 0.51, 0.834, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				],
+				"attachment": [
+					{ "name": "images/coolers/water_cooler/fan" },
+					{ "time": 1, "name": "images/coolers/water_cooler/fan" }
+				]
+			},
+			"water_cooler_tank_lights": {
+				"rgba": [
+					{
+						"color": "ffffffff",
+						"curve": [ 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 1, 0.167, 1, 0.333, 0.33 ]
+					},
+					{
+						"time": 0.5,
+						"color": "ffffff54",
+						"curve": [ 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 0.33, 0.833, 1 ]
+					},
+					{ "time": 1, "color": "ffffffff" }
+				]
+			}
+		},
+		"bones": {
+			"Rack": {
+				"translate": [
+					{
+						"curve": [ 0.019, 0, 0.031, 0, 0.019, 0, 0.031, 1.27 ]
+					},
+					{
+						"time": 0.05,
+						"y": 1.27,
+						"curve": [ 0.069, 0, 0.098, 0, 0.069, 1.27, 0.098, 0 ]
+					},
+					{
+						"time": 0.1167,
+						"curve": [ 0.135, 0, 0.148, 0, 0.135, 0, 0.148, 1.27 ]
+					},
+					{
+						"time": 0.1667,
+						"y": 1.27,
+						"curve": [ 0.185, 0, 0.198, 0, 0.185, 1.27, 0.198, 0 ]
+					},
+					{
+						"time": 0.2167,
+						"curve": [ 0.235, 0, 0.265, 0, 0.235, 0, 0.265, 1.27 ]
+					},
+					{
+						"time": 0.2833,
+						"y": 1.27,
+						"curve": [ 0.302, 0, 0.315, 0, 0.302, 1.27, 0.315, 0 ]
+					},
+					{
+						"time": 0.3333,
+						"curve": [ 0.352, 0, 0.365, 0, 0.352, 0, 0.365, 1.27 ]
+					},
+					{
+						"time": 0.3833,
+						"y": 1.27,
+						"curve": [ 0.402, 0, 0.431, 0, 0.402, 1.27, 0.431, 0 ]
+					},
+					{
+						"time": 0.45,
+						"curve": [ 0.469, 0, 0.481, 0, 0.469, 0, 0.481, 1.27 ]
+					},
+					{
+						"time": 0.5,
+						"y": 1.27,
+						"curve": [ 0.519, 0, 0.548, 0, 0.519, 1.27, 0.548, 0 ]
+					},
+					{
+						"time": 0.5667,
+						"curve": [ 0.585, 0, 0.598, 0, 0.585, 0, 0.598, 1.27 ]
+					},
+					{
+						"time": 0.6167,
+						"y": 1.27,
+						"curve": [ 0.635, 0, 0.648, 0, 0.635, 1.27, 0.648, 0 ]
+					},
+					{
+						"time": 0.6667,
+						"curve": [ 0.685, 0, 0.715, 0, 0.685, 0, 0.715, 1.27 ]
+					},
+					{
+						"time": 0.7333,
+						"y": 1.27,
+						"curve": [ 0.752, 0, 0.765, 0, 0.752, 1.27, 0.765, 0 ]
+					},
+					{
+						"time": 0.7833,
+						"curve": [ 0.802, 0, 0.815, 0, 0.802, 0, 0.815, 1.27 ]
+					},
+					{
+						"time": 0.8333,
+						"y": 1.27,
+						"curve": [ 0.852, 0, 0.881, 0, 0.852, 1.27, 0.881, 0 ]
+					},
+					{
+						"time": 0.9,
+						"curve": [ 0.919, 0, 0.931, 0, 0.919, 0, 0.931, 1.27 ]
+					},
+					{
+						"time": 0.95,
+						"y": 1.27,
+						"curve": [ 0.969, 0, 0.981, 0, 0.969, 1.27, 0.981, 0 ]
+					},
+					{ "time": 1 }
+				],
+				"scale": [
+					{
+						"curve": [ 0.011, 1, 0.022, 1.01, 0.011, 1, 0.022, 1 ]
+					},
+					{
+						"time": 0.0333,
+						"x": 1.01,
+						"curve": [ 0.044, 1.01, 0.056, 1, 0.044, 1, 0.056, 1 ]
+					},
+					{
+						"time": 0.0667,
+						"curve": [ 0.078, 1, 0.089, 1.01, 0.078, 1, 0.089, 1 ]
+					},
+					{
+						"time": 0.1,
+						"x": 1.01,
+						"curve": [ 0.111, 1.01, 0.122, 1, 0.111, 1, 0.122, 1 ]
+					},
+					{
+						"time": 0.1333,
+						"curve": [ 0.144, 1, 0.156, 1.01, 0.144, 1, 0.156, 1 ]
+					},
+					{
+						"time": 0.1667,
+						"x": 1.01,
+						"curve": [ 0.178, 1.01, 0.189, 1, 0.178, 1, 0.189, 1 ]
+					},
+					{
+						"time": 0.2,
+						"curve": [ 0.211, 1, 0.222, 1.01, 0.211, 1, 0.222, 1 ]
+					},
+					{
+						"time": 0.2333,
+						"x": 1.01,
+						"curve": [ 0.244, 1.01, 0.256, 1, 0.244, 1, 0.256, 1 ]
+					},
+					{
+						"time": 0.2667,
+						"curve": [ 0.278, 1, 0.289, 1.01, 0.278, 1, 0.289, 1 ]
+					},
+					{
+						"time": 0.3,
+						"x": 1.01,
+						"curve": [ 0.311, 1.01, 0.322, 1, 0.311, 1, 0.322, 1 ]
+					},
+					{
+						"time": 0.3333,
+						"curve": [ 0.344, 1, 0.356, 1.01, 0.344, 1, 0.356, 1 ]
+					},
+					{
+						"time": 0.3667,
+						"x": 1.01,
+						"curve": [ 0.378, 1.01, 0.389, 1, 0.378, 1, 0.389, 1 ]
+					},
+					{
+						"time": 0.4,
+						"curve": [ 0.411, 1, 0.422, 1.01, 0.411, 1, 0.422, 1 ]
+					},
+					{
+						"time": 0.4333,
+						"x": 1.01,
+						"curve": [ 0.444, 1.01, 0.456, 1, 0.444, 1, 0.456, 1 ]
+					},
+					{
+						"time": 0.4667,
+						"curve": [ 0.478, 1, 0.489, 1.01, 0.478, 1, 0.489, 1 ]
+					},
+					{
+						"time": 0.5,
+						"x": 1.01,
+						"curve": [ 0.511, 1.01, 0.522, 1, 0.511, 1, 0.522, 1 ]
+					},
+					{
+						"time": 0.5333,
+						"curve": [ 0.544, 1, 0.556, 1.01, 0.544, 1, 0.556, 1 ]
+					},
+					{
+						"time": 0.5667,
+						"x": 1.01,
+						"curve": [ 0.578, 1.01, 0.589, 1, 0.578, 1, 0.589, 1 ]
+					},
+					{
+						"time": 0.6,
+						"curve": [ 0.611, 1, 0.622, 1.01, 0.611, 1, 0.622, 1 ]
+					},
+					{
+						"time": 0.6333,
+						"x": 1.01,
+						"curve": [ 0.644, 1.01, 0.656, 1, 0.644, 1, 0.656, 1 ]
+					},
+					{
+						"time": 0.6667,
+						"curve": [ 0.678, 1, 0.689, 1.01, 0.678, 1, 0.689, 1 ]
+					},
+					{
+						"time": 0.7,
+						"x": 1.01,
+						"curve": [ 0.711, 1.01, 0.722, 1, 0.711, 1, 0.722, 1 ]
+					},
+					{
+						"time": 0.7333,
+						"curve": [ 0.744, 1, 0.756, 1.01, 0.744, 1, 0.756, 1 ]
+					},
+					{
+						"time": 0.7667,
+						"x": 1.01,
+						"curve": [ 0.778, 1.01, 0.789, 1, 0.778, 1, 0.789, 1 ]
+					},
+					{
+						"time": 0.8,
+						"curve": [ 0.811, 1, 0.822, 1.01, 0.811, 1, 0.822, 1 ]
+					},
+					{
+						"time": 0.8333,
+						"x": 1.01,
+						"curve": [ 0.844, 1.01, 0.856, 1, 0.844, 1, 0.856, 1 ]
+					},
+					{
+						"time": 0.8667,
+						"curve": [ 0.878, 1, 0.889, 1.01, 0.878, 1, 0.889, 1 ]
+					},
+					{
+						"time": 0.9,
+						"x": 1.01,
+						"curve": [ 0.911, 1.01, 0.922, 1, 0.911, 1, 0.922, 1 ]
+					},
+					{
+						"time": 0.9333,
+						"curve": [ 0.944, 1, 0.956, 1.01, 0.944, 1, 0.956, 1 ]
+					},
+					{
+						"time": 0.9667,
+						"x": 1.01,
+						"curve": [ 0.978, 1.01, 0.989, 1, 0.978, 1, 0.989, 1 ]
+					},
+					{ "time": 1 }
+				]
+			},
+			"water_cooler_fan2": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"water_cooler_fan1": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu1_fan1": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"Fan_Blade": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu1_fan2": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu1_fan3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu2_fan1": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu2_fan2": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu2_fan3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu3_fan1": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu3_fan2": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu3_fan3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu4_fan1": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu4_fan2": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu4_fan3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu5_fan1": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu5_fan2": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu5_fan3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu6_fan1": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu6_fan2": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"gpu6_fan3": {
+				"rotate": [
+					{},
+					{ "time": 1, "value": 360 }
+				]
+			},
+			"bubble_particle1": {
+				"translate": [
+					{
+						"curve": [ 0.278, 0, 0.556, 0, 0.278, 0, 0.556, 127.05 ]
+					},
+					{ "time": 0.8333, "y": 127.05, "curve": "stepped" },
+					{ "time": 1 }
+				],
+				"scale": [
+					{
+						"x": 0.168,
+						"y": 0.168,
+						"curve": [ 0.139, 0.168, 0.278, 1, 0.139, 0.168, 0.278, 1 ]
+					},
+					{
+						"time": 0.4167,
+						"curve": [ 0.556, 1, 0.694, 0.777, 0.556, 1, 0.694, 0.777 ]
+					},
+					{ "time": 0.8333, "x": 0.332, "y": 0.332, "curve": "stepped" },
+					{ "time": 1, "x": 0.168, "y": 0.168 }
+				]
+			},
+			"bubble_particle2": {
+				"translate": [
+					{
+						"y": 123.49,
+						"curve": [ 0.028, 0, 0.056, 0, 0.028, 125.78, 0.056, 127.05 ]
+					},
+					{ "time": 0.0833, "y": 127.05, "curve": "stepped" },
+					{
+						"time": 0.25,
+						"curve": [ 0.5, 0, 0.75, 0, 0.5, 0, 0.75, 102.91 ]
+					},
+					{ "time": 1, "y": 123.49 }
+				],
+				"scale": [
+					{
+						"x": 0.572,
+						"y": 0.572,
+						"curve": [ 0.029, 0.502, 0.056, 0.419, 0.029, 0.502, 0.056, 0.419 ]
+					},
+					{ "time": 0.0833, "x": 0.332, "y": 0.332, "curve": "stepped" },
+					{
+						"time": 0.25,
+						"x": 0.168,
+						"y": 0.168,
+						"curve": [ 0.389, 0.168, 0.528, 1, 0.389, 0.168, 0.528, 1 ]
+					},
+					{
+						"time": 0.6667,
+						"curve": [ 0.778, 1, 0.89, 0.86, 0.778, 1, 0.89, 0.86 ]
+					},
+					{ "time": 1, "x": 0.572, "y": 0.572 }
+				]
+			},
+			"bubble_particle3": {
+				"translate": [
+					{
+						"y": 82.33,
+						"curve": [ 0.111, 0, 0.222, 0, 0.111, 106.72, 0.222, 127.05 ]
+					},
+					{ "time": 0.3333, "y": 127.05, "curve": "stepped" },
+					{
+						"time": 0.5,
+						"curve": [ 0.667, 0, 0.833, 0, 0.667, 0, 0.833, 45.74 ]
+					},
+					{ "time": 1, "y": 82.33 }
+				],
+				"scale": [
+					{
+						"x": 0.973,
+						"y": 0.973,
+						"curve": [ 0.112, 0.901, 0.223, 0.687, 0.112, 0.901, 0.223, 0.687 ]
+					},
+					{ "time": 0.3333, "x": 0.332, "y": 0.332, "curve": "stepped" },
+					{
+						"time": 0.5,
+						"x": 0.168,
+						"y": 0.168,
+						"curve": [ 0.639, 0.168, 0.778, 1, 0.639, 0.168, 0.778, 1 ]
+					},
+					{
+						"time": 0.9167,
+						"curve": [ 0.945, 1, 0.973, 0.992, 0.945, 1, 0.973, 0.992 ]
+					},
+					{ "time": 1, "x": 0.973, "y": 0.973 }
+				]
+			},
+			"bubble_particle4": {
+				"translate": [
+					{
+						"y": 27.44,
+						"curve": [ 0.194, 0, 0.389, 0, 0.194, 64.8, 0.389, 127.05 ]
+					},
+					{ "time": 0.5833, "y": 127.05, "curve": "stepped" },
+					{
+						"time": 0.75,
+						"curve": [ 0.833, 0, 0.917, 0, 0.833, 0, 0.917, 11.43 ]
+					},
+					{ "time": 1, "y": 27.44 }
+				],
+				"scale": [
+					{
+						"x": 0.867,
+						"y": 0.867,
+						"curve": [ 0.056, 0.954, 0.112, 1, 0.056, 0.954, 0.112, 1 ]
+					},
+					{
+						"time": 0.1667,
+						"curve": [ 0.306, 1, 0.444, 0.777, 0.306, 1, 0.444, 0.777 ]
+					},
+					{ "time": 0.5833, "x": 0.332, "y": 0.332, "curve": "stepped" },
+					{
+						"time": 0.75,
+						"x": 0.168,
+						"y": 0.168,
+						"curve": [ 0.833, 0.168, 0.918, 0.734, 0.833, 0.168, 0.918, 0.734 ]
+					},
+					{ "time": 1, "x": 0.867, "y": 0.867 }
+				]
+			}
+		},
+		"transform": {
+			"rack3WaterCoolerConstraint": [
+				{ "mixRotate": 0, "mixScaleX": 0, "mixShearY": 0, "curve": "stepped" },
+				{ "time": 1, "mixRotate": 0, "mixScaleX": 0, "mixShearY": 0 }
+			]
+		}
+	}
+}
+}

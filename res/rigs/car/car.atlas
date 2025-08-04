@@ -1,0 +1,99 @@
+car.png
+	size: 2048, 2048
+	filter: Linear, Linear
+Car/Explosion1/explosion1
+	bounds: 6, 390, 419, 422
+	offsets: 2, 2, 421, 445
+	rotate: 90
+Car/Explosion1/explosion2
+	bounds: 708, 42, 347, 347
+	offsets: 32, 77, 421, 445
+Car/Explosion1/explosion3
+	bounds: 742, 395, 395, 384
+	offsets: 9, 60, 421, 445
+Car/Explosion1/explosion4
+	bounds: 434, 491, 318, 302
+	offsets: 51, 69, 421, 445
+	rotate: 90
+Car/Explosion1/explosion5
+	bounds: 1143, 454, 332, 325
+	offsets: 40, 56, 421, 445
+Car/Explosion1/explosion6
+	bounds: 6, 35, 355, 349
+	offsets: 25, 45, 421, 445
+Car/Explosion1/explosion7
+	bounds: 1481, 222, 350, 350
+	offsets: 32, 45, 421, 445
+Car/Explosion1/explosion8
+	bounds: 1143, 100, 348, 331
+	offsets: 35, 58, 421, 445
+	rotate: 90
+Car/Explosion1/explosion9
+	bounds: 367, 6, 342, 322
+	offsets: 41, 65, 421, 445
+	rotate: 90
+Car/car/car_1
+	bounds: 1489, 578, 687, 424
+	offsets: 1, 1, 689, 427
+	rotate: 90
+Car/car/car_1_tire_1
+	bounds: 434, 354, 131, 131
+	offsets: 1, 1, 133, 133
+Car/car/car_1_tire_2
+	bounds: 571, 354, 131, 131
+	offsets: 1, 1, 133, 133
+Car/car/shadow_car_1
+	bounds: 755, 785, 666, 216
+	offsets: 1, 1, 668, 218
+Car/car_debris/Layer 184
+	bounds: 1919, 1178, 98, 87
+	offsets: 1, 1, 100, 89
+Car/car_debris/car_debris_01
+	bounds: 1919, 780, 47, 69
+	offsets: 1, 1, 49, 71
+	rotate: 90
+Car/car_debris/car_debris_02
+	bounds: 1919, 1008, 91, 85
+	offsets: 1, 1, 93, 87
+Car/car_debris/car_debris_03
+	bounds: 1994, 760, 67, 46
+	offsets: 1, 1, 69, 48
+	rotate: 90
+Car/car_debris/car_debris_04
+	bounds: 1919, 833, 79, 85
+	offsets: 1, 1, 81, 87
+	rotate: 90
+Car/car_debris/car_debris_05
+	bounds: 1919, 918, 84, 85
+	offsets: 1, 1, 86, 87
+	rotate: 90
+Car/car_debris/car_debris_06
+	bounds: 1977, 612, 38, 49
+	offsets: 1, 1, 40, 51
+	rotate: 90
+Car/car_debris/car_debris_07
+	bounds: 1919, 608, 49, 52
+	offsets: 1, 1, 51, 54
+	rotate: 90
+Car/car_debris/car_debris_08
+	bounds: 1919, 715, 65, 59
+	offsets: 1, 1, 67, 61
+Car/car_debris/car_debris_09
+	bounds: 1919, 1099, 73, 95
+	offsets: 1, 1, 75, 97
+	rotate: 90
+Car/car_debris/car_debris_10
+	bounds: 1919, 663, 58, 46
+	offsets: 1, 1, 60, 48
+Car/car_debris/car_debris_11
+	bounds: 1990, 700, 52, 54
+	offsets: 1, 1, 54, 56
+Car/car_debris/car_debris_12
+	bounds: 1983, 656, 56, 38
+	offsets: 1, 1, 58, 40
+Car/car_wrecked/car_1_smashed
+	bounds: 6, 815, 743, 450
+	offsets: 1, 1, 745, 452
+Car/car_wrecked/shadow_car_1_smashed
+	bounds: 755, 1007, 728, 258
+	offsets: 2, 1, 731, 260

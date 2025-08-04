@@ -1,0 +1,47 @@
+pet_toy_cat.png
+	size: 708, 708
+	filter: Linear, Linear
+	scale: 0.5
+cat_chibi/arm_L
+	bounds: 585, 573, 62, 71
+	offsets: 5, 7, 77, 100
+	rotate: 270
+cat_chibi/arm_R
+	bounds: 642, 634, 60, 68
+	offsets: 12, 9, 77, 100
+cat_chibi/body
+	bounds: 452, 622, 80, 76
+	offsets: 28, 50, 135, 175
+	rotate: 90
+cat_chibi/ear_L
+	bounds: 145, 605, 85, 97
+	offsets: 10, 14, 105, 132
+cat_chibi/ear_R
+	bounds: 234, 584, 76, 98
+	offsets: 15, 14, 105, 133
+cat_chibi/eyes_default
+	bounds: 391, 612, 90, 55
+	rotate: 90
+cat_chibi/head
+	bounds: 6, 583, 135, 119
+	offsets: 13, 30, 152, 196
+cat_chibi/leg_L
+	bounds: 452, 572, 52, 68
+	offsets: 10, 16, 77, 100
+	rotate: 270
+cat_chibi/leg_R
+	bounds: 588, 634, 53, 68
+	offsets: 12, 18, 77, 100
+cat_chibi/mouth
+	bounds: 533, 608, 94, 51
+	offsets: 15, 8, 123, 65
+	rotate: 90
+cat_chibi/nose
+	bounds: 145, 584, 23, 17
+cat_chibi/pendant
+	bounds: 187, 572, 28, 30
+	offsets: 8, 6, 44, 43
+cat_chibi/tail
+	bounds: 310, 602, 100, 76
+	offsets: 1, 9, 102, 128
+	rotate: 270

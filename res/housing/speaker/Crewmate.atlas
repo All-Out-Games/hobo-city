@@ -1,0 +1,18 @@
+faf5716e7376b606.png
+	size: 564, 564
+	filter: Linear, Linear
+speaker/sound/wave1
+	bounds: 422, 88, 143, 128
+	rotate: 90
+speaker/sound/wave2
+	bounds: 315, 363, 195, 210
+	rotate: 90
+speaker/sound/wave3
+	bounds: 3, 3, 287, 287
+speaker/speaker_L
+	bounds: 315, 234, 126, 155
+	rotate: 90
+speaker/speaker_R
+	bounds: 293, 76, 126, 155
+speaker/speaker_mid
+	bounds: 3, 293, 309, 265

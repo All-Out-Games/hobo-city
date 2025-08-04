@@ -1,0 +1,29 @@
+Bird.png
+	size: 284, 284
+	filter: Linear, Linear
+BackPaw
+	bounds: 118, 21, 60, 48
+Body
+	bounds: 6, 69, 106, 91
+	offsets: 1, 1, 108, 93
+BottomBeak
+	bounds: 205, 87, 108, 35
+	offsets: 1, 1, 110, 37
+	rotate: 90
+Head
+	bounds: 6, 166, 165, 111
+RightPaw
+	bounds: 184, 21, 60, 48
+Shadow
+	bounds: 6, 23, 102, 40
+	offsets: 1, 1, 104, 42
+Tail
+	bounds: 118, 75, 81, 85
+	offsets: 1, 1, 83, 88
+Tigh
+	bounds: 246, 153, 42, 31
+	offsets: 1, 1, 44, 33
+	rotate: 90
+Wing
+	bounds: 177, 201, 91, 76
+	offsets: 1, 3, 93, 80

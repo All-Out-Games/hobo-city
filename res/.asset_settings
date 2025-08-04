@@ -1,0 +1,512 @@
+[
+  {
+    "id": "destructables/*",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "rigs/*",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "icons/*",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "consumables/*",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "land4sale.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/bases/HouseBG.png",
+    "texture": {
+      "resample_multiplier": 2
+    }
+  },
+  {
+    "id": "housing/bases/0c1bde9a8ccc23e1.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/bases/FBI_Mansion_n_Corn_Map.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/pizza_oven.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/H6Shelf.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/crypto/collector.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/H6bluestool.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/hot-tub.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "map/Decoration/Plant_pot4.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/soap1.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/wardrobe.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/013RED_Gorilla_spine/307c7b80fd12e7be.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/bases/teleporter.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/bases/ssundee_was_murdered_map_tiny.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/trophy_case.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/silver_trophy.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "phone-bg.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "PortalPointer.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/H6oven.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/H6Sink.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/H6Fridge_crop.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/coffee_table.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "map/GroundTiles/Street_Tile_5x.png",
+    "texture": {
+      "wrap_repeat": true
+    }
+  },
+  {
+    "id": "housing/fish-tank.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/pink-palms.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/lookout-tower.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/lava.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/friend-in-a-tank.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/happy-plant.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/telescope.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/streetlight.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/bases/warp.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/crypto/exchange-for-cash-icon.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "island.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "boat1.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "boat2.png",
+    "texture": {
+      "resample_multiplier": 0.8000000119209290
+    }
+  },
+  {
+    "id": "dock.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/bases/shack-house.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/bases/House2.png",
+    "texture": {
+      "resample_multiplier": 0.8000000119209290
+    }
+  },
+  {
+    "id": "stand.png",
+    "texture": {
+      "resample_multiplier": 0.8000000119209290
+    }
+  },
+  {
+    "id": "bank-vault.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "vault-2.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "sussys.png",
+    "texture": {
+      "resample_multiplier": 1.1000000238418579
+    }
+  },
+  {
+    "id": "map/Buildings/Bank/Bank_Wall_Back.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "careers/pizza-kitchen.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "careers/cooking-stations.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "minimap.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/crate.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "owner-billboard.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "map/Street/STOP.png",
+    "texture": {
+      "resample_multiplier": 0.8999999761581421
+    }
+  },
+  {
+    "id": "anims/reusable-weapons/weapons/013RED_weapons.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/bases/island-house.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "cinema-inside.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "cinema-screen.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "ssundee-icon.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "sprites/reusable-weapons/ammo_icons/solarcores.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "pets/icons/velociraptor.png",
+    "texture": {
+      "resample_multiplier": 1.1000000238418579
+    }
+  },
+  {
+    "id": "pets/icons/capy.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "pets/icons/mole.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "pets/icons/cooper.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "pets/icons/spider.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "white house interior/WhiteHouse_Interior.png",
+    "texture": {
+      "resample_multiplier": 0.8000000119209290
+    }
+  },
+  {
+    "id": "cone.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "nuke-icon.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/misc-icons/locked.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "map/GroundTiles/copacabana_beach_tile_1.png",
+    "texture": {
+      "wrap_repeat": true
+    }
+  },
+  {
+    "id": "map/GroundTiles/Sidewalk/Sidewalk_corner_Horizontal_Lower.png",
+    "texture": {
+      "wrap_repeat": true
+    }
+  },
+  {
+    "id": "map/GroundTiles/Sidewalk/Sidewalk_corner_Horizontal_Upper.png",
+    "texture": {
+      "wrap_repeat": true
+    }
+  },
+  {
+    "id": "map/GroundTiles/Street_Tile.png",
+    "texture": {
+      "wrap_repeat": true
+    }
+  },
+  {
+    "id": "basket.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "sprites/reusable-weapons/projectiles/missile.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "pets/pet_donut_goat/FAT001_pet_donut_goat.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/crypto/power-solar.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/crypto/mining-rack-thumbnails/racks/rack_1/rack.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/crypto/mining-rack-thumbnails/racks/rack_2/rack.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/crypto/mining-rack-thumbnails/racks/rack_3/rack.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "pedestal.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/packs/*",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "housing/party/*",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "pedestal_light.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  }
+]

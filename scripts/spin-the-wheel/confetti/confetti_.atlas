@@ -1,0 +1,112 @@
+4a665bca81670a65.png
+	size: 2396, 2396
+	filter: Linear, Linear
+qualified/confetti
+	bounds: 263, 106, 37, 50
+	offsets: 1, 0, 38, 51
+qualified/confetti 2
+	bounds: 98, 85, 71, 93
+	offsets: 1, 1, 73, 95
+	rotate: 90
+qualified/confetti 3
+	bounds: 265, 8, 25, 27
+	offsets: 1, 1, 27, 29
+qualified/confetti 4
+	bounds: 6, 66, 90, 86
+	offsets: 1, 1, 92, 88
+	rotate: 90
+qualified/confetti 5
+	bounds: 226, 41, 41, 46
+	offsets: 1, 1, 43, 48
+qualified/confetti 6
+	bounds: 197, 93, 63, 60
+	offsets: 1, 1, 65, 62
+	rotate: 90
+qualified/confetti 7
+	bounds: 226, 6, 33, 29
+	offsets: 1, 1, 35, 31
+qualified/confetti 8
+	bounds: 159, 14, 61, 65
+	offsets: 1, 1, 63, 66
+qualified/confetti 9
+	bounds: 90, 12, 63, 48
+	offsets: 1, 1, 65, 50
+qualified/effects/smoke_puffs/blue_puff/blue_puff1
+	bounds: 533, 17, 393, 392
+	offsets: 1, 1, 395, 394
+	rotate: 90
+qualified/effects/smoke_puffs/blue_puff/blue_puff2
+	bounds: 1078, 893, 461, 481
+	offsets: 1, 1, 463, 483
+	rotate: 90
+qualified/effects/smoke_puffs/blue_puff/blue_puff3
+	bounds: 1091, 1877, 511, 539
+	offsets: 1, 1, 513, 541
+	rotate: 90
+qualified/effects/smoke_puffs/blue_puff/blue_puff4
+	bounds: 6, 1836, 521, 552
+	offsets: 1, 1, 523, 554
+qualified/effects/smoke_puffs/green_puff/green_puff1
+	bounds: 931, 7, 393, 392
+	offsets: 1, 1, 395, 394
+	rotate: 90
+qualified/effects/smoke_puffs/green_puff/green_puff2
+	bounds: 533, 883, 461, 481
+	offsets: 1, 1, 463, 483
+	rotate: 90
+qualified/effects/smoke_puffs/green_puff/green_puff3
+	bounds: 1636, 1877, 511, 539
+	offsets: 1, 1, 513, 541
+	rotate: 90
+qualified/effects/smoke_puffs/green_puff/green_puff4
+	bounds: 6, 1278, 521, 552
+	offsets: 1, 1, 523, 554
+qualified/effects/smoke_puffs/purple_puff/purple_puff1
+	bounds: 1329, 7, 393, 392
+	offsets: 1, 1, 395, 394
+	rotate: 90
+qualified/effects/smoke_puffs/purple_puff/purple_puff2
+	bounds: 1565, 893, 461, 481
+	offsets: 1, 1, 463, 483
+	rotate: 90
+qualified/effects/smoke_puffs/purple_puff/purple_puff3
+	bounds: 1091, 1360, 511, 539
+	offsets: 1, 1, 513, 541
+	rotate: 90
+qualified/effects/smoke_puffs/purple_puff/purple_puff4
+	bounds: 6, 720, 521, 552
+	offsets: 1, 1, 523, 554
+qualified/effects/smoke_puffs/red_puff/red_puff1
+	bounds: 1487, 494, 393, 392
+	offsets: 1, 1, 395, 394
+	rotate: 90
+qualified/effects/smoke_puffs/red_puff/red_puff2
+	bounds: 1020, 406, 461, 481
+	offsets: 1, 1, 463, 483
+qualified/effects/smoke_puffs/red_puff/red_puff3
+	bounds: 533, 1350, 511, 539
+	offsets: 1, 1, 513, 541
+	rotate: 90
+qualified/effects/smoke_puffs/red_puff/red_puff4
+	bounds: 6, 162, 521, 552
+	offsets: 1, 1, 523, 554
+qualified/effects/smoke_puffs/yellow_puff/yellow_puff1
+	bounds: 1727, 95, 393, 392
+	offsets: 1, 1, 395, 394
+	rotate: 90
+qualified/effects/smoke_puffs/yellow_puff/yellow_puff2
+	bounds: 533, 416, 461, 481
+	offsets: 1, 1, 463, 483
+	rotate: 90
+qualified/effects/smoke_puffs/yellow_puff/yellow_puff3
+	bounds: 1636, 1360, 511, 539
+	offsets: 1, 1, 513, 541
+	rotate: 90
+qualified/effects/smoke_puffs/yellow_puff/yellow_puff4
+	bounds: 533, 1867, 521, 552
+	offsets: 1, 1, 523, 554
+	rotate: 90
+qualified/effects/star_particle
+	bounds: 6, 6, 54, 78
+	offsets: 1, 2, 56, 82
+	rotate: 90

@@ -1,0 +1,325 @@
+e051754b5f6ab747.png
+	size: 2048, 2048
+	filter: Linear, Linear
+electricity2/electricity_00
+	bounds: 1229, 512, 179, 178
+	offsets: 84, 63, 352, 352
+electricity/electricity_00
+	bounds: 1229, 512, 179, 178
+	offsets: 84, 63, 352, 352
+electricity2/electricity_01
+	bounds: 584, 1100, 213, 216
+	offsets: 67, 44, 352, 352
+electricity/electricity_01
+	bounds: 584, 1100, 213, 216
+	offsets: 67, 44, 352, 352
+electricity2/electricity_02
+	bounds: 1767, 1220, 223, 227
+	offsets: 62, 39, 352, 352
+electricity/electricity_02
+	bounds: 1767, 1220, 223, 227
+	offsets: 62, 39, 352, 352
+electricity2/electricity_03
+	bounds: 1669, 313, 149, 139
+	offsets: 111, 89, 352, 352
+electricity/electricity_03
+	bounds: 1669, 313, 149, 139
+	offsets: 111, 89, 352, 352
+electricity2/electricity_04
+	bounds: 584, 894, 200, 210
+	offsets: 74, 54, 352, 352
+	rotate: 90
+electricity/electricity_04
+	bounds: 584, 894, 200, 210
+	offsets: 74, 54, 352, 352
+	rotate: 90
+electricity2/electricity_05
+	bounds: 310, 786, 258, 261
+	offsets: 45, 22, 352, 352
+	rotate: 90
+electricity/electricity_05
+	bounds: 310, 786, 258, 261
+	offsets: 45, 22, 352, 352
+	rotate: 90
+electricity2/electricity_06
+	bounds: 1751, 657, 268, 272
+	offsets: 40, 17, 352, 352
+	rotate: 90
+electricity/electricity_06
+	bounds: 1751, 657, 268, 272
+	offsets: 40, 17, 352, 352
+	rotate: 90
+electricity2/electricity_07
+	bounds: 310, 1050, 266, 268
+	offsets: 41, 19, 352, 352
+	rotate: 90
+electricity/electricity_07
+	bounds: 310, 1050, 266, 268
+	offsets: 41, 19, 352, 352
+	rotate: 90
+electricity2/electricity_08
+	bounds: 1754, 931, 283, 284
+	offsets: 33, 11, 352, 352
+	rotate: 90
+electricity/electricity_08
+	bounds: 1754, 931, 283, 284
+	offsets: 33, 11, 352, 352
+	rotate: 90
+electricity2/electricity_09
+	bounds: 1021, 608, 202, 173
+	offsets: 80, 90, 352, 352
+electricity/electricity_09
+	bounds: 1021, 608, 202, 173
+	offsets: 80, 90, 352, 352
+electricity2/electricity_10
+	bounds: 805, 1408, 313, 313
+	offsets: 18, 0, 352, 352
+electricity/electricity_10
+	bounds: 805, 1408, 313, 313
+	offsets: 18, 0, 352, 352
+electricity2/electricity_11
+	bounds: 1245, 951, 298, 298
+	offsets: 25, 5, 352, 352
+electricity/electricity_11
+	bounds: 1245, 951, 298, 298
+	offsets: 25, 5, 352, 352
+electricity2/electricity_12
+	bounds: 6, 1019, 297, 298
+	offsets: 26, 5, 352, 352
+	rotate: 90
+electricity/electricity_12
+	bounds: 6, 1019, 297, 298
+	offsets: 26, 5, 352, 352
+	rotate: 90
+electricity2/electricity_13
+	bounds: 805, 1103, 299, 303
+	offsets: 25, 2, 352, 352
+	rotate: 90
+electricity/electricity_13
+	bounds: 805, 1103, 299, 303
+	offsets: 25, 2, 352, 352
+	rotate: 90
+electricity2/electricity_14
+	bounds: 803, 836, 261, 261
+	offsets: 43, 23, 352, 352
+electricity/electricity_14
+	bounds: 803, 836, 261, 261
+	offsets: 43, 23, 352, 352
+electricity2/electricity_15
+	bounds: 1232, 696, 249, 250
+	offsets: 49, 28, 352, 352
+	rotate: 90
+electricity/electricity_15
+	bounds: 1232, 696, 249, 250
+	offsets: 49, 28, 352, 352
+	rotate: 90
+electricity2/electricity_16
+	bounds: 1782, 1779, 260, 263
+	offsets: 44, 21, 352, 352
+electricity/electricity_16
+	bounds: 1782, 1779, 260, 263
+	offsets: 44, 21, 352, 352
+electricity2/electricity_17
+	bounds: 1488, 566, 222, 221
+	offsets: 63, 42, 352, 352
+electricity/electricity_17
+	bounds: 1488, 566, 222, 221
+	offsets: 63, 42, 352, 352
+electricity2/electricity_18
+	bounds: 1070, 936, 156, 153
+	offsets: 82, 85, 352, 352
+electricity/electricity_18
+	bounds: 1070, 936, 156, 153
+	offsets: 82, 85, 352, 352
+electricity2/electricity_19
+	bounds: 577, 667, 216, 221
+	offsets: 66, 41, 352, 352
+electricity/electricity_19
+	bounds: 577, 667, 216, 221
+	offsets: 66, 41, 352, 352
+electricity2/electricity_20
+	bounds: 1070, 787, 149, 143
+	offsets: 81, 92, 352, 352
+electricity/electricity_20
+	bounds: 1070, 787, 149, 143
+	offsets: 81, 92, 352, 352
+electricity2/electricity_21
+	bounds: 1716, 458, 202, 193
+	offsets: 76, 47, 352, 352
+electricity/electricity_21
+	bounds: 1716, 458, 202, 193
+	offsets: 76, 47, 352, 352
+electricity2/electricity_22
+	bounds: 1486, 384, 177, 176
+	offsets: 84, 64, 352, 352
+electricity/electricity_22
+	bounds: 1486, 384, 177, 176
+	offsets: 84, 64, 352, 352
+electricity2/electricity_23
+	bounds: 1608, 1528, 204, 166
+	offsets: 76, 66, 352, 352
+	rotate: 90
+electricity/electricity_23
+	bounds: 1608, 1528, 204, 166
+	offsets: 76, 66, 352, 352
+	rotate: 90
+electricity2/electricity_24
+	bounds: 1924, 381, 74, 77
+	offsets: 93, 159, 352, 352
+	rotate: 90
+electricity/electricity_24
+	bounds: 1924, 381, 74, 77
+	offsets: 93, 159, 352, 352
+	rotate: 90
+electricity2/electricity_25
+	bounds: 1824, 237, 138, 139
+	offsets: 104, 82, 352, 352
+	rotate: 90
+electricity/electricity_25
+	bounds: 1824, 237, 138, 139
+	offsets: 104, 82, 352, 352
+	rotate: 90
+electricity2/electricity_26
+	bounds: 6, 885, 128, 130
+	offsets: 109, 86, 352, 352
+	rotate: 90
+electricity/electricity_26
+	bounds: 6, 885, 128, 130
+	offsets: 109, 86, 352, 352
+	rotate: 90
+electricity2/electricity_27
+	bounds: 1114, 1095, 109, 110
+	offsets: 118, 96, 352, 352
+	rotate: 90
+electricity/electricity_27
+	bounds: 1114, 1095, 109, 110
+	offsets: 118, 96, 352, 352
+	rotate: 90
+electricity2/electricity_28
+	bounds: 1924, 556, 95, 97
+	offsets: 125, 102, 352, 352
+	rotate: 90
+electricity/electricity_28
+	bounds: 1924, 556, 95, 97
+	offsets: 125, 102, 352, 352
+	rotate: 90
+electricity2/electricity_29
+	bounds: 1924, 461, 89, 90
+	offsets: 128, 105, 352, 352
+	rotate: 90
+electricity/electricity_29
+	bounds: 1924, 461, 89, 90
+	offsets: 128, 105, 352, 352
+	rotate: 90
+electricity2/electricity_30
+	bounds: 1824, 381, 71, 72
+	offsets: 137, 114, 352, 352
+	rotate: 90
+electricity/electricity_30
+	bounds: 1824, 381, 71, 72
+	offsets: 137, 114, 352, 352
+	rotate: 90
+electricity2/electricity_31
+	bounds: 1414, 628, 62, 62
+	offsets: 141, 119, 352, 352
+electricity/electricity_31
+	bounds: 1414, 628, 62, 62
+	offsets: 141, 119, 352, 352
+electricity2/electricity_32
+	bounds: 2040, 1580, 1, 1
+electricity/electricity_32
+	bounds: 2040, 1580, 1, 1
+electricity/electricity_34
+	bounds: 2040, 1580, 1, 1
+electricity2/electricity_34
+	bounds: 2040, 1580, 1, 1
+electricity2/electricity_33
+	bounds: 1734, 1479, 18, 19
+	offsets: 163, 140, 352, 352
+	rotate: 90
+electricity/electricity_33
+	bounds: 1734, 1479, 18, 19
+	offsets: 163, 140, 352, 352
+	rotate: 90
+electricity2/electricity_35
+	bounds: 1751, 1441, 10, 10
+	offsets: 167, 144, 352, 352
+electricity/electricity_35
+	bounds: 1751, 1441, 10, 10
+	offsets: 167, 144, 352, 352
+generator/1
+	bounds: 805, 1727, 490, 315
+	offsets: 1, 1, 492, 317
+generator/2
+	bounds: 1301, 1255, 477, 301
+	offsets: 1, 1, 479, 303
+	rotate: 90
+generator/3
+	bounds: 1301, 1738, 475, 304
+	offsets: 1, 1, 477, 306
+generator/generator
+	bounds: 6, 1322, 793, 720
+	offsets: 1, 1, 795, 722
+generator/upgrade_station/1
+	bounds: 1608, 1244, 278, 120
+	offsets: 1, 1, 280, 122
+	rotate: 90
+generator/upgrade_station/2
+	bounds: 1124, 1210, 258, 115
+	offsets: 1, 1, 260, 117
+	rotate: 90
+generator/upgrade_station/3
+	bounds: 1124, 1474, 247, 124
+	offsets: 1, 1, 249, 126
+	rotate: 90
+generator/upgrade_station/station_base
+	bounds: 1782, 1453, 320, 211
+	offsets: 1, 1, 322, 213
+	rotate: 90
+generator/upgrade_station/station_bulb_off
+	bounds: 1608, 1039, 140, 199
+	offsets: 1, 2, 142, 202
+generator/upgrade_station/station_bulb_on
+	bounds: 799, 655, 175, 216
+	offsets: 3, 2, 181, 222
+	rotate: 90
+generator/upgrade_station/station_top
+	bounds: 1549, 793, 240, 196
+	offsets: 1, 1, 242, 198
+	rotate: 90
+sparks/Spark_A
+	bounds: 1999, 1671, 102, 37
+	offsets: 1, 1, 104, 39
+	rotate: 90
+sparks/Spark_B
+	bounds: 1759, 1457, 29, 10
+	offsets: 1, 1, 31, 12
+	rotate: 90
+sparks/Spark_C
+	bounds: 1549, 1159, 90, 53
+	offsets: 1, 1, 92, 55
+	rotate: 90
+sparks/Spark_D
+	bounds: 1734, 1447, 11, 26
+	offsets: 1, 1, 13, 27
+sparks/Spark_E
+	bounds: 1999, 1442, 28, 65
+	offsets: 1, 1, 30, 68
+sparks/Spark_F
+	bounds: 1414, 565, 66, 57
+	offsets: 1, 1, 68, 59
+sparks/Spark_G
+	bounds: 1999, 1513, 68, 35
+	offsets: 1, 1, 70, 37
+	rotate: 90
+sparks/Spark_H
+	bounds: 1766, 1492, 30, 10
+	offsets: 1, 1, 32, 12
+	rotate: 90
+sparks/Spark_I
+	bounds: 1999, 1587, 78, 42
+	offsets: 1, 1, 80, 44
+	rotate: 90
+sparks/Spark_J
+	bounds: 1734, 1503, 26, 19
+	offsets: 1, 1, 28, 21

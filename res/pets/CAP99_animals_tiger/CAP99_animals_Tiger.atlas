@@ -1,0 +1,101 @@
+CAP99_animals_Tiger.png
+	size: 412, 412
+	filter: Linear, Linear
+BackLegL_A
+	bounds: 229, 82, 71, 61
+	offsets: 1, 1, 73, 63
+BackLegR_A
+	bounds: 306, 299, 72, 107
+	offsets: 1, 1, 74, 109
+BackLegR_B
+	bounds: 113, 154, 57, 63
+	offsets: 1, 1, 59, 65
+	rotate: 90
+BackLeg_B
+	bounds: 163, 222, 57, 63
+	offsets: 1, 1, 59, 65
+BackPawL
+	bounds: 306, 62, 61, 40
+	offsets: 1, 1, 63, 42
+	rotate: 90
+BackPawR
+	bounds: 360, 225, 62, 40
+	offsets: 1, 1, 64, 42
+	rotate: 90
+Body
+	bounds: 6, 291, 214, 115
+BotSnout
+	bounds: 6, 149, 42, 39
+	offsets: 1, 1, 44, 41
+	rotate: 90
+EyeL
+	bounds: 384, 340, 21, 26
+	offsets: 1, 1, 23, 28
+EyeR
+	bounds: 51, 165, 26, 26
+	offsets: 1, 1, 28, 28
+EyebrowL
+	bounds: 83, 166, 24, 25
+	offsets: 1, 1, 26, 26
+EyebrownR
+	bounds: 384, 372, 34, 22
+	offsets: 1, 1, 36, 24
+	rotate: 90
+FrontArmL_A
+	bounds: 295, 9, 47, 43
+	offsets: 1, 1, 49, 45
+	rotate: 90
+FrontArmL_B
+	bounds: 229, 8, 60, 68
+	offsets: 1, 1, 62, 70
+FrontArmR_A
+	bounds: 306, 129, 48, 65
+	offsets: 1, 1, 50, 67
+FrontArmR_B
+	bounds: 97, 217, 60, 68
+	offsets: 1, 1, 62, 70
+FrontPawL
+	bounds: 360, 157, 62, 40
+	offsets: 1, 1, 64, 42
+	rotate: 90
+FrontPawR
+	bounds: 360, 89, 62, 40
+	offsets: 1, 1, 64, 42
+	rotate: 90
+Head
+	bounds: 6, 19, 124, 105
+	offsets: 1, 1, 126, 107
+	rotate: 90
+HighlightL
+	bounds: 397, 294, 5, 6
+	offsets: 1, 1, 7, 8
+	rotate: 90
+HighlightR
+	bounds: 384, 293, 6, 7
+	offsets: 1, 1, 8, 9
+	rotate: 90
+PupilL
+	bounds: 384, 305, 10, 12
+	offsets: 1, 1, 12, 14
+	rotate: 90
+PupilR
+	bounds: 384, 321, 13, 14
+	offsets: 1, 1, 15, 16
+	rotate: 90
+Shadow
+	bounds: 226, 149, 257, 74
+	offsets: 1, 1, 259, 76
+	rotate: 90
+Tail
+	bounds: 117, 29, 114, 106
+	rotate: 90
+TopSnout
+	bounds: 352, 26, 42, 57
+	offsets: 1, 1, 44, 59
+tranq dart
+	bounds: 306, 200, 93, 48
+	offsets: 1, 1, 95, 50
+	rotate: 90
+tranq dart feathers
+	bounds: 6, 197, 85, 88
+	offsets: 1, 1, 87, 90

@@ -1,0 +1,23 @@
+55541dd680cff54e.png
+	size: 2048, 2048
+	filter: Linear, Linear
+nuclear_plant/cloud/cloud_1
+	bounds: 1765, 1791, 258, 232
+	offsets: 1, 1, 260, 234
+nuclear_plant/cloud/cloud_2
+	bounds: 1765, 1397, 388, 246
+	offsets: 1, 1, 390, 248
+	rotate: 90
+nuclear_plant/cloud/cloud_3
+	bounds: 1765, 1023, 368, 243
+	offsets: 1, 1, 370, 245
+	rotate: 90
+nuclear_plant/nuclear_plant
+	bounds: 888, 1170, 871, 853
+	offsets: 1, 1, 873, 855
+nuclear_plant/nuclear_plant_broken
+	bounds: 6, 1652, 876, 371
+	offsets: 1, 1, 878, 389
+nuclear_plant/nuclear_plant_overlay
+	bounds: 6, 885, 871, 761
+	offsets: 1, 1, 873, 764

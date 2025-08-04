@@ -1,0 +1,423 @@
+016ARP_Destructible_Items_2.png
+	size: 4096, 1708
+	filter: Linear, Linear
+	scale: 0.5
+Police cars/blue  overlay
+	bounds: 2083, 918, 42, 31
+	offsets: 6, 6, 58, 41
+Police cars/blue light
+	bounds: 1778, 1228, 55, 33
+	offsets: 8, 0, 63, 34
+Police cars/both lights on
+	bounds: 1717, 1228, 55, 33
+	offsets: 8, 0, 63, 34
+Police cars/lights off
+	bounds: 1656, 1228, 55, 33
+	offsets: 8, 0, 63, 34
+Police cars/red light
+	bounds: 1595, 1228, 55, 33
+	offsets: 8, 0, 63, 34
+Police cars/red overlay
+	bounds: 2895, 988, 44, 32
+	offsets: 9, 4, 55, 41
+break_particles/break_particle_1
+	bounds: 4062, 1314, 27, 26
+	rotate: 90
+break_particles/break_particle_2
+	bounds: 2131, 917, 30, 32
+break_particles/break_particle_3
+	bounds: 1454, 1212, 46, 49
+brown_button_poof/brown_button_poof_A
+	bounds: 3421, 355, 239, 218
+	offsets: 1, 1, 241, 220
+brown_button_poof/brown_button_poof_B
+	bounds: 1510, 221, 236, 214
+	offsets: 1, 1, 238, 216
+brown_button_poof/brown_button_poof_C
+	bounds: 2527, 429, 259, 242
+	offsets: 1, 1, 261, 244
+hit spark
+	bounds: 931, 121, 96, 228
+	offsets: 0, 0, 97, 228
+	rotate: 90
+hit_fx/hit_effect1
+	bounds: 3340, 809, 60, 62
+hit_fx/hit_effect2
+	bounds: 178, 43, 80, 82
+hit_fx/hit_effect3
+	bounds: 3932, 6, 88, 91
+objs/Bush_1
+	bounds: 3817, 103, 214, 166
+objs/Bush_2
+	bounds: 6, 236, 254, 266
+objs/Cabrio_60s
+	bounds: 968, 966, 465, 238
+	offsets: 10, 3, 487, 241
+objs/Cone_1
+	bounds: 265, 313, 113, 117
+	offsets: 2, 2, 117, 119
+	rotate: 90
+objs/CopperFence_horizontal
+	bounds: 634, 277, 305, 166
+	offsets: 3, 2, 313, 168
+objs/CopperFence_vertical
+	bounds: 4037, 75, 38, 345
+	offsets: 4, 36, 47, 382
+objs/DN_ESign
+	bounds: 2286, 116, 101, 240
+	offsets: 0, 3, 101, 243
+	rotate: 90
+objs/ExoticPond
+	bounds: 953, 653, 328, 307
+	offsets: 1, 4, 336, 312
+objs/Ferrari_90s
+	bounds: 1956, 955, 472, 250
+	offsets: 16, 3, 504, 253
+objs/FireHydrant
+	bounds: 3755, 635, 108, 153
+	offsets: 6, 6, 120, 159
+objs/IronBench
+	bounds: 3414, 179, 217, 170
+	offsets: 0, 1, 217, 173
+objs/KiddyPool
+	bounds: 1878, 106, 189, 155
+	offsets: 2, 3, 193, 158
+objs/Lamba_90s
+	bounds: 1699, 706, 378, 243
+objs/Lando_30s
+	bounds: 3406, 794, 460, 239
+	offsets: 16, 3, 492, 242
+objs/LushFountain
+	bounds: 1287, 721, 406, 237
+	offsets: 1, 5, 416, 309
+objs/LushFountain2
+	bounds: 3189, 97, 181, 177
+objs/Meter
+	bounds: 267, 99, 78, 200
+	offsets: 1, 1, 80, 201
+	rotate: 90
+objs/OW_Sign
+	bounds: 6, 131, 99, 255
+	offsets: 0, 3, 99, 258
+	rotate: 90
+objs/Palm_Tree_1
+	bounds: 457, 521, 240, 348
+	offsets: 17, 13, 299, 529
+	rotate: 90
+objs/Palm_Tree_1a
+	bounds: 1653, 441, 262, 259
+objs/Palm_Tree_2
+	bounds: 2997, 278, 298, 420
+	offsets: 19, 18, 336, 627
+	rotate: 90
+objs/Palm_Tree_2a
+	bounds: 2234, 395, 288, 281
+objs/ParkBench
+	bounds: 1438, 90, 175, 125
+	offsets: 3, 2, 182, 128
+objs/Public_Trash_Can
+	bounds: 3058, 56, 111, 144
+	offsets: 0, 1, 111, 145
+objs/RoadBlocker_Vertical
+	bounds: 3426, 1051, 78, 207
+	offsets: 1, 1, 80, 208
+	rotate: 90
+objs/Sedan_1_60s
+	bounds: 6, 733, 445, 226
+	offsets: 15, 3, 475, 229
+objs/Sedan_30s
+	bounds: 3340, 579, 409, 209
+	offsets: 14, 3, 437, 212
+objs/Stop_Sign
+	bounds: 3975, 1467, 110, 235
+	offsets: 3, 2, 113, 237
+objs/StreetLamp
+	bounds: 3666, 275, 145, 332
+	offsets: 16, 6, 176, 350
+	rotate: 90
+objs/Street_Sign_1
+	bounds: 811, 449, 198, 316
+	offsets: 0, 4, 198, 320
+	rotate: 90
+objs/Street_Sign_2
+	bounds: 3755, 426, 192, 316
+	offsets: 0, 4, 192, 320
+	rotate: 90
+objs/TableUmbrella
+	bounds: 3650, 1039, 288, 406
+	offsets: 17, 15, 322, 421
+	rotate: 90
+objs/TrafficLight
+	bounds: 545, 767, 257, 402
+	offsets: 0, 6, 263, 408
+	rotate: 90
+objs/TrafficLight1
+	bounds: 2167, 920, 32, 29
+objs/TrafficLight2
+	bounds: 2997, 973, 33, 30
+objs/TrafficLight3
+	bounds: 3024, 1470, 36, 32
+objs/Tree_1
+	bounds: 2741, 1152, 319, 550
+	offsets: 0, 12, 319, 562
+objs/Tree_2
+	bounds: 6, 965, 533, 737
+	offsets: 4, 8, 538, 746
+objs/Umbrella
+	bounds: 2973, 970, 314, 447
+	offsets: 15, 18, 352, 465
+	rotate: 90
+objs/leaf_1
+	bounds: 3382, 1241, 30, 21
+objs/leaf_2
+	bounds: 2945, 990, 46, 30
+	offsets: 0, 0, 47, 30
+objs_2/Barbell
+	bounds: 2286, 55, 227, 55
+objs_2/BenchPress
+	bounds: 583, 98, 173, 183
+	rotate: 90
+objs_2/Brick_Pile
+	bounds: 1287, 523, 360, 192
+	offsets: 0, 7, 362, 201
+objs_2/Embroiderer
+	bounds: 1619, 51, 130, 139
+	offsets: 1, 2, 132, 141
+	rotate: 90
+objs_2/Firetruck
+	bounds: 6, 508, 219, 363
+	rotate: 90
+objs_2/Fruit_Crate
+	bounds: 3817, 14, 109, 83
+	offsets: 0, 2, 109, 86
+objs_2/Gas_Pump
+	bounds: 1752, 187, 120, 248
+	offsets: 0, 3, 122, 251
+objs_2/Grave1
+	bounds: 2895, 1026, 66, 121
+	offsets: 2, 2, 70, 123
+objs_2/Grave2
+	bounds: 1165, 54, 139, 127
+	offsets: 2, 2, 143, 130
+objs_2/Plant_pot1
+	bounds: 2507, 223, 215, 200
+	offsets: 1, 0, 217, 200
+objs_2/Plant_pot2
+	bounds: 772, 102, 153, 169
+objs_2/Plant_pot3
+	bounds: 2181, 6, 96, 96
+	offsets: 1, 0, 97, 96
+objs_2/Plant_pot4
+	bounds: 457, 767, 57, 59
+objs_2/Plant_pot5
+	bounds: 473, 308, 39, 78
+objs_2/Plant_pot6
+	bounds: 2728, 255, 42, 72
+objs_2/Police_Car
+	bounds: 3650, 1333, 369, 319
+	offsets: 0, 3, 371, 323
+	rotate: 90
+objs_2/Printer
+	bounds: 2875, 94, 106, 177
+	offsets: 1, 1, 109, 180
+	rotate: 90
+objs_2/Sandcastle
+	bounds: 1921, 267, 281, 182
+	offsets: 1, 1, 283, 184
+objs_2/Sofa_Lounge
+	bounds: 1921, 455, 307, 221
+	offsets: 0, 3, 307, 224
+objs_2/Swings
+	bounds: 2440, 1223, 479, 295
+	offsets: 4, 3, 487, 298
+	rotate: 90
+objs_2/Swings1
+	bounds: 3376, 82, 91, 171
+	rotate: 90
+objs_2/Swings2
+	bounds: 3235, 1295, 96, 43
+	offsets: 2, 2, 99, 47
+objs_2/Swings3
+	bounds: 2440, 1165, 339, 52
+	offsets: 0, 1, 339, 56
+objs_2/Tire
+	bounds: 1764, 87, 102, 94
+objs_2/Trailer
+	bounds: 1454, 1267, 391, 435
+	offsets: 0, 1, 393, 436
+objs_2/Vault_Door
+	bounds: 3066, 1344, 352, 358
+	offsets: 1, 2, 354, 361
+objs_2/Weight kettles
+	bounds: 753, 464, 51, 51
+objs_2/basket_ball
+	bounds: 3048, 1287, 51, 51
+objs_2/beach_chair
+	bounds: 1223, 187, 179, 209
+	offsets: 1, 1, 180, 210
+	rotate: 90
+objs_2/beach_chair_2
+	bounds: 2974, 206, 179, 209
+	offsets: 1, 1, 180, 210
+	rotate: 90
+objs_2/beach_umbrella
+	bounds: 299, 183, 354, 333
+	offsets: 28, 0, 406, 333
+objs_2/bucket_wood
+	bounds: 375, 537, 50, 61
+	offsets: 1, 1, 53, 62
+objs_2/chair_diner_back
+	bounds: 2792, 528, 84, 143
+	offsets: 1, 2, 86, 145
+objs_2/chair_diner_front
+	bounds: 3227, 581, 89, 131
+	offsets: 1, 2, 90, 133
+objs_2/drinking_fountain
+	bounds: 1133, 532, 133, 115
+	offsets: 1, 1, 134, 117
+objs_2/table_diner
+	bounds: 2532, 77, 140, 173
+	offsets: 0, 2, 142, 175
+	rotate: 90
+objs_3/Boxes_stack
+	bounds: 3637, 99, 174, 170
+objs_3/Car_Dirty
+	bounds: 2886, 506, 335, 206
+	offsets: 12, 3, 359, 209
+objs_3/Car_Long
+	bounds: 3424, 1135, 567, 220
+	offsets: 19, 3, 605, 223
+	rotate: 90
+objs_3/Car_Modern
+	bounds: 2498, 677, 382, 221
+	offsets: 13, 3, 408, 224
+objs_3/Car_Police
+	bounds: 2895, 718, 439, 247
+	offsets: 14, 3, 462, 250
+objs_3/Car_Taxi
+	bounds: 2434, 904, 455, 243
+	offsets: 15, 3, 485, 246
+objs_3/Car_Tesla_Red
+	bounds: 2083, 682, 409, 216
+	offsets: 14, 3, 437, 220
+objs_3/Car_Tesla_White
+	bounds: 3872, 624, 409, 215
+	offsets: 14, 3, 437, 219
+	rotate: 90
+objs_3/Car_sign
+	bounds: 1133, 372, 145, 371
+	offsets: 0, 1, 145, 372
+	rotate: 90
+objs_3/Cart1
+	bounds: 482, 71, 95, 117
+	offsets: 0, 1, 97, 119
+objs_3/Cart2
+	bounds: 3666, 462, 64, 111
+	offsets: 0, 1, 64, 112
+objs_3/Claw_L1
+	bounds: 2741, 1432, 27, 53
+	offsets: 0, 1, 28, 55
+objs_3/Claw_L2
+	bounds: 2785, 1156, 34, 43
+	offsets: 2, 2, 36, 45
+objs_3/Claw_L3
+	bounds: 2741, 1254, 35, 44
+	offsets: 0, 0, 37, 44
+objs_3/Claw_L4
+	bounds: 3353, 1268, 64, 70
+	offsets: 0, 0, 67, 70
+objs_3/Claw_L5
+	bounds: 1438, 257, 63, 109
+	offsets: 1, 0, 124, 112
+objs_3/Claw_L6
+	bounds: 1310, 92, 112, 88
+	offsets: 3, 1, 116, 95
+objs_3/Claw_L7
+	bounds: 3139, 1279, 90, 59
+	offsets: 1, 1, 91, 65
+objs_3/Claw_R
+	bounds: 945, 223, 143, 272
+	offsets: 2, 0, 148, 276
+	rotate: 90
+objs_3/Flight_Board
+	bounds: 6, 41, 166, 84
+objs_3/Flight_Board2
+	bounds: 931, 31, 166, 84
+objs_3/Fuel_Tank_Large
+	bounds: 545, 1030, 417, 672
+	offsets: 2, 3, 421, 675
+objs_3/Fuel_Tank_Small
+	bounds: 1454, 964, 242, 496
+	offsets: 2, 2, 245, 498
+	rotate: 90
+objs_3/Luggage_Truck
+	bounds: 968, 1210, 480, 492
+	offsets: 3, 0, 484, 492
+objs_3/Oil_Drum
+	bounds: 457, 832, 76, 127
+	offsets: 1, 1, 79, 128
+objs_3/Pole
+	bounds: 2728, 333, 40, 90
+	offsets: 1, 1, 42, 91
+objs_3/Solar_Panel
+	bounds: 2792, 209, 176, 291
+	offsets: 1, 2, 179, 294
+objs_3/Solar_Panel2
+	bounds: 1506, 1235, 26, 83
+	rotate: 90
+objs_3/Suitcase1
+	bounds: 658, 454, 61, 89
+	offsets: 2, 1, 64, 94
+	rotate: 90
+objs_3/Suitcase2
+	bounds: 1510, 456, 61, 101
+	offsets: 1, 1, 64, 102
+	rotate: 90
+objs_3/Suitcase3
+	bounds: 375, 604, 61, 123
+	offsets: 1, 1, 64, 124
+objs_3/Suitcase4
+	bounds: 945, 374, 77, 69
+	offsets: 2, 2, 81, 71
+objs_3/Suitcase5
+	bounds: 3359, 877, 41, 109
+	offsets: 1, 1, 43, 110
+objs_3/Suitcase6
+	bounds: 1983, 21, 76, 79
+	offsets: 2, 1, 79, 80
+objs_3/Suitcase7
+	bounds: 3553, 68, 63, 105
+	offsets: 1, 2, 66, 107
+objs_3/Toolbox
+	bounds: 2711, 81, 158, 122
+	offsets: 0, 1, 158, 123
+objs_3/Waiting_chair
+	bounds: 811, 654, 113, 107
+objs_3/coffee
+	bounds: 2208, 233, 266, 156
+	offsets: 0, 0, 267, 156
+objs_3/show_car_red
+	bounds: 2146, 1211, 491, 288
+	offsets: 0, 0, 491, 289
+	rotate: 90
+objs_3/show_car_white
+	bounds: 1851, 1211, 491, 289
+	rotate: 90
+objs_3/water_cooler
+	bounds: 2073, 108, 119, 207
+	offsets: 4, 0, 123, 207
+	rotate: 90
+smoke/smoke_particle_A
+	bounds: 3975, 1347, 112, 114
+	offsets: 2, 2, 116, 118
+smoke/smoke_particle_B
+	bounds: 518, 304, 110, 112
+	offsets: 3, 3, 116, 118
+smoke/smoke_particle_C
+	bounds: 2073, 9, 93, 102
+	offsets: 2, 2, 97, 106
+	rotate: 90
+stream/water stream
+	bounds: 772, 7, 99, 89
+stream/water stream2
+	bounds: 1872, 11, 105, 89
