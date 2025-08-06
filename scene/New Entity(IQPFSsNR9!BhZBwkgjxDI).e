@@ -14,6 +14,7 @@
     "Y": 1
   },
   "previous_sibling": "2321920916029404:1754440966424115100",
+  "next_sibling": "2664037629981359:1754520678703028000",
   "spawn_as_networked_entity": true
 },
 {

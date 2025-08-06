@@ -1,26 +1,27 @@
 13
-1309965025281
-1571478601443800 1754266115404479600
+425201762305
+2662950584832820 1754520425424412700
 {
   "name": "DI_RoadBlocker_vertical",
   "local_enabled": true,
   "local_position": {
-    "X": 55.1737327575683594,
-    "Y": -41.2508392333984375
+    "X": 54.0993461608886719,
+    "Y": -70.0357666015625000
   },
   "local_rotation": 0,
   "local_scale": {
     "X": 1,
     "Y": 1
   },
-  "previous_sibling": "1571471090643839:1754266113654482200",
-  "next_sibling": "2662950584832820:1754520425424412700",
+  "previous_sibling": "1571478601443800:1754266115404479600",
+  "next_sibling": "2662954662195979:1754520426374427100",
   "parent": "572739174724627:1745626489395237700",
-  "spawn_as_networked_entity": true
+  "spawn_as_networked_entity": true,
+  "linked_prefab": "DI_RoadBlocker_vertical.prefab"
 },
 {
   "cid": 3,
-  "aoid": "1571478601969045:1754266115404601000",
+  "aoid": "2662950585152267:1754520425424486400",
   "component_type": "Internal_Component",
   "internal_component_type": "Polygon_Collider",
   "data": {
@@ -46,7 +47,7 @@
 },
 {
   "cid": 2,
-  "aoid": "1571478601890527:1754266115404582800",
+  "aoid": "2662950585277483:1754520425424515500",
   "component_type": "Internal_Component",
   "internal_component_type": "Spine_Animator",
   "data": {

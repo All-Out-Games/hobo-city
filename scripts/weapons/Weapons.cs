@@ -324,6 +324,11 @@ namespace ReusableWeapons
 
         public virtual float ApplyRarityToCooldown(float baseCooldown, MyPlayer player)
         {
+            if (!player.Alive())
+            {
+                return baseCooldown;
+            }
+
             // Get the actual rarity from the item instance metadata
             ItemRarity actualRarity = ItemRarity;  // Default to base rarity
 
@@ -551,6 +556,11 @@ namespace ReusableWeapons
             var myPlayer = (MyPlayer)Player;
             if (!myPlayer.HealthManager.Alive() || myPlayer.HealthManager.Health <= 0 || myPlayer.HasEffect<InvulnerabilityEffect>())
             {
+                if (Player.IsLocal)
+                {
+                    Notifications.Show("You can't shoot while you're invulnerable or dead!");
+                }
+
                 return false;
             }
 
@@ -650,7 +660,7 @@ namespace ReusableWeapons
         public override bool IsActiveEffect => true;
 
         public float TimeUntilNextShot = 0.0f;
-        public long FramesBetweenShots => (long)(CalculateTimeBetweenShots(EquippedWeapon.ApplyRarityToCooldown(EquippedWeapon.BaseTimeBetweenShots, Player)) * 60); // Using frames to avoid latency desync issues
+        public long FramesBetweenShots => System.Math.Max(1, (long)(CalculateTimeBetweenShots(EquippedWeapon?.ApplyRarityToCooldown(EquippedWeapon?.BaseTimeBetweenShots ?? 0.0f, Player) ?? 0.0f) * 60)); // Using frames to avoid latency desync issues, minimum 1 to prevent divide by zero
 
         public Weapon EquippedWeapon;
 
@@ -675,6 +685,10 @@ namespace ReusableWeapons
             var myPlayer = (MyPlayer)Player;
             if (!myPlayer.HealthManager.Alive() || myPlayer.HealthManager.Health <= 0 || myPlayer.HasEffect<InvulnerabilityEffect>())
             {
+                if (Player.IsLocal)
+                {
+                    Notifications.Show("You can't shoot while you're invulnerable or dead!");
+                }
                 return;
             }
 

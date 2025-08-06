@@ -288,6 +288,19 @@ public partial class MyPlayer : Player, INetworkedComponent
     Respawn("general");
   }
 
+  [ClientRpc]
+  public void SpawnCashReward(int amount, Player LastDamagedBy)
+  {
+    Destructable.CashRewardPrefab.Instantiate(onBeforeAwake: (entity) =>
+    {
+      var explodeAndLerp = entity.GetComponent<ExplodeAndLerpToPlayer>();
+      explodeAndLerp.Player = LastDamagedBy;
+      explodeAndLerp.Texture = Assets.GetAsset<Texture>("icons/cash.png");
+      explodeAndLerp.Count = amount;
+      entity.SetParent(Entity, false);
+    });
+  }
+
   public void HandleDeath()
   {
     SpineAnimator.SpineInstance.StateMachine.SetTrigger("death");
@@ -325,6 +338,12 @@ public partial class MyPlayer : Player, INetworkedComponent
         {
           LastDamagedBy.KillsThisLife.Set(LastDamagedBy.KillsThisLife.Value + 1);
           Economy.DepositCurrency(LastDamagedBy, GameManager.CASH_CURRENCY, bounty);
+
+          if (Network.IsServer && LastDamagedBy.Alive())
+          {
+            CallClient_SpawnCashReward(75, LastDamagedBy);
+            Economy.DepositCurrency(LastDamagedBy, GameManager.CASH_CURRENCY, 75);
+          }
 
           // Save total kills to persistent leaderboard
           Leaderboards.IncrementPlayerScore("killsSeason1", LastDamagedBy, 1);

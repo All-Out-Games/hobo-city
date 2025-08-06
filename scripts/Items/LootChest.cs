@@ -160,6 +160,23 @@ namespace ReusableWeapons
             var myPlayer = (MyPlayer)player;
             Interactable.LocalEnabled = false;
 
+            if (Network.IsClient)
+            {
+                Destructable.CashRewardPrefab.Instantiate(onBeforeAwake: (entity) =>
+                {
+                    var explodeAndLerp = entity.GetComponent<ExplodeAndLerpToPlayer>();
+                    explodeAndLerp.Player = myPlayer;
+                    explodeAndLerp.Texture = Assets.GetAsset<Texture>("icons/cash.png");
+                    explodeAndLerp.Count = 75;
+                    entity.SetParent(Entity, false);
+                });
+            }
+
+            if (Network.IsServer && myPlayer.Alive())
+            {
+                Economy.DepositCurrency(myPlayer, GameManager.CASH_CURRENCY, 75);
+            }
+
             Coroutine.Start(myPlayer.Entity, DoOpenSequence());
             IEnumerator DoOpenSequence()
             {

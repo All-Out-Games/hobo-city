@@ -5,8 +5,8 @@
   "name": "New Entity",
   "local_enabled": true,
   "local_position": {
-    "X": 23.4447784423828125,
-    "Y": -5.5650587081909180
+    "X": 26.3598403930664062,
+    "Y": -2.7559967041015625
   },
   "local_rotation": 0,
   "local_scale": {

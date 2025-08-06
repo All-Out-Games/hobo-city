@@ -67,5 +67,5 @@ public class PistolProjectile : BaseProjectile
     public override string TravelAnimation => "016ARP/Bullet_Loop";
     public override string HitAnimation => "016ARP/Bullet_Loop";
     public override string ProjectileSkin => "bullet_1";
-    public override float BaseDamage => 9.0f;
+    public override float BaseDamage => 11.0f;
 }
