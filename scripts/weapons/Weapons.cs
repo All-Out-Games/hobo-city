@@ -99,8 +99,8 @@ namespace ReusableWeapons
         public virtual float FireRangeMultiplier => 2.0f;
 
         // Screenshake
-        public virtual float CamShakeIntensity => 0.1f;
-        public virtual float CamShakeDuration => 0.1f;
+        public virtual float CamShakeIntensity => 0.06f;
+        public virtual float CamShakeDuration => 0.06f;
 
         public override void OnEquip(MyPlayer player)
         {
@@ -308,15 +308,15 @@ namespace ReusableWeapons
                 case ItemRarity.Common:
                     return baseDamage;
                 case ItemRarity.Uncommon:
-                    return baseDamage * 1.2f; // +20%
+                    return baseDamage * 1.1f;
                 case ItemRarity.Rare:
-                    return baseDamage * 1.4f; // +40%
+                    return baseDamage * 1.2f;
                 case ItemRarity.Epic:
-                    return baseDamage * 1.6f; // +60%
+                    return baseDamage * 1.3f;
                 case ItemRarity.Legendary:
-                    return baseDamage * 1.8f; // +80%
+                    return baseDamage * 1.6f;
                 case ItemRarity.Mythic:
-                    return baseDamage * 2.0f; // +100%
+                    return baseDamage * 1.5f;
                 default:
                     return baseDamage;
             }
@@ -341,15 +341,15 @@ namespace ReusableWeapons
                 case ItemRarity.Common:
                     return baseCooldown;
                 case ItemRarity.Uncommon:
-                    return baseCooldown * 0.9f;
+                    return baseCooldown;
                 case ItemRarity.Rare:
-                    return baseCooldown * 0.8f;
+                    return baseCooldown * 0.9f;
                 case ItemRarity.Epic:
-                    return baseCooldown * 0.7f;
+                    return baseCooldown * 0.8f;
                 case ItemRarity.Legendary:
-                    return baseCooldown * 0.6f;
+                    return baseCooldown * 0.7f;
                 case ItemRarity.Mythic:
-                    return baseCooldown * 0.5f;
+                    return baseCooldown * 0.6f;
                 default:
                     return baseCooldown;
             }
@@ -376,7 +376,7 @@ namespace ReusableWeapons
         [Serialized] public Circle_Collider Collider;
 
         public virtual float BaseDamage => 10f;
-        public virtual float MaxLifetime => 1.0f;
+        public virtual float MaxLifetime => 0.75f;
 
         public abstract string ProjectileSkin { get; }
         public virtual string TravelAnimation => TravelNormal;
@@ -482,7 +482,7 @@ namespace ReusableWeapons
             var multiplier = 1f;
             if (mob.GetComponent<Destructable>() != null)
             {
-                multiplier = 3f;
+                multiplier = 6f;
             }
 
             mob.Damage((int)(damageToApply * multiplier), Owner.Entity);
@@ -545,6 +545,12 @@ namespace ReusableWeapons
             if (!Player.Alive())
             {
                 Log.Warn($"Player {Player.Name} is not alive");
+                return false;
+            }
+
+            var myPlayer = (MyPlayer)Player;
+            if (!myPlayer.HealthManager.Alive() || myPlayer.HealthManager.Health <= 0 || myPlayer.HasEffect<InvulnerabilityEffect>())
+            {
                 return false;
             }
 
@@ -663,6 +669,12 @@ namespace ReusableWeapons
             if (!Player.Alive())
             {
                 Log.Warn($"Player {Player.Name} is not alive");
+                return;
+            }
+
+            var myPlayer = (MyPlayer)Player;
+            if (!myPlayer.HealthManager.Alive() || myPlayer.HealthManager.Health <= 0 || myPlayer.HasEffect<InvulnerabilityEffect>())
+            {
                 return;
             }
 

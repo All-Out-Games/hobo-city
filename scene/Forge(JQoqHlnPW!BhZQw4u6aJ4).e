@@ -2,7 +2,7 @@
 1275605286915
 2606437538100182 1754507258033185400
 {
-  "name": "Gun Store",
+  "name": "Forge",
   "local_enabled": true,
   "local_position": {
     "X": -153.3695983886718750,
@@ -40,6 +40,6 @@
   "component_type": "Mono_Component",
   "mono_component_type": "RoomBounds",
   "data": {
-    "RoomName": 6
+    "RoomName": 19
   }
 }

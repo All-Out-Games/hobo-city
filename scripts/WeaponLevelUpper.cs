@@ -6,7 +6,7 @@ public partial class WeaponLevelUpper : Component
     private Interactable interactable;
     private Spine_Animator spineAnimator;
     private const int MAX_WEAPON_LEVEL = 50;
-    private const long TOTAL_COST_TO_MAX = 5000000; // $5M total to reach level 50
+    private const long TOTAL_COST_TO_MAX = 2500000; // $2.5M total to reach level 50
 
     public override void Awake()
     {

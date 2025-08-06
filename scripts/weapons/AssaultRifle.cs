@@ -85,5 +85,5 @@ public class AssaultRifleProjectile : BaseProjectile
     public override string TravelAnimation => "016ARP/Bullet_Loop";
     public override string HitAnimation => "016ARP/Bullet_Loop";
     public override string ProjectileSkin => "bullet";
-    public override float BaseDamage => 8.0f;
+    public override float BaseDamage => 7f;
 }

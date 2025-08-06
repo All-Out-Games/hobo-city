@@ -234,7 +234,7 @@ public partial class ItemStand : Component
       {
         if (Enum.TryParse<AmmoType>(ItemDef.Id.Substring(8), out var ammoType))
         {
-          player.ServerSyncAmmoAmount(ammoType, player.AmmoAmounts[ammoType].CurrentAmount + 24);
+          player.ServerSyncAmmoAmount(ammoType, player.AmmoAmounts[ammoType].CurrentAmount + 52);
           player.CallClient_ThrowMoney(player);
         }
         else

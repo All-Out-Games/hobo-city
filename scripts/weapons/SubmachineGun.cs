@@ -5,7 +5,7 @@ namespace ReusableWeapons
     public static class SubmachineGunConfigs
     {
         public const float TIME_BETWEEN_SHOTS = 0.2f;
-        public const float BASE_DAMAGE = 4.0f;
+        public const float BASE_DAMAGE = 5.0f;
 
         public const int AMMO_WITH_FIRST_PICKUP = 300;
         public const int AMMO_WITH_EXTRA_PICKUP = 150;

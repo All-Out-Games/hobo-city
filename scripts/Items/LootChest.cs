@@ -18,7 +18,7 @@ namespace ReusableWeapons
     public partial class LootChest : Component
     {
         private const float BASIC_OPEN_DURATION = 0.15f;
-        private const float EXCITING_OPEN_DURATION = 1f;
+        private const float EXCITING_OPEN_DURATION = 1.5f;
 
         private const float LEGENDARY_CHEST_CHANCE = 0.04f;
 
@@ -52,7 +52,7 @@ namespace ReusableWeapons
         private static readonly WeightedList<LootChestDrop> WeaponLootTable = new()
         {
             {new LootChestDrop(GameManager.Instance.GameItems.Blunderbuss), 2},
-            {new LootChestDrop(GameManager.Instance.GameItems.Pistol), 7},
+            {new LootChestDrop(GameManager.Instance.GameItems.Pistol), 6},
             {new LootChestDrop(GameManager.Instance.GameItems.SubmachineGun), 3},
             {new LootChestDrop(GameManager.Instance.GameItems.ExplosiveShotgun), 1},
             {new LootChestDrop(GameManager.Instance.GameItems.AssaultRifle), 3},
@@ -90,6 +90,12 @@ namespace ReusableWeapons
         public override void Awake()
         {
             Interactable.OnInteract += OnInteract;
+
+            Interactable.CanUseCallback = (player) =>
+            {
+                var myPlayer = (MyPlayer)player;
+                return myPlayer.HealthManager.Alive() && myPlayer.HealthManager.Health > 0;
+            };
 
             Skeleton.Awaken();
             var sm = StateMachine.Make();
@@ -275,8 +281,8 @@ namespace ReusableWeapons
                 // Legendary chest: No common items, higher chance of rare items
                 table = new()
                 {
-                    {ItemRarity.Epic, 8 },
-                    {ItemRarity.Legendary, 8 },
+                    {ItemRarity.Epic, 11 },
+                    {ItemRarity.Legendary, 7 },
                 };
             }
             else

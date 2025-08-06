@@ -83,15 +83,17 @@ public class KillNotification : Component
     {
         if (!Network.IsClient) return;
 
-        var baseRect = UI.ScreenRect.TopCenterRect().Offset(0, -100).Grow(400, 80, 400, 0);
+        var baseRect = UI.ScreenRect.TopCenterRect().Offset(0, -175).Grow(400, 80, 400, 0);
 
-        for (int i = 0; i < ActiveNotifications.Count; i++)
+        // Draw notifications in reverse order so newest appears on top
+        for (int i = ActiveNotifications.Count - 1; i >= 0; i--)
         {
             var notification = ActiveNotifications[i];
             var timeSinceStart = Time.TimeSinceStartup - notification.StartTime;
 
-            // Calculate notification position (stack them vertically)
-            var notifRect = baseRect.Offset(0, -i * 100);
+            // Calculate notification position (newer notifications at top, older ones below)
+            var positionIndex = ActiveNotifications.Count - 1 - i;
+            var notifRect = baseRect.Offset(0, positionIndex * 100);
 
             // Animation calculations
             var animationProgress = timeSinceStart / ANIMATION_IN_DURATION;

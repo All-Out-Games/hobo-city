@@ -20,31 +20,6 @@
   "linked_prefab": "DI_RoadBlocker_vertical.prefab"
 },
 {
-  "cid": 1,
-  "aoid": "1305149914193324:1750623516124709600",
-  "component_type": "Mono_Component",
-  "mono_component_type": "Destructable",
-  "data": {
-    "MaxHealth": 50,
-    "skin": "road_blocker_vertical",
-    "RespawnTime": 60,
-    "CashReward": 3
-  }
-},
-{
-  "cid": 2,
-  "aoid": "1305149914214503:1750623516124716200",
-  "component_type": "Internal_Component",
-  "internal_component_type": "Spine_Animator",
-  "data": {
-    "skeleton_data_asset": "rigs/destructible-item-2/016ARP_Destructible_Items_2.spine",
-    "ordered_skins": [
-      "road_blocker_vertical"
-    ],
-    "depth_offset": 1.0324993133544922
-  }
-},
-{
   "cid": 3,
   "aoid": "1305149914238026:1750623516124723600",
   "component_type": "Internal_Component",
@@ -68,5 +43,18 @@
         "Y": 1.2852879762649536
       }
     ]
+  }
+},
+{
+  "cid": 2,
+  "aoid": "1305149914214503:1750623516124716200",
+  "component_type": "Internal_Component",
+  "internal_component_type": "Spine_Animator",
+  "data": {
+    "skeleton_data_asset": "rigs/destructible-item-2/016ARP_Destructible_Items_2.spine",
+    "ordered_skins": [
+      "road_blocker_vertical"
+    ],
+    "depth_offset": 1.0324993133544922
   }
 }

@@ -31,8 +31,6 @@ public class RoomBounds : Component
 
     public override void Awake()
     {
-        if (!Network.IsServer) return;
-
         Entity.GetComponent<Box_Collider>().OnCollisionEnter = (Entity other) =>
         {
             var op = other.GetComponent<MyPlayer>();
@@ -41,6 +39,15 @@ public class RoomBounds : Component
             // Store the previous room for event metadata
             Room previousRoom = op.CurrentRoom;
             op.CurrentRoom = RoomName;
+
+            // Add invulnerability effect when entering forge or gun store
+            if (RoomName == Room.FORGE || RoomName == Room.GUN_STORE || RoomName == Room.HOSPITAL)
+            {
+                if (!op.HasEffect<InvulnerabilityEffect>())
+                {
+                    op.AddEffect<InvulnerabilityEffect>(duration: 35f); // -1f for infinite duration
+                }
+            }
 
             // Fire the room enter event
             string metadata = $"{previousRoom}:{RoomName}";
@@ -55,6 +62,15 @@ public class RoomBounds : Component
             // Store the previous room for event metadata
             Room previousRoom = player.CurrentRoom;
             player.CurrentRoom = Room.OUTSIDE;
+
+            // Remove invulnerability effect when exiting forge or gun store
+            if (RoomName == Room.FORGE || RoomName == Room.GUN_STORE)
+            {
+                if (player.HasEffect<InvulnerabilityEffect>())
+                {
+                    player.RemoveEffect<InvulnerabilityEffect>(true);
+                }
+            }
 
             // Fire the room exit event
             string metadata = $"{previousRoom}:{Room.OUTSIDE}";

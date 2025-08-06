@@ -16,8 +16,7 @@
   "previous_sibling": "1570843531570861:1754265967434821400",
   "next_sibling": "1570928224456216:1754265987168046900",
   "parent": "572739174724627:1745626489395237700",
-  "spawn_as_networked_entity": true,
-  "linked_prefab": "DI_RoadBlocker_vertical.prefab"
+  "spawn_as_networked_entity": true
 },
 {
   "cid": 1,

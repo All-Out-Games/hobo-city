@@ -5,8 +5,8 @@
   "name": "89c5a0973e4b38bb.png",
   "local_enabled": true,
   "local_position": {
-    "X": -82.5129394531250000,
-    "Y": 4.2286801338195801
+    "X": -60.9230957031250000,
+    "Y": 5.9696946144104004
   },
   "local_rotation": 0,
   "local_scale": {

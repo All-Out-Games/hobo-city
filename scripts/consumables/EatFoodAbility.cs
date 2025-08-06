@@ -106,7 +106,7 @@ public class EatBurgerAbility : EatFoodAbility
 {
     public override Item_Definition FoodItem => GameManager.Instance.GameItems.Burger.ItemDefinition;
     public override string FoodTrigger => "apple";
-    public override int HpAmountToRestore => 75;
+    public override int HpAmountToRestore => 55;
 }
 
 public class EatEnergyDrinkAbility : EatFoodAbility

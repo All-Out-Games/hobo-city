@@ -90,7 +90,13 @@ public partial class MyPlayer : Player, INetworkedComponent
   public Room CurrentRoom
   {
     get => (Room)currentRoom.Value;
-    set => currentRoom.Set((int)value);
+    set
+    {
+      if (Network.IsServer)
+      {
+        currentRoom.Set((int)value);
+      }
+    }
   }
 
   public CameraControl CameraControl;
@@ -245,6 +251,9 @@ public partial class MyPlayer : Player, INetworkedComponent
 
       CameraControl = CameraControl.Create(0);
       CameraControl.SetPostProcessor(CustomPostProcessor);
+
+      // Create FTUE dialog for new players
+      Entity.Unsafe_AddComponent<FTUEDialog>();
     }
 
     if (Network.IsServer)
@@ -731,7 +740,7 @@ public partial class MyPlayer : Player, INetworkedComponent
 
     if (Network.IsServer)
     {
-      var shouldBeHidden = IsBehindSomething;
+      var shouldBeHidden = IsBehindSomething && (Time.TimeSinceStartup - LastShootTime) > 2.25f;
       IsHidden.Set(shouldBeHidden);
 
       // Health regeneration - tick system every second, heal completely in 1 minute (60 seconds)
