@@ -35,15 +35,28 @@ public class GameTeleporter : Component
         var interactable = Entity.GetComponent<Interactable>();
         interactable.OnInteract += OnInteract;
         interactable.CanUseCallback += (Player p) =>
-        {
-            if (GameId == "none")
-            {
-                return false;
-            }
+{
+    if (GameId == "none")
+    {
+        return false;
+    }
 
-            var myPlayer = (MyPlayer)p;
-            return myPlayer.TeleportingToGameId.Value == "none";
-        };
+    var myPlayer = (MyPlayer)p;
+
+    // Check if player is already teleporting
+    if (myPlayer.TeleportingToGameId.Value != "none")
+    {
+        return false;
+    }
+
+    // Check if player is on teleport cooldown
+    if (myPlayer.IsTeleportOnCooldown)
+    {
+        return false;
+    }
+
+    return true;
+};
 
         var spineAnimator = Entity.GetComponent<Spine_Animator>();
         if (spineAnimator.Alive())
@@ -69,8 +82,18 @@ public class GameTeleporter : Component
     public void OnInteract(Player p)
     {
         if (!Network.IsServer) return;
-        ((MyPlayer)p).TeleportingToGameId.Set(GameId);
-        ((MyPlayer)p).StartedTeleportingAt.Set(Time.TimeSinceStartup);
+
+        var myPlayer = (MyPlayer)p;
+
+        // Check damage cooldown
+        if (myPlayer.IsTeleportOnCooldown)
+        {
+            GameManager.CallClient_SendTargetedMessage($"You can't teleport for {myPlayer.TeleportCooldownRemaining.Value:F1} more seconds after taking damage!", new RPCOptions() { Target = myPlayer });
+            return;
+        }
+
+        myPlayer.TeleportingToGameId.Set(GameId);
+        myPlayer.StartedTeleportingAt.Set(Time.TimeSinceStartup);
         Network.QueueAddPlayer("__TRANSFER:" + GameId, p);
     }
 }

@@ -5,8 +5,8 @@
   "name": "AreaCollider",
   "local_enabled": true,
   "local_position": {
-    "X": -108.3917312622070312,
-    "Y": -16.0343055725097656
+    "X": -98.5055465698242188,
+    "Y": -8.8474178314208984
   },
   "local_rotation": 0,
   "local_scale": {

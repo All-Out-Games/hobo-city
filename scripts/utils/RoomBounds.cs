@@ -20,6 +20,7 @@ public enum Room
     BANK_VAULT,
     CINEMA,
     BLACK_MARKET,
+    FORGE,
     None,
 }
 

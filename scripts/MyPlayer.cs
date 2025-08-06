@@ -32,6 +32,12 @@ public partial class MyPlayer : Player, INetworkedComponent
   public bool IsBehindSomething = false;
   public SyncVar<bool> IsHidden = new(false); // If they're behind something and a helicoptor isn't over them
 
+  // Track remaining teleport cooldown time
+  public SyncVar<float> TeleportCooldownRemaining = new(0f);
+
+  // Helper property to check if teleport is on cooldown
+  public bool IsTeleportOnCooldown => TeleportCooldownRemaining.Value > 0f;
+
   public float ClientDiedAt = -1f;
 
   public bool CanDealDamage => HealthManager.Alive() && HealthManager.Health > 0;
@@ -169,7 +175,7 @@ public partial class MyPlayer : Player, INetworkedComponent
 
       if (HasEffect<EnergyEffect>())
       {
-        multiplier *= 1.5f;
+        multiplier *= 1.3f;
       }
 
       if (HasEffect<WonkyScreenEffect>())
@@ -179,7 +185,7 @@ public partial class MyPlayer : Player, INetworkedComponent
 
       if (HasEffect<SuperEnergyEffect>())
       {
-        multiplier *= 1.6f;
+        multiplier *= 1.3f;
       }
 
       if (HasEffect<BasicWeaponAimingEffect>())
@@ -310,6 +316,9 @@ public partial class MyPlayer : Player, INetworkedComponent
         {
           LastDamagedBy.KillsThisLife.Set(LastDamagedBy.KillsThisLife.Value + 1);
           Economy.DepositCurrency(LastDamagedBy, GameManager.CASH_CURRENCY, bounty);
+
+          // Save total kills to persistent leaderboard
+          Leaderboards.IncrementPlayerScore("killsSeason1", LastDamagedBy, 1);
 
           // Give XP for kill
           LastDamagedBy.GainXP(100);
@@ -623,6 +632,12 @@ public partial class MyPlayer : Player, INetworkedComponent
   public override void Update()
   {
     HealthManager.IsInvulnerable = HasEffect<InvulnerabilityEffect>() || IsHidden.Value;
+
+    // Update teleport cooldown timer
+    if (Network.IsServer && TeleportCooldownRemaining.Value > 0f)
+    {
+      TeleportCooldownRemaining.Set(Math.Max(0f, TeleportCooldownRemaining.Value - Time.DeltaTime));
+    }
 
     PlayTimeTimer += Time.DeltaTime;
     if (Network.IsServer && PlayTimeTimer >= 10f)
@@ -1006,6 +1021,8 @@ public partial class MyPlayer : Player, INetworkedComponent
     // Client-side only zoom modifier (no SyncVar writes) is applied in CustomPostProcessor.
     if (IsLocal && !Network.IsServer)
     {
+
+      GunButtonsUI.DrawSidebarButtons();
       UIManager.DrawUI(Position);
 
       if (PointToEntity.Alive())
@@ -1873,7 +1890,14 @@ public partial class MyPlayer : Player, INetworkedComponent
     // Get weapon level and calculate value
     string levelStr = item.GetMetadata("level");
     int weaponLevel = string.IsNullOrEmpty(levelStr) ? 1 : int.Parse(levelStr);
+    // Get rarity from metadata first, fallback to custom definition
     ItemRarity rarity = customDef.ItemRarity;
+    string rarityStr = item.GetMetadata("rarity");
+    if (!string.IsNullOrEmpty(rarityStr) && Enum.TryParse<ItemRarity>(rarityStr, out var metadataRarity))
+    {
+      rarity = metadataRarity;
+    }
+
     int sellValue = Store.CalculateWeaponValue(rarity, weaponLevel);
 
     // Remove weapon from inventory
@@ -1883,7 +1907,7 @@ public partial class MyPlayer : Player, INetworkedComponent
     Economy.DepositCurrency(player, GameManager.CASH_CURRENCY, sellValue);
 
     // Notify player
-    player.CallClient_WeaponSold(item.Definition.Name, sellValue, weaponLevel, rarity);
+    player.CallClient_WeaponSold(item.Definition.Name, sellValue, weaponLevel, rarity, new RPCOptions() { Target = player });
   }
 
   [ClientRpc]

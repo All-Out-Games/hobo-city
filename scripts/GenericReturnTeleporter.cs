@@ -14,10 +14,23 @@ public class GenericReturnTeleporter : Component
     Interactable.OnInteract += OnInteract;
 
     Interactable.CanUseCallback = (Player _player) =>
-    {
-      var player = (MyPlayer)_player;
-      return player.HealthManager.Health > 0;
-    };
+{
+  var player = (MyPlayer)_player;
+
+  // Check if player is alive
+  if (player.HealthManager.Health <= 0)
+  {
+    return false;
+  }
+
+  // Check if player is on teleport cooldown
+  if (player.IsTeleportOnCooldown)
+  {
+    return false;
+  }
+
+  return true;
+};
   }
 
   public void OnInteract(Player _player)
@@ -37,10 +50,20 @@ public class GenericReturnTeleporter : Component
       return;
     }
 
-    if (Network.IsServer && player.HealthManager.Health <= 0)
+    if (Network.IsServer)
     {
-      GameManager.CallClient_SendTargetedMessage("You can't teleport right now", new RPCOptions() { Target = player });
-      return;
+      if (player.HealthManager.Health <= 0)
+      {
+        GameManager.CallClient_SendTargetedMessage("You can't teleport right now", new RPCOptions() { Target = player });
+        return;
+      }
+
+      // Check damage cooldown
+      if (player.IsTeleportOnCooldown)
+      {
+        GameManager.CallClient_SendTargetedMessage($"You can't teleport for {player.TeleportCooldownRemaining.Value:F1} more seconds after taking damage!", new RPCOptions() { Target = player });
+        return;
+      }
     }
 
     player.Teleport(ReturnToPoint.Position);

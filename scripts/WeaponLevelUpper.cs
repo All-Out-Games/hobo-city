@@ -80,8 +80,8 @@ public partial class WeaponLevelUpper : Component
         myPlayer.CallClient_UpdateCurrentHoveredSlot();
 
         // Play upgrade sound and animation
-        myPlayer.CallClient_PlayUpgradeSound();
-        CallClient_PlayUpgradeAnimation();
+        myPlayer.CallClient_PlayUpgradeSound(new RPCOptions() { Target = myPlayer });
+        CallClient_PlayUpgradeAnimation(new RPCOptions() { Target = myPlayer });
     }
     else
     {
@@ -206,14 +206,14 @@ public partial class MyPlayer
     public void PlayUpgradeSound()
     {
         // Play a satisfying upgrade sound
-        AudioAsset upgradeSound = Assets.GetAsset<AudioAsset>("sfx/store-purchase.wav");
+        AudioAsset upgradeSound = Assets.GetAsset<AudioAsset>("sfx/pull_lever.wav");
         if (upgradeSound != null)
         {
             SFX.Play(upgradeSound, new SFX.PlaySoundDesc()
             {
                 EntityToFollow = Entity,
-                Volume = 0.8f,
-                SpeedPerturb = 0.05f
+                Volume = 0.4f,
+                SpeedPerturb = 0.1f
             });
         }
     }

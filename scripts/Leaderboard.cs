@@ -3,7 +3,7 @@ using System.Collections;
 
 public partial class Leaderboard : Component
 {
-    public const string LEADERBOARD_MOST_DAYS_SURVIVED_ID = "red_sun_most_days_survived_v3";
+    public const string LEADERBOARD_KILLS_ID = "killsSeason1";
 
     [Serialized] public Texture LeaderboardBgFirst;
     [Serialized] public Texture LeaderboardBgSecond;
@@ -28,6 +28,12 @@ public partial class Leaderboard : Component
 
     [Serialized] public string OptionalTitle;
 
+    public override void Awake()
+    {
+        // Track the kills leaderboard
+        Leaderboards.TrackLeaderboard(LEADERBOARD_KILLS_ID);
+    }
+
     public override void Update()
     {
         if (Network.IsServer) return;
@@ -46,42 +52,24 @@ public partial class Leaderboard : Component
             Entries.Clear();
             EntryScoreStrings.Clear();
 
-            // Collect all players with their current cash balances
-            var playerCashPairs = new List<(MyPlayer player, double cash)>();
-            foreach (var player in Scene.Components<MyPlayer>())
+            // Get top entries from the leaderboard
+            var topEntries = Leaderboards.GetTop(LEADERBOARD_KILLS_ID, 25);
+            if (topEntries != null)
             {
-                double cashBalance = Economy.GetBalance(player, GameManager.CASH_CURRENCY);
-                playerCashPairs.Add((player, cashBalance));
+                Entries.AddRange(topEntries);
+
+                // Pre-format the score strings
+                foreach (var entry in topEntries)
+                {
+                    EntryScoreStrings.Add(((int)entry.Score).ToString());
+                }
             }
 
-            // Sort descending by cash amount
-            playerCashPairs.Sort((a, b) => b.cash.CompareTo(a.cash));
-
-            // Populate the Entries list and figure out the local player's entry (if any)
-            MyEntry = null;
-            MyEntryScoreString = "";
-
-            for (int i = 0; i < playerCashPairs.Count && i < 25; i++)
+            // Get local player entry
+            MyEntry = Leaderboards.GetLocalPlayerEntry(LEADERBOARD_KILLS_ID);
+            if (MyEntry.HasValue)
             {
-                var (player, cash) = playerCashPairs[i];
-
-                var entry = new LeaderboardEntry()
-                {
-                    Placement = i,
-                    Username = player.Name,
-                    Score = cash,
-                };
-
-                Entries.Add(entry);
-
-                // Pre-format the score string once
-                EntryScoreStrings.Add(Util.FormatDouble(cash));
-
-                if (player.IsLocal)
-                {
-                    MyEntry = entry;
-                    MyEntryScoreString = Util.FormatDouble(cash);
-                }
+                MyEntryScoreString = ((int)MyEntry.Value.Score).ToString();
             }
         }
 

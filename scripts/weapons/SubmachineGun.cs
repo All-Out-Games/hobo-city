@@ -33,7 +33,7 @@ namespace ReusableWeapons
         public override string WeaponSkin => "weapons/smg";
         public override string ProjectilePrefab => "Projectile_SubmachineGun.prefab";
 
-        public override CustomItemDefinition AmmoType => GameManager.Instance.GameItems.MediumAmmo;
+        public override CustomItemDefinition AmmoType => GameManager.Instance.GameItems.LightAmmo;
         public override long AmmoWithFirstPickup => SubmachineGunConfigs.AMMO_WITH_FIRST_PICKUP;
         public override long AmmoWithExtraPickup => SubmachineGunConfigs.AMMO_WITH_EXTRA_PICKUP;
 

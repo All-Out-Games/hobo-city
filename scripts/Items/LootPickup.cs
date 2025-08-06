@@ -70,11 +70,29 @@ namespace ReusableWeapons
             ItemSprite.Sprite = Assets.GetAsset<Texture>(Item.ItemDefinition.Icon);
             if (Item.ItemCategory == ItemCategory.Ammo)
             {
-                ItemSprite.Entity.Scale = new Vector2(0.3f, 0.3f);
+                // Special case for shotgun ammo
+                if (Item.ItemDefinition.Id == "__AMMO__ShotgunShells")
+                {
+                    ItemSprite.Entity.Scale = new Vector2(0.5f, 0.5f);
+                }
+                else
+                {
+                    ItemSprite.Entity.Scale = new Vector2(0.3f, 0.3f);
+                }
             }
             else
             {
-                ItemSprite.Entity.Scale = new Vector2(0.65f, 0.65f);
+                // Special cases for specific weapons
+                if (Item.ItemDefinition.Id == "__WEAPON__submachine_gun" ||
+                    Item.ItemDefinition.Id == "__WEAPON__blunderbuss" ||
+                    Item.ItemDefinition.Id == "__WEAPON__assault_rifle")
+                {
+                    ItemSprite.Entity.Scale = new Vector2(0.65f, 0.65f);
+                }
+                else
+                {
+                    ItemSprite.Entity.Scale = new Vector2(1f, 1f);
+                }
             }
 
             TimeSpawnedAt = Time.TimeSinceStartup;
@@ -109,7 +127,7 @@ namespace ReusableWeapons
         {
             if (Network.IsServer)
             {
-                if (TimeSpawnedAt + 60 < Time.TimeSinceStartup && LerpTime >= MaxLerpTime)
+                if (TimeSpawnedAt + 30 < Time.TimeSinceStartup && LerpTime >= MaxLerpTime)
                 {
                     MarkedForDestroy = true;
                 }
@@ -142,7 +160,10 @@ namespace ReusableWeapons
 
             ItemSprite.DepthOffset = -spriteOffset - 0.4f;
             ShineSprite.DepthOffset = -shineOffset + 0.1f;
-            InnerShineSprite.DepthOffset = ShineSprite.DepthOffset - 0.2f;
+            if (InnerShineSprite.Alive())
+            {
+                InnerShineSprite.DepthOffset = ShineSprite.DepthOffset - 0.2f;
+            }
 
             if (LerpTime < MaxLerpTime)
             {

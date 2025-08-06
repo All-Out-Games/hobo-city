@@ -5,7 +5,7 @@ namespace ReusableWeapons
     public static class ExplosiveShotgunConfigs
     {
         public static float TIME_BETWEEN_SHOTS = 2.0f;
-        public static float PROJECTILE_HIT_BASE_DAMAGE = 10.0f; // Damage from the bullet directly hitting the target, does not include the AOE explosion damage
+        public static float PROJECTILE_HIT_BASE_DAMAGE = 3.0f; // Damage from the bullet directly hitting the target, does not include the AOE explosion damage
 
         public static int AMMO_WITH_FIRST_PICKUP = 18;
         public static int AMMO_WITH_EXTRA_PICKUP = 9;

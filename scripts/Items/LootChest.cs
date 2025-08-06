@@ -268,14 +268,28 @@ namespace ReusableWeapons
         /// </summary>
         private WeightedList<ItemRarity> GetScaledRarities()
         {
-            WeightedList<ItemRarity> table = new()
+            WeightedList<ItemRarity> table;
+
+            if (ChestTier == ItemRarity.Legendary)
+            {
+                // Legendary chest: No common items, higher chance of rare items
+                table = new()
                 {
-                    {ItemRarity.Common, ChestTier == ItemRarity.Legendary ? 1 : 10 },
-                    {ItemRarity.Uncommon, ChestTier == ItemRarity.Legendary ? 2 : 5 },
-                    {ItemRarity.Rare, ChestTier == ItemRarity.Legendary ? 5 : 2 },
-                    {ItemRarity.Epic, ChestTier == ItemRarity.Legendary ? 8 : 1 },
-                    {ItemRarity.Legendary, ChestTier == ItemRarity.Legendary ? 10 : 0 },
+                    {ItemRarity.Epic, 8 },
+                    {ItemRarity.Legendary, 8 },
                 };
+            }
+            else
+            {
+                // Common chest: No legendary items, higher chance of common items
+                table = new()
+                {
+                    {ItemRarity.Common, 10 },
+                    {ItemRarity.Uncommon, 7 },
+                    {ItemRarity.Rare, 2 },
+                    {ItemRarity.Epic, 1 },
+                };
+            }
 
             return table;
         }

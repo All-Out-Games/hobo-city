@@ -22,6 +22,7 @@ public enum LandmarkArea
     CommercialArea,
     TedIsland,
     Ocean,
+    Forge,
     None,
 }
 
@@ -69,6 +70,7 @@ public class AreaCollider : Component
             LandmarkArea.CommercialArea => "Commercial Area",
             LandmarkArea.TedIsland => "Ted Island",
             LandmarkArea.Ocean => "Ocean",
+            LandmarkArea.Forge => "Forge",
             _ => area.ToString()
         };
     }

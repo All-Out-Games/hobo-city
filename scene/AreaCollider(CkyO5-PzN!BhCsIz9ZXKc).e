@@ -5,8 +5,8 @@
   "name": "AreaCollider",
   "local_enabled": true,
   "local_position": {
-    "X": 34.3083457946777344,
-    "Y": -34.0833358764648438
+    "X": -141.3482055664062500,
+    "Y": 35.9145011901855469
   },
   "local_rotation": 0,
   "local_scale": {
@@ -24,7 +24,7 @@
   "component_type": "Mono_Component",
   "mono_component_type": "AreaCollider",
   "data": {
-    "AreaName": 10
+    "AreaName": 18
   }
 },
 {

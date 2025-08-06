@@ -78,6 +78,8 @@ public partial class GameManager : Component
   public static string BITCOIN_CURRENCY = "bitcoin";
   // New admin flag: if true, the next wishing well toss will guarantee a Private Jet reward
   public static bool ForcePrivateJetWish = false;
+  // Admin toggle flag: if false, admin commands (except the toggle command itself) are disabled
+  public static bool AdminCommandsEnabled = true;
   public static string BITCOIN_UNCOLLECTED_CURRENCY = "bitcoinuncollected";
 
   // Append the job name to this
@@ -437,6 +439,13 @@ public partial class GameManager : Component
 
     if (!allowCommands && !isPublicCommand)
     {
+      return;
+    }
+
+    // Check if admin commands are disabled (except for the toggle command itself)
+    if (allowCommands && !AdminCommandsEnabled && cmd != "toggleadmin")
+    {
+      Chat.SendMessage(p, "Admin commands are currently disabled you rat.");
       return;
     }
 
@@ -879,6 +888,14 @@ public partial class GameManager : Component
           {
             Chat.SendMessage(p, "This command can only be run on the server.");
           }
+          break;
+        }
+      case "toggleadmin":
+        {
+          // Toggle whether admin commands are enabled or disabled
+          AdminCommandsEnabled = !AdminCommandsEnabled;
+          string status = AdminCommandsEnabled ? "enabled" : "disabled";
+          Chat.SendMessage(p, $"Admin commands are now {status}.");
           break;
         }
     }

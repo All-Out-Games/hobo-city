@@ -6,9 +6,9 @@ public partial class PunchAbility : MyAbility
 {
   public override TargettingMode TargettingMode => TargettingMode.Self;
 
-  public int PunchDamage = 10;
+  public int PunchDamage = 5;
   public int DestructibleDamgeMultiplier = 7;
-  public override float MaxDistance => 3.5f;
+  public override float MaxDistance => 3.25f;
   public override int MaxTargets => 1;
   public override Texture Icon => GetCachedNearbyPunchable().Alive() ?
     Assets.GetAsset<Texture>("icons/weapons/punch-active.png") :

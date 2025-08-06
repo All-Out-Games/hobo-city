@@ -26,6 +26,17 @@ public partial class ThingWithHealth : Component
       {
         if (value < _Health.Value && IsInvulnerable) return;
 
+        // Check if this is damage (health decreasing)
+        if (value < _Health.Value)
+        {
+          var targetPlayer = Entity.GetComponent<MyPlayer>();
+          if (targetPlayer.Alive())
+          {
+            // Set teleport cooldown to 5 seconds
+            targetPlayer.TeleportCooldownRemaining.Set(5f);
+          }
+        }
+
         _Health.Set(Math.Clamp(value, 0, _MaxHealth.Value));
       }
     }
@@ -74,8 +85,16 @@ public partial class ThingWithHealth : Component
 
     if (shouldDealDamage)
     {
-      // Little hack to not show damage for cops who use max health for reasons
+      // Update the teleport cooldown
       if (targetPlayer.Alive())
+      {
+        // Set teleport cooldown to 5 seconds
+        targetPlayer.TeleportCooldownRemaining.Set(5f);
+      }
+
+      // Little hack to not show damage for cops who use max health for reasons
+      // Also don't show damage numbers if the player is invulnerable
+      if (targetPlayer.Alive() && !IsInvulnerable)
       {
         GameManager.Instance.CallClient_SpawnDamageNumber(Entity.Position, new Vector4(1, 0f, 0, 1), amount.ToString(), 0.5f, 0.0f, false);
       }
