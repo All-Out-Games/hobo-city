@@ -22,11 +22,11 @@ public static class CashDisplay
   //   if (timeLoop > 3 && timeLoop < 4)
   //   {
   //     // Simulate money change during preview
-  //     DrawMoney(previewAmount, previewAmount + 250, timeLoop - 3);
+  //     DrawMoney(previewAmount + 250);
   //   }
   //   else
   //   {
-  //     DrawMoney(previewAmount, previewAmount, 0);
+  //     DrawMoney(previewAmount);
   //   }
   // }
 
@@ -70,7 +70,7 @@ public static class CashDisplay
     }
 
     // Create a compact, cohesive container for money display
-    var baseRect = UI.SafeRect.TopCenterRect().Offset(270, 0).Inset(30, 30, 10, 10);
+    var baseRect = UI.SafeRect.BottomLeftRect().Offset(300, 200).Inset(30, 30, 10, 10);
     var containerWidth = 260;
     var containerHeight = 100;
     var containerRect = baseRect.Grow(0, 0, containerHeight, containerWidth);

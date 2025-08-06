@@ -5,8 +5,8 @@
   "name": "ItemStand_HeavyAmmo",
   "local_enabled": true,
   "local_position": {
-    "X": -1.1458969116210938,
-    "Y": -0.2210564613342285
+    "X": -1.3358383178710938,
+    "Y": 2.2244915962219238
   },
   "local_rotation": 0,
   "local_scale": {

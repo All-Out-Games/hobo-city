@@ -7,8 +7,8 @@ using TinyJson;
 public partial class Store : System<Store>
 {
 
-    public Shop sparksShop, gunShop, generalShop, blackMarket, generateFurnitureShop, petShop, upgradesShop;
-    public ShopCategory ammo, weapons, consumables, blackMarketCat, generateFurnitureCat;
+    public Shop sparksShop, gunShop, generalShop, blackMarket, generateFurnitureShop, petShop, upgradesShop, weaponSellShop;
+    public ShopCategory ammo, weapons, consumables, blackMarketCat, generateFurnitureCat, weaponSellCat;
     public string lastGenerativeMessage = "";
     public string generativeMessage = "";
 
@@ -54,6 +54,7 @@ public partial class Store : System<Store>
         CreateGunShop();
         CreateBlackMarket();
         CreateUpgradesShop();
+        CreateWeaponSellShop();
     }
 
     public void CreateGeneralShop()
@@ -169,6 +170,22 @@ public partial class Store : System<Store>
         }
     }
 
+    public void CreateWeaponSellShop()
+    {
+        weaponSellShop = Economy.CreateShop("Weapon Sell Shop");
+        weaponSellShop.SetPurchaseModifier(OnBeforeItemPurchase);
+        if (Network.IsClient)
+        {
+            weaponSellShop.SetCustomDisplay(CustomItemShopDisplay);
+        }
+        if (Network.IsServer)
+        {
+            weaponSellShop.SetPurchaseHandler(OnItemPurchaseSuccessfull);
+        }
+
+        weaponSellCat = weaponSellShop.AddCategory("Sell Weapons");
+        weaponSellCat.Icon = "icons/weapons/assault_rifle.png";
+    }
 
     #region ItemShop
     public PurchaseModification OnBeforeItemPurchase(Player _player, GameProduct product)
@@ -210,6 +227,14 @@ public partial class Store : System<Store>
                 modification.Color = PurchaseButtonColor.Grey;
                 modification.OnBuyButtonClicked = () => PurchaseFail(_player);
             }
+        }
+
+        if (product.Id.StartsWith("WEAPON_SELL_"))
+        {
+            modification.ModifyProduct = true;
+            modification.PurchaseButtonText = "Sell";
+            int slotIndex = int.Parse(product.Id.Substring(12, product.Id.IndexOf('_', 12) - 12));
+            modification.OnBuyButtonClicked = () => MyPlayer.localPlayer.RequestSellWeapon(slotIndex);
         }
 
         return modification;
@@ -274,7 +299,21 @@ public partial class Store : System<Store>
         Log.Info($"Purchasing item: {product.Id}");
         if (product.Id.StartsWith("__WEAPON__") || product.Id.StartsWith("__HEALING__"))
         {
-            player.ServerTryAddItem(item);
+            // Check if it's a weapon to add level metadata
+            if (product.Id.StartsWith("__WEAPON__"))
+            {
+                var metadata = new List<(string, string)>();
+
+                // Add level metadata based on player level
+                var playerLevel = player.Level;
+                metadata.Add(("level", playerLevel.ToString()));
+
+                player.ServerTryAddItem(item, metadata: metadata);
+            }
+            else
+            {
+                player.ServerTryAddItem(item);
+            }
         }
         else if (product.Id.StartsWith("__AMMO__"))
         {
@@ -303,6 +342,73 @@ public partial class Store : System<Store>
         return true;
     }
     #endregion
+
+    public static int CalculateWeaponValue(ItemRarity rarity, int level = 1)
+    {
+        // Base values for each rarity
+        int baseValue = rarity switch
+        {
+            ItemRarity.Common => 100,
+            ItemRarity.Rare => 500,
+            ItemRarity.Epic => 2000,
+            ItemRarity.Legendary => 5000,
+            ItemRarity.Mythic => 10000,
+            _ => 50
+        };
+
+        // Level multiplier: each level adds 20% more value
+        float levelMultiplier = 1.0f + (level - 1) * 0.2f;
+
+        return (int)(baseValue * levelMultiplier);
+    }
+
+    public void RefreshWeaponSell()
+    {
+        if (!Network.IsClient || MyPlayer.localPlayer == null) return;
+
+        weaponSellCat.ClearProducts();
+
+        var gameItems = GameManager.Instance.GameItems;
+
+        foreach (var item in MyPlayer.localPlayer.DefaultInventory.Items)
+        {
+            if (item == null || item.Definition == null) continue;
+
+            // Get custom item definition to check if it's a weapon
+            var customDef = gameItems.GetCustomItemDefByID(item.Definition.Id);
+            if (customDef == null || customDef.ItemCategory != ItemCategory.Weapon) continue;
+
+            // Skip fists
+            if (item.Definition.Id == "__WEAPON__fists") continue;
+
+            string levelStr = item.GetMetadata("level");
+            int weaponLevel = string.IsNullOrEmpty(levelStr) ? 1 : int.Parse(levelStr);
+
+            // Get rarity from metadata first, fallback to custom definition
+            ItemRarity rarity = customDef.ItemRarity;
+            string rarityStr = item.GetMetadata("rarity");
+            if (!string.IsNullOrEmpty(rarityStr) && Enum.TryParse<ItemRarity>(rarityStr, out var metadataRarity))
+            {
+                rarity = metadataRarity;
+            }
+
+            int price = CalculateWeaponValue(rarity, weaponLevel);
+            string id = $"WEAPON_SELL_{item.InventorySlot}_{item.Id}";
+
+            ShopCategory.ProductDescription product = new()
+            {
+                Id = id,
+                Rarity = rarity,
+                Price = price,
+                Icon = item.Definition.Icon,
+                Currency = GameManager.CASH_CURRENCY,
+                Name = item.Definition.Name,
+                Description = $"Level {weaponLevel} {rarity} Weapon"
+            };
+
+            weaponSellCat.AddProduct(product);
+        }
+    }
 
     public static bool DrawShop(Shop shop)
     {

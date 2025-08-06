@@ -23,7 +23,7 @@
   "internal_component_type": "Sprite_Renderer",
   "data": {
     "texture": "map/Buildings/city_bldg6.png",
-    "depth_offset": -3.3805909156799316,
+    "depth_offset": -0.5805886983871460,
     "tint": {
       "X": 0.7919999957084656,
       "Y": 1.0390000343322754,

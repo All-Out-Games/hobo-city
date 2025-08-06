@@ -5,8 +5,8 @@
   "name": "ItemStand_MediumAmmo",
   "local_enabled": true,
   "local_position": {
-    "X": -3.1096858978271484,
-    "Y": -0.2330117225646973
+    "X": -3.2996273040771484,
+    "Y": 2.2125363349914551
   },
   "local_rotation": 0,
   "local_scale": {

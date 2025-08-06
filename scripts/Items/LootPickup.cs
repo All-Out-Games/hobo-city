@@ -18,6 +18,7 @@ namespace ReusableWeapons
 
         private float TimeSpawnedAt;
         private Player LockedOwner; // Useful if we want to prevent other players from picking up the item
+        public MyPlayer OpeningPlayer; // Player who opened the chest that spawned this item
 
         public enum LerpType
         {
@@ -234,7 +235,22 @@ namespace ReusableWeapons
         {
             if (!Network.IsServer) return false;
 
-            return player.ServerTryAddItem(Item.ItemDefinition, PickupAmount, metadata: new() { ("rarity", PickupRarity.ToString()) });
+            var metadata = new List<(string, string)> { ("rarity", PickupRarity.ToString()) };
+
+            // Add level metadata for weapons based on the player who opened the chest
+            if (Item.ItemCategory == ItemCategory.Weapon && OpeningPlayer != null && OpeningPlayer.Alive())
+            {
+                // Generate a level near the opening player's level (within +/- 2 levels, but at least 1)
+                var playerLevel = OpeningPlayer.Level;
+                var levelVariance = 2;
+                var minLevel = Math.Max(1, playerLevel - levelVariance);
+                var maxLevel = playerLevel + levelVariance;
+                var weaponLevel = Random.Shared.Next(minLevel, maxLevel + 1);
+
+                metadata.Add(("level", weaponLevel.ToString()));
+            }
+
+            return player.ServerTryAddItem(Item.ItemDefinition, PickupAmount, metadata: metadata);
         }
     }
 }

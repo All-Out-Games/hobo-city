@@ -508,5 +508,23 @@
     "texture": {
       "resample_multiplier": 1
     }
+  },
+  {
+    "id": "Forge/forge.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "Lava Tree/lavaTree.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
+  },
+  {
+    "id": "spooky-area.png",
+    "texture": {
+      "resample_multiplier": 1
+    }
   }
 ]

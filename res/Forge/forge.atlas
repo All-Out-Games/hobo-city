@@ -1,0 +1,126 @@
+forge.png
+	size: 4084, 920
+	filter: Linear, Linear
+ANIMATION ASSETS/BEAM 1
+	bounds: 1549, 429, 201, 483
+ANIMATION ASSETS/BEAM 2
+	bounds: 1342, 429, 201, 483
+ANIMATION ASSETS/Forge Door BOTTOM
+	bounds: 3564, 640, 272, 139
+	offsets: 1, 1, 274, 141
+	rotate: 90
+ANIMATION ASSETS/Forge Door TOP
+	bounds: 3392, 638, 274, 166
+	rotate: 90
+ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETa
+	bounds: 3369, 545, 39, 137
+	offsets: 1, 1, 41, 140
+ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETb
+	bounds: 3908, 635, 43, 147
+	offsets: 1, 1, 45, 150
+ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETc
+	bounds: 3170, 535, 45, 147
+	offsets: 1, 1, 47, 150
+ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETd
+	bounds: 3857, 635, 45, 147
+	offsets: 1, 1, 47, 150
+ANIMATION ASSETS/Gauntlet/Mould Gauntlet
+	bounds: 3959, 682, 112, 95
+	offsets: 1, 1, 114, 97
+	rotate: 90
+ANIMATION ASSETS/LEVER OFF
+	bounds: 3709, 637, 68, 145
+	offsets: 1, 1, 70, 147
+ANIMATION ASSETS/LEVER ON
+	bounds: 3783, 661, 68, 121
+	offsets: 1, 1, 70, 123
+ANIMATION ASSETS/Lava 1
+	bounds: 3392, 876, 21, 36
+	offsets: 2, 1, 25, 38
+ANIMATION ASSETS/Lava 2
+	bounds: 2691, 608, 22, 49
+	offsets: 1, 1, 24, 51
+	rotate: 90
+ANIMATION ASSETS/Lava 3
+	bounds: 2564, 606, 24, 64
+	offsets: 1, 1, 26, 66
+	rotate: 90
+ANIMATION ASSETS/Lava 4
+	bounds: 3414, 609, 23, 77
+	offsets: 1, 1, 25, 79
+	rotate: 90
+ANIMATION ASSETS/Lava 5
+	bounds: 3564, 611, 23, 89
+	offsets: 1, 1, 25, 91
+	rotate: 90
+ANIMATION ASSETS/Lava 6
+	bounds: 3957, 617, 26, 106
+	offsets: 1, 1, 28, 108
+	rotate: 90
+ANIMATION ASSETS/Lava 7
+	bounds: 3957, 649, 27, 120
+	offsets: 1, 1, 30, 123
+	rotate: 90
+ANIMATION ASSETS/Middle forge EMPTY
+	bounds: 2968, 636, 196, 276
+	offsets: 1, 1, 198, 278
+ANIMATION ASSETS/Middle forge FULLa
+	bounds: 1958, 603, 196, 309
+	offsets: 1, 1, 198, 313
+ANIMATION ASSETS/Middle forge FULLb
+	bounds: 1756, 603, 196, 309
+	offsets: 1, 1, 198, 313
+ANIMATION ASSETS/Middle forge Fill1
+	bounds: 2766, 636, 196, 276
+	offsets: 1, 1, 198, 278
+ANIMATION ASSETS/Middle forge Fill2
+	bounds: 2564, 636, 196, 276
+	offsets: 1, 1, 198, 278
+ANIMATION ASSETS/Middle forge Fill3
+	bounds: 2362, 627, 196, 285
+	offsets: 1, 1, 198, 288
+ANIMATION ASSETS/Middle forge Fill4
+	bounds: 2160, 617, 196, 295
+	offsets: 1, 1, 198, 298
+ANIMATION ASSETS/Power Stone/Lava 8 STONEa
+	bounds: 3323, 544, 40, 138
+	offsets: 1, 1, 42, 141
+ANIMATION ASSETS/Power Stone/Lava 8 STONEb
+	bounds: 3272, 544, 45, 138
+	offsets: 1, 1, 47, 141
+ANIMATION ASSETS/Power Stone/Lava 8 STONEc
+	bounds: 3221, 544, 45, 138
+	offsets: 1, 1, 47, 141
+ANIMATION ASSETS/Power Stone/Mould Power Stones
+	bounds: 3959, 800, 112, 95
+	offsets: 1, 1, 114, 97
+	rotate: 90
+Forge Inside Dark OPEN
+	bounds: 674, 6, 662, 906
+	offsets: 1, 1, 664, 918
+Forge Inside Light OPEN
+	bounds: 6, 6, 662, 906
+	offsets: 1, 1, 664, 918
+Light
+	bounds: 3170, 688, 224, 216
+	offsets: 13, 12, 240, 230
+	rotate: 90
+collectable items/adamantium_ingot_collectable
+	bounds: 2634, 600, 51, 30
+collectable items/adamantium_ore_collectable
+	bounds: 3709, 594, 42, 37
+collectable items/anti_metal_globs_big
+	bounds: 2746, 600, 32, 30
+	offsets: 5, 3, 42, 38
+collectable items/diamond_hardened_collectable
+	bounds: 3497, 594, 42, 38
+collectable items/diamond_ore_collectable
+	bounds: 3659, 596, 44, 38
+collectable items/uru_ore_collectable
+	bounds: 3783, 612, 44, 43
+light_off
+	bounds: 3834, 788, 119, 124
+	offsets: 1, 1, 121, 126
+light_on
+	bounds: 3709, 788, 119, 124
+	offsets: 1, 1, 121, 126

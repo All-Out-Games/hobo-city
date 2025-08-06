@@ -68,7 +68,7 @@ namespace ReusableWeapons
         public override Type TargettingEffect => Player.IsPlayingOnMobile ? typeof(BasicWeaponAimingEffect) : null; // Having a targetting effect on this breaks the aiming on PC since the aiming effect is already on
         public override Texture Icon => Assets.GetAsset<Texture>(GameManager.Instance.GameItems.BoomWheel.ItemDefinition.Icon);
         public override float MaxDistance => 10f;
-        public override float Cooldown => CalculateCooldown(EquippedWeapon?.TimeBetweenShotsAfterRarity ?? RayGunConfigs.TIME_BETWEEN_SHOTS);
+        public override float Cooldown => CalculateCooldown(EquippedWeapon != null ? GetWeaponCooldownWithRarity() : RayGunConfigs.TIME_BETWEEN_SHOTS);
     }
 
     public class RayGunProjectile : BaseProjectile

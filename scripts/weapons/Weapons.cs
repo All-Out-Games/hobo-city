@@ -74,7 +74,7 @@ namespace ReusableWeapons
         public abstract WeaponType WeaponType { get; }
         public abstract string ProjectilePrefab { get; }
         public abstract float BaseTimeBetweenShots { get; }
-        public float TimeBetweenShotsAfterRarity => ApplyRarityToCooldown(BaseTimeBetweenShots);
+        public float GetTimeBetweenShotsAfterRarity(MyPlayer player) => ApplyRarityToCooldown(BaseTimeBetweenShots, player);
         public virtual string ProjectileID => $"{GetType().Name}_bullet";
         public abstract CustomItemDefinition AmmoType { get; }
         public abstract long AmmoWithFirstPickup { get; } // The ammo the player gets when picking this gun type up for the first time
@@ -246,9 +246,25 @@ namespace ReusableWeapons
             var spawnPos = spawnPosition.HasValue ? spawnPosition.Value : GetBulletSpawnPosition(player);
             var shootDir = shootDirection.HasValue ? shootDirection.Value : GetBulletShootDirection(player);
 
-            var entity = Game.SpawnProjectile(player, ProjectilePrefab, spawnID, spawnPos, shootDir);
+            var entity = Game.SpawnProjectile(player.Entity, ProjectilePrefab, spawnID, spawnPos, shootDir);
             var projectile = entity.GetComponent<BaseProjectile>();
-            projectile.DamageAfterRarity = ApplyRarityToDamage(projectile.BaseDamage);
+
+            // Apply rarity scaling first
+            float damageAfterRarity = ApplyRarityToDamage(projectile.BaseDamage, player);
+
+            // Apply weapon level scaling if the weapon has level metadata
+            if (player.CurrentEquippedItem != null)
+            {
+                var levelMetadata = player.CurrentEquippedItem.Instance.GetMetadata("level");
+                if (!string.IsNullOrEmpty(levelMetadata) && int.TryParse(levelMetadata, out int weaponLevel))
+                {
+                    // Each level increases damage by 2%
+                    float levelMultiplier = 1f + (weaponLevel - 1) * 0.02f;
+                    damageAfterRarity *= levelMultiplier;
+                }
+            }
+
+            projectile.DamageAfterRarity = damageAfterRarity;
             projectile.Owner = player;
 
             return projectile;
@@ -273,30 +289,54 @@ namespace ReusableWeapons
             return player.CurrentTargettingDirection;
         }
 
-        public virtual float ApplyRarityToDamage(float baseDamage)
+        public virtual float ApplyRarityToDamage(float baseDamage, MyPlayer player)
         {
-            switch (ItemRarity)
+            // Get the actual rarity from the item instance metadata
+            ItemRarity actualRarity = ItemRarity;  // Default to base rarity
+
+            if (player.CurrentEquippedItem != null)
+            {
+                var rarityMetadata = player.CurrentEquippedItem.Instance.GetMetadata("rarity");
+                if (!string.IsNullOrEmpty(rarityMetadata) && Enum.TryParse<ItemRarity>(rarityMetadata, out var parsedRarity))
+                {
+                    actualRarity = parsedRarity;
+                }
+            }
+
+            switch (actualRarity)
             {
                 case ItemRarity.Common:
                     return baseDamage;
                 case ItemRarity.Uncommon:
-                    return baseDamage * 1.25f;
+                    return baseDamage * 1.2f; // +20%
                 case ItemRarity.Rare:
-                    return baseDamage * 1.5f;
+                    return baseDamage * 1.4f; // +40%
                 case ItemRarity.Epic:
-                    return baseDamage * 1.75f;
+                    return baseDamage * 1.6f; // +60%
                 case ItemRarity.Legendary:
-                    return baseDamage * 2f;
+                    return baseDamage * 1.8f; // +80%
                 case ItemRarity.Mythic:
-                    return baseDamage/* * 2.5f*/; // Mythics are never anything but mythic, so just use whatever values are in the gun itself
+                    return baseDamage * 2.0f; // +100%
                 default:
                     return baseDamage;
             }
         }
 
-        public virtual float ApplyRarityToCooldown(float baseCooldown)
+        public virtual float ApplyRarityToCooldown(float baseCooldown, MyPlayer player)
         {
-            switch (ItemRarity)
+            // Get the actual rarity from the item instance metadata
+            ItemRarity actualRarity = ItemRarity;  // Default to base rarity
+
+            if (player != null && player.CurrentEquippedItem != null)
+            {
+                var rarityMetadata = player.CurrentEquippedItem.Instance.GetMetadata("rarity");
+                if (!string.IsNullOrEmpty(rarityMetadata) && Enum.TryParse<ItemRarity>(rarityMetadata, out var parsedRarity))
+                {
+                    actualRarity = parsedRarity;
+                }
+            }
+
+            switch (actualRarity)
             {
                 case ItemRarity.Common:
                     return baseCooldown;
@@ -491,6 +531,15 @@ namespace ReusableWeapons
     {
         public Weapon EquippedWeapon;
 
+        protected float GetWeaponCooldownWithRarity()
+        {
+            if (EquippedWeapon != null)
+            {
+                return EquippedWeapon.ApplyRarityToCooldown(EquippedWeapon.BaseTimeBetweenShots, Player);
+            }
+            return 1.0f; // Default fallback
+        }
+
         public override bool OnTryActivate(List<Player> targetPlayers, Vector2 direction, float magnitude)
         {
             if (!Player.Alive())
@@ -595,7 +644,7 @@ namespace ReusableWeapons
         public override bool IsActiveEffect => true;
 
         public float TimeUntilNextShot = 0.0f;
-        public long FramesBetweenShots => (long)(CalculateTimeBetweenShots(EquippedWeapon.TimeBetweenShotsAfterRarity) * 60); // Using frames to avoid latency desync issues
+        public long FramesBetweenShots => (long)(CalculateTimeBetweenShots(EquippedWeapon.ApplyRarityToCooldown(EquippedWeapon.BaseTimeBetweenShots, Player)) * 60); // Using frames to avoid latency desync issues
 
         public Weapon EquippedWeapon;
 

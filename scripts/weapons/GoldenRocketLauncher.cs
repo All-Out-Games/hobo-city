@@ -69,7 +69,7 @@ namespace ReusableWeapons
 
             if (Network.IsServer)
             {
-                return LobbedProjectile.Spawn(Assets.GetAsset<Prefab>(ProjectilePrefab), player, GetBulletSpawnPosition(player), GetClickedPosition(player), GoldenRocketLauncherConfigs.ROCKET_TRAVEL_SPEED, ApplyRarityToDamage(GoldenRocketLauncherConfigs.BASE_DAMAGE), ServerOnLanded);
+                return LobbedProjectile.Spawn(Assets.GetAsset<Prefab>(ProjectilePrefab), player, GetBulletSpawnPosition(player), GetClickedPosition(player), GoldenRocketLauncherConfigs.ROCKET_TRAVEL_SPEED, ApplyRarityToDamage(GoldenRocketLauncherConfigs.BASE_DAMAGE, player), ServerOnLanded);
             }
 
             return null;
@@ -85,7 +85,7 @@ namespace ReusableWeapons
 
                 if ((mob.Entity.Position - position).LengthSquared <= (GoldenRocketLauncherConfigs.AOE_RADIUS * GoldenRocketLauncherConfigs.AOE_RADIUS))
                 {
-                    float damageToApply = ApplyRarityToDamage(GoldenRocketLauncherConfigs.BASE_DAMAGE);
+                    float damageToApply = ApplyRarityToDamage(GoldenRocketLauncherConfigs.BASE_DAMAGE, owner);
                     mob.Damage((int)damageToApply, owner.Entity);
                 }
             }
@@ -97,7 +97,7 @@ namespace ReusableWeapons
         public override TargettingMode TargettingMode => TargettingMode.CircleAOE;
         public override Type TargettingEffect => Player.IsPlayingOnMobile ? typeof(CircleAOEWeaponAimingEffect) : null;
 
-        public override float Cooldown => CalculateCooldown(EquippedWeapon?.TimeBetweenShotsAfterRarity ?? GoldenRocketLauncherConfigs.TIME_BETWEEN_SHOTS);
+        public override float Cooldown => CalculateCooldown(EquippedWeapon != null ? GetWeaponCooldownWithRarity() : GoldenRocketLauncherConfigs.TIME_BETWEEN_SHOTS);
         public override float MaxDistance => 10f;
         public override Texture Icon => Assets.GetAsset<Texture>(GameManager.Instance.GameItems.BoomWheel.ItemDefinition.Icon);
     }

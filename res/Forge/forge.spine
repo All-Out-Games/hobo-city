@@ -1,0 +1,833 @@
+{
+"skeleton": { "hash": "9rr4+9pHEXE", "spine": "4.0.64", "x": -332, "y": -459, "width": 664, "height": 918 },
+"bones": [
+	{ "name": "root" },
+	{ "name": "forge_base", "parent": "root" },
+	{ "name": "door", "parent": "forge_base", "y": 193.25 },
+	{ "name": "ANIMATION ASSETS/Forge Door BOTTOM", "parent": "door", "y": -81.83 },
+	{ "name": "ANIMATION ASSETS/Forge Door TOP", "parent": "door", "y": 69.32 },
+	{ "name": "ANIMATION ASSETS/LEVER ON", "parent": "forge_base", "x": -127.6, "y": -5.39 },
+	{ "name": "Lava", "parent": "forge_base", "x": -3.58, "y": -191.54 },
+	{ "name": "ANIMATION ASSETS/Middle forge EMPTY", "parent": "forge_base", "y": -288.96 },
+	{ "name": "ANIMATION ASSETS/BEAM 1", "parent": "forge_base", "x": 3.6, "y": 303.16 },
+	{ "name": "ANIMATION ASSETS/Gauntlet/Mould Gauntlet", "parent": "ANIMATION ASSETS/Middle forge EMPTY", "x": -1.28, "y": -53.79 },
+	{ "name": "Lava STONE", "parent": "Lava", "x": 0.42, "y": -14.3 },
+	{ "name": "Lava GAUNTLET", "parent": "Lava", "x": 1.66, "y": -13.32 },
+	{ "name": "collectable", "parent": "root", "x": -128.64, "y": -214.98 },
+	{ "name": "Light", "parent": "forge_base", "x": 151.5, "y": -326.86 },
+	{ "name": "bone", "parent": "Light", "rotation": 96, "y": 16.68, "scaleX": 0.7699, "scaleY": 0.8289 },
+	{
+		"name": "bone3",
+		"parent": "Light",
+		"length": 184.51,
+		"rotation": 90.65,
+		"x": -3.13,
+		"y": 15.64,
+		"scaleX": 0.7263,
+		"scaleY": 0.9174
+	},
+	{ "name": "Light2", "parent": "forge_base", "x": 151.5, "y": -228.85 },
+	{ "name": "bone2", "parent": "Light2", "rotation": 96, "y": 16.68, "scaleX": 0.7699, "scaleY": 0.8289 },
+	{
+		"name": "bone4",
+		"parent": "Light2",
+		"length": 184.51,
+		"rotation": 90.65,
+		"x": -3.13,
+		"y": 15.64,
+		"scaleX": 0.7263,
+		"scaleY": 0.9174
+	},
+	{ "name": "Light3", "parent": "forge_base", "x": 151.5, "y": -132.04 },
+	{ "name": "bone5", "parent": "Light3", "rotation": 96, "y": 16.68, "scaleX": 0.7699, "scaleY": 0.8289 },
+	{
+		"name": "bone6",
+		"parent": "Light3",
+		"length": 184.51,
+		"rotation": 90.65,
+		"x": -3.13,
+		"y": 15.64,
+		"scaleX": 0.7263,
+		"scaleY": 0.9174
+	}
+],
+"slots": [
+	{ "name": "ANIMATION ASSETS/Forge Door BOTTOM", "bone": "ANIMATION ASSETS/Forge Door BOTTOM", "attachment": "ANIMATION ASSETS/Forge Door BOTTOM" },
+	{ "name": "ANIMATION ASSETS/Forge Door TOP", "bone": "ANIMATION ASSETS/Forge Door TOP", "attachment": "ANIMATION ASSETS/Forge Door TOP" },
+	{ "name": "Forge Inside Dark OPEN", "bone": "forge_base", "attachment": "Forge Inside Dark OPEN" },
+	{ "name": "ANIMATION ASSETS/BEAM 1", "bone": "ANIMATION ASSETS/BEAM 1" },
+	{ "name": "ANIMATION ASSETS/LEVER ON", "bone": "ANIMATION ASSETS/LEVER ON", "attachment": "ANIMATION ASSETS/LEVER OFF" },
+	{ "name": "ANIMATION ASSETS/Middle forge EMPTY", "bone": "ANIMATION ASSETS/Middle forge EMPTY", "attachment": "ANIMATION ASSETS/Middle forge EMPTY" },
+	{ "name": "ANIMATION ASSETS/Gauntlet/Mould Gauntlet", "bone": "ANIMATION ASSETS/Gauntlet/Mould Gauntlet", "attachment": "Mould" },
+	{ "name": "ANIMATION ASSETS/Lava 1", "bone": "Lava" },
+	{ "name": "ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETa", "bone": "Lava GAUNTLET" },
+	{ "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEa", "bone": "Lava STONE" },
+	{ "name": "collectable", "bone": "collectable" },
+	{ "name": "light_off3", "bone": "bone5", "attachment": "light_off" },
+	{ "name": "Light3", "bone": "bone6", "color": "ffffffb2" },
+	{ "name": "light_off2", "bone": "bone2", "attachment": "light_off" },
+	{ "name": "Light2", "bone": "bone4", "color": "ffffffb2" },
+	{ "name": "light_off", "bone": "bone", "attachment": "light_off" },
+	{ "name": "Light", "bone": "bone3", "color": "ffffffb2" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"ANIMATION ASSETS/BEAM 1": {
+				"ANIMATION ASSETS/BEAM 1": {
+					"type": "mesh",
+					"uvs": [ 1, 0.1564, 1, 0.19382, 1, 1, 0, 1, 0, 0.19108, 0, 0.14792, 0, 0, 0.13918, 0, 0.82483, 0, 1, 0, 0.1437, 0.08766, 0.83162, 0.10837 ],
+					"triangles": [ 10, 7, 8, 11, 8, 9, 10, 8, 11, 10, 5, 6, 10, 6, 7, 11, 9, 0, 4, 5, 10, 11, 0, 1, 4, 10, 11, 1, 4, 11, 3, 4, 1, 3, 1, 2 ],
+					"vertices": [ 100.5, -55.33, 100.5, -73.41, 100.5, -462.79, -100.5, -462.79, -100.5, -72.09, -100.5, -51.24, -100.5, 20.21, -72.53, 20.21, 65.29, 20.21, 100.5, 20.21, -71.62, -22.13, 66.66, -32.14 ],
+					"hull": 10
+				},
+				"ANIMATION ASSETS/BEAM 2": {
+					"type": "mesh",
+					"uvs": [ 1, 0.15922, 1, 0.18214, 1, 1, 0, 1, 0, 0.18507, 0, 0.16393, 0, 0, 0.15728, 0, 0.83389, 0, 1, 0, 0.15728, 0.10931, 0.83162, 0.11873 ],
+					"triangles": [ 10, 6, 7, 8, 10, 7, 11, 10, 8, 11, 8, 9, 0, 11, 9, 5, 6, 10, 11, 0, 1, 4, 5, 10, 4, 10, 11, 4, 11, 1, 2, 3, 4, 2, 4, 1 ],
+					"vertices": [ 100.5, -56.7, 100.5, -67.76, 100.5, -462.79, -100.5, -462.79, -100.5, -69.18, -100.5, -58.97, -100.5, 20.21, -68.89, 20.21, 67.11, 20.21, 100.5, 20.21, -68.89, -32.59, 66.66, -37.14 ],
+					"hull": 10
+				}
+			},
+			"ANIMATION ASSETS/Forge Door BOTTOM": {
+				"ANIMATION ASSETS/Forge Door BOTTOM": { "x": 0.04, "y": 21.18, "width": 274, "height": 141 }
+			},
+			"ANIMATION ASSETS/Forge Door TOP": {
+				"ANIMATION ASSETS/Forge Door TOP": {
+					"type": "mesh",
+					"uvs": [ 0.92343, 0.26401, 1, 0.53865, 1, 1, 0, 1, 0, 0.52893, 0.09277, 0.24943, 0.30628, 1.0E-5, 0.71876, 1.0E-5 ],
+					"triangles": [ 6, 7, 0, 5, 6, 0, 5, 0, 1, 4, 5, 1, 3, 4, 1, 3, 1, 2 ],
+					"vertices": [ 117.05, 29.82, 138.03, -15.77, 138.03, -92.36, -135.97, -92.36, -135.97, -14.16, -110.55, 32.24, -52.05, 73.64, 60.97, 73.64 ],
+					"hull": 8
+				}
+			},
+			"ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETa": {
+				"ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETa": { "x": -1.82, "y": -46.72, "width": 41, "height": 140 },
+				"ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETb": { "x": -2.82, "y": -51.59, "width": 45, "height": 150 },
+				"ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETc": { "x": -2.82, "y": -51.85, "width": 47, "height": 150 },
+				"ANIMATION ASSETS/Gauntlet/Lava 8 GAUNTLETd": { "x": -2.82, "y": -51.85, "width": 47, "height": 150 }
+			},
+			"ANIMATION ASSETS/Lava 1": {
+				"ANIMATION ASSETS/Lava 1": { "x": 1.34, "y": -9.02, "width": 25, "height": 38 },
+				"ANIMATION ASSETS/Lava 2": { "x": 1.34, "y": -15.52, "width": 24, "height": 51 },
+				"ANIMATION ASSETS/Lava 3": { "x": 1.34, "y": -23.02, "width": 26, "height": 66 },
+				"ANIMATION ASSETS/Lava 4": { "x": 1.34, "y": -29.52, "width": 25, "height": 79 },
+				"ANIMATION ASSETS/Lava 5": { "x": 1.34, "y": -35.52, "width": 25, "height": 91 },
+				"ANIMATION ASSETS/Lava 6": { "x": 1.34, "y": -44.02, "width": 28, "height": 108 },
+				"ANIMATION ASSETS/Lava 7": { "x": 1.34, "y": -51.52, "width": 30, "height": 123 }
+			},
+			"ANIMATION ASSETS/LEVER ON": {
+				"ANIMATION ASSETS/LEVER OFF": { "x": 0.51, "y": 55.04, "width": 70, "height": 147 },
+				"ANIMATION ASSETS/LEVER ON": { "x": 0.46, "y": 43.05, "width": 70, "height": 123 }
+			},
+			"ANIMATION ASSETS/Middle forge EMPTY": {
+				"ANIMATION ASSETS/Middle forge EMPTY": { "x": -0.18, "y": 34.58, "width": 198, "height": 278 },
+				"ANIMATION ASSETS/Middle forge Fill1": { "x": -0.18, "y": 34.58, "width": 198, "height": 278 },
+				"ANIMATION ASSETS/Middle forge Fill2": { "x": -0.18, "y": 34.58, "width": 198, "height": 278 },
+				"ANIMATION ASSETS/Middle forge Fill3": { "x": -0.18, "y": 39.64, "width": 198, "height": 288 },
+				"ANIMATION ASSETS/Middle forge Fill4": { "x": -0.18, "y": 44.7, "width": 198, "height": 298 },
+				"ANIMATION ASSETS/Middle forge FULLa": { "x": -0.18, "y": 52.04, "width": 198, "height": 313 },
+				"ANIMATION ASSETS/Middle forge FULLb": { "x": -0.18, "y": 52.04, "width": 198, "height": 313 }
+			},
+			"ANIMATION ASSETS/Power Stone/Lava 8 STONEa": {
+				"ANIMATION ASSETS/Power Stone/Lava 8 STONEa": { "x": 0.93, "y": -48.22, "width": 42, "height": 141 },
+				"ANIMATION ASSETS/Power Stone/Lava 8 STONEb": { "x": 1.37, "y": -48.22, "width": 47, "height": 141 },
+				"ANIMATION ASSETS/Power Stone/Lava 8 STONEc": { "x": 1.37, "y": -48.22, "width": 47, "height": 141 }
+			},
+			"collectable": {
+				"collectable items/adamantium_ingot_collectable": { "width": 51, "height": 30 },
+				"collectable items/adamantium_ore_collectable": { "width": 42, "height": 37 },
+				"collectable items/anti_metal_globs_big": { "width": 42, "height": 38 },
+				"collectable items/diamond_hardened_collectable": { "width": 42, "height": 38 },
+				"collectable items/diamond_ore_collectable": { "width": 44, "height": 38 },
+				"collectable items/uru_ore_collectable": { "width": 44, "height": 43 }
+			},
+			"Forge Inside Dark OPEN": {
+				"Forge Inside Dark OPEN": { "width": 664, "height": 918 },
+				"Forge Inside Light OPEN": { "width": 664, "height": 918 }
+			},
+			"Light": {
+				"Light": {
+					"x": 136.68,
+					"y": 10.96,
+					"scaleX": 1.2242,
+					"scaleY": 1.1278,
+					"rotation": 146.63,
+					"width": 240,
+					"height": 230
+				}
+			},
+			"Light2": {
+				"Light": {
+					"x": 136.68,
+					"y": 10.96,
+					"scaleX": 1.2242,
+					"scaleY": 1.1278,
+					"rotation": 146.63,
+					"width": 240,
+					"height": 230
+				}
+			},
+			"Light3": {
+				"Light": {
+					"x": 136.68,
+					"y": 10.96,
+					"scaleX": 1.2242,
+					"scaleY": 1.1278,
+					"rotation": 146.63,
+					"width": 240,
+					"height": 230
+				}
+			},
+			"light_off": {
+				"light_off": { "x": 0.5, "width": 121, "height": 126 },
+				"light_on": { "x": 0.5, "width": 121, "height": 126 }
+			},
+			"light_off2": {
+				"light_off": { "x": 0.5, "width": 121, "height": 126 },
+				"light_on": { "x": 0.5, "width": 121, "height": 126 }
+			},
+			"light_off3": {
+				"light_off": { "x": 0.5, "width": 121, "height": 126 },
+				"light_on": { "x": 0.5, "width": 121, "height": 126 }
+			}
+		}
+	},
+	{
+		"name": "gauntlet",
+		"attachments": {
+			"ANIMATION ASSETS/Gauntlet/Mould Gauntlet": {
+				"Mould": { "name": "ANIMATION ASSETS/Gauntlet/Mould Gauntlet", "x": 0.23, "y": 27.11, "width": 114, "height": 97 }
+			}
+		}
+	},
+	{
+		"name": "stone",
+		"attachments": {
+			"ANIMATION ASSETS/Gauntlet/Mould Gauntlet": {
+				"Mould": { "name": "ANIMATION ASSETS/Power Stone/Mould Power Stones", "x": 0.23, "y": 27.11, "width": 114, "height": 97 }
+			}
+		}
+	}
+],
+"animations": {
+	"forge_idle": {},
+	"forge_item": {
+		"slots": {
+			"ANIMATION ASSETS/BEAM 1": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.0333, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.0667, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.1, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.1333, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.1667, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.2, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.2667, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.3, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.3333, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.3667, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.4, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.4333, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.5, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.5333, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.5667, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.6, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.6333, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.6667, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.7, "name": "ANIMATION ASSETS/BEAM 2" }
+				]
+			},
+			"ANIMATION ASSETS/Lava 1": {
+				"attachment": [
+					{ "time": 0.0333, "name": "ANIMATION ASSETS/Lava 1" },
+					{ "time": 0.1, "name": "ANIMATION ASSETS/Lava 2" },
+					{ "time": 0.1667, "name": "ANIMATION ASSETS/Lava 3" },
+					{ "time": 0.2333, "name": "ANIMATION ASSETS/Lava 4" },
+					{ "time": 0.3, "name": "ANIMATION ASSETS/Lava 5" },
+					{ "time": 0.3667, "name": "ANIMATION ASSETS/Lava 6" },
+					{ "time": 0.4333, "name": "ANIMATION ASSETS/Lava 7" }
+				]
+			},
+			"ANIMATION ASSETS/LEVER ON": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/LEVER ON" }
+				]
+			},
+			"ANIMATION ASSETS/Middle forge EMPTY": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/Middle forge FULLb" },
+					{ "time": 0.1, "name": "ANIMATION ASSETS/Middle forge FULLa" },
+					{ "time": 0.2, "name": "ANIMATION ASSETS/Middle forge FULLb" },
+					{ "time": 0.3333, "name": "ANIMATION ASSETS/Middle forge FULLa" },
+					{ "time": 0.4333, "name": "ANIMATION ASSETS/Middle forge FULLb" },
+					{ "time": 0.5667, "name": "ANIMATION ASSETS/Middle forge FULLa" },
+					{ "time": 0.6667, "name": "ANIMATION ASSETS/Middle forge FULLb" }
+				]
+			},
+			"ANIMATION ASSETS/Power Stone/Lava 8 STONEa": {
+				"attachment": [
+					{ "time": 0.5167, "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEa" },
+					{ "time": 0.6, "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEb" },
+					{ "time": 0.6667, "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEc" }
+				]
+			},
+			"Forge Inside Dark OPEN": {
+				"attachment": [
+					{ "name": "Forge Inside Light OPEN" }
+				]
+			}
+		},
+		"bones": {
+			"ANIMATION ASSETS/Forge Door BOTTOM": {
+				"translate": [
+					{ "y": -119.41 }
+				]
+			},
+			"ANIMATION ASSETS/Forge Door TOP": {
+				"translate": [
+					{ "y": 144.93 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"ANIMATION ASSETS/Forge Door TOP": {
+					"ANIMATION ASSETS/Forge Door TOP": [
+						{
+							"offset": 1,
+							"vertices": [ -27.94046, 0, 0, 0, 0, 0, 0, 0, 0, 0, -27.94046, -1.0E-5, -60.71677, -1.0E-5, -60.71677 ]
+						}
+					]
+				}
+			}
+		}
+	},
+	"forge_item_idle": {
+		"slots": {
+			"ANIMATION ASSETS/BEAM 1": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.0333, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.0667, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.1, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.1333, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.1667, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.2, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.2333, "name": "ANIMATION ASSETS/BEAM 2" }
+				]
+			},
+			"ANIMATION ASSETS/LEVER ON": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/LEVER ON" }
+				]
+			},
+			"ANIMATION ASSETS/Middle forge EMPTY": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/Middle forge FULLb" },
+					{ "time": 0.1, "name": "ANIMATION ASSETS/Middle forge FULLa" },
+					{ "time": 0.2, "name": "ANIMATION ASSETS/Middle forge FULLb" }
+				]
+			},
+			"ANIMATION ASSETS/Power Stone/Lava 8 STONEa": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEa" },
+					{ "time": 0.0667, "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEc" },
+					{ "time": 0.1667, "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEb" }
+				]
+			},
+			"Forge Inside Dark OPEN": {
+				"attachment": [
+					{ "name": "Forge Inside Light OPEN" }
+				]
+			}
+		},
+		"bones": {
+			"ANIMATION ASSETS/Forge Door BOTTOM": {
+				"translate": [
+					{ "y": -119.41 }
+				]
+			},
+			"ANIMATION ASSETS/Forge Door TOP": {
+				"translate": [
+					{ "y": 144.93 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"ANIMATION ASSETS/Forge Door TOP": {
+					"ANIMATION ASSETS/Forge Door TOP": [
+						{
+							"offset": 1,
+							"vertices": [ -27.94046, 0, 0, 0, 0, 0, 0, 0, 0, 0, -27.94046, -1.0E-5, -60.71677, -1.0E-5, -60.71677 ]
+						}
+					]
+				}
+			}
+		}
+	},
+	"iris_off": {
+		"slots": {
+			"ANIMATION ASSETS/BEAM 1": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.0667, "name": null }
+				]
+			},
+			"ANIMATION ASSETS/Lava 1": {
+				"attachment": [
+					{ "time": 0.0667, "name": "ANIMATION ASSETS/Lava 5" },
+					{ "time": 0.1167, "name": "ANIMATION ASSETS/Lava 4" },
+					{ "time": 0.1667, "name": "ANIMATION ASSETS/Lava 3" },
+					{ "time": 0.2167, "name": "ANIMATION ASSETS/Lava 2" },
+					{ "time": 0.2667, "name": "ANIMATION ASSETS/Lava 1" },
+					{ "time": 0.3, "name": null }
+				]
+			},
+			"ANIMATION ASSETS/LEVER ON": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/LEVER ON" },
+					{ "time": 0.0333, "name": "ANIMATION ASSETS/LEVER OFF" }
+				]
+			},
+			"ANIMATION ASSETS/Middle forge EMPTY": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/Middle forge FULLb" },
+					{ "time": 0.0667, "name": "ANIMATION ASSETS/Middle forge Fill4" },
+					{ "time": 0.1333, "name": "ANIMATION ASSETS/Middle forge Fill3" },
+					{ "time": 0.2, "name": "ANIMATION ASSETS/Middle forge Fill2" },
+					{ "time": 0.2667, "name": "ANIMATION ASSETS/Middle forge Fill1" },
+					{ "time": 0.3333, "name": "ANIMATION ASSETS/Middle forge EMPTY" }
+				]
+			},
+			"ANIMATION ASSETS/Power Stone/Lava 8 STONEa": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEb" },
+					{ "time": 0.05, "name": "ANIMATION ASSETS/Power Stone/Lava 8 STONEa" },
+					{ "time": 0.1, "name": null }
+				]
+			},
+			"Forge Inside Dark OPEN": {
+				"attachment": [
+					{ "name": "Forge Inside Light OPEN" },
+					{ "time": 0.2667, "name": "Forge Inside Dark OPEN" }
+				]
+			}
+		},
+		"bones": {
+			"ANIMATION ASSETS/Forge Door BOTTOM": {
+				"translate": [
+					{ "y": -119.41, "curve": "stepped" },
+					{ "time": 0.0667, "y": -119.41 },
+					{ "time": 0.3333 }
+				]
+			},
+			"ANIMATION ASSETS/Forge Door TOP": {
+				"translate": [
+					{ "y": 144.93, "curve": "stepped" },
+					{ "time": 0.0667, "y": 144.93 },
+					{ "time": 0.3333 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"ANIMATION ASSETS/BEAM 1": {
+					"ANIMATION ASSETS/BEAM 1": [
+						{},
+						{
+							"time": 0.0333,
+							"offset": 5,
+							"vertices": [ 155.9321, 0, 155.9321 ]
+						}
+					]
+				},
+				"ANIMATION ASSETS/Forge Door TOP": {
+					"ANIMATION ASSETS/Forge Door TOP": [
+						{
+							"offset": 1,
+							"vertices": [ -27.94046, 0, 0, 0, 0, 0, 0, 0, 0, 0, -27.94046, -1.0E-5, -60.71677, -1.0E-5, -60.71677 ],
+							"curve": "stepped"
+						},
+						{
+							"time": 0.1667,
+							"offset": 1,
+							"vertices": [ -27.94046, 0, 0, 0, 0, 0, 0, 0, 0, 0, -27.94046, -1.0E-5, -60.71677, -1.0E-5, -60.71677 ]
+						},
+						{ "time": 0.2333 }
+					]
+				}
+			}
+		}
+	},
+	"iris_opens": {
+		"slots": {
+			"ANIMATION ASSETS/BEAM 1": {
+				"attachment": [
+					{ "time": 1.35, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 1.4167, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 1.4833, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 1.55, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 1.6167, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 1.6833, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 1.75, "name": "ANIMATION ASSETS/BEAM 1" }
+				]
+			},
+			"ANIMATION ASSETS/LEVER ON": {
+				"attachment": [
+					{ "time": 0.0333, "name": "ANIMATION ASSETS/LEVER ON" }
+				]
+			},
+			"ANIMATION ASSETS/Middle forge EMPTY": {
+				"attachment": [
+					{ "time": 1.4167, "name": "ANIMATION ASSETS/Middle forge Fill1" },
+					{ "time": 1.4833, "name": "ANIMATION ASSETS/Middle forge Fill2" },
+					{ "time": 1.55, "name": "ANIMATION ASSETS/Middle forge Fill3" },
+					{ "time": 1.6167, "name": "ANIMATION ASSETS/Middle forge Fill4" },
+					{ "time": 1.6833, "name": "ANIMATION ASSETS/Middle forge FULLa" },
+					{ "time": 1.75, "name": "ANIMATION ASSETS/Middle forge FULLb" }
+				]
+			},
+			"Forge Inside Dark OPEN": {
+				"attachment": [
+					{ "time": 1.35, "name": "Forge Inside Light OPEN" }
+				]
+			}
+		},
+		"bones": {
+			"forge_base": {
+				"translate": [
+					{
+						"time": 0.0667,
+						"curve": [ 0.089, 1.82, 0.111, 5.46, 0.089, 0, 0.111, 0 ]
+					},
+					{
+						"time": 0.1333,
+						"x": 5.46,
+						"curve": [ 0.155, 5.46, 0.178, -3.28, 0.155, 0, 0.178, 0 ]
+					},
+					{
+						"time": 0.2,
+						"x": -3.28,
+						"curve": [ 0.222, -3.28, 0.245, 5.46, 0.222, 0, 0.245, 0 ]
+					},
+					{
+						"time": 0.2667,
+						"x": 5.46,
+						"curve": [ 0.289, 5.46, 0.311, -3.28, 0.289, 0, 0.311, 0 ]
+					},
+					{
+						"time": 0.3333,
+						"x": -3.28,
+						"curve": [ 0.355, -3.28, 0.378, 5.46, 0.355, 0, 0.378, 0 ]
+					},
+					{
+						"time": 0.4,
+						"x": 5.46,
+						"curve": [ 0.422, 5.46, 0.445, -3.28, 0.422, 0, 0.445, 0 ]
+					},
+					{
+						"time": 0.4667,
+						"x": -3.28,
+						"curve": [ 0.489, -3.28, 0.511, 5.46, 0.489, 0, 0.511, 0 ]
+					},
+					{
+						"time": 0.5333,
+						"x": 5.46,
+						"curve": [ 0.555, 5.46, 0.578, -0.36, 0.555, 0, 0.578, 0 ]
+					},
+					{ "time": 0.6, "x": -3.28 },
+					{ "time": 0.6667 }
+				],
+				"shear": [
+					{
+						"time": 0.1,
+						"curve": [ 0.122, 0, 0.145, 0, 0.122, -0.35, 0.145, -1.04 ]
+					},
+					{
+						"time": 0.1667,
+						"y": -1.04,
+						"curve": [ 0.189, 0, 0.211, 0, 0.189, -1.04, 0.211, 1.04 ]
+					},
+					{
+						"time": 0.2333,
+						"y": 1.04,
+						"curve": [ 0.255, 0, 0.278, 0, 0.255, 1.04, 0.278, -1.04 ]
+					},
+					{
+						"time": 0.3,
+						"y": -1.04,
+						"curve": [ 0.322, 0, 0.345, 0, 0.322, -1.04, 0.345, 1.04 ]
+					},
+					{
+						"time": 0.3667,
+						"y": 1.04,
+						"curve": [ 0.389, 0, 0.411, 0, 0.389, 1.04, 0.411, -1.04 ]
+					},
+					{
+						"time": 0.4333,
+						"y": -1.04,
+						"curve": [ 0.455, 0, 0.478, 0, 0.455, -1.04, 0.478, 1.04 ]
+					},
+					{
+						"time": 0.5,
+						"y": 1.04,
+						"curve": [ 0.522, 0, 0.545, 0, 0.522, 1.04, 0.545, -1.04 ]
+					},
+					{
+						"time": 0.5667,
+						"y": -1.04,
+						"curve": [ 0.589, 0, 0.611, 0, 0.589, -1.04, 0.611, 0.35 ]
+					},
+					{ "time": 0.6333 }
+				]
+			},
+			"ANIMATION ASSETS/Forge Door BOTTOM": {
+				"translate": [
+					{
+						"time": 0.3333,
+						"curve": [ 0.799, 0, 1.141, 0, 0.799, 0, 1.141, -39.8 ]
+					},
+					{ "time": 1.3833, "y": -119.41 }
+				]
+			},
+			"ANIMATION ASSETS/Forge Door TOP": {
+				"translate": [
+					{
+						"time": 0.3333,
+						"curve": [ 0.799, 0, 1.141, 0, 0.799, 0, 1.141, 48.31 ]
+					},
+					{ "time": 1.3833, "y": 144.93 }
+				]
+			},
+			"ANIMATION ASSETS/Middle forge EMPTY": {
+				"translate": [
+					{ "time": 1.35 },
+					{ "time": 1.3833, "y": -3.79 },
+					{ "time": 1.4167 }
+				],
+				"scale": [
+					{ "time": 1.35 },
+					{ "time": 1.3833, "y": 0.97 },
+					{ "time": 1.4167 }
+				]
+			},
+			"ANIMATION ASSETS/LEVER ON": {
+				"scale": [
+					{ "time": 0.0333, "y": 0.969 },
+					{ "time": 0.0667 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"ANIMATION ASSETS/BEAM 1": {
+					"ANIMATION ASSETS/BEAM 1": [
+						{
+							"time": 1.35,
+							"offset": 5,
+							"vertices": [ 190.36273, 0, 190.36273 ]
+						},
+						{ "time": 1.3833 }
+					]
+				},
+				"ANIMATION ASSETS/Forge Door TOP": {
+					"ANIMATION ASSETS/Forge Door TOP": [
+						{ "time": 1.1833 },
+						{
+							"time": 1.3833,
+							"offset": 1,
+							"vertices": [ -27.94046, 0, 0, 0, 0, 0, 0, 0, 0, 0, -27.94046, -1.0E-5, -60.71677, -1.0E-5, -60.71677 ]
+						}
+					]
+				}
+			}
+		}
+	},
+	"iris_opens_idle": {
+		"slots": {
+			"ANIMATION ASSETS/BEAM 1": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.0333, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.0667, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.1, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.1333, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.1667, "name": "ANIMATION ASSETS/BEAM 2" },
+					{ "time": 0.2, "name": "ANIMATION ASSETS/BEAM 1" },
+					{ "time": 0.2333, "name": "ANIMATION ASSETS/BEAM 2" }
+				]
+			},
+			"ANIMATION ASSETS/LEVER ON": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/LEVER ON" }
+				]
+			},
+			"ANIMATION ASSETS/Middle forge EMPTY": {
+				"attachment": [
+					{ "name": "ANIMATION ASSETS/Middle forge FULLb" },
+					{ "time": 0.1, "name": "ANIMATION ASSETS/Middle forge FULLa" },
+					{ "time": 0.2, "name": "ANIMATION ASSETS/Middle forge FULLb" }
+				]
+			},
+			"Forge Inside Dark OPEN": {
+				"attachment": [
+					{ "name": "Forge Inside Light OPEN" }
+				]
+			}
+		},
+		"bones": {
+			"ANIMATION ASSETS/Forge Door BOTTOM": {
+				"translate": [
+					{ "y": -119.41 }
+				]
+			},
+			"ANIMATION ASSETS/Forge Door TOP": {
+				"translate": [
+					{ "y": 144.93 }
+				]
+			}
+		},
+		"deform": {
+			"default": {
+				"ANIMATION ASSETS/Forge Door TOP": {
+					"ANIMATION ASSETS/Forge Door TOP": [
+						{
+							"offset": 1,
+							"vertices": [ -27.94046, 0, 0, 0, 0, 0, 0, 0, 0, 0, -27.94046, -1.0E-5, -60.71677, -1.0E-5, -60.71677 ]
+						}
+					]
+				}
+			}
+		}
+	},
+	"iris_placed": {
+		"slots": {
+			"ANIMATION ASSETS/Middle forge EMPTY": {
+				"attachment": [
+					{ "time": 0.1167, "name": "ANIMATION ASSETS/Middle forge Fill1" },
+					{ "time": 0.1833, "name": "ANIMATION ASSETS/Middle forge Fill2" },
+					{ "time": 0.3167, "name": "ANIMATION ASSETS/Middle forge Fill1" },
+					{ "time": 0.3833, "name": "ANIMATION ASSETS/Middle forge EMPTY" }
+				]
+			}
+		},
+		"bones": {
+			"collectable": {
+				"rotate": [
+					{
+						"curve": [ 0.067, 0, -0.017, 22 ]
+					},
+					{
+						"time": 0.05,
+						"value": 28.08,
+						"curve": [ 0.117, 34.16, 0.05, 33.69 ]
+					},
+					{ "time": 0.1167, "value": 36.49 }
+				],
+				"translate": [
+					{
+						"curve": [ 0.068, -2.13, -0.019, 31.38, 0.067, 46.28, -0.048, 148.26 ]
+					},
+					{
+						"time": 0.05,
+						"x": 64.89,
+						"y": 138.85,
+						"curve": [ 0.117, 97.36, 0.048, 122.41, 0.148, 129.44, 0.051, 60.5 ]
+					},
+					{ "time": 0.1167, "x": 129.79, "y": -14.31 }
+				]
+			}
+		}
+	},
+	"LightA_on_AL": {
+		"slots": {
+			"Light": {
+				"attachment": [
+					{ "name": "Light" }
+				]
+			},
+			"light_off": {
+				"attachment": [
+					{ "name": "light_on" }
+				]
+			}
+		},
+		"bones": {
+			"bone3": {
+				"scale": [
+					{
+						"curve": [ 0.222, 1, 0.444, 0.872, 0.222, 1, 0.444, 1 ]
+					},
+					{
+						"time": 0.6667,
+						"x": 0.872,
+						"curve": [ 0.889, 0.872, 1.111, 1, 0.889, 1, 1.111, 1 ]
+					},
+					{ "time": 1.3333 }
+				]
+			}
+		}
+	},
+	"LightB_on_AL": {
+		"slots": {
+			"Light2": {
+				"attachment": [
+					{ "name": "Light" }
+				]
+			},
+			"light_off2": {
+				"attachment": [
+					{ "name": "light_on" }
+				]
+			}
+		},
+		"bones": {
+			"bone4": {
+				"scale": [
+					{
+						"curve": [ 0.222, 1, 0.444, 0.872, 0.222, 1, 0.444, 1 ]
+					},
+					{
+						"time": 0.6667,
+						"x": 0.872,
+						"curve": [ 0.889, 0.872, 1.111, 1, 0.889, 1, 1.111, 1 ]
+					},
+					{ "time": 1.3333 }
+				]
+			}
+		}
+	},
+	"LightC_on_AL": {
+		"slots": {
+			"Light3": {
+				"attachment": [
+					{ "name": "Light" }
+				]
+			},
+			"light_off3": {
+				"attachment": [
+					{ "name": "light_on" }
+				]
+			}
+		},
+		"bones": {
+			"bone6": {
+				"scale": [
+					{
+						"curve": [ 0.222, 1, 0.444, 0.872, 0.222, 1, 0.444, 1 ]
+					},
+					{
+						"time": 0.6667,
+						"x": 0.872,
+						"curve": [ 0.889, 0.872, 1.111, 1, 0.889, 1, 1.111, 1 ]
+					},
+					{ "time": 1.3333 }
+				]
+			}
+		}
+	}
+}
+}

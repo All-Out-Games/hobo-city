@@ -5,7 +5,7 @@
   "name": "DI_Sign_Street_1",
   "local_enabled": true,
   "local_position": {
-    "X": 36.4005966186523438,
+    "X": 38.6648559570312500,
     "Y": -28.4330406188964844
   },
   "local_rotation": 0,

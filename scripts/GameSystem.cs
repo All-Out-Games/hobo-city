@@ -6,6 +6,7 @@ public class GameSystem : System<GameSystem>
   {
     Keybinds.OverrideKeybindDefault("Ability 1", Input.UnifiedInput.MOUSE_LEFT);
     Economy.RegisterCurrency(GameManager.CASH_CURRENCY, "icons/cash.png");
+    Economy.RegisterCurrency(GameManager.XP_CURRENCY, "icons/xp.png");
     Economy.RegisterCurrency("play_time_10s", "icons/bitcoin.png");
 
     // if (!Network.IsServer)

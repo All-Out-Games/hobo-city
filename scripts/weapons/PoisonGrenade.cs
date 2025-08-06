@@ -74,7 +74,7 @@ namespace ReusableWeapons
             if (Network.IsServer)
             {
                 player.RequestRemoveItemCountFromSlot(player.CurrentHoveredSlot, 1);
-                return LobbedProjectile.Spawn(Assets.GetAsset<Prefab>(ProjectilePrefab), player, player.Position, GetClickedPosition(player), PoisonGrenadeConfigs.GRENADE_TRAVEL_SPEED, ApplyRarityToDamage(PoisonGrenadeConfigs.GRENADE_DAMAGE), ServerOnGrenadeLanded);
+                return LobbedProjectile.Spawn(Assets.GetAsset<Prefab>(ProjectilePrefab), player, player.Position, GetClickedPosition(player), PoisonGrenadeConfigs.GRENADE_TRAVEL_SPEED, ApplyRarityToDamage(PoisonGrenadeConfigs.GRENADE_DAMAGE, player), ServerOnGrenadeLanded);
             }
 
             return null;
@@ -91,7 +91,7 @@ namespace ReusableWeapons
 
                 if ((mob.Entity.Position - position).LengthSquared <= (PoisonGrenadeConfigs.GRENADE_AOE_RADIUS * PoisonGrenadeConfigs.GRENADE_AOE_RADIUS))
                 {
-                    float damageToApply = ApplyRarityToDamage(PoisonGrenadeConfigs.GRENADE_DAMAGE);
+                    float damageToApply = ApplyRarityToDamage(PoisonGrenadeConfigs.GRENADE_DAMAGE, owner);
 
                     if (mob.GetComponent<Destructable>() != null)
                     {
@@ -134,7 +134,7 @@ namespace ReusableWeapons
         public override TargettingMode TargettingMode => TargettingMode.CircleAOE;
         public override Type TargettingEffect => Player.IsPlayingOnMobile ? typeof(CircleAOEWeaponAimingEffect) : null;
 
-        public override float Cooldown => CalculateCooldown(EquippedWeapon?.TimeBetweenShotsAfterRarity ?? PoisonGrenadeConfigs.THROW_COOLDOWN);
+        public override float Cooldown => CalculateCooldown(EquippedWeapon != null ? GetWeaponCooldownWithRarity() : PoisonGrenadeConfigs.THROW_COOLDOWN);
         public override float MaxDistance => 10f;
         public override Texture Icon => Assets.GetAsset<Texture>(GameManager.Instance.GameItems.PoisonGrenade.ItemDefinition.Icon);
 

@@ -19,12 +19,11 @@ public static class WastedUI
   // Array of tips to display
   public static string[] tips = new string[]
   {
-    "Police chasing you? Hide behind an object to escape",
-    "Need cash? Set up a Bitcoin miner in your housey",
-    "Completing jobs around the city is an easy way to make money",
+    "Each level increases your gun's damage!",
+    "Upgrade weapons at the forge in the top left",
+    "Sell weapons for cash at the shop in the bottom right",
     "Buy food and drinks for more health!",
     "Be careful out there!",
-    "Police will chase when you hurt players or destroy things!"
   };
 
   // [UIPreview]
@@ -39,7 +38,7 @@ public static class WastedUI
     selectedTip = tips[tipIndex];
   }
 
-  [UIPreview]
+  // [UIPreview]
   public static void Draw()
   {
     if (startedAt == -1f) return;

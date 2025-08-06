@@ -5,7 +5,7 @@
   "name": "wall4.png",
   "local_enabled": true,
   "local_position": {
-    "X": -125.1376266479492188,
+    "X": -125.0695877075195312,
     "Y": 29.7666778564453125
   },
   "local_rotation": 0,

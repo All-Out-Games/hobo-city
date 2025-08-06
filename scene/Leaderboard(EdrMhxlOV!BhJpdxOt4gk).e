@@ -5,8 +5,8 @@
   "name": "Leaderboard",
   "local_enabled": true,
   "local_position": {
-    "X": -75.8114395141601562,
-    "Y": 43.8624877929687500
+    "X": -93.1534729003906250,
+    "Y": 12.8161497116088867
   },
   "local_rotation": 0,
   "local_scale": {
@@ -37,7 +37,7 @@
     "LeaderboardBgOther": "Leaderboard/numberless/RANK 4.png",
     "LeaderboardBgMe": "Leaderboard/numberless/RANK ME.png",
     "LeaderboardSpriteRenderer": "1256434250925140:1750112301109380400",
-    "OptionalTitle": "Money (This Server)"
+    "OptionalTitle": "Kills This Season"
   }
 },
 {

@@ -40,6 +40,7 @@
   "component_type": "Mono_Component",
   "mono_component_type": "_LootManager",
   "data": {
-    "RootNavmesh": "258959805205990:1745441451547781600"
+    "RootNavmesh": "258959805205990:1745441451547781600",
+    "ChestSpawnPoints": "1572508562982168:1754266355382885900"
   }
 }

@@ -18,9 +18,11 @@ namespace ReusableWeapons
     public partial class LootChest : Component
     {
         private const float BASIC_OPEN_DURATION = 0.15f;
-        private const float EXCITING_OPEN_DURATION = 1.75f;
+        private const float EXCITING_OPEN_DURATION = 1f;
 
-        private const float LEGENDARY_CHEST_CHANCE = 0.15f;
+        private const float LEGENDARY_CHEST_CHANCE = 0.04f;
+
+        public Vector2 SpawnPosition;
 
         #region Loot Table Randomizations
         /// <summary>
@@ -49,8 +51,11 @@ namespace ReusableWeapons
         /// </summary>
         private static readonly WeightedList<LootChestDrop> WeaponLootTable = new()
         {
-            {new LootChestDrop(GameManager.Instance.GameItems.Blunderbuss), 1},
-            {new LootChestDrop(GameManager.Instance.GameItems.AssaultRifle), 2},
+            {new LootChestDrop(GameManager.Instance.GameItems.Blunderbuss), 2},
+            {new LootChestDrop(GameManager.Instance.GameItems.Pistol), 7},
+            {new LootChestDrop(GameManager.Instance.GameItems.SubmachineGun), 3},
+            {new LootChestDrop(GameManager.Instance.GameItems.ExplosiveShotgun), 1},
+            {new LootChestDrop(GameManager.Instance.GameItems.AssaultRifle), 3},
         };
 
         /// <summary>
@@ -60,9 +65,9 @@ namespace ReusableWeapons
         public static readonly WeightedList<LootChestDrop> AmmoLootTable = new()
         {
             {new LootChestDrop(GameManager.Instance.GameItems.LightAmmo), 3},
-            {new LootChestDrop(GameManager.Instance.GameItems.MediumAmmo), 3},
-            {new LootChestDrop(GameManager.Instance.GameItems.HeavyAmmo), 3},
-            {new LootChestDrop(GameManager.Instance.GameItems.ShotgunShells), 3},
+            {new LootChestDrop(GameManager.Instance.GameItems.MediumAmmo), 4},
+            {new LootChestDrop(GameManager.Instance.GameItems.HeavyAmmo), 2},
+            {new LootChestDrop(GameManager.Instance.GameItems.ShotgunShells), 2},
         };
         #endregion
 
@@ -121,6 +126,7 @@ namespace ReusableWeapons
         public void SpawnChest(Vector2 position)
         {
             Entity.Position = position;
+            SpawnPosition = position;
             Interactable.LocalEnabled = true;
         }
 
@@ -128,6 +134,12 @@ namespace ReusableWeapons
         public void DespawnChest()
         {
             Entity.Position = Vector2.One * 1000;
+
+            // Register this chest for respawn (server only)
+            if (Network.IsServer)
+            {
+                _LootManager.AddChestToRespawnQueue(SpawnPosition);
+            }
         }
 
         public void ServerRandomizeChestType()
@@ -222,12 +234,12 @@ namespace ReusableWeapons
 
                 for (int itemInstanceIndex = 0; itemInstanceIndex < Random.Shared.Next(lootDrop.MinQuantity, lootDrop.MaxQuantity); itemInstanceIndex++)
                 {
-                    SpawnLootInstance(lootDrop.ItemDef, forceRarity);
+                    SpawnLootInstance(lootDrop.ItemDef, forceRarity, player);
                 }
             }
         }
 
-        private void SpawnLootInstance(CustomItemDefinition itemDef, ItemRarity? forcedItemRarity = null)
+        private void SpawnLootInstance(CustomItemDefinition itemDef, ItemRarity? forcedItemRarity = null, MyPlayer openingPlayer = null)
         {
             ItemRarity? rarity = null;
             var itemCategory = itemDef.ItemCategory;
@@ -236,7 +248,18 @@ namespace ReusableWeapons
                 rarity = forcedItemRarity ?? GetScaledRarities().Next();
             }
 
-            GameItems.SpawnLootInstance(itemDef, Entity.Position, true, true, rarity);
+            // Pass the opening player so we can set level metadata
+            var lootEntity = GameItems.SpawnLootInstance(itemDef, Entity.Position, true, true, rarity);
+
+            // If it's a weapon and we have a player, set the level metadata
+            if (itemCategory == ItemCategory.Weapon && openingPlayer != null && lootEntity != null && lootEntity.Alive())
+            {
+                var lootPickup = lootEntity.GetComponent<LootPickup>();
+                if (lootPickup != null)
+                {
+                    lootPickup.OpeningPlayer = openingPlayer;
+                }
+            }
         }
 
         /// <summary>
@@ -246,14 +269,13 @@ namespace ReusableWeapons
         private WeightedList<ItemRarity> GetScaledRarities()
         {
             WeightedList<ItemRarity> table = new()
-            {
-                {ItemRarity.Common, 1 },
-                {ItemRarity.Uncommon, 1 },
-                {ItemRarity.Rare, 1 },
-                {ItemRarity.Epic, 1 },
-                {ItemRarity.Legendary, 1 },
-                //{ItemRarity.Mythic, 1 }, // Uncomment if you want to be able to get mythic items from chests
-            };
+                {
+                    {ItemRarity.Common, ChestTier == ItemRarity.Legendary ? 1 : 10 },
+                    {ItemRarity.Uncommon, ChestTier == ItemRarity.Legendary ? 2 : 5 },
+                    {ItemRarity.Rare, ChestTier == ItemRarity.Legendary ? 5 : 2 },
+                    {ItemRarity.Epic, ChestTier == ItemRarity.Legendary ? 8 : 1 },
+                    {ItemRarity.Legendary, ChestTier == ItemRarity.Legendary ? 10 : 0 },
+                };
 
             return table;
         }

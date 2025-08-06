@@ -71,7 +71,7 @@ namespace ReusableWeapons
         public override Type TargettingEffect => Player.IsPlayingOnMobile ? typeof(BasicWeaponAimingEffect) : null;
         public override Texture Icon => Assets.GetAsset<Texture>(GameManager.Instance.GameItems.ExplosiveShotgun.ItemDefinition.Icon);
         public override float MaxDistance => 5.0f;
-        public override float Cooldown => CalculateCooldown(EquippedWeapon?.TimeBetweenShotsAfterRarity ?? ExplosiveShotgunConfigs.TIME_BETWEEN_SHOTS);
+        public override float Cooldown => CalculateCooldown(EquippedWeapon != null ? GetWeaponCooldownWithRarity() : ExplosiveShotgunConfigs.TIME_BETWEEN_SHOTS);
 
         public override bool OnTryActivate(List<Player> targetPlayers, Vector2 direction, float magnitude)
         {

@@ -69,7 +69,7 @@ namespace ReusableWeapons
 
             if (Network.IsServer)
             {
-                return LobbedProjectile.Spawn(Assets.GetAsset<Prefab>(ProjectilePrefab), player, GetBulletSpawnPosition(player), GetClickedPosition(player), WaterBalloonRPGConfigs.PROJECTILE_TRAVEL_SPEED, ApplyRarityToDamage(WaterBalloonRPGConfigs.BASE_DAMAGE), ServerOnBalloonLanded);
+                return LobbedProjectile.Spawn(Assets.GetAsset<Prefab>(ProjectilePrefab), player, GetBulletSpawnPosition(player), GetClickedPosition(player), WaterBalloonRPGConfigs.PROJECTILE_TRAVEL_SPEED, ApplyRarityToDamage(WaterBalloonRPGConfigs.BASE_DAMAGE, player), ServerOnBalloonLanded);
             }
 
             return null;
@@ -87,7 +87,7 @@ namespace ReusableWeapons
 
                 if ((mob.Entity.Position - position).LengthSquared <= (WaterBalloonRPGConfigs.AOE_RADIUS * WaterBalloonRPGConfigs.AOE_RADIUS))
                 {
-                    float damageToApply = ApplyRarityToDamage(WaterBalloonRPGConfigs.BASE_DAMAGE);
+                    float damageToApply = ApplyRarityToDamage(WaterBalloonRPGConfigs.BASE_DAMAGE, owner);
                     if (mob.Entity.GetComponent<Destructable>() != null)
                     {
                         damageToApply *= 3;
@@ -106,7 +106,7 @@ namespace ReusableWeapons
         public override TargettingMode TargettingMode => TargettingMode.CircleAOE;
         public override Type TargettingEffect => Player.IsPlayingOnMobile ? typeof(CircleAOEWeaponAimingEffect) : null;
 
-        public override float Cooldown => CalculateCooldown(EquippedWeapon?.TimeBetweenShotsAfterRarity ?? WaterBalloonRPGConfigs.TIME_BETWEEN_SHOTS);
+        public override float Cooldown => CalculateCooldown(EquippedWeapon != null ? GetWeaponCooldownWithRarity() : WaterBalloonRPGConfigs.TIME_BETWEEN_SHOTS);
         public override float MaxDistance => 10f;
         public override Texture Icon => Assets.GetAsset<Texture>(GameManager.Instance.GameItems.WaterBalloonRPG.ItemDefinition.Icon);
     }

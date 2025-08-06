@@ -2,7 +2,7 @@
 
 public class NpcTrigger : Component
 {
-    public enum ShopType { Gun, General, BlackMarket, Generative }
+    public enum ShopType { Gun, General, BlackMarket, Generative, WeaponSell }
     [Serialized] public Interactable Interactable;
     [Serialized] public Spine_Animator SpineAnimator;
     [Serialized] public ShopType shopType;
@@ -62,6 +62,8 @@ public class NpcTrigger : Component
 
     public void StartRig()
     {
+        if (!SpineAnimator.Alive()) return;
+
         SpineAnimator.Awaken();
         if (overrideSkin)
         {
@@ -104,6 +106,10 @@ public class NpcTrigger : Component
                     break;
                 case ShopType.Generative:
                     UIManager.OpenPositionalUI(() => Store.DrawShop(Store.Instance.generateFurnitureShop), Position);
+                    break;
+                case ShopType.WeaponSell:
+                    Store.Instance.RefreshWeaponSell();
+                    UIManager.OpenPositionalUI(() => Store.DrawShop(Store.Instance.weaponSellShop), Position);
                     break;
             }
         }

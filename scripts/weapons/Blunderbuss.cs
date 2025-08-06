@@ -5,7 +5,7 @@ namespace ReusableWeapons
     public static class BlunderbussConfigs
     {
         public static float TIME_BETWEEN_SHOTS = 2.0f;
-        public static float BASE_DAMAGE = 70.0f;
+        public static float BASE_DAMAGE = 30.0f;
 
         public static int AMMO_WITH_FIRST_PICKUP = 30;
         public static int AMMO_WITH_EXTRA_PICKUP = 15;
@@ -67,7 +67,7 @@ namespace ReusableWeapons
         public override Type TargettingEffect => Player.IsPlayingOnMobile ? typeof(BasicWeaponAimingEffect) : null; // Having a targetting effect on this breaks the aiming on PC since the aiming effect is already on
         public override Texture Icon => Assets.GetAsset<Texture>(GameManager.Instance.GameItems.Blunderbuss.ItemDefinition.Icon);
         public override float MaxDistance => 10f;
-        public override float Cooldown => CalculateCooldown(EquippedWeapon?.TimeBetweenShotsAfterRarity ?? BlunderbussConfigs.TIME_BETWEEN_SHOTS);
+        public override float Cooldown => CalculateCooldown(EquippedWeapon != null ? GetWeaponCooldownWithRarity() : BlunderbussConfigs.TIME_BETWEEN_SHOTS);
     }
 
     public class BlunderbussProjectile : BaseProjectile

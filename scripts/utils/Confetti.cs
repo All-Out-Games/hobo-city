@@ -10,6 +10,7 @@ public class Confetti : Component
     {
         SpineAnimator = GetComponent<Spine_Animator>();
         SpineAnimator.SpineInstance.SetAnimation("Confetti_Explosion", false);
+        SpineAnimator.SpineInstance.Speed = 0.7f;
         startTime = Time.TimeSinceStartup;
     }
 

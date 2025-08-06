@@ -116,10 +116,10 @@ public partial class MyPlayer : Player, INetworkedComponent
   // Scavenger hunt presents collected during the current house visit
   public SyncVar<int> ScavengerHuntCount = new(0);
 
-  public SyncVar<float> SpeedMultiplier = new(0.825f);
+  public SyncVar<float> SpeedMultiplier = new(0.95f);
 
   // Doesn't really have to be a syncvar but easier to set around 
-  public SyncVar<float> CameraZoom = new(1.275f);
+  public SyncVar<float> CameraZoom = new(1.55f);
 
   public string GenerativePrompt = "";
   public string pendingAssetId = "";
@@ -184,7 +184,7 @@ public partial class MyPlayer : Player, INetworkedComponent
 
       if (HasEffect<BasicWeaponAimingEffect>())
       {
-        multiplier *= 0.9f;
+        multiplier *= 0.85f;
       }
 
       if (HasEffect<EatFoodEffect>())
@@ -243,6 +243,16 @@ public partial class MyPlayer : Player, INetworkedComponent
 
     if (Network.IsServer)
     {
+      // Set XP
+      XP.Set(Save.GetInt(this, "xp", 0));
+      XP.OnSync += (oldXP, newXP) =>
+      {
+        if (newXP != 0)
+        {
+          Save.SetInt(this, "xp", newXP);
+        }
+      };
+
       var ammoTypesToProcess = new List<AmmoType>(AmmoAmounts.Keys);
       foreach (AmmoType ammoType in ammoTypesToProcess)
       {
@@ -303,6 +313,9 @@ public partial class MyPlayer : Player, INetworkedComponent
 
           // Give XP for kill
           LastDamagedBy.GainXP(100);
+
+          // Show kill notification to the killer
+          LastDamagedBy.CallClient_ShowKillNotification(this.Name, 100, false, new RPCOptions() { Target = LastDamagedBy });
         }
         else
         {
@@ -331,6 +344,9 @@ public partial class MyPlayer : Player, INetworkedComponent
               assistPlayer.GainXP(50); // Assist XP
               GameManager.Instance.CallClient_SpawnDamageNumber(assistInfo.DamagedBy.Position + new Vector2(0, 1),
                 new Vector4(0, 1, 1, 1), "ASSIST +50 XP", 1.5f, 0.0f, false);
+
+              // Show assist notification to the assisting player
+              assistPlayer.CallClient_ShowKillNotification(this.Name, 50, true, new RPCOptions() { Target = assistPlayer });
             }
           }
         }
@@ -344,6 +360,8 @@ public partial class MyPlayer : Player, INetworkedComponent
   [ClientRpc]
   public void Respawn(string spawnType)
   {
+    AddEffect<InvulnerabilityEffect>();
+
     RemoveFreezeReason("dead");
     RemoveEmoteBlockReason("dead");
     SpineAnimator.SpineInstance.StateMachine.SetTrigger("spawn");
@@ -604,6 +622,8 @@ public partial class MyPlayer : Player, INetworkedComponent
 
   public override void Update()
   {
+    HealthManager.IsInvulnerable = HasEffect<InvulnerabilityEffect>() || IsHidden.Value;
+
     PlayTimeTimer += Time.DeltaTime;
     if (Network.IsServer && PlayTimeTimer >= 10f)
     {
@@ -655,6 +675,12 @@ public partial class MyPlayer : Player, INetworkedComponent
 
     if (Network.IsClient && IsLocal)
     {
+      // Draw kill notifications
+      KillNotification.DrawKillNotifications();
+
+      // Draw XP progress bar
+      XPProgressBar.DrawXPProgressBar();
+
       destructibleVisibilityFrameCounter++;
       if (destructibleVisibilityFrameCounter >= 10)
       {
@@ -830,6 +856,7 @@ public partial class MyPlayer : Player, INetworkedComponent
                 }
               }
 
+
               if (rarity.HasValue)
               {
                 // Colour in the background of the item to show its rarity
@@ -837,33 +864,6 @@ public partial class MyPlayer : Player, INetworkedComponent
                 rarityColor.W = 0.8f;
                 var highlightRect = rect.Inset(8);
                 UI.Image(highlightRect, Assets.GetAsset<Texture>("$AO/new/in_game/inventory/inventory_v2/inventory_bubble.png"), rarityColor);
-
-                // Draw a series of star icons to represent the rarity as well
-                int starCount = (int)rarity + 1;
-                bool isEven = starCount % 2 == 0;
-                var starSize = 12;
-                var starRect = rect.BottomCenterRect().Grow(starSize, starSize / 2, 0, starSize / 2);
-
-                // The stars are centered along the bottom
-                // So, we need to know how many on each side of the middle
-                // When even, there are 2 stars in the middle. Odd just has the 1 centered one
-                int countExcludingMiddle = starCount;
-                countExcludingMiddle = isEven ? countExcludingMiddle - 2 : countExcludingMiddle - 1;
-
-                if (isEven)
-                {
-                  // Offset by half a star to the left if even so they're centered
-                  starRect = starRect.Slide(-0.5f, 0);
-                }
-
-                starRect = starRect.Slide(-countExcludingMiddle / 2, 0);
-
-                rarityColor.W = 1.0f;
-                for (int i = 0; i < starCount; i++)
-                {
-                  UI.Image(starRect, Assets.GetAsset<Texture>("$AO/new/Shop Modal/Premium_Shop/full_star.png"), rarityColor);
-                  starRect = starRect.Slide(1, 0);
-                }
               }
             }
           },
@@ -894,6 +894,39 @@ public partial class MyPlayer : Player, INetworkedComponent
                 // Draw the ammo count to the left of the icon
                 var textSettings = UIUtils.GetTextSettings(28, Vector4.White, UI.HorizontalAlignment.Left);
                 UI.TextAsync(ammoRect.RightCenterRect().Offset(-5, 0), $"x{weaponReference.GetRPAmmoAmount(this)}", textSettings);
+              }
+
+              // Draw weapon level if it exists (where stars used to be)
+              var levelMetadata = item.GetMetadata("level");
+              if (!string.IsNullOrEmpty(levelMetadata) && int.TryParse(levelMetadata, out int weaponLevel))
+              {
+                // Check if this item is currently selected/highlighted
+                bool isHighlighted = false;
+                for (int i = 0; i < DefaultInventory.Items.Length; i++)
+                {
+                  if (DefaultInventory.Items[i] == item && i == CurrentHoveredSlot)
+                  {
+                    isHighlighted = true;
+                    break;
+                  }
+                }
+
+                // Position at bottom center where stars used to be
+                var levelRect = rect.BottomCenterRect().Offset(0, 8);
+                var levelTextSettings = new UI.TextSettings()
+                {
+                  Font = UI.Fonts.BarlowBold,
+                  Size = 27,
+                  Color = isHighlighted ? new Vector4(1.0f, 1.0f, 1.0f, 1.0f) : new Vector4(1.0f, 0.9f, 0.0f, 1.0f), // White if highlighted, yellow/gold otherwise
+                  DropShadowColor = new Vector4(0f, 0f, 0.02f, 0.8f),
+                  DropShadowOffset = new Vector2(0f, -2f),
+                  HorizontalAlignment = UI.HorizontalAlignment.Center,
+                  VerticalAlignment = UI.VerticalAlignment.Center,
+                  WordWrap = false,
+                  Outline = true,
+                  OutlineThickness = 2,
+                };
+                UI.TextAsync(levelRect, $"Lv.{weaponLevel}", levelTextSettings);
               }
             }
           },
@@ -1420,6 +1453,12 @@ public partial class MyPlayer : Player, INetworkedComponent
     IsPlayingOnMobile = isPlayingOnMobile;
   }
 
+  [ClientRpc]
+  public void ShowKillNotification(string killedPlayerName, int xpAmount, bool isAssist)
+  {
+    KillNotification.ShowKillNotification(killedPlayerName, xpAmount, isAssist);
+  }
+
 
   public int GetBountyReward()
   {
@@ -1706,6 +1745,7 @@ public partial class MyPlayer : Player, INetworkedComponent
 
     int oldLevel = Level;
     XP.Set(XP.Value + amount);
+    Economy.DepositCurrency(this, GameManager.XP_CURRENCY, amount);
     int newLevel = Level;
 
     if (newLevel > oldLevel)
@@ -1751,15 +1791,13 @@ public partial class MyPlayer : Player, INetworkedComponent
     using var _2 = IM.PUSH_Z(GetZOffset() - 0.001f);
     using var _3 = UI.PUSH_SCALE_FACTOR(5.0f / 540.0f);
 
-    // Position above the player, offset from health bar
-    var position = Entity.Position + new Vector2(0, 1.5f);
     var levelText = $"Lv.{Level}";
 
     // Create text settings for the level display
     var ts = new UI.TextSettings()
     {
       Font = UI.Fonts.BarlowBold,
-      Size = 15f,
+      Size = 25f,
       Color = new Vector4(1.0f, 1.0f, 0.0f, 1f), // Yellow color
       DropShadowColor = new Vector4(0f, 0f, 0.02f, 0.5f),
       DropShadowOffset = new Vector2(0f, -0.01f),
@@ -1771,18 +1809,117 @@ public partial class MyPlayer : Player, INetworkedComponent
       Offset = Vector2.Zero
     };
 
-    // Draw the level text above the player name/health bar
-    var rect = new Rect(position, position);
-    UI.TextAsync(rect, levelText, ts);
+    UI.TextAsync(FinalNameRect.RightCenterRect().Offset(27, 0), levelText, ts);
+  }
+
+  [ClientRpc]
+  public static void SpawnConfetti(Player player)
+  {
+    // Spawn confetti behind the player
+    var confettiPrefab = Assets.GetAsset<Prefab>("Confetti.prefab");
+    if (confettiPrefab != null)
+    {
+      confettiPrefab.Instantiate(onBeforeAwake: (entity) =>
+      {
+        entity.Position = player.Entity.Position;
+        entity.LocalScale = new Vector2(2f, 2f);
+      });
+    }
   }
 
   [ClientRpc]
   public void LevelUp(int newLevel)
   {
-    if (!Network.IsClient) return;
+    SFX.Play(Assets.GetAsset<AudioAsset>("sfx/job-success.wav"), new SFX.PlaySoundDesc() { EntityToFollow = Entity, Volume = 0.75f, VolumePerturb = 0.1f, SpeedPerturb = 0.1f });
+
+    if (!Network.IsServer) return;
+
+    CallClient_SpawnConfetti(this);
 
     // Show level up message/effect
     GameManager.Instance.CallClient_SpawnDamageNumber(Entity.Position + new Vector2(0, 1),
       new Vector4(1, 1, 0, 1), $"LEVEL {newLevel}!", 2.0f, 0.0f, false);
+  }
+
+  // Weapon selling methods
+  public void RequestSellWeapon(int inventorySlot)
+  {
+    if (!Network.IsClient || !IsLocal) return;
+    CallServer_SellWeapon(inventorySlot);
+  }
+
+  [ServerRpc]
+  public void SellWeapon(int inventorySlot)
+  {
+    if (!Network.IsServer) return;
+
+    var player = (MyPlayer)Network.GetRemoteCallContextPlayer();
+    if (!player.Alive()) return;
+
+    var items = player.DefaultInventory.Items;
+    if (inventorySlot < 0 || inventorySlot >= items.Length) return;
+
+    var item = items[inventorySlot];
+    if (item == null || item.Definition == null) return;
+
+    // Verify it's a weapon
+    var gameItems = GameManager.Instance.GameItems;
+    var customDef = gameItems.GetCustomItemDefByID(item.Definition.Id);
+    if (customDef == null || customDef.ItemCategory != ItemCategory.Weapon) return;
+
+    // Don't allow selling fists
+    if (item.Definition.Id == "__WEAPON__fists") return;
+
+    // Get weapon level and calculate value
+    string levelStr = item.GetMetadata("level");
+    int weaponLevel = string.IsNullOrEmpty(levelStr) ? 1 : int.Parse(levelStr);
+    ItemRarity rarity = customDef.ItemRarity;
+    int sellValue = Store.CalculateWeaponValue(rarity, weaponLevel);
+
+    // Remove weapon from inventory
+    Inventory.RemoveItemFromInventory(item, player.DefaultInventory);
+
+    // Give money to player
+    Economy.DepositCurrency(player, GameManager.CASH_CURRENCY, sellValue);
+
+    // Notify player
+    player.CallClient_WeaponSold(item.Definition.Name, sellValue, weaponLevel, rarity);
+  }
+
+  [ClientRpc]
+  public void WeaponSold(string weaponName, int sellValue, int level, ItemRarity rarity)
+  {
+    // Show sell notification
+    string rarityText = rarity.ToString().ToUpper();
+    Notifications.Show($"Sold {rarityText} {weaponName} (Lv.{level}) for ${sellValue:N0}!");
+
+    // Refresh the weapon sell shop to remove the sold item
+    Store.Instance.RefreshWeaponSell();
+
+    // Show visual feedback with damage number in rarity color
+    Vector4 color = rarity switch
+    {
+      ItemRarity.Rare => new Vector4(0.31f, 0.76f, 0.97f, 1f),      // Light Blue
+      ItemRarity.Epic => new Vector4(0.61f, 0.15f, 0.69f, 1f),      // Purple
+      ItemRarity.Legendary => new Vector4(1f, 0.6f, 0f, 1f),        // Orange
+      ItemRarity.Mythic => new Vector4(0.96f, 0.27f, 0.21f, 1f),    // Red
+      _ => new Vector4(1f, 1f, 1f, 1f)                              // White
+    };
+
+    if (Network.IsServer)
+    {
+      GameManager.Instance.CallClient_SpawnDamageNumber(Entity.Position + new Vector2(0, 1), color, $"+${sellValue:N0}", 2.0f, 0.0f, false);
+    }
+
+    if (!Network.IsClient) return;
+
+
+
+    // Play sell sound
+    AudioAsset sellSound = Assets.GetAsset<AudioAsset>("sfx/purchase.wav");
+    if (sellSound != null)
+    {
+      SFX.Play(sellSound, new SFX.PlaySoundDesc() { Volume = 0.5f });
+    }
   }
 }

@@ -96,7 +96,7 @@ namespace ReusableWeapons
 
             if (Network.IsServer)
             {
-                return LobbedProjectile.Spawn(Assets.GetAsset<Prefab>(ProjectilePrefab), player, GetBulletSpawnPosition(player), GetClickedPosition(player), BoomwheelConfigs.LARGE_BOMB_TRAVEL_SPEED, ApplyRarityToDamage(BoomwheelConfigs.LARGE_BOMB_DAMAGE), ServerOnLargeBombImpact);
+                return LobbedProjectile.Spawn(Assets.GetAsset<Prefab>(ProjectilePrefab), player, GetBulletSpawnPosition(player), GetClickedPosition(player), BoomwheelConfigs.LARGE_BOMB_TRAVEL_SPEED, ApplyRarityToDamage(BoomwheelConfigs.LARGE_BOMB_DAMAGE, player), ServerOnLargeBombImpact);
             }
 
             return null;
@@ -291,7 +291,7 @@ namespace ReusableWeapons
         public override TargettingMode TargettingMode => TargettingMode.CircleAOE;
         public override Type TargettingEffect => Player.IsPlayingOnMobile ? typeof(CircleAOEWeaponAimingEffect) : null;
 
-        public override float Cooldown => CalculateCooldown(EquippedWeapon?.TimeBetweenShotsAfterRarity ?? BoomwheelConfigs.TIME_BETWEEN_SHOTS);
+        public override float Cooldown => CalculateCooldown(EquippedWeapon != null ? GetWeaponCooldownWithRarity() : BoomwheelConfigs.TIME_BETWEEN_SHOTS);
         public override float MaxDistance => 10f;
         public override Texture Icon => Assets.GetAsset<Texture>(GameManager.Instance.GameItems.BoomWheel.ItemDefinition.Icon);
     }

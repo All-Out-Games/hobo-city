@@ -1,0 +1,18 @@
+lavaTree.png
+	size: 1412, 444
+	filter: Linear, Linear
+electrocute_aura1
+	bounds: 432, 6, 389, 429
+	offsets: 2, 2, 393, 433
+electrocute_aura2
+	bounds: 6, 18, 420, 417
+	offsets: 2, 2, 424, 421
+lava_treeOFF
+	bounds: 1105, 135, 147, 300
+	offsets: 22, 16, 181, 316
+lava_treeON
+	bounds: 1258, 147, 147, 288
+	offsets: 22, 28, 181, 316
+ray
+	bounds: 827, 19, 272, 416
+	offsets: 9, 15, 290, 446

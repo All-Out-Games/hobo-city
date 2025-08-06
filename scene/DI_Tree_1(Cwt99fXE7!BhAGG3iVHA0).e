@@ -14,7 +14,7 @@
     "Y": 1
   },
   "previous_sibling": "777201377095472:1747423512031390700",
-  "next_sibling": "777434946817639:1747423573612681500",
+  "next_sibling": "109833749462640:1748567018546556400",
   "parent": "572739174724627:1745626489395237700",
   "spawn_as_networked_entity": true,
   "linked_prefab": "DI_Tree_1.prefab"

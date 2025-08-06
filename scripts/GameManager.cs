@@ -74,6 +74,7 @@ public partial class GameManager : Component
   public static string SAVE_PREFIX = "1";
   // Not prefixed so they look correct on the UI
   public static string CASH_CURRENCY = "cash";
+  public static string XP_CURRENCY = "xp";
   public static string BITCOIN_CURRENCY = "bitcoin";
   // New admin flag: if true, the next wishing well toss will guarantee a Private Jet reward
   public static bool ForcePrivateJetWish = false;
@@ -532,6 +533,12 @@ public partial class GameManager : Component
 
           var instance = Inventory.CreateItem(item, quantity);
 
+          // Add level metadata for weapons
+          if (itemId.StartsWith("__WEAPON__"))
+          {
+            instance.SetMetadata("level", targetPlayer.Level.ToString());
+          }
+
           if (Inventory.CanMoveItemToInventory(instance, targetPlayer.DefaultInventory))
           {
             Inventory.MoveItemToInventory(instance, targetPlayer.DefaultInventory);
@@ -652,6 +659,88 @@ public partial class GameManager : Component
           else
           {
             Chat.SendMessage(p, "Usage: /swole <value>");
+          }
+          break;
+        }
+      case "xp":
+        {
+          if (parts.Length < 2)
+          {
+            Chat.SendMessage(p, "Usage: /xp <amount>");
+            break;
+          }
+
+          if (int.TryParse(parts[1], out var xpAmount) && xpAmount >= 0)
+          {
+            if (Network.IsServer)
+            {
+              int oldLevel = player.Level;
+              int currentXP = player.XP.Value;
+              int xpDifference = xpAmount - currentXP;
+
+              player.XP.Set(xpAmount);
+              if (xpDifference != 0)
+              {
+                Economy.DepositCurrency(player, GameManager.XP_CURRENCY, xpDifference);
+              }
+
+              int newLevel = player.Level;
+              if (newLevel > oldLevel)
+              {
+                player.CallClient_LevelUp(newLevel);
+              }
+
+              Chat.SendMessage(p, $"XP set to {xpAmount}. Level: {newLevel}");
+            }
+            else
+            {
+              Chat.SendMessage(p, "XP can only be set on the server.");
+            }
+          }
+          else
+          {
+            Chat.SendMessage(p, "Usage: /xp <amount> (must be 0 or positive)");
+          }
+          break;
+        }
+      case "level":
+        {
+          if (parts.Length < 2)
+          {
+            Chat.SendMessage(p, "Usage: /level <level>");
+            break;
+          }
+
+          if (int.TryParse(parts[1], out var targetLevel) && targetLevel >= 1 && targetLevel <= 50)
+          {
+            if (Network.IsServer)
+            {
+              int oldLevel = player.Level;
+              int currentXP = player.XP.Value;
+              int requiredXP = MyPlayer.CalculateXPForLevel(targetLevel);
+              int xpDifference = requiredXP - currentXP;
+
+              player.XP.Set(requiredXP);
+              if (xpDifference != 0)
+              {
+                Economy.DepositCurrency(player, GameManager.XP_CURRENCY, xpDifference);
+              }
+
+              if (targetLevel > oldLevel)
+              {
+                player.CallClient_LevelUp(targetLevel);
+              }
+
+              Chat.SendMessage(p, $"Level set to {targetLevel} (XP: {requiredXP})");
+            }
+            else
+            {
+              Chat.SendMessage(p, "Level can only be set on the server.");
+            }
+          }
+          else
+          {
+            Chat.SendMessage(p, "Usage: /level <level> (must be between 1 and 50)");
           }
           break;
         }

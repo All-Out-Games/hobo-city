@@ -59,7 +59,7 @@ public class PistolAbility : BaseSingleShotWeaponAbility
     public override Type TargettingEffect => Player.IsPlayingOnMobile ? typeof(BasicWeaponAimingEffect) : null; // Having a targetting effect on this breaks the aiming on PC since the aiming effect is already on
     public override Texture Icon => Assets.GetAsset<Texture>(GameManager.Instance.GameItems.Pistol.ItemDefinition.Icon);
     public override float MaxDistance => 10f;
-    public override float Cooldown => CalculateCooldown(EquippedWeapon?.TimeBetweenShotsAfterRarity ?? Pistol.PISTOL_TIME_BETWEEN_SHOTS);
+    public override float Cooldown => CalculateCooldown(EquippedWeapon != null ? GetWeaponCooldownWithRarity() : Pistol.PISTOL_TIME_BETWEEN_SHOTS);
 }
 
 public class PistolProjectile : BaseProjectile
@@ -67,5 +67,5 @@ public class PistolProjectile : BaseProjectile
     public override string TravelAnimation => "016ARP/Bullet_Loop";
     public override string HitAnimation => "016ARP/Bullet_Loop";
     public override string ProjectileSkin => "bullet_1";
-    public override float BaseDamage => 25.0f;
+    public override float BaseDamage => 6.0f;
 }

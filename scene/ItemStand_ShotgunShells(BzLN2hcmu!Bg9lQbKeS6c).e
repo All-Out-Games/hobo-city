@@ -5,8 +5,8 @@
   "name": "ItemStand_ShotgunShells",
   "local_enabled": true,
   "local_position": {
-    "X": 0.7694740295410156,
-    "Y": -0.2210564613342285
+    "X": 0.5795326232910156,
+    "Y": 2.2244915962219238
   },
   "local_rotation": 0,
   "local_scale": {
@@ -14,7 +14,6 @@
     "Y": 1
   },
   "previous_sibling": "506546136345902:1746716086888888800",
-  "next_sibling": "719044530666801:1748984527001415600",
   "parent": "505664764441075:1746715876644456000",
   "spawn_as_networked_entity": true
 },
