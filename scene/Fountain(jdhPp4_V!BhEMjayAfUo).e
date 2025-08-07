@@ -13,8 +13,8 @@
     "X": 0.8999999761581421,
     "Y": 0.8999999761581421
   },
-  "previous_sibling": "258798454150660:1748538847823003600",
-  "next_sibling": "358884199165974:1748625046632416600",
+  "previous_sibling": "724472877362216:1748153664682915900",
+  "next_sibling": "1256411644711829:1750112295842187300",
   "spawn_as_networked_entity": true
 },
 {
@@ -107,15 +107,5 @@
         "Y": 0.0232157707214355
       }
     ]
-  }
-},
-{
-  "cid": 5,
-  "aoid": "155960189290947:1748577765822796300",
-  "component_type": "Internal_Component",
-  "internal_component_type": "Interactable",
-  "data": {
-    "text": "Toss Coin ($1 Wishing Well)",
-    "radius": 3.5000000000000000
   }
 }

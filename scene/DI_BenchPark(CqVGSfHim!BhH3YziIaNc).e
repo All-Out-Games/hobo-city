@@ -14,7 +14,7 @@
     "Y": 1
   },
   "previous_sibling": "566295239124342:1745624952246224100",
-  "next_sibling": "835463783303494:1747696331376676400",
+  "next_sibling": "9069904373068:1747405302865462300",
   "parent": "572739174724627:1745626489395237700",
   "spawn_as_networked_entity": true,
   "linked_prefab": "DI_BenchPark.prefab"

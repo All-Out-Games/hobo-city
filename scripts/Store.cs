@@ -369,6 +369,7 @@ public partial class Store : System<Store>
         weaponSellCat.ClearProducts();
 
         var gameItems = GameManager.Instance.GameItems;
+        var weaponProducts = new List<ShopCategory.ProductDescription>();
 
         foreach (var item in MyPlayer.localPlayer.DefaultInventory.Items)
         {
@@ -406,6 +407,15 @@ public partial class Store : System<Store>
                 Description = $"Level {weaponLevel} {rarity} Weapon"
             };
 
+            weaponProducts.Add(product);
+        }
+
+        // Sort by rarity (lowest to highest)
+        weaponProducts.Sort((a, b) => a.Rarity.CompareTo(b.Rarity));
+
+        // Add sorted products to the shop
+        foreach (var product in weaponProducts)
+        {
             weaponSellCat.AddProduct(product);
         }
     }

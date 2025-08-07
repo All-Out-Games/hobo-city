@@ -11,6 +11,7 @@ namespace ReusableWeapons
     {
         public Action<LootPickup> OnPickedUp;
 
+        [Serialized] public Box_Collider BoxCollider;
         [Serialized] public Interactable Interactable;
         [Serialized] public Sprite_Renderer ItemSprite;
         [Serialized] public Sprite_Renderer ShineSprite;
@@ -45,6 +46,20 @@ namespace ReusableWeapons
         [ClientRpc]
         public void Initialize(string itemDefId, int rarity, int amount, bool createdByChest, Player lockedOwner)
         {
+            BoxCollider.OnCollisionEnter += (Entity other) =>
+            {
+                var player = other.GetComponent<MyPlayer>();
+                if (player.Alive())
+                {
+                    // Auto pickup if it's an ammo type
+                    if (Item.ItemCategory == ItemCategory.Ammo)
+                    {
+                        OnInteract(player);
+                        BoxCollider.LocalEnabled = false;
+                    }
+                }
+            };
+
             Interactable.CanUseCallback += p => LerpTime >= MaxLerpTime && !MarkedForDestroy && CheckIfPlayerCanPickUp((MyPlayer)p);
             Interactable.OnInteract += OnInteract;
 
@@ -138,6 +153,7 @@ namespace ReusableWeapons
 
                     if (DestroyTimer <= 0)
                     {
+                        BoxCollider.OnCollisionEnter = null;
                         Network.Despawn(Entity);
                         Entity.Destroy();
                     }
@@ -220,7 +236,7 @@ namespace ReusableWeapons
                     myPlayer.ServerSyncAmmoAmount(ammoType, myPlayer.AmmoAmounts[ammoType].CurrentAmount + 24);
                     myPlayer.CallClient_ThrowMoney(myPlayer);
 
-                    DestroyTimer = 0.075f;
+                    DestroyTimer = 0.01f;
 
                     MarkedForDestroy = true;
                     LerpItem(Entity.Position, player.Position, 0.075f, LerpType.Linear);
@@ -237,7 +253,7 @@ namespace ReusableWeapons
             {
                 if (ServerTryGrantItem((MyPlayer)player))
                 {
-                    DestroyTimer = 0.075f;
+                    DestroyTimer = 0.01f;
 
                     MarkedForDestroy = true;
                     LerpItem(Entity.Position, player.Position, 0.075f, LerpType.Linear);

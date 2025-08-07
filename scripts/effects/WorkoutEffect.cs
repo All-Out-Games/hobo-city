@@ -17,12 +17,7 @@ public partial class WorkoutEffect : MyEffect
 
     public override void OnEffectEnd(bool interrupt)
     {
-        if (Network.IsServer && !interrupt)
-        {
-            if (Player.SwoleLevel.Value < 5f)
-            {
-                Player.SwoleLevel.Set(Player.SwoleLevel.Value + 0.4f);
-            }
-        }
+        // Workout effect no longer increases SwoleLevel
+        // Player size is now based on damage leaderboard position
     }
 }

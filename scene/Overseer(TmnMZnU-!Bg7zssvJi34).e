@@ -5,7 +5,7 @@
   "name": "Overseer",
   "local_enabled": true,
   "local_position": {
-    "X": -60.4700050354003906,
+    "X": -61.3592529296875000,
     "Y": 6.7960276603698730
   },
   "local_rotation": 0,
@@ -13,7 +13,7 @@
     "X": -1,
     "Y": 1
   },
-  "next_sibling": "1195984052838626:1750982953406522100",
+  "next_sibling": "4358481718605655:1748364171311853400",
   "linked_prefab": "Overseer.prefab"
 },
 {

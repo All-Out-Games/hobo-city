@@ -6,7 +6,7 @@ public partial class WeaponLevelUpper : Component
     private Interactable interactable;
     private Spine_Animator spineAnimator;
     private const int MAX_WEAPON_LEVEL = 50;
-    private const long TOTAL_COST_TO_MAX = 1500000; // $2.5M total to reach level 50
+    private const long TOTAL_COST_TO_MAX = 750000; // $1M total to reach level 50
 
     public override void Awake()
     {
@@ -20,76 +20,80 @@ public partial class WeaponLevelUpper : Component
         };
 
         interactable.OnInteract = (Player p) =>
-{
-    if (!Network.IsServer) return;
+        {
+            if (!Network.IsServer) return;
 
-    var myPlayer = (MyPlayer)p;
-    var equippedItem = myPlayer.DefaultInventory.Items[myPlayer.CurrentHoveredSlot];
+            var myPlayer = (MyPlayer)p;
+            var equippedItem = myPlayer.DefaultInventory.Items[myPlayer.CurrentHoveredSlot];
 
-    if (equippedItem == null)
-    {
-        // No item equipped
-        myPlayer.CallClient_NoWeaponEquipped();
-        return;
-    }
+            if (equippedItem == null)
+            {
+                // No item equipped
+                myPlayer.CallClient_NoWeaponEquipped();
+                return;
+            }
 
-    // Get weapon info
-    if (!GameItems.TryCreateCustomInstance(equippedItem, out var customItem))
-    {
-        myPlayer.CallClient_NoWeaponEquipped();
-        return;
-    }
+            // Get weapon info
+            if (!GameItems.TryCreateCustomInstance(equippedItem, out var customItem))
+            {
+                myPlayer.CallClient_NoWeaponEquipped();
+                return;
+            }
 
-    if (customItem.CustomDefinition.ItemCategory != ItemCategory.Weapon)
-    {
-        // Item is not a weapon
-        myPlayer.CallClient_NotAWeapon(customItem.CustomDefinition.ItemDefinition.Name, new RPCOptions() { Target = myPlayer });
-        return;
-    }
+            if (customItem.CustomDefinition.ItemCategory != ItemCategory.Weapon)
+            {
+                // Item is not a weapon
+                myPlayer.CallClient_NotAWeapon(customItem.CustomDefinition.ItemDefinition.Name, new RPCOptions() { Target = myPlayer });
+                return;
+            }
 
-    var levelStr = equippedItem.GetMetadata("level");
-    int currentLevel = string.IsNullOrEmpty(levelStr) ? 1 : int.Parse(levelStr);
+            var levelStr = equippedItem.GetMetadata("level");
+            int currentLevel = string.IsNullOrEmpty(levelStr) ? 1 : int.Parse(levelStr);
 
-    if (currentLevel >= MAX_WEAPON_LEVEL)
-    {
-        // Weapon is already max level
-        myPlayer.CallClient_WeaponMaxLevel(customItem.CustomDefinition.ItemDefinition.Name, new RPCOptions() { Target = myPlayer });
-        return;
-    }
+            if (currentLevel >= MAX_WEAPON_LEVEL)
+            {
+                // Weapon is already max level
+                myPlayer.CallClient_WeaponMaxLevel(customItem.CustomDefinition.ItemDefinition.Name, new RPCOptions() { Target = myPlayer });
+                return;
+            }
 
-    // Get rarity from custom definition
-    ItemRarity rarity = customItem.CustomDefinition.ItemRarity;
+            ItemRarity rarity = customItem.CustomDefinition.ItemRarity;
+            string rarityStr = equippedItem.GetMetadata("rarity");
+            if (!string.IsNullOrEmpty(rarityStr) && Enum.TryParse<ItemRarity>(rarityStr, out var metadataRarity))
+            {
+                rarity = metadataRarity;
+            }
 
-    long upgradeCost = CalculateUpgradeCost(rarity, currentLevel);
+            long upgradeCost = CalculateUpgradeCost(rarity, currentLevel);
 
-    long currentBalance = Economy.GetBalance(myPlayer, GameManager.CASH_CURRENCY);
+            long currentBalance = Economy.GetBalance(myPlayer, GameManager.CASH_CURRENCY);
 
-    if (currentBalance >= upgradeCost)
-    {
-        // Deduct money
-        Economy.DepositCurrency(myPlayer, GameManager.CASH_CURRENCY, -upgradeCost);
+            if (currentBalance >= upgradeCost)
+            {
+                // Deduct money
+                Economy.DepositCurrency(myPlayer, GameManager.CASH_CURRENCY, -upgradeCost);
 
-        // Update weapon level
-        int newLevel = currentLevel + 1;
-        equippedItem.SetMetadata("level", newLevel.ToString());
+                // Update weapon level
+                int newLevel = currentLevel + 1;
+                equippedItem.SetMetadata("level", newLevel.ToString());
 
-        // Send success notification
-        myPlayer.CallClient_WeaponUpgraded(customItem.CustomDefinition.ItemDefinition.Name, newLevel, upgradeCost, new RPCOptions() { Target = myPlayer });
+                // Send success notification
+                myPlayer.CallClient_WeaponUpgraded(customItem.CustomDefinition.ItemDefinition.Name, newLevel, upgradeCost, new RPCOptions() { Target = myPlayer });
 
-        // Update the equipped item to refresh any damage calculations
-        myPlayer.CallClient_UpdateCurrentHoveredSlot();
+                // Update the equipped item to refresh any damage calculations
+                myPlayer.CallClient_UpdateCurrentHoveredSlot();
 
-        // Play upgrade sound and animation
-        myPlayer.CallClient_PlayUpgradeSound(new RPCOptions() { Target = myPlayer });
-        CallClient_PlayUpgradeAnimation(new RPCOptions() { Target = myPlayer });
-    }
-    else
-    {
-        // Not enough money - send notification
-        long shortBy = upgradeCost - currentBalance;
-        myPlayer.CallClient_NotEnoughMoneyForUpgrade(customItem.CustomDefinition.ItemDefinition.Name, upgradeCost, currentBalance, new RPCOptions() { Target = myPlayer });
-    }
-};
+                // Play upgrade sound and animation
+                myPlayer.CallClient_PlayUpgradeSound(new RPCOptions() { Target = myPlayer });
+                CallClient_PlayUpgradeAnimation(new RPCOptions() { Target = myPlayer });
+            }
+            else
+            {
+                // Not enough money - send notification
+                long shortBy = upgradeCost - currentBalance;
+                myPlayer.CallClient_NotEnoughMoneyForUpgrade(customItem.CustomDefinition.ItemDefinition.Name, upgradeCost, currentBalance, new RPCOptions() { Target = myPlayer });
+            }
+        };
     }
 
     public override void Update()
@@ -134,8 +138,12 @@ public partial class WeaponLevelUpper : Component
             return;
         }
 
-        // Get rarity from custom definition
         ItemRarity rarity = customItem.CustomDefinition.ItemRarity;
+        string rarityStr = equippedItem.GetMetadata("rarity");
+        if (!string.IsNullOrEmpty(rarityStr) && Enum.TryParse<ItemRarity>(rarityStr, out var metadataRarity))
+        {
+            rarity = metadataRarity;
+        }
 
         // Calculate upgrade cost
         long upgradeCost = CalculateUpgradeCost(rarity, currentLevel);
@@ -149,11 +157,12 @@ public partial class WeaponLevelUpper : Component
         // Rarity multipliers affect the distribution of cost across levels
         float rarityMultiplier = rarity switch
         {
-            ItemRarity.Common => 0.5f,      // Cheaper upgrades
-            ItemRarity.Rare => 0.75f,       // Moderate upgrades
-            ItemRarity.Epic => 1.0f,        // Standard upgrades
-            ItemRarity.Legendary => 1.5f,   // Expensive upgrades
-            ItemRarity.Mythic => 2.0f,      // Very expensive upgrades
+            ItemRarity.Common => 0.2f,      // Cheaper upgrades
+            ItemRarity.Uncommon => 0.3f,
+            ItemRarity.Rare => 0.4f,       // Moderate upgrades
+            ItemRarity.Epic => 0.6f,        // Standard upgrades
+            ItemRarity.Legendary => 0.8f,   // Expensive upgrades
+            ItemRarity.Mythic => 1.0f,      // Very expensive upgrades
             _ => 1.0f
         };
 

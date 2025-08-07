@@ -153,13 +153,18 @@ public partial class PunchAbility : MyAbility
     {
       if (Network.IsServer)
       {
+        // Calculate bonus damage based on player scale (1.0 to 2.5)
+        float playerScale = Player.Entity.LocalScale.X;
+        float scaleFactor = (playerScale - 1f) / 1.5f; // Normalize to 0-1 range
+        int bonusDamage = (int)(scaleFactor * 25f); // Max 25 bonus damage at max scale
+
         if (nearestPunchable.IsDestructable)
         {
-          nearestPunchable.Damage(PunchDamage * DestructibleDamgeMultiplier + (int)(Player.SwoleLevel.Value * 5f), Player.Entity);
+          nearestPunchable.Damage(PunchDamage * DestructibleDamgeMultiplier + bonusDamage, Player.Entity);
         }
         else
         {
-          nearestPunchable.Damage(PunchDamage + (int)(Player.SwoleLevel.Value * 5f), Player.Entity);
+          nearestPunchable.Damage(PunchDamage + bonusDamage, Player.Entity);
         }
       }
 

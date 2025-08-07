@@ -151,20 +151,7 @@ public class KillNotification : Component
             Offset = new Vector2(0, 10),
         };
 
-        var xpTextSettings = new UI.TextSettings()
-        {
-            Font = UI.Fonts.BarlowBold,
-            Size = 48,
-            Color = notification.IsAssist ? new Vector4(0.0f, 1.0f, 1.0f, alpha) : new Vector4(1.0f, 0.8f, 0.0f, alpha),
-            DropShadowColor = new Vector4(0f, 0f, 0.02f, 0.7f * alpha),
-            DropShadowOffset = new Vector2(0f, -4f),
-            HorizontalAlignment = UI.HorizontalAlignment.Center,
-            VerticalAlignment = UI.VerticalAlignment.Center,
-            WordWrap = false,
-            Outline = true,
-            OutlineThickness = 4,
-            Offset = new Vector2(0, -20),
-        };
+
 
         // Main text
         var actionText = notification.IsAssist ? "ASSIST" : "ELIMINATED";
@@ -177,7 +164,21 @@ public class KillNotification : Component
 
         // Add pulsing effect to XP text
         var pulseScale = 1.0f + (float)(Math.Sin(Time.TimeSinceStartup * 8.0f) * 0.1f);
-        xpTextSettings.Size = 48 * pulseScale;
+
+        var xpTextSettings = new UI.TextSettings()
+        {
+            Font = UI.Fonts.BarlowBold,
+            Size = 48 * pulseScale,
+            Color = notification.IsAssist ? new Vector4(0.0f, 1.0f, 1.0f, alpha) : new Vector4(1.0f, 0.8f, 0.0f, alpha),
+            DropShadowColor = new Vector4(0f, 0f, 0.02f, 0.7f * alpha),
+            DropShadowOffset = new Vector2(0f, -4f),
+            HorizontalAlignment = UI.HorizontalAlignment.Center,
+            VerticalAlignment = UI.VerticalAlignment.Center,
+            WordWrap = false,
+            Outline = true,
+            OutlineThickness = 4,
+            Offset = new Vector2(0, -20),
+        };
 
         UI.TextAsync(rect.Offset(0, -20), xpText, xpTextSettings);
 

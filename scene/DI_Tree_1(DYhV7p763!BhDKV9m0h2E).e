@@ -20,18 +20,6 @@
   "linked_prefab": "DI_Tree_1.prefab"
 },
 {
-  "cid": 1,
-  "aoid": "952269339129997:1748286570073712700",
-  "component_type": "Mono_Component",
-  "mono_component_type": "Destructable",
-  "data": {
-    "MaxHealth": 260,
-    "skin": "tree_1",
-    "RespawnTime": 30,
-    "CashReward": 18
-  }
-},
-{
   "cid": 2,
   "aoid": "952269339201209:1748286570073731400",
   "component_type": "Internal_Component",

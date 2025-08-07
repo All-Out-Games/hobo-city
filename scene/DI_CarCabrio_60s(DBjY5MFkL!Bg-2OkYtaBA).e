@@ -5,7 +5,7 @@
   "name": "DI_CarCabrio_60s",
   "local_enabled": true,
   "local_position": {
-    "X": 16.3138504028320312,
+    "X": 19.7053909301757812,
     "Y": -43.2790412902832031
   },
   "local_rotation": 0,

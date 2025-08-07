@@ -88,6 +88,9 @@ public partial class GameManager : Component
   // Global bonus added to each job's XP reward. Configurable via admin command.
   public static int JobXpBonus = 0;
 
+  // Leaderboard constants
+  public const float LEADERBOARD_ENTRY_HEIGHT = 35f;
+
   public static List<DamageNumbers> ActiveDamageNumbers = new();
   public static List<Entity> ActiveDestructables = new();
   public static List<Destructable> ActiveDestructableComponents = new();
@@ -319,6 +322,21 @@ public partial class GameManager : Component
     searchResult.TextSettings = GetTextSettingsDamageNumbers(UI.Fonts.Barlow, Game.IsMobile ? 0.5f : size, color, slant);
     searchResult.SpaceText = spaceText;
     ActiveDamageNumbers.Add(searchResult);
+  }
+
+  public static UI.TextSettings GetTextSettings(float size, UI.HorizontalAlignment alignment = UI.HorizontalAlignment.Center)
+  {
+    return new UI.TextSettings()
+    {
+      Font = UI.Fonts.BarlowBold,
+      Size = size,
+      Color = new Vector4(1f, 1f, 1f, 1f),
+      DropShadowColor = new Vector4(0f, 0f, 0f, 0.8f),
+      DropShadowOffset = new Vector2(0f, -2f),
+      HorizontalAlignment = alignment,
+      VerticalAlignment = UI.VerticalAlignment.Center,
+      WordWrap = false
+    };
   }
 
   public UI.TextSettings GetTextSettingsDamageNumbers(FontAsset font, float size, Vector4 color, float slant)
@@ -651,23 +669,23 @@ public partial class GameManager : Component
           }
           break;
         }
-      case "swole":
+      case "scale":
         {
           if (parts.Length < 2)
           {
-            Chat.SendMessage(p, "Usage: /swole <value>");
+            Chat.SendMessage(p, "Usage: /scale <value> (1.0 to 2.5)");
             break;
           }
 
-          if (float.TryParse(parts[1], out var swoleValue))
+          if (float.TryParse(parts[1], out var scaleValue))
           {
-            swoleValue = Math.Clamp(swoleValue, 0f, 5f);
-            player.SwoleLevel.Set(swoleValue);
-            Chat.SendMessage(p, $"Swole level set to {swoleValue}.");
+            scaleValue = Math.Clamp(scaleValue, 1f, 2.5f);
+            player.Entity.LocalScale = new Vector2(scaleValue, scaleValue);
+            Chat.SendMessage(p, $"Player scale set to {scaleValue}. Note: This will be overridden by damage leaderboard position.");
           }
           else
           {
-            Chat.SendMessage(p, "Usage: /swole <value>");
+            Chat.SendMessage(p, "Usage: /scale <value> (1.0 to 2.5)");
           }
           break;
         }
@@ -927,6 +945,76 @@ public partial class GameManager : Component
     if (destructible != null && destructible.Alive() && !DestructablesShowingHealthBars.Contains(destructible))
     {
       DestructablesShowingHealthBars.Add(destructible);
+    }
+  }
+
+  public static void DrawLeaderboard(List<PlayerLeaderboardData> players, string headerText, string localPlayerName = null)
+  {
+    var leaderboardRect = UI.SafeRect.LeftRect().Grow(0, 250, 400, 0);
+
+    using var _ = UI.PUSH_LAYER(-10);
+
+    // Draw header
+    var headerRect = leaderboardRect.CutTop(GameManager.LEADERBOARD_ENTRY_HEIGHT);
+    var headerSettings = GameManager.GetTextSettings(30, UI.HorizontalAlignment.Center);
+    headerSettings.Color = new Vector4(1, 1, 1, 1);
+    headerSettings.Offset = new Vector2(0, 2);
+    UI.TextAsync(headerRect, headerText, headerSettings);
+
+    var textSettings = GameManager.GetTextSettings(22, UI.HorizontalAlignment.Left);
+    textSettings.Color = new Vector4(1, 1, 1, 1);
+    textSettings.Offset = new Vector2(0, 2);
+
+    // Calculate base positions for entries
+    var baseRect = leaderboardRect.CutTop(GameManager.LEADERBOARD_ENTRY_HEIGHT);
+
+    // Define alternating background colors
+    var bgColor1 = new Vector4(0.2f, 0.2f, 0.2f, 0.8f); // Slightly lighter
+    var bgColor2 = new Vector4(0.1f, 0.1f, 0.1f, 0.8f);    // Slightly darker
+
+    // Draw entries with lerped positions
+    for (int i = 0; i < players.Count; i++)
+    {
+      var player = players[i];
+
+      // Calculate entry rectangle based on lerped position
+      var entryRect = baseRect.Offset(0, -player.CurrentYOffset);
+
+      // Draw alternating background first
+      UI.Image(entryRect, null, i % 2 == 0 ? bgColor1 : bgColor2);
+
+      // Draw medal colors for top 3
+      if (i < 3)
+      {
+        Vector4 medalColor = i switch
+        {
+          0 => new Vector4(1.0f, 0.84f, 0.0f, 0.5f),    // Gold - brighter yellow
+          1 => new Vector4(0.85f, 0.85f, 0.9f, 0.5f),   // Silver - slightly blue-tinted silver
+          2 => new Vector4(0.87f, 0.45f, 0.23f, 0.5f),  // Bronze - more saturated bronze
+          _ => default
+        };
+        UI.Image(entryRect, null, medalColor);
+      }
+
+      // Set text color for local player
+      var nameColor = localPlayerName != null && player.Name == localPlayerName
+        ? new Vector4(0.3f, 1f, 0.3f, 1f)  // Bright green for local player
+        : new Vector4(1, 1, 1, 1);         // White for others
+
+      // Draw player name with appropriate color
+      textSettings.Color = nameColor;
+      textSettings.DoAutofit = true;
+      textSettings.AutofitMinSize = 15;
+      textSettings.AutofitMaxSize = textSettings.Size;
+      var nameRect = entryRect.CutLeft(240).Inset(0, 0, 0, 4);  // 4 pixels left padding
+      UI.Text(nameRect, player.Name, textSettings);
+
+      // Draw score (always white)
+      var scoreSettings = GameManager.GetTextSettings(30, UI.HorizontalAlignment.Right);
+      scoreSettings.Color = new Vector4(1, 1, 1, 1);
+      scoreSettings.Offset = new Vector2(0, 2);
+      var scoreRect = entryRect.Inset(0, 4, 0, 0);  // 4 pixels right padding
+      UI.Text(scoreRect, player.Points.ToString(), scoreSettings);
     }
   }
 }

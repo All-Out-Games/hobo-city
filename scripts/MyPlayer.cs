@@ -62,8 +62,6 @@ public partial class MyPlayer : Player, INetworkedComponent
   public bool IsPlayingOnMobile = false;
   public MyPlayer LastKilledPlayer;
 
-  public SyncVar<float> SwoleLevel = new(0f);
-
   // Level system
   public int Level => CalculateLevelFromXP(XP.Value);
   public int XPToNextLevel => CalculateXPForLevel(Level + 1) - XP.Value;
@@ -99,6 +97,20 @@ public partial class MyPlayer : Player, INetworkedComponent
     }
   }
 
+  public UI.TextSettings LevelTextSettings = new UI.TextSettings()
+  {
+    Font = UI.Fonts.BarlowBold,
+    Size = 27,
+    Color = new Vector4(1f, 1f, 1f, 1.0f),
+    DropShadowColor = new Vector4(0f, 0f, 0.02f, 0.8f),
+    DropShadowOffset = new Vector2(0f, -2f),
+    HorizontalAlignment = UI.HorizontalAlignment.Center,
+    VerticalAlignment = UI.VerticalAlignment.Center,
+    WordWrap = false,
+    Outline = true,
+    OutlineThickness = 2,
+  };
+
   public CameraControl CameraControl;
 
   public ThingWithHealth HealthManager;
@@ -106,6 +118,8 @@ public partial class MyPlayer : Player, INetworkedComponent
   // Frame-synced data
   public bool IsShooting = false;
   public long FrameStartedShooting = 0;
+  // Global per-player next allowed shoot frame; used to gate continuous fire regardless of effect restarts
+  public long NextAllowedShootFrame = 0;
   public Vector2 FrameTargettingDirection = Vector2.Zero;
   public float FrameTargettingMagnitude = 0f;
 
@@ -674,9 +688,8 @@ public partial class MyPlayer : Player, INetworkedComponent
       Economy.DepositCurrency(this, "play_time_10s", 1);
     }
 
-    // Get bigger when you work out :D 
-    var scale = 1f + (SwoleLevel.Value * 0.115f);
-    Entity.Scale = new Vector2(scale, scale);
+    // Scale based on damage leaderboard position
+    UpdateScaleBasedOnLeaderboard();
 
     if (Network.IsServer)
     {
@@ -790,7 +803,6 @@ public partial class MyPlayer : Player, INetworkedComponent
       }
       if (Time.TimeSinceStartup - LastHealthRegenTime >= 1.0f)
       {
-        SwoleLevel.Set(Math.Max(0, SwoleLevel.Value - 0.0075f));
         LastHealthRegenTime = Time.TimeSinceStartup;
       }
     }
@@ -835,7 +847,7 @@ public partial class MyPlayer : Player, INetworkedComponent
       {
         HealthManager.Reset();
 
-        CallClient_Respawn("hospital");
+        CallClient_Respawn("general");
       }
     }
 
@@ -944,32 +956,12 @@ public partial class MyPlayer : Player, INetworkedComponent
               if (!string.IsNullOrEmpty(levelMetadata) && int.TryParse(levelMetadata, out int weaponLevel))
               {
                 // Check if this item is currently selected/highlighted
-                bool isHighlighted = false;
-                for (int i = 0; i < DefaultInventory.Items.Length; i++)
-                {
-                  if (DefaultInventory.Items[i] == item && i == CurrentHoveredSlot)
-                  {
-                    isHighlighted = true;
-                    break;
-                  }
-                }
+                bool isHighlighted = CurrentHoveredSlot < DefaultInventory.Items.Length && DefaultInventory.Items[CurrentHoveredSlot] == item;
 
                 // Position at bottom center where stars used to be
                 var levelRect = rect.BottomCenterRect().Offset(0, 8);
-                var levelTextSettings = new UI.TextSettings()
-                {
-                  Font = UI.Fonts.BarlowBold,
-                  Size = 27,
-                  Color = isHighlighted ? new Vector4(1.0f, 1.0f, 1.0f, 1.0f) : new Vector4(1.0f, 0.9f, 0.0f, 1.0f), // White if highlighted, yellow/gold otherwise
-                  DropShadowColor = new Vector4(0f, 0f, 0.02f, 0.8f),
-                  DropShadowOffset = new Vector2(0f, -2f),
-                  HorizontalAlignment = UI.HorizontalAlignment.Center,
-                  VerticalAlignment = UI.VerticalAlignment.Center,
-                  WordWrap = false,
-                  Outline = true,
-                  OutlineThickness = 2,
-                };
-                UI.TextAsync(levelRect, $"Lv.{weaponLevel}", levelTextSettings);
+
+                UI.TextAsync(levelRect, $"Lv.{weaponLevel}", LevelTextSettings);
               }
             }
           },
@@ -1053,6 +1045,9 @@ public partial class MyPlayer : Player, INetworkedComponent
       GunButtonsUI.DrawSidebarButtons();
       UIManager.DrawUI(Position);
 
+      var leaderboardData = DamageTracker.Instance.GetClientLeaderboardData();
+      GameManager.DrawLeaderboard(leaderboardData, "Damage Dealt (120s)", Name);
+
       if (PointToEntity.Alive())
       {
         // Little offset so it looks like it's above it
@@ -1090,13 +1085,13 @@ public partial class MyPlayer : Player, INetworkedComponent
       }
 
       // Display Swoleness level in bottom-right corner when applicable
-      if (SwoleLevel.Value > 0f)
-      {
-        var swoleRect = UI.SafeRect.BottomRightRect().Offset(-220, 45);
-        float swoleDisplay = (float)Math.Round(SwoleLevel.Value, 1);
-        var swoleTextSettings = UIUtils.GetTextSettings(28, Vector4.White, UI.HorizontalAlignment.Right);
-        UI.TextAsync(swoleRect, $"Swoleness ({swoleDisplay}/5)", swoleTextSettings);
-      }
+      // if (SwoleLevel.Value > 0f)
+      // {
+      //   var swoleRect = UI.SafeRect.BottomRightRect().Offset(-220, 45);
+      //   float swoleDisplay = (float)Math.Round(SwoleLevel.Value, 1);
+      //   var swoleTextSettings = UIUtils.GetTextSettings(28, Vector4.White, UI.HorizontalAlignment.Right);
+      //   UI.TextAsync(swoleRect, $"Swoleness ({swoleDisplay}/5)", swoleTextSettings);
+      // }
     }
 
     if (Network.IsClient)
@@ -1973,5 +1968,59 @@ public partial class MyPlayer : Player, INetworkedComponent
     {
       SFX.Play(sellSound, new SFX.PlaySoundDesc() { Volume = 0.5f });
     }
+  }
+
+  void UpdateScaleBasedOnLeaderboard()
+  {
+    // Get damage tracker instance
+    var damageTracker = DamageTracker.Instance;
+    if (!damageTracker.Alive()) return;
+
+    // Get appropriate leaderboard data based on client/server
+    var leaderboardData = damageTracker.GetClientLeaderboardData();
+
+    // If no one is on the leaderboard, use default scale
+    if (leaderboardData.Count == 0)
+    {
+      Entity.LocalScale = new Vector2(1f, 1f);
+      return;
+    }
+
+    // Find this player's position in the leaderboard
+    int playerPosition = -1;
+    for (int i = 0; i < leaderboardData.Count; i++)
+    {
+      if (leaderboardData[i].Name == Name)
+      {
+        playerPosition = i;
+        break;
+      }
+    }
+
+    // If player is not on the leaderboard (no damage dealt), use minimum scale
+    if (playerPosition == -1)
+    {
+      Entity.LocalScale = new Vector2(1f, 1f);
+      return;
+    }
+
+    // Calculate scale based on position
+    // Last place = 1.0f, First place = 2.5f
+    float minScale = 1.0f;
+    float maxScale = 1.6f;
+
+    // If only one player on leaderboard, they get max scale
+    if (leaderboardData.Count == 1)
+    {
+      Entity.LocalScale = new Vector2(maxScale, maxScale);
+      return;
+    }
+
+    // Linear interpolation based on position
+    // Position 0 (first) = maxScale, Position (count-1) (last) = minScale
+    float t = 1f - ((float)playerPosition / (leaderboardData.Count - 1));
+    float scale = minScale + (maxScale - minScale) * t;
+
+    Entity.LocalScale = new Vector2(scale, scale);
   }
 }

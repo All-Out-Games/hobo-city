@@ -5,7 +5,7 @@
   "name": "Overseer",
   "local_enabled": true,
   "local_position": {
-    "X": -60.4700050354003906,
+    "X": -61.3592529296875000,
     "Y": 3.3367896080017090
   },
   "local_rotation": 0,

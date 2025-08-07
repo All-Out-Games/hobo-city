@@ -90,6 +90,7 @@ namespace ReusableWeapons
         public override void Awake()
         {
             Interactable.OnInteract += OnInteract;
+            Interactable.RequiredHoldTime = 0.5f;
 
             Interactable.CanUseCallback = (player) =>
             {

@@ -45,7 +45,7 @@ public class RoomBounds : Component
             {
                 if (!op.HasEffect<InvulnerabilityEffect>())
                 {
-                    op.AddEffect<InvulnerabilityEffect>(duration: 35f); // -1f for infinite duration
+                    op.AddEffect<InvulnerabilityEffect>(duration: 35f);
                 }
             }
 

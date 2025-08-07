@@ -29,8 +29,18 @@
   "component_type": "Mono_Component",
   "mono_component_type": "LootPickup",
   "data": {
+    "BoxCollider": "2708797070138487:1754531107538159500",
     "Interactable": "4466585951557658:1748392670500904700",
     "ItemSprite": "4466978637212911:1748392774039192700",
     "ShineSprite": "4466687162065313:1748392697186786300"
+  }
+},
+{
+  "cid": 3,
+  "aoid": "2708797070138487:1754531107538159500",
+  "component_type": "Internal_Component",
+  "internal_component_type": "Box_Collider",
+  "data": {
+    "is_trigger": true
   }
 }

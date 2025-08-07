@@ -105,6 +105,12 @@ public partial class ThingWithHealth : Component
         targetPlayer.RecordDamageForAssist(damagedBy, amount);
       }
 
+      // Track damage for the damage leaderboard
+      if (targetPlayer.Alive() && hitByPlayer.Alive() && DamageTracker.Instance != null)
+      {
+        DamageTracker.Instance.RecordDamage(damagedBy, amount);
+      }
+
       LastDamagedBy.Set(damagedBy);
       Health -= amount;
     }

@@ -463,9 +463,16 @@ namespace ReusableWeapons
 
             ProjectileCollisionType collisionType = ProjectileCollisionType.Environment;
 
-            if (other.GetComponent<Player>() != null)
+            if (other.GetComponent<Player>().Alive())
             {
-                collisionType = ProjectileCollisionType.Mob;
+                if (other.GetComponent<MyPlayer>().HealthManager.Health > 0)
+                {
+                    collisionType = ProjectileCollisionType.Mob;
+                }
+                else
+                {
+                    return;
+                }
             }
             else
             {
@@ -554,14 +561,14 @@ namespace ReusableWeapons
             }
 
             var myPlayer = (MyPlayer)Player;
-            if (!myPlayer.HealthManager.Alive() || myPlayer.HealthManager.Health <= 0 || myPlayer.HasEffect<InvulnerabilityEffect>())
+            if (!myPlayer.HealthManager.Alive() || myPlayer.HealthManager.Health <= 0)
             {
-                if (Player.IsLocal)
-                {
-                    Notifications.Show("You can't shoot while you're invulnerable or dead!");
-                }
-
                 return false;
+            }
+
+            if (myPlayer.Alive() && myPlayer.HasEffect<InvulnerabilityEffect>())
+            {
+                myPlayer.RemoveEffect<InvulnerabilityEffect>(true);
             }
 
             if (Player.CurrentEquippedItem == null)
@@ -572,7 +579,8 @@ namespace ReusableWeapons
 
             EquippedWeapon = Player.CurrentEquippedItem.CustomDefinition as Weapon;
 
-            if (Player.LastShootTime - Time.TimeSinceStartup > Cooldown)
+            // Correct cooldown gating: block if we haven't waited long enough
+            if ((Time.TimeSinceStartup - Player.LastShootTime) < Cooldown)
             {
                 return false;
             }
@@ -683,13 +691,18 @@ namespace ReusableWeapons
             }
 
             var myPlayer = (MyPlayer)Player;
-            if (!myPlayer.HealthManager.Alive() || myPlayer.HealthManager.Health <= 0 || myPlayer.HasEffect<InvulnerabilityEffect>())
+            if (!myPlayer.HealthManager.Alive() || myPlayer.HealthManager.Health <= 0)
             {
                 if (Player.IsLocal)
                 {
                     Notifications.Show("You can't shoot while you're invulnerable or dead!");
                 }
                 return;
+            }
+
+            if (myPlayer.Alive() && myPlayer.HasEffect<InvulnerabilityEffect>())
+            {
+                myPlayer.RemoveEffect<InvulnerabilityEffect>(true);
             }
 
             if (Player.CurrentEquippedItem == null)
@@ -745,9 +758,8 @@ namespace ReusableWeapons
                     Player.SetAimTarget(Player.Position + (Player.CurrentTargettingDirection * Player.CurrentTargettingMagnitude));
                 }
 
-                // Don't shoot on the first frame but then shoot every X frames after
-                var frameSinceStartedShooting = Game.FrameNumber - Player.FrameStartedShooting;
-                if (frameSinceStartedShooting % FramesBetweenShots == 0)
+                // Fire only when the global next-allowed frame has been reached (prevents effect restart exploits)
+                if (Game.FrameNumber >= Player.NextAllowedShootFrame)
                 {
                     OnShootTickReached();
                 }
@@ -760,6 +772,9 @@ namespace ReusableWeapons
             {
                 EquippedWeapon.Shoot(Player);
                 EquippedWeapon.SpawnProjectile(Player);
+
+                // Advance the player's next allowed shooting frame using current effective fire rate
+                Player.NextAllowedShootFrame = Game.FrameNumber + FramesBetweenShots;
             }
         }
 
