@@ -155,6 +155,10 @@ public partial class MyPlayer : Player, INetworkedComponent
   // Health regeneration tracking
   public float LastHealthRegenTime = -1f;
 
+  // Player physics collider
+  public Circle_Collider CircleCollider;
+  public float BaseColliderRadius = 0.4f; // default was 0.333; increasing per request
+
 
   [ClientRpc]
   public void AddEnergyEffect(Player player)
@@ -187,6 +191,14 @@ public partial class MyPlayer : Player, INetworkedComponent
     else
     {
       HealthManager = GetComponent<ThingWithHealth>();
+    }
+
+    // Ensure the player's circle collider exists and has the requested base size
+    CircleCollider = GetComponent<Circle_Collider>();
+    if (CircleCollider.Alive())
+    {
+      CircleCollider.Size = BaseColliderRadius;
+      CircleCollider.Offset = new Vector2(0, 0.4f);
     }
 
     Agent.CustomVelocityCallback += (agent, velocity, input, dt) =>
@@ -691,6 +703,16 @@ public partial class MyPlayer : Player, INetworkedComponent
     // Scale based on damage leaderboard position
     UpdateScaleBasedOnLeaderboard();
 
+    // Keep collider radius in sync with current visual scale
+    if (CircleCollider.Alive())
+    {
+      float targetRadius = BaseColliderRadius * Entity.LocalScale.X;
+      if (Math.Abs(CircleCollider.Size - targetRadius) > 0.0001f)
+      {
+        CircleCollider.Size = targetRadius;
+      }
+    }
+
     if (Network.IsServer)
     {
       // Ensure the player always has the "Fists" item in the first hot-bar slot
@@ -1111,6 +1133,12 @@ public partial class MyPlayer : Player, INetworkedComponent
           BountyDisplay.DrawBountyReward(Entity, GetBountyReward(), GetBountyTier());
         }
       }
+    }
+
+    // World-space weapon cooldown indicator for local player
+    if (Network.IsClient && IsLocal)
+    {
+      WeaponCooldownIndicator.DrawForPlayerGun(this);
     }
 
     // This has to be at the end

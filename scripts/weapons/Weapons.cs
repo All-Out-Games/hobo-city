@@ -381,7 +381,7 @@ namespace ReusableWeapons
         [Serialized] public Circle_Collider Collider;
 
         public virtual float BaseDamage => 10f;
-        public virtual float MaxLifetime => 0.75f;
+        public virtual float MaxLifetime => 0.875f;
 
         public abstract string ProjectileSkin { get; }
         public virtual string TravelAnimation => TravelNormal;

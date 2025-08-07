@@ -18,7 +18,7 @@ namespace ReusableWeapons
     public partial class LootChest : Component
     {
         private const float BASIC_OPEN_DURATION = 0.15f;
-        private const float EXCITING_OPEN_DURATION = 1.5f;
+        private const float EXCITING_OPEN_DURATION = 1.75f;
 
         private const float LEGENDARY_CHEST_CHANCE = 0.04f;
 

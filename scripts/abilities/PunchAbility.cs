@@ -141,6 +141,11 @@ public partial class PunchAbility : MyAbility
   {
     var nearestPunchable = GetCachedNearbyPunchable();
 
+    if (Player.HasEffect<InvulnerabilityEffect>())
+    {
+      Player.RemoveEffect<InvulnerabilityEffect>(true);
+    }
+
     if (nearestPunchable.Alive())
     {
       SFX.Play(Assets.GetAsset<AudioAsset>("sfx/weapons/punch-hit.wav"), new SFX.PlaySoundDesc() { Volume = 0.5f, Positional = true, VolumePerturb = 0.1f, SpeedPerturb = 0.2f, Position = Player.Entity.Position });
