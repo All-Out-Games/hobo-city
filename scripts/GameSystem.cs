@@ -9,10 +9,10 @@ public class GameSystem : System<GameSystem>
     Economy.RegisterCurrency(GameManager.XP_CURRENCY, "icons/xp.png");
     Economy.RegisterCurrency("play_time_10s", "icons/bitcoin.png");
 
-    // if (!Network.IsServer)
-    // {
-    //   Analytics.EnableAutomaticAnalytics("92e46d4144f82b3d5953a8dec0575714", "3d67d59d0befc79a5b19abcd3bd3137ae8eef6bb");
-    // }
+    if (!Network.IsServer)
+    {
+      Analytics.EnableAutomaticAnalytics("e167b72bbe4c3cf6672000d5d2f7aa9f", "b0dbcb4f65d428b37f5ba8767513702e7112c8e0");
+    }
 
   }
 }

@@ -172,7 +172,10 @@ public partial class GunButtonsUI
         }
 
         CallServer_ServerTeleportToArea(targetAreaCollider.Entity.Position);
-        MyPlayer.localPlayer.AddEffect<InvulnerabilityEffect>();
+        if (!MyPlayer.localPlayer.HasEffect<InvulnerabilityEffect>())
+        {
+            MyPlayer.localPlayer.AddEffect<InvulnerabilityEffect>();
+        }
     }
 
     [ServerRpc]
@@ -192,6 +195,9 @@ public partial class GunButtonsUI
         }
 
         player.Teleport(position);
-        myPlayer.AddEffect<InvulnerabilityEffect>();
+        if (!myPlayer.HasEffect<InvulnerabilityEffect>())
+        {
+            myPlayer.AddEffect<InvulnerabilityEffect>();
+        }
     }
 }
