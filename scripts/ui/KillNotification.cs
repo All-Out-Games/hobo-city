@@ -6,9 +6,11 @@ public class KillNotificationData
 {
     public string KilledPlayerName;
     public int XPAmount;
+    public int MoneyAmount;
     public bool IsAssist;
     public float StartTime;
     public float DisplayedXP; // For lerping
+    public float DisplayedMoney; // For lerping
 }
 
 public class KillNotification : Component
@@ -30,7 +32,7 @@ public class KillNotification : Component
         ActiveNotifications.RemoveAll(notif => Time.TimeSinceStartup - notif.StartTime > NOTIFICATION_DURATION);
     }
 
-    public static void ShowKillNotification(string killedPlayerName, int xpAmount, bool isAssist = false)
+    public static void ShowKillNotification(string killedPlayerName, int xpAmount, int moneyAmount, bool isAssist = false)
     {
         if (!Network.IsClient) return;
 
@@ -38,9 +40,11 @@ public class KillNotification : Component
         {
             KilledPlayerName = killedPlayerName,
             XPAmount = xpAmount,
+            MoneyAmount = Math.Max(0, moneyAmount),
             IsAssist = isAssist,
             StartTime = Time.TimeSinceStartup,
-            DisplayedXP = 0
+            DisplayedXP = 0,
+            DisplayedMoney = 0
         };
 
         ActiveNotifications.Add(notification);
@@ -120,9 +124,10 @@ public class KillNotification : Component
                 yOffset += fadeOutProgress * 100f; // Slide up when fading out
             }
 
-            // XP lerping animation
+            // XP/Money lerping animation
             var xpLerpProgress = Math.Min(1.0f, timeSinceStart / XP_LERP_DURATION);
             notification.DisplayedXP = EaseOutQuart(xpLerpProgress) * notification.XPAmount;
+            notification.DisplayedMoney = EaseOutQuart(xpLerpProgress) * notification.MoneyAmount;
 
             // Apply animations to rect
             var animatedRect = notifRect.Offset(0, yOffset).Scale(popScale);
@@ -180,7 +185,30 @@ public class KillNotification : Component
             Offset = new Vector2(0, -20),
         };
 
-        UI.TextAsync(rect.Offset(0, -20), xpText, xpTextSettings);
+        // Draw XP slightly left of center
+        UI.TextAsync(rect.Offset(-90, -20), xpText, xpTextSettings);
+
+        // Money text with pulsing effect
+        var displayedMoney = (int)Math.Round(notification.DisplayedMoney);
+        var moneyText = $"+$" + displayedMoney.ToString("N0");
+
+        var moneyTextSettings = new UI.TextSettings()
+        {
+            Font = UI.Fonts.BarlowBold,
+            Size = 48 * pulseScale,
+            Color = new Vector4(0.3f, 1.0f, 0.3f, alpha),
+            DropShadowColor = new Vector4(0f, 0f, 0.02f, 0.7f * alpha),
+            DropShadowOffset = new Vector2(0f, -4f),
+            HorizontalAlignment = UI.HorizontalAlignment.Center,
+            VerticalAlignment = UI.VerticalAlignment.Center,
+            WordWrap = false,
+            Outline = true,
+            OutlineThickness = 4,
+            Offset = new Vector2(0, -20),
+        };
+
+        // Draw Money slightly right of center
+        UI.TextAsync(rect.Offset(110, -20), moneyText, moneyTextSettings);
 
         // Add particle-like effects around the notification
         DrawParticleEffects(rect, notification, alpha);

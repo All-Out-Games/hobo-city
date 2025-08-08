@@ -84,7 +84,7 @@ public partial class MyPlayer : Player, INetworkedComponent
 
   public bool InventoryOpen = false;
 
-  public SyncVar<int> currentRoom = new((int)Room.OUTSIDE);
+  public SyncVar<int> currentRoom = new((int)Room.ISLAND);
   public Room CurrentRoom
   {
     get => (Room)currentRoom.Value;
@@ -172,6 +172,32 @@ public partial class MyPlayer : Player, INetworkedComponent
     myPlayer.AddEffect<SuperEnergyEffect>();
   }
 
+  [ClientRpc]
+  public void SetInvulnerable(bool enabled, bool interruptRemove)
+  {
+    if (enabled)
+    {
+      if (!HasEffect<InvulnerabilityEffect>())
+      {
+        AddEffect<InvulnerabilityEffect>();
+      }
+    }
+    else
+    {
+      if (HasEffect<InvulnerabilityEffect>())
+      {
+        RemoveEffect<InvulnerabilityEffect>(interruptRemove);
+      }
+    }
+  }
+
+  [ClientRpc]
+  public void DisplayFTUE()
+  {
+    // Create FTUE dialog for new players
+    Entity.Unsafe_AddComponent<FTUEDialog>();
+  }
+
 
   public override void Awake()
   {
@@ -193,12 +219,19 @@ public partial class MyPlayer : Player, INetworkedComponent
       HealthManager = GetComponent<ThingWithHealth>();
     }
 
+    var hasSeenFTUE = Save.GetInt(this, "hasSeenFTUE", 0) == 1;
+    if (!hasSeenFTUE && Network.IsServer)
+    {
+      Save.SetInt(this, "hasSeenFTUE", 1);
+      CallClient_DisplayFTUE();
+    }
+
     // Ensure the player's circle collider exists and has the requested base size
     CircleCollider = GetComponent<Circle_Collider>();
     if (CircleCollider.Alive())
     {
       CircleCollider.Size = BaseColliderRadius;
-      CircleCollider.Offset = new Vector2(0, 0.4f);
+      CircleCollider.Offset = new Vector2(0, 0.3f);
     }
 
     Agent.CustomVelocityCallback += (agent, velocity, input, dt) =>
@@ -278,8 +311,7 @@ public partial class MyPlayer : Player, INetworkedComponent
       CameraControl = CameraControl.Create(0);
       CameraControl.SetPostProcessor(CustomPostProcessor);
 
-      // Create FTUE dialog for new players
-      Entity.Unsafe_AddComponent<FTUEDialog>();
+
     }
 
     if (Network.IsServer)
@@ -311,7 +343,7 @@ public partial class MyPlayer : Player, INetworkedComponent
       }
     }
 
-    Respawn("general");
+    Respawn("island");
   }
 
   [ClientRpc]
@@ -377,8 +409,9 @@ public partial class MyPlayer : Player, INetworkedComponent
           // Give XP for kill
           LastDamagedBy.GainXP(100);
 
-          // Show kill notification to the killer
-          LastDamagedBy.CallClient_ShowKillNotification(this.Name, 100, false, new RPCOptions() { Target = LastDamagedBy });
+          // Show kill notification to the killer (include bounty + base pay)
+          int totalMoneyEarned = bounty + 75;
+          LastDamagedBy.CallClient_ShowKillNotification(this.Name, 100, totalMoneyEarned, false, new RPCOptions() { Target = LastDamagedBy });
         }
         else
         {
@@ -408,8 +441,8 @@ public partial class MyPlayer : Player, INetworkedComponent
               GameManager.Instance.CallClient_SpawnDamageNumber(assistInfo.DamagedBy.Position + new Vector2(0, 1),
                 new Vector4(0, 1, 1, 1), "ASSIST +50 XP", 1.5f, 0.0f, false);
 
-              // Show assist notification to the assisting player
-              assistPlayer.CallClient_ShowKillNotification(this.Name, 50, true, new RPCOptions() { Target = assistPlayer });
+              // Show assist notification to the assisting player (no cash for assist)
+              assistPlayer.CallClient_ShowKillNotification(this.Name, 50, 0, true, new RPCOptions() { Target = assistPlayer });
             }
           }
         }
@@ -423,8 +456,6 @@ public partial class MyPlayer : Player, INetworkedComponent
   [ClientRpc]
   public void Respawn(string spawnType)
   {
-    AddEffect<InvulnerabilityEffect>();
-
     RemoveFreezeReason("dead");
     RemoveEmoteBlockReason("dead");
     SpineAnimator.SpineInstance.StateMachine.SetTrigger("spawn");
@@ -442,6 +473,12 @@ public partial class MyPlayer : Player, INetworkedComponent
       PVPEnabled.Set(true);
     }
 
+    // Server-side: if the player has no gun (excluding fists), grant starter Pistol and SMG
+    if (Network.IsServer)
+    {
+      ServerEnsureStarterWeaponsIfNoGun();
+    }
+
     if (spawnType == "general")
     {
 
@@ -456,9 +493,9 @@ public partial class MyPlayer : Player, INetworkedComponent
       Teleport(Entity.FindByName("HospitalSpawn").Position);
       UpdateCameraPosition(1f);
     }
-    else if (spawnType == "jail")
+    else if (spawnType == "island")
     {
-      Teleport(Entity.FindByName("JailSpawn").Position);
+      Teleport(Entity.FindByName("IslandSpawn").Position);
       UpdateCameraPosition(1f);
     }
   }
@@ -685,7 +722,7 @@ public partial class MyPlayer : Player, INetworkedComponent
 
   public override void Update()
   {
-    HealthManager.IsInvulnerable = HasEffect<InvulnerabilityEffect>() || IsHidden.Value;
+    HealthManager.IsInvulnerable = HasEffect<InvulnerabilityEffect>() || IsHidden.Value || CurrentRoom == Room.ISLAND;
 
     // Update teleport cooldown timer
     if (Network.IsServer && TeleportCooldownRemaining.Value > 0f)
@@ -706,7 +743,7 @@ public partial class MyPlayer : Player, INetworkedComponent
     // Keep collider radius in sync with current visual scale
     if (CircleCollider.Alive())
     {
-      float targetRadius = BaseColliderRadius * Entity.LocalScale.X;
+      float targetRadius = BaseColliderRadius * Math.Clamp(Entity.LocalScale.X, 1f, 1.2f);
       if (Math.Abs(CircleCollider.Size - targetRadius) > 0.0001f)
       {
         CircleCollider.Size = targetRadius;
@@ -870,6 +907,7 @@ public partial class MyPlayer : Player, INetworkedComponent
         HealthManager.Reset();
 
         CallClient_Respawn("general");
+        CallClient_SetInvulnerable(true, false);
       }
     }
 
@@ -1067,8 +1105,13 @@ public partial class MyPlayer : Player, INetworkedComponent
       GunButtonsUI.DrawSidebarButtons();
       UIManager.DrawUI(Position);
 
-      var leaderboardData = DamageTracker.Instance.GetClientLeaderboardData();
-      GameManager.DrawLeaderboard(leaderboardData, "Damage Dealt (120s)", Name);
+      if (!UI.IsChatOpen())
+      {
+        var leaderboardData = DamageTracker.Instance.GetClientLeaderboardData();
+        // Limit to top 6 players
+        var top6Players = leaderboardData.OrderByDescending(x => x.Points).Take(6).ToList();
+        GameManager.DrawLeaderboard(top6Players, "Damage Dealt (120s)", Name);
+      }
 
       if (PointToEntity.Alive())
       {
@@ -1522,9 +1565,9 @@ public partial class MyPlayer : Player, INetworkedComponent
   }
 
   [ClientRpc]
-  public void ShowKillNotification(string killedPlayerName, int xpAmount, bool isAssist)
+  public void ShowKillNotification(string killedPlayerName, int xpAmount, int moneyAmount, bool isAssist)
   {
-    KillNotification.ShowKillNotification(killedPlayerName, xpAmount, isAssist);
+    KillNotification.ShowKillNotification(killedPlayerName, xpAmount, moneyAmount, isAssist);
   }
 
 
@@ -1706,6 +1749,65 @@ public partial class MyPlayer : Player, INetworkedComponent
       }
     }
     // 3) If inventory is full (no emptySlot) we'll try again in a future frame.
+  }
+
+  // --------------------------------------------------------------------
+  // Grants starter weapons if the player currently has no non-fists guns
+  // Runs server-side only
+  // --------------------------------------------------------------------
+  public void ServerEnsureStarterWeaponsIfNoGun()
+  {
+    if (!Network.IsServer) return;
+    if (DefaultInventory == null) return;
+
+    var items = DefaultInventory.Items;
+    if (items == null || items.Length == 0) return;
+
+    bool hasNonFistsWeapon = false;
+    for (int i = 0; i < items.Length; i++)
+    {
+      var inst = items[i];
+      if (inst == null || inst.Definition == null) continue;
+      var defId = inst.Definition.Id;
+      // Any weapon that isn't fists counts as having a gun
+      if (!string.IsNullOrEmpty(defId) && defId.StartsWith("__WEAPON__") && defId != "__WEAPON__fists")
+      {
+        hasNonFistsWeapon = true;
+        break;
+      }
+    }
+
+    if (hasNonFistsWeapon) return;
+
+    // Grant Common, Level 1 Pistol and Submachine Gun
+    var metadata = new List<(string, string)>()
+    {
+      ("rarity", ItemRarity.Common.ToString()),
+      ("level", "1")
+    };
+
+    var pistolDef = GameManager.Instance.GameItems.Pistol.ItemDefinition;
+    var smgDef = GameManager.Instance.GameItems.SubmachineGun.ItemDefinition;
+
+    ServerTryAddItem(pistolDef, 1, false, metadata);
+    ServerTryAddItem(smgDef, 1, false, metadata);
+
+    // Ensure at least 100 Light ammo to start using the weapons immediately
+    if (AmmoAmounts != null && AmmoAmounts.TryGetValue(AmmoType.LightAmmo, out var lightAmmo) && lightAmmo != null)
+    {
+      int desired = 100;
+      int newAmount = Math.Max(desired, lightAmmo.CurrentAmount);
+      if (newAmount != lightAmmo.CurrentAmount)
+      {
+        // Persist and sync to client
+        ServerSyncAmmoAmount(AmmoType.LightAmmo, newAmount);
+      }
+      else
+      {
+        // Still sync to ensure client is authoritative even if already >= 100
+        ServerSyncAmmoAmount(AmmoType.LightAmmo, newAmount);
+      }
+    }
   }
 
   public void NetworkSerialize(AO.StreamWriter writer)

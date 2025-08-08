@@ -40,7 +40,7 @@ public partial class ItemStand : Component
   {
     var seed = RNG.Seed(Entity.Id);
 
-    currency = UseBitcoin ? GameManager.BITCOIN_CURRENCY : GameManager.CASH_CURRENCY;
+    currency = GameManager.CASH_CURRENCY;
 
     // Only try to look up an ItemDef if an ItemId was supplied
     if (!string.IsNullOrEmpty(ItemId))
@@ -228,7 +228,7 @@ public partial class ItemStand : Component
       return;
     }
 
-    if (Economy.GetBalance(player, currency) >= (currency == GameManager.BITCOIN_CURRENCY ? Price * 100 : Price))
+    if (Economy.GetBalance(player, currency) >= Price)
     {
       if (ItemDef.Id.StartsWith("__AMMO__"))
       {
@@ -249,7 +249,7 @@ public partial class ItemStand : Component
       }
 
       player.CallClient_ThrowMoney(player);
-      Economy.WithdrawCurrency(player, currency, currency == GameManager.BITCOIN_CURRENCY ? Price * 100 : Price);
+      Economy.WithdrawCurrency(player, currency, Price);
     }
     else
     {

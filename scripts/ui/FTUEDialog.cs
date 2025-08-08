@@ -107,7 +107,7 @@ public class FTUEDialog : Component
         var mainTitleTs = titleTs;
         mainTitleTs.Size = 48;
         mainTitleTs.HorizontalAlignment = UI.HorizontalAlignment.Center;
-        UI.Text(contentRect.CutTop(60), "Welcome to Hobo City", mainTitleTs);
+        UI.TextAsync(contentRect.CutTop(60), "Welcome to Gun Game!", mainTitleTs);
         contentRect.CutTop(20); // Spacing after main title
 
         // Animate entrance

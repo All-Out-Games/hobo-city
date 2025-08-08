@@ -75,18 +75,9 @@ public partial class GameManager : Component
   // Not prefixed so they look correct on the UI
   public static string CASH_CURRENCY = "cash";
   public static string XP_CURRENCY = "xp";
-  public static string BITCOIN_CURRENCY = "bitcoin";
-  // New admin flag: if true, the next wishing well toss will guarantee a Private Jet reward
   public static bool ForcePrivateJetWish = false;
   // Admin toggle flag: if false, admin commands (except the toggle command itself) are disabled
   public static bool AdminCommandsEnabled = true;
-  public static string BITCOIN_UNCOLLECTED_CURRENCY = "bitcoinuncollected";
-
-  // Append the job name to this
-  public static string JOB_XP_CURRENCY_PREFIX = "jobxp" + SAVE_PREFIX;
-
-  // Global bonus added to each job's XP reward. Configurable via admin command.
-  public static int JobXpBonus = 0;
 
   // Leaderboard constants
   public const float LEADERBOARD_ENTRY_HEIGHT = 35f;
@@ -97,21 +88,7 @@ public partial class GameManager : Component
   public static List<Destructable> DestructablesShowingHealthBars = new();
   public static List<DestructibleRespawnInfo> DestructibleRespawnQueue = new();
 
-
-  public SyncVar<int> GlobalTaxAmount = new(0); // $ amount deducted every interval per player
   public const float TAX_INTERVAL = 600f; // 10 minutes
-  float _lastTaxCollectionTime = 0f;
-
-  // 0 = Chill, 1 = Normal, 2 = No Chill
-  public SyncVar<int> PoliceAggroLevel = new(1);
-
-  // Stimulus check cooldown handling (seconds)
-  public const float STIMULUS_COOLDOWN = 600f; // 10 minutes
-  public SyncVar<float> NextStimulusAllowedAt = new(0f);
-
-  // Global president policy change cooldown (seconds)
-  public const float POLICY_CHANGE_COOLDOWN = 120f; // 2 minutes
-  public SyncVar<float> NextPolicyChangeAllowedAt = new(0f);
 }
 
 // Event system implementation
@@ -296,17 +273,6 @@ public partial class GameManager : Component
     }
   }
 
-  // Save system only supports longs so we store the value as 100x there
-  public static float GetEffectiveBitcoinBalance(Player player)
-  {
-    return Economy.GetBalance(player, BITCOIN_CURRENCY) / 100f;
-  }
-
-  public static float GetEffectiveBitcoinUncollectedBalance(Player player)
-  {
-    return Economy.GetBalance(player, BITCOIN_UNCOLLECTED_CURRENCY) / 100f;
-  }
-
   [ClientRpc]
   public void SpawnDamageNumber(Vector2 worldPosition, Vector4 color, string text, float size = 0.3f, float slant = 0.0f, bool spaceText = false)
   {
@@ -484,26 +450,6 @@ public partial class GameManager : Component
           else
           {
             Chat.SendMessage(p, "Usage: /cash <amount>");
-          }
-          break;
-        }
-      case "bitcoin":
-        {
-          if (parts.Length < 2)
-          {
-            Chat.SendMessage(p, "Usage: /bitcoin <amount>");
-            return;
-          }
-          if (float.TryParse(parts[1], out var amount))
-          {
-            // Bitcoin is stored as 100x the actual value in the economy system
-            int bitcoinAmount = (int)(amount * 100);
-            Economy.DepositCurrency(player, GameManager.BITCOIN_CURRENCY, bitcoinAmount);
-            Chat.SendMessage(p, $"Bitcoin updated by {amount}.");
-          }
-          else
-          {
-            Chat.SendMessage(p, "Usage: /bitcoin <amount>");
           }
           break;
         }
@@ -785,21 +731,7 @@ public partial class GameManager : Component
             Economy.WithdrawCurrency(player, GameManager.CASH_CURRENCY, cashBalance);
           }
 
-          // Reset bitcoin balances (collected and uncollected)
-          long btcBalance = Economy.GetBalance(player, GameManager.BITCOIN_CURRENCY);
-          if (btcBalance > 0)
-          {
-            Economy.WithdrawCurrency(player, GameManager.BITCOIN_CURRENCY, btcBalance);
-          }
-
-          long btcUncollected = Economy.GetBalance(player, GameManager.BITCOIN_UNCOLLECTED_CURRENCY);
-          if (btcUncollected > 0)
-          {
-            Economy.WithdrawCurrency(player, GameManager.BITCOIN_UNCOLLECTED_CURRENCY, btcUncollected);
-          }
-
-
-          Chat.SendMessage(p, "Your progress has been reset: all job levels, cash, and bitcoin balances are now zero.");
+          Chat.SendMessage(p, "Your progress has been reset: all cash balance is now zero.");
           break;
         }
       case "clearinv":

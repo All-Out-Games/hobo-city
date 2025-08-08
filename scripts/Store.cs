@@ -50,10 +50,10 @@ public partial class Store : System<Store>
     {
         if (Network.IsServer) Purchasing.SetPurchaseHandler(SparksPurchaseHandler);
 
-        CreateGeneralShop();
-        CreateGunShop();
-        CreateBlackMarket();
-        CreateUpgradesShop();
+        // CreateGeneralShop();
+        // CreateGunShop();
+        // CreateBlackMarket();
+        // CreateUpgradesShop();
         CreateWeaponSellShop();
     }
 
@@ -78,26 +78,26 @@ public partial class Store : System<Store>
         }
     }
 
-    public void CreateBlackMarket()
-    {
-        blackMarket = Economy.CreateShop("Black Market");
-        blackMarket.SetPurchaseModifier(OnBeforeItemPurchase);
-        if (Network.IsClient)
-        {
-            blackMarket.SetCustomDisplay(CustomItemShopDisplay);
-        }
-        if (Network.IsServer)
-        {
-            blackMarket.SetPurchaseHandler(OnItemPurchaseSuccessfull);
-        }
+    // public void CreateBlackMarket()
+    // {
+    //     blackMarket = Economy.CreateShop("Black Market");
+    //     blackMarket.SetPurchaseModifier(OnBeforeItemPurchase);
+    //     if (Network.IsClient)
+    //     {
+    //         blackMarket.SetCustomDisplay(CustomItemShopDisplay);
+    //     }
+    //     if (Network.IsServer)
+    //     {
+    //         blackMarket.SetPurchaseHandler(OnItemPurchaseSuccessfull);
+    //     }
 
-        var blackMarketCat = blackMarket.AddCategory("Black Market");
-        blackMarketCat.Icon = "housing/crypto/black-market-icon.png";
-        foreach (var p in BlackMarketProducts)
-        {
-            blackMarketCat.AddProduct(p);
-        }
-    }
+    //     var blackMarketCat = blackMarket.AddCategory("Black Market");
+    //     blackMarketCat.Icon = "housing/crypto/black-market-icon.png";
+    //     foreach (var p in BlackMarketProducts)
+    //     {
+    //         blackMarketCat.AddProduct(p);
+    //     }
+    // }
 
     // -------------------- UPGRADES SHOP --------------------
     public void CreateUpgradesShop()

@@ -24,7 +24,7 @@ public partial class PlainItemForSale : Component
   {
     var seed = RNG.Seed(Entity.Id);
 
-    currency = UseBitcoin ? GameManager.BITCOIN_CURRENCY : GameManager.CASH_CURRENCY;
+    currency = GameManager.CASH_CURRENCY;
 
     // Cache the price text at startup
     if (SparkProductId != null)
@@ -118,7 +118,7 @@ public partial class PlainItemForSale : Component
       return;
     }
 
-    if (Economy.GetBalance(player, currency) >= (currency == GameManager.BITCOIN_CURRENCY ? Price * 100 : Price))
+    if (Economy.GetBalance(player, currency) >= Price)
     {
       if (ItemDef.Id.StartsWith("__AMMO__"))
       {
@@ -138,7 +138,7 @@ public partial class PlainItemForSale : Component
         player.ServerTryAddItem(ItemDef);
       }
 
-      Economy.WithdrawCurrency(player, currency, currency == GameManager.BITCOIN_CURRENCY ? Price * 100 : Price);
+      Economy.WithdrawCurrency(player, currency, Price);
       player.CallClient_ThrowMoney(player);
     }
     else

@@ -90,7 +90,7 @@ namespace ReusableWeapons
         public override void Awake()
         {
             Interactable.OnInteract += OnInteract;
-            Interactable.RequiredHoldTime = 0.5f;
+            Interactable.RequiredHoldTime = 0.375f;
 
             Interactable.CanUseCallback = (player) =>
             {
@@ -126,7 +126,19 @@ namespace ReusableWeapons
                 Skeleton.SpineInstance.RefreshSkins();
 
                 Skeleton.SpineInstance.StateMachine.SetTrigger(ChestTier == ItemRarity.Legendary ? "idle_exciting" : "idle_basic");
+
+                // Adjust animator speed based on chest tier (client-side visual)
+                if (Network.IsClient)
+                {
+                    Skeleton.SpineInstance.Speed = ChestTier == ItemRarity.Legendary ? 2f : 1f;
+                }
             };
+
+            // Ensure default speed is normal on initialize
+            if (Network.IsClient)
+            {
+                Skeleton.SpineInstance.Speed = 1f;
+            }
         }
 
         [ClientRpc]
@@ -135,6 +147,12 @@ namespace ReusableWeapons
             Entity.Position = position;
             SpawnPosition = position;
             Interactable.LocalEnabled = true;
+
+            // On respawn/spawn, ensure speed matches the tier (client-side only)
+            if (Network.IsClient)
+            {
+                Skeleton.SpineInstance.Speed = ChestTier == ItemRarity.Legendary ? 2f : 1f;
+            }
         }
 
         [ClientRpc]
@@ -185,7 +203,7 @@ namespace ReusableWeapons
 
                 SFX.Play(Assets.GetAsset<AudioAsset>(ChestTier == ItemRarity.Legendary ? "sounds/reusable-weapons/open_chest_long.wav" : "sounds/reusable-weapons/open_chest_default.wav"), new SFX.PlaySoundDesc() { Position = Entity.Position, Positional = true });
 
-                var openTime = ChestTier == ItemRarity.Legendary ? EXCITING_OPEN_DURATION : BASIC_OPEN_DURATION;
+                var openTime = ChestTier == ItemRarity.Legendary ? EXCITING_OPEN_DURATION * 0.5f : BASIC_OPEN_DURATION;
 
                 yield return new WaitForSeconds(openTime);
 

@@ -64,20 +64,10 @@ public partial class GunButtonsUI
         Rect gunStoreRect;
         Rect gunForgeRect;
 
-        if (!Game.IsMobile)
-        {
-            // Desktop: vertical stack on the left
-            var baseRect = UI.SafeRect.LeftCenterRect().Offset(90, -70).Grow(50, 75, 50, 75);
-            gunStoreRect = baseRect.Inset(5);
-            gunForgeRect = baseRect.Offset(0, 140).Inset(5);
-        }
-        else
-        {
-            // Mobile: horizontal row
-            var baseRect = UI.SafeRect.LeftCenterRect().Offset(90, 0).Grow(50, 75, 50, 75);
-            gunStoreRect = baseRect.Inset(5);
-            gunForgeRect = baseRect.Offset(spacing, 0).Inset(5);
-        }
+        // Desktop: vertical stack on the left
+        var baseRect = UI.SafeRect.LeftCenterRect().Offset(90, -150).Grow(50, 75, 50, 75);
+        gunStoreRect = baseRect.Inset(5);
+        gunForgeRect = baseRect.Offset(0, 100).Inset(5);
 
         // Gun Store Button
         var gunStoreButtonSettings = new UI.ButtonSettings()
@@ -172,10 +162,6 @@ public partial class GunButtonsUI
         }
 
         CallServer_ServerTeleportToArea(targetAreaCollider.Entity.Position);
-        if (!MyPlayer.localPlayer.HasEffect<InvulnerabilityEffect>())
-        {
-            MyPlayer.localPlayer.AddEffect<InvulnerabilityEffect>();
-        }
     }
 
     [ServerRpc]
@@ -197,7 +183,7 @@ public partial class GunButtonsUI
         player.Teleport(position);
         if (!myPlayer.HasEffect<InvulnerabilityEffect>())
         {
-            myPlayer.AddEffect<InvulnerabilityEffect>();
+            myPlayer.CallClient_SetInvulnerable(true, false);
         }
     }
 }

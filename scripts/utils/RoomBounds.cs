@@ -21,6 +21,7 @@ public enum Room
     CINEMA,
     BLACK_MARKET,
     FORGE,
+    ISLAND,
     None,
 }
 
@@ -40,12 +41,12 @@ public class RoomBounds : Component
             Room previousRoom = op.CurrentRoom;
             op.CurrentRoom = RoomName;
 
-            // Add invulnerability effect when entering forge or gun store
-            if (RoomName == Room.FORGE || RoomName == Room.GUN_STORE || RoomName == Room.HOSPITAL)
+            // Add invulnerability effect when entering safe areas
+            if (Network.IsServer && (RoomName == Room.FORGE || RoomName == Room.GUN_STORE || RoomName == Room.HOSPITAL))
             {
                 if (!op.HasEffect<InvulnerabilityEffect>())
                 {
-                    op.AddEffect<InvulnerabilityEffect>(duration: 35f);
+                    op.CallClient_SetInvulnerable(true, false);
                 }
             }
 
@@ -63,12 +64,12 @@ public class RoomBounds : Component
             Room previousRoom = player.CurrentRoom;
             player.CurrentRoom = Room.OUTSIDE;
 
-            // Remove invulnerability effect when exiting forge or gun store
-            if (RoomName == Room.FORGE || RoomName == Room.GUN_STORE)
+            // Remove invulnerability effect when exiting safe areas
+            if (Network.IsServer && (RoomName == Room.FORGE || RoomName == Room.GUN_STORE || RoomName == Room.HOSPITAL))
             {
                 if (player.HasEffect<InvulnerabilityEffect>())
                 {
-                    player.RemoveEffect<InvulnerabilityEffect>(true);
+                    player.CallClient_SetInvulnerable(false, true);
                 }
             }
 

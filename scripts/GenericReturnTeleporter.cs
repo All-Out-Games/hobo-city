@@ -66,7 +66,17 @@ public class GenericReturnTeleporter : Component
       }
     }
 
-    player.Teleport(ReturnToPoint.Position);
+    if (ReturnToPoint == null)
+    {
+      if (Network.IsServer)
+      {
+        player.CallClient_Respawn("general");
+      }
+    }
+    else
+    {
+      player.Teleport(ReturnToPoint.Position);
+    }
     player.Agent.LockToNavmesh = false;
 
     if (Network.IsServer)
