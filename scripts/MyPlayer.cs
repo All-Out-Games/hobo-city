@@ -219,12 +219,12 @@ public partial class MyPlayer : Player, INetworkedComponent
       HealthManager = GetComponent<ThingWithHealth>();
     }
 
-    var hasSeenFTUE = Save.GetInt(this, "hasSeenFTUE", 0) == 1;
-    if (!hasSeenFTUE && Network.IsServer)
-    {
-      Save.SetInt(this, "hasSeenFTUE", 1);
-      CallClient_DisplayFTUE();
-    }
+    // var hasSeenFTUE = Save.GetInt(this, "hasSeenFTUE", 0) == 1;
+    // if (!hasSeenFTUE && Network.IsServer)
+    // {
+    //   Save.SetInt(this, "hasSeenFTUE", 1);
+    //   CallClient_DisplayFTUE(new RPCOptions() { Target = this });
+    // }
 
     // Ensure the player's circle collider exists and has the requested base size
     CircleCollider = GetComponent<Circle_Collider>();
@@ -1261,7 +1261,7 @@ public partial class MyPlayer : Player, INetworkedComponent
       float daySaturation = 1.0f;
 
       // Night values
-      Vector3 nightColorFilter = new Vector3(0.3f, 0.6f, 2.5f);
+      Vector3 nightColorFilter = new Vector3(0.4f, 0.7f, 2.7f);
       float nightSaturation = 0.5f;
 
       if (GameManager.Instance.IsDay.Value)
@@ -2112,7 +2112,7 @@ public partial class MyPlayer : Player, INetworkedComponent
     // If no one is on the leaderboard, use default scale
     if (leaderboardData.Count == 0)
     {
-      Entity.LocalScale = new Vector2(1f, 1f);
+      Entity.Scale = new Vector2(1f, 1f);
       return;
     }
 
@@ -2130,7 +2130,7 @@ public partial class MyPlayer : Player, INetworkedComponent
     // If player is not on the leaderboard (no damage dealt), use minimum scale
     if (playerPosition == -1)
     {
-      Entity.LocalScale = new Vector2(1f, 1f);
+      Entity.Scale = new Vector2(1f, 1f);
       return;
     }
 
@@ -2142,7 +2142,7 @@ public partial class MyPlayer : Player, INetworkedComponent
     // If only one player on leaderboard, they get max scale
     if (leaderboardData.Count == 1)
     {
-      Entity.LocalScale = new Vector2(maxScale, maxScale);
+      Entity.Scale = new Vector2(maxScale, maxScale);
       return;
     }
 
@@ -2151,6 +2151,6 @@ public partial class MyPlayer : Player, INetworkedComponent
     float t = 1f - ((float)playerPosition / (leaderboardData.Count - 1));
     float scale = minScale + (maxScale - minScale) * t;
 
-    Entity.LocalScale = new Vector2(scale, scale);
+    Entity.Scale = new Vector2(scale, scale);
   }
 }

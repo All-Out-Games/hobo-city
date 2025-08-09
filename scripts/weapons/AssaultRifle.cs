@@ -9,7 +9,7 @@ public class AssaultRifle : Weapon
     public override string WeaponSkin => "weapons/assault_rifle";
     public override string ProjectilePrefab => "Projectile_AssaultRifle.prefab"; /*"Projectile_AssaultRifle.prefab";*/
     public override CustomItemDefinition AmmoType => GameManager.Instance.GameItems.MediumAmmo;
-    public override float BaseTimeBetweenShots => 0.26f;
+    public override float BaseTimeBetweenShots => 0.28f;
     public override long AmmoWithFirstPickup => 60;
     public override long AmmoWithExtraPickup => 30;
     public override string FireAnimation => null;
@@ -85,5 +85,5 @@ public class AssaultRifleProjectile : BaseProjectile
     public override string TravelAnimation => "016ARP/Bullet_Loop";
     public override string HitAnimation => "016ARP/Bullet_Loop";
     public override string ProjectileSkin => "bullet";
-    public override float BaseDamage => 7f;
+    public override float BaseDamage => 6f;
 }

@@ -5,8 +5,8 @@
   "name": "ItemStand_LightAmmo",
   "local_enabled": true,
   "local_position": {
-    "X": -5.0416297912597656,
-    "Y": 2.2386975288391113
+    "X": -3.4614601135253906,
+    "Y": 1.4941949844360352
   },
   "local_rotation": 0,
   "local_scale": {
@@ -36,6 +36,6 @@
   "component_type": "Internal_Component",
   "internal_component_type": "Interactable",
   "data": {
-    "radius": 1.5000000000000000
+
   }
 }

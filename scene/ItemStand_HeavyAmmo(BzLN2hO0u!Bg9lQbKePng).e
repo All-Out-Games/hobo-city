@@ -5,8 +5,8 @@
   "name": "ItemStand_HeavyAmmo",
   "local_enabled": true,
   "local_position": {
-    "X": -1.3358383178710938,
-    "Y": 2.2244915962219238
+    "X": 0.2443313598632812,
+    "Y": 1.4799890518188477
   },
   "local_rotation": 0,
   "local_scale": {
@@ -37,6 +37,6 @@
   "component_type": "Internal_Component",
   "internal_component_type": "Interactable",
   "data": {
-    "radius": 1.5000000000000000
+
   }
 }

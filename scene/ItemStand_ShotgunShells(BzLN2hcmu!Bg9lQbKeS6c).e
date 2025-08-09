@@ -5,8 +5,8 @@
   "name": "ItemStand_ShotgunShells",
   "local_enabled": true,
   "local_position": {
-    "X": 0.5795326232910156,
-    "Y": 2.2244915962219238
+    "X": 2.1597023010253906,
+    "Y": 1.4799890518188477
   },
   "local_rotation": 0,
   "local_scale": {
@@ -36,6 +36,6 @@
   "component_type": "Internal_Component",
   "internal_component_type": "Interactable",
   "data": {
-    "radius": 1.5000000000000000
+
   }
 }

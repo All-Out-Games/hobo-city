@@ -314,7 +314,7 @@ namespace ReusableWeapons
                 case ItemRarity.Epic:
                     return baseDamage * 1.3f;
                 case ItemRarity.Legendary:
-                    return baseDamage * 1.6f;
+                    return baseDamage * 1.4f;
                 case ItemRarity.Mythic:
                     return baseDamage * 1.5f;
                 default:

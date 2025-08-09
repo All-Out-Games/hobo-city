@@ -160,8 +160,8 @@ public partial class WeaponLevelUpper : Component
             ItemRarity.Common => 0.2f,      // Cheaper upgrades
             ItemRarity.Uncommon => 0.3f,
             ItemRarity.Rare => 0.4f,       // Moderate upgrades
-            ItemRarity.Epic => 0.6f,        // Standard upgrades
-            ItemRarity.Legendary => 0.8f,   // Expensive upgrades
+            ItemRarity.Epic => 0.8f,        // Standard upgrades
+            ItemRarity.Legendary => 1f,   // Expensive upgrades
             ItemRarity.Mythic => 1.0f,      // Very expensive upgrades
             _ => 1.0f
         };

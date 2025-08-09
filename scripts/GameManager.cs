@@ -175,7 +175,7 @@ public partial class GameManager : Component
 
   public SyncVar<bool> IsDay = new(true);
   public const float DAY_LENGTH_MINUTES = 1f;
-  public const float NIGHT_LENGTH_MINUTES = 5f;
+  public const float NIGHT_LENGTH_MINUTES = 1f;
   public float TimeDayChanged;
   [NetSync] public float GlobalTimer;
 

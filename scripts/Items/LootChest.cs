@@ -20,7 +20,7 @@ namespace ReusableWeapons
         private const float BASIC_OPEN_DURATION = 0.15f;
         private const float EXCITING_OPEN_DURATION = 1.75f;
 
-        private const float LEGENDARY_CHEST_CHANCE = 0.04f;
+        private const float LEGENDARY_CHEST_CHANCE = 0.06f;
 
         public Vector2 SpawnPosition;
 
