@@ -135,8 +135,8 @@ public class FTUEDialog : Component
 
             // Title and content on the right
             var textArea = sectionRect.Inset(0, 0, 0, 10);
-            UI.Text(textArea.CutTop(30), section.Title, titleTs);
-            UI.Text(textArea, section.Content, contentTs);
+            UI.TextAsync(textArea.CutTop(30), section.Title, titleTs);
+            UI.TextAsync(textArea, section.Content, contentTs);
         }
 
         // Close button at the bottom with pulsing animation

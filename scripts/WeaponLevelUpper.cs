@@ -29,14 +29,14 @@ public partial class WeaponLevelUpper : Component
             if (equippedItem == null)
             {
                 // No item equipped
-                myPlayer.CallClient_NoWeaponEquipped();
+                myPlayer.CallClient_NoWeaponEquipped(new RPCOptions() { Target = myPlayer });
                 return;
             }
 
             // Get weapon info
             if (!GameItems.TryCreateCustomInstance(equippedItem, out var customItem))
             {
-                myPlayer.CallClient_NoWeaponEquipped();
+                myPlayer.CallClient_NoWeaponEquipped(new RPCOptions() { Target = myPlayer });
                 return;
             }
 

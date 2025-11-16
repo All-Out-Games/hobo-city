@@ -5,6 +5,7 @@ public class GameSystem : System<GameSystem>
   public override void Awake()
   {
     Keybinds.OverrideKeybindDefault("Ability 1", Input.UnifiedInput.MOUSE_LEFT);
+    Keybinds.OverrideKeybindDefault("Ability 2", Input.UnifiedInput.KEYCODE_SPACE);
     Economy.RegisterCurrency(GameManager.CASH_CURRENCY, "icons/cash.png");
     Economy.RegisterCurrency(GameManager.XP_CURRENCY, "icons/xp.png");
     Economy.RegisterCurrency("play_time_10s", "icons/bitcoin.png");

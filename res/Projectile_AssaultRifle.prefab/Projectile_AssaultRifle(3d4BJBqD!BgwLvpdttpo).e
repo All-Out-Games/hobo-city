@@ -19,7 +19,7 @@
   "component_type": "Internal_Component",
   "internal_component_type": "Projectile",
   "data": {
-    "speed": 17,
+    "speed": 27,
     "no_rotate_root": true,
     "rotate_override": "244151330407275:1742944767539536300"
   }

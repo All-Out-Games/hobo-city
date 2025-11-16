@@ -30,7 +30,7 @@ public static class SpinTheWheelConfig
         //     if (alreadyHas) return;
 
         //     var instance = Inventory.CreateItem(itemDef, 1);
-        //     if (Inventory.CanMoveItemToInventory(instance, myPlayer.DefaultInventory))
+        //     if (Inventory.CanMoveItemToInventory(instance, myPlayer.DefaultInventory, out var _))
         //     {
         //         Inventory.MoveItemToInventory(instance, myPlayer.DefaultInventory);
         //     }
@@ -47,7 +47,7 @@ public static class SpinTheWheelConfig
         //     if (alreadyHas) return;
 
         //     var instance = Inventory.CreateItem(itemDef, 1);
-        //     if (Inventory.CanMoveItemToInventory(instance, myPlayer.DefaultInventory))
+        //     if (Inventory.CanMoveItemToInventory(instance, myPlayer.DefaultInventory, out var _))
         //     {
         //         Inventory.MoveItemToInventory(instance, myPlayer.DefaultInventory);
         //     }
@@ -70,7 +70,7 @@ public static class SpinTheWheelConfig
         //     if (alreadyHas) return;
 
         //     var instance = Inventory.CreateItem(itemDef, 1);
-        //     if (Inventory.CanMoveItemToInventory(instance, myPlayer.DefaultInventory))
+        //     if (Inventory.CanMoveItemToInventory(instance, myPlayer.DefaultInventory, out var _))
         //     {
         //         Inventory.MoveItemToInventory(instance, myPlayer.DefaultInventory);
         //     }
@@ -87,7 +87,7 @@ public static class SpinTheWheelConfig
             if (alreadyHas) return;
 
             var instance = Inventory.CreateItem(itemDef, 1);
-            if (Inventory.CanMoveItemToInventory(instance, myPlayer.DefaultInventory))
+            if (Inventory.CanMoveItemToInventory(instance, myPlayer.DefaultInventory, out var _))
             {
                 Inventory.MoveItemToInventory(instance, myPlayer.DefaultInventory);
             }

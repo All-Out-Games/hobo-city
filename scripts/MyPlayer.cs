@@ -161,6 +161,25 @@ public partial class MyPlayer : Player, INetworkedComponent
 
 
   [ClientRpc]
+  public void AddDash(Vector2 add, float duration)
+  {
+    SetFacingDirection(add.X > 0);
+    Dash = add;
+    DashRemainingDuration = duration;
+  }
+
+  protected void DashDecay()
+  {
+    if (DashRemainingDuration > 0) DashRemainingDuration -= Time.DeltaTime;
+    Dash = DashRemainingDuration > 0 ? Dash : Vector2.Zero;
+  }
+
+  public Vector2 Dash = Vector2.Zero;
+  protected float DashRemainingDuration;
+  protected const float DashDecayThreshold = 0.1f;
+
+
+  [ClientRpc]
   public void AddEnergyEffect(Player player)
   {
     if (!player.Alive()) return;
@@ -263,7 +282,8 @@ public partial class MyPlayer : Player, INetworkedComponent
         multiplier *= 0.3f;
       }
 
-      return DefaultPlayerVelocityCalculation(velocity, input, dt, multiplier);
+      var velocityWithDash = velocity + (Dash * dt);
+      return DefaultPlayerVelocityCalculation(velocityWithDash, input, dt, multiplier);
     };
 
     GameManager.Instance.IsDay.OnSync += (oldIsDay, newIsDay) =>
@@ -893,6 +913,9 @@ public partial class MyPlayer : Player, INetworkedComponent
       SpineAnimator.SpineInstance.ColorMultiplier = new Vector4(1, 1, 1, 1);
     }
 
+    // Dash decay runs every frame on both client and server so motion and visuals stay in sync
+    DashDecay();
+
     if (HealthManager.DiedAt > 0f && !HasFreezeReasons())
     {
       AddEmoteBlockReason("dead");
@@ -1072,6 +1095,9 @@ public partial class MyPlayer : Player, INetworkedComponent
       {
         abilities.Add(GetAbility<PunchAbility>());
       }
+
+      // Add baseline dodge roll ability for all players
+      abilities.Add(GetAbility<AbilityDodgeRoll>());
 
       // abilities.Add(GetAbility<BushDisguiseAbility>());
       DrawDefaultAbilityUI(new AbilityDrawOptions()
@@ -1405,7 +1431,7 @@ public partial class MyPlayer : Player, INetworkedComponent
 
       numItemsLeftToAdd -= numItemsInThisStack;
 
-      if (itemInstance != null && Inventory.CanMoveItemToInventory(itemInstance, DefaultInventory))
+      if (itemInstance != null && Inventory.CanMoveItemToInventory(itemInstance, DefaultInventory, out var _))
       {
         Inventory.MoveItemToInventory(itemInstance, DefaultInventory);
 
@@ -1742,7 +1768,7 @@ public partial class MyPlayer : Player, INetworkedComponent
     if (emptySlot != -1)
     {
       var newFistsInstance = Inventory.CreateItem(fistsDef, 1);
-      if (newFistsInstance != null && Inventory.CanMoveItemToInventory(newFistsInstance, DefaultInventory))
+      if (newFistsInstance != null && Inventory.CanMoveItemToInventory(newFistsInstance, DefaultInventory, out var _))
       {
         Inventory.MoveItemToInventory(newFistsInstance, DefaultInventory);
         // Next Update() will swap to slot 0 if necessary

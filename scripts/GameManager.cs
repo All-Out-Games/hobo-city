@@ -512,7 +512,7 @@ public partial class GameManager : Component
             instance.SetMetadata("level", targetPlayer.Level.ToString());
           }
 
-          if (Inventory.CanMoveItemToInventory(instance, targetPlayer.DefaultInventory))
+          if (Inventory.CanMoveItemToInventory(instance, targetPlayer.DefaultInventory, out var _))
           {
             Inventory.MoveItemToInventory(instance, targetPlayer.DefaultInventory);
             Chat.SendMessage(player, $"Gave x{quantity} {itemId} to {targetPlayer.Name}.");
@@ -939,14 +939,14 @@ public partial class GameManager : Component
       textSettings.AutofitMinSize = 15;
       textSettings.AutofitMaxSize = textSettings.Size;
       var nameRect = entryRect.CutLeft(240).Inset(0, 0, 0, 4);  // 4 pixels left padding
-      UI.Text(nameRect, player.Name, textSettings);
+      UI.TextAsync(nameRect, player.Name, textSettings);
 
       // Draw score (always white)
       var scoreSettings = GameManager.GetTextSettings(30, UI.HorizontalAlignment.Right);
       scoreSettings.Color = new Vector4(1, 1, 1, 1);
       scoreSettings.Offset = new Vector2(0, 2);
       var scoreRect = entryRect.Inset(0, 4, 0, 0);  // 4 pixels right padding
-      UI.Text(scoreRect, player.Points.ToString(), scoreSettings);
+      UI.TextAsync(scoreRect, player.Points.ToString(), scoreSettings);
     }
   }
 }
