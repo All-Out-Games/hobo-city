@@ -3,7 +3,7 @@ using System.Collections;
 
 public partial class Leaderboard : Component
 {
-    public const string LEADERBOARD_KILLS_ID = "killsSeason1";
+    public const string LEADERBOARD_KILLS_ID = "killsSeason2";
 
     [Serialized] public Texture LeaderboardBgFirst;
     [Serialized] public Texture LeaderboardBgSecond;
