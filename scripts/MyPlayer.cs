@@ -47,6 +47,10 @@ public partial class MyPlayer : Player, INetworkedComponent
   public CustomItemInstance CurrentEquippedItem;
   public List<string> BlockScrollReasons = new List<string>();
 
+  // Tracking fields to detect when the item in the hovered slot changes (e.g. from drag-move)
+  public int _LastObservedHoveredSlotIndex = -1;
+  public Item_Instance _LastObservedHoveredSlotItem = null;
+
   // Cached list to avoid allocations when checking if the player is behind a destructible.
   public static List<ThingWithHealth> BehindCheckCache = new();
   public static List<ThingWithHealth> OnScreenCheckCache = new();
@@ -1070,6 +1074,9 @@ public partial class MyPlayer : Player, INetworkedComponent
         HoveredSlotLastFrame = hotbarResult.SelectedItemIndex;
       }
 
+      // Refresh equipped item if the item in the current slot changed (e.g. from drag-move)
+      MaybeRefreshEquippedItemFromHoveredSlot();
+
       // Update the custom aiming information in case of being on PC and this item using the special aiming system
       if (CurrentEquippedItem != null && CurrentEquippedItem.CustomDefinition.OverrideTargettingOnPC && !IsPlayingOnMobile)
       {
@@ -1511,6 +1518,27 @@ public partial class MyPlayer : Player, INetworkedComponent
   {
     var item = DefaultInventory.Items[CurrentHoveredSlot];
     UpdateEquippedItem(item);
+  }
+
+  // Called every frame on the client to detect when the item in the hovered slot has changed
+  // (e.g. from drag-and-drop moves) and refresh the equipped item/ability UI accordingly.
+  public void MaybeRefreshEquippedItemFromHoveredSlot()
+  {
+    if (DefaultInventory == null) return;
+    if (CurrentHoveredSlot < 0 || CurrentHoveredSlot >= DefaultInventory.Items.Length) return;
+
+    var currentItem = DefaultInventory.Items[CurrentHoveredSlot];
+
+    // Check if slot index or item reference changed
+    bool slotChanged = _LastObservedHoveredSlotIndex != CurrentHoveredSlot;
+    bool itemChanged = currentItem != _LastObservedHoveredSlotItem;
+
+    if (slotChanged || itemChanged)
+    {
+      _LastObservedHoveredSlotIndex = CurrentHoveredSlot;
+      _LastObservedHoveredSlotItem = currentItem;
+      UpdateEquippedItem(currentItem);
+    }
   }
 
   public void UpdateEquippedItem(Item_Instance newEquippedItem)

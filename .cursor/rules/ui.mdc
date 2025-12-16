@@ -17,7 +17,7 @@ alwaysApply: false
 - Because this is mobile first, do not try to do "hover" effects or other interaction models that don't work on mobile
 - UI functions MUST be static and take their inputs as parameters
 
-Start all UI from UI.ScreenRect, unless its at the edge of the screen in which case use UI.SafeRect
+Start all UI from UI.ScreenRect, unless it's at the edge of the screen in which case use UI.SafeRect
 
 ## Rect Functions
 - NEVER call new Rect() for screen space UI. Instead derive all your UI from one of the ScreenRects.  
@@ -26,7 +26,7 @@ Start all UI from UI.ScreenRect, unless its at the edge of the screen in which c
 public struct Rect
 {
   public Rect CenterRect()
-  Public Rect BottomRect()
+  public Rect BottomRect()
   public Rect BottomCenterRect()
   ^ etc...
 
@@ -150,7 +150,7 @@ public static void DrawPlayerGrid(List<MyPlayer> players, float time, float dura
 
         var localTime = time - (players.Count - i - 1) * timeOffsetPerPlayer;
         var localDuration = duration - (players.Count - i - 1) * (timeOffsetPerPlayer * 2);
-        var show01 = 1f - Ease.OutQuart(FadeInAndOut(0.4f, 0.4f, localDuration, localTime-0.5f));
+        var show01 = 1f - Ease.OutQuart(FadeInAndOut(0.4f, 0.4f, localDuration, localTime - 0.5f));
         myEntryRect = myEntryRect.Offset(0, 1080f * show01);
 
         var diamondRect = myEntryRect.FitAspect(playerDiamondBack.Aspect);
@@ -430,3 +430,222 @@ public static void DemoGrids()
         }
     }
 }
+
+## Windows and Modals (UI.DrawWindow / UI.DrawAlertWindow)
+- Prefer the window API for complex UI: titles, headers, tab bars, lists, grids, trees, and detail views.
+- Windows auto-draw backgrounds, headers, close button, and content. You only provide `WindowOptions` and a `WindowContent` tree.
+
+### Quick start: simple window
+```csharp
+[UIPreview]
+public static void PreviewSimpleWindow()
+{
+    var window = Window.Make(new WindowOptions
+    {
+        Title = "Inventory",
+        WindowBackgroundStyle = WindowBackgroundStyle.SimpleWithBottomStripe,
+        WindowBackgroundColor = WindowBackgroundColor.Blue,
+        WindowHeaderColor = WindowHeaderColor.MatchBackground,
+        WindowTitleFlare = WindowTitleFlare.None,
+
+        Content = new GridWindowContent
+        {
+            Columns = 3,
+            ItemHeight = 400,
+            Items = new List<CollectionElement>
+            {
+                new CollectionElement{ Label = "Potion", Icon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/items/potion.png"), Color = ElementColor.Green,  Style = ElementStyle.Simple, RarityStyle = RarityPipStyle.Diamond, RarityColor = RarityPipColor.Gold, RarityPipLocation = RarityPipLocation.TopRight },
+                new CollectionElement{ Label = "Sword",  Icon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/items/sword.png"),   Color = ElementColor.Grey,   Style = ElementStyle.Banner },
+                new CollectionElement{ Label = "Bow",    Icon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/items/bow.png"),     Color = ElementColor.Blue,   Style = ElementStyle.Banner2 },
+            }
+        }
+    });
+
+    // Centers and sizes the window automatically
+    UI.DrawWindow(window);
+}
+```
+
+### Controlling placement/size
+- Use the overload that takes a `Rect` when a custom placement is needed.
+```csharp
+var rect = UI.SafeRect.CenterRect().Grow(350, 450, 350, 450);
+UI.DrawWindow(rect, window);
+```
+
+### Alerts and confirmations
+- Use for Yes/No or Accept/Decline flows.
+```csharp
+var result = UI.DrawAlertWindow(new AlertWindowOptions
+{
+    Title = "Delete Item?",
+    Message = "This action cannot be undone.",
+    WindowBackgroundStyle = WindowBackgroundStyle.Simple,
+    WindowBackgroundColor = WindowBackgroundColor.Red,
+
+    AcceptButtonText = "Delete",
+    AcceptButtonColor = ButtonColor.Red,
+    AcceptButtonStyle = ButtonStyle.Basic,
+
+    DeclineButtonText = "Cancel",
+    DeclineButtonColor = ButtonColor.Grey,
+    DeclineButtonStyle = ButtonStyle.Basic,
+});
+if (result == AlertWindowResult.Accept) {
+    // perform deletion via [ServerRpc] if required
+}
+```
+
+### Window content types
+Build UI by composing one of the `WindowContent` types below. All are in `AO.UI`:
+
+- CustomWindowContent: draw any custom contents you want.
+```csharp
+Content = new CustomWindowContent
+{
+    DrawContent = rect =>
+    {
+        var icon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/misc_icons_2/exit_button.png");
+        var buttonRect = rect.CutBottom(120).Inset(25, 40, 25, 40);
+        var res = UI.DrawWindowButton(buttonRect, "Close", icon, ButtonColor.Orange, ButtonStyle.Basic);
+        if (res.Clicked) { /* handle click */ }
+    }
+}
+```
+
+- TabbedWindowContent: top tabs or side tabs.
+```csharp
+Content = new TabbedWindowContent
+{
+    TabLocation = TabLocation.Top, // or Side
+    TabButtonStyle = TabButtonStyle.Default, // Simple, Shiny, Trapezoid
+    TabButtonColor = ButtonColor.Grey,
+    TabSelectedButtonColor = ButtonColor.Orange,
+    Tabs = new List<TabContent>
+    {
+        new TabContent
+        {
+            Label = "Weapons",
+            Icon  = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/items/sword.png"),
+            Content = new GridWindowContent { Columns = 3, Items = MakeWeaponElements() }
+        },
+        new TabContent
+        {
+            Label = "Consumables",
+            Icon  = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/items/potion.png"),
+            Content = new ListWindowContent { ItemHeight = 200, Items = MakeConsumableElements() }
+        },
+    }
+}
+```
+
+- SplitWindowContent: split UI horizontally or vertically.
+```csharp
+Content = new SplitWindowContent
+{
+    Axis = SplitAxis.Horizontal, // or Vertical
+    SplitRatio = 0.4f,
+    First  = new GridWindowContent { Columns = 4, Items = MakeElementsLeft() },
+    Second = new ElementDisplayWindowContent { Element = GetSelectedElement(), Stats = MakeStats() }
+}
+```
+
+- SideCarWindowContent: main content with a side panel (left/right) that has its own background.
+```csharp
+Content = new SideCarWindowContent
+{
+    Position = SideCarPosition.Right,
+    SideCarSize = new Vector2(400, 500),
+    SideCarBackgroundColor = WindowBackgroundColor.Blue,
+    SideCarBackgroundColorMultiplier = new Vector4(0.9f, 0.9f, 0.9f, 1),
+    Main = new GridWindowContent { Columns = 3, Items = MakeElements() },
+    Side = new ElementDisplayWindowContent { Element = GetSelectedElement(), Stats = MakeStats() },
+}
+```
+
+- ListWindowContent: vertically scrolling rich list with optional action button per item.
+```csharp
+new ListWindowContent
+{
+    ItemHeight = 200, // -1 uses default
+    Items = new List<CollectionElement>
+    {
+        new CollectionElement
+        {
+            Label = "Health Potion",
+            Description = "+50 HP",
+            Icon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/items/potion.png"),
+            ListItemActionButtonText = "Use",
+            ListItemButtonColor = ButtonColor.Green,
+            ListItemButtonStyle = ButtonStyle.Arrow,
+            ListItemAction = item => { /* use potion */ },
+        },
+    }
+}
+```
+
+- GridWindowContent: grid of elements with label and icon; supports rarity pips and a bottom tab stripe.
+```csharp
+new GridWindowContent
+{
+    Columns = 3, ItemHeight = 400, DrawElementTabs = true,
+    Items = new List<CollectionElement>
+    {
+        new CollectionElement{ Label = "Common",  Icon = UI.WhiteSprite, Color = ElementColor.Grey,  Style = ElementStyle.Simple, RarityStyle = RarityPipStyle.None },
+        new CollectionElement{ Label = "Rare",    Icon = UI.WhiteSprite, Color = ElementColor.Blue,  Style = ElementStyle.Banner, RarityStyle = RarityPipStyle.Star, RarityColor = RarityPipColor.Gold },
+        new CollectionElement{ Label = "Mythic",  Icon = UI.WhiteSprite, Color = ElementColor.Red,   Style = ElementStyle.Banner2, RarityStyle = RarityPipStyle.Diamond, RarityColor = RarityPipColor.Diamond },
+    }
+}
+```
+
+- ElementDisplayWindowContent: large icon + title, optional CTA button, plus key-value stats.
+```csharp
+new ElementDisplayWindowContent
+{
+    Element = new CollectionElement{ Label = "Excalibur", Icon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/items/sword.png") },
+    ButtonText = "Equip",
+    ButtonColor = ButtonColor.Orange,
+    ButtonStyle = ButtonStyle.Basic,
+    ButtonAction = el => { /* equip */ },
+    Stats = new List<ElementStat>
+    {
+        new ElementStat{ Text = "+20 ATK", Icon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/stat_icons/sword.png") },
+        new ElementStat{ Text = "+5% CRIT", Icon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/stat_icons/crit.png") },
+    }
+}
+```
+
+- TreeWindowContent: nodes on a grid with orthogonal connections.
+```csharp
+new TreeWindowContent
+{
+    NodeWidth = 125, NodeHeight = 125, RowSpacing = 25, ColumnSpacing = 50,
+    Nodes = new List<TreeWindowNode>
+    {
+        new TreeWindowNode { Id = "root", Row = 0, Column = 0, ConnectionState = TreeWindowNodeConnectionState.Connected, BackgroundColor = ButtonColor.Grey,  Element = new CollectionElement{ Label = "Root", Icon = UI.WhiteSprite } },
+        new TreeWindowNode { Id = "a",    Row = 1, Column = 1, ConnectionState = TreeWindowNodeConnectionState.ConnectedEnabled, ParentIds = new List<string>{"root"}, Element = new CollectionElement{ Label = "Node A", Icon = UI.WhiteSprite } },
+    }
+}
+```
+
+### Title, backgrounds and colors
+- `WindowOptionsBase` fields:
+  - `Title`: string shown in the header
+  - `WindowBackgroundStyle`: Simple, SimpleWithBottomStripe, Blueprint, Rounded
+  - `WindowBackgroundColor`: Black/Blue/Brown/Gold/Green/Grey/Orange/Purple/Red/White/Yellow or BlueprintBlue/Pink/Yellow
+  - `WindowHeaderColor`: MatchBackground or a specific color (plus `RoundedRed`)
+  - `WindowTitleFlare`: None, Black/Blue/Green/Red/White/Yellow, or Gold/Silver/Bronze
+
+### Drawing buttons inside windows
+Use `UI.DrawWindowButton` for a styled button that supports an optional icon and correct text settings.
+```csharp
+var okIcon = Assets.GetAsset<Texture>("$AO/ui/kit/Icons/misc_icons_2/exit_button.png");
+var okRect = rect.CutBottom(120).Inset(30, 50, 30, 50);
+var ok = UI.DrawWindowButton(okRect, "OK", okIcon, ButtonColor.Orange, ButtonStyle.Basic);
+if (ok.Clicked) { /* handle */ }
+```
+
+### Tips
+- Derive all placement from `UI.SafeRect` or `UI.ScreenRect` and then use the window overload with a `Rect` if you need custom sizing/position.
+- For list and grid entries, always use `FitAspect(icon.Aspect)` to avoid stretched images.
+- When building lists/grids, keep `ItemHeight` and `Columns` reasonable for mobile.

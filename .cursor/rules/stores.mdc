@@ -5,19 +5,24 @@ alwaysApply: false
 ---
 The Store API allows you to display UI to players for purchasing items. 
 
-Items can be sold for your own currency (using the Economy system) or for Sparks (a paid platform wide currency)
+Items can be sold for your own currency (using the Economy system) or for Sparks (a paid platform-wide currency)
 
+Here is an example store:
+```cs
 public partial class Store : System<Store>
 {
-    public const string STARTERPACK_OUTLAW = "6822d2d1685a3ea7c23b9f08";
-    public const string STARTERPACK_CRYPTO = "6822d5e3f5b5d24518ba5935";
-    public const string STARTERPACK_ROLEPLAY = "6822d5e3f5b5d24518ba5935";
-
-    public Shop sparksShop, gunShop, generalShop, blackMarket, generateFurnitureShop;
+    public Shop sparksShop, gunShop, generalShop;
     public ShopCategory ammo, weapons, consumables, blackMarketCat, generateFurnitureCat;
-    public string lastGenerativeMessage = "";
-    public string generativeMessage = "";
 
+    public override void Awake()
+    {
+        if (Network.IsServer) Purchasing.SetPurchaseHandler(SparksPurchaseHandler);
+
+        CreateGeneralShop();
+        CreateGunShop();
+    }
+
+    
     public void CreateGunShop()
     {
         gunShop = Economy.CreateShop("Gun Shop");
@@ -28,7 +33,7 @@ public partial class Store : System<Store>
         }
         if (Network.IsServer)
         {
-            gunShop.SetPurchaseHandler(OnItemPurchaseSuccessfull);
+            gunShop.SetPurchaseHandler(OnItemPurchaseSuccessful);
         }
 
         generateFurnitureShop = Economy.CreateShop("Generate Furniture");
@@ -39,7 +44,7 @@ public partial class Store : System<Store>
         }
         if (Network.IsServer)
         {
-            generateFurnitureShop.SetPurchaseHandler(OnItemPurchaseSuccessfull);
+            generateFurnitureShop.SetPurchaseHandler(OnItemPurchaseSuccessful);
         }
 
         var generateFurnitureCat = generateFurnitureShop.AddCategory("Generate Furniture");
@@ -65,16 +70,6 @@ public partial class Store : System<Store>
         }
     }
 
-    public override void Awake()
-    {
-        if (Network.IsServer) Purchasing.SetPurchaseHandler(SparksPurchaseHandler);
-
-        CreateGeneralShop();
-        CreateGunShop();
-        CreateSparksShop();
-        CreateBlackMarket();
-    }
-
     public void CreateGeneralShop()
     {
         generalShop = Economy.CreateShop("General Shop");
@@ -85,7 +80,7 @@ public partial class Store : System<Store>
         }
         if (Network.IsServer)
         {
-            generalShop.SetPurchaseHandler(OnItemPurchaseSuccessfull);
+            generalShop.SetPurchaseHandler(OnItemPurchaseSuccessful);
         }
 
         var consumablesCat = generalShop.AddCategory("Consumables");
@@ -143,23 +138,6 @@ public partial class Store : System<Store>
             ModifyProduct = false
         };
 
-        if (MyPlayer.localPlayer != null && product.Id.StartsWith("__GENERATIVE__"))
-        {
-            if (generativeMessage.Length < 3)
-            {
-                modification.ModifyProduct = true;
-                modification.PurchaseButtonText = "Type a prompt";
-                modification.Color = PurchaseButtonColor.Grey;
-                modification.OnBuyButtonClicked = () => PurchaseFail(_player);
-            }
-            else
-            {
-                modification.ModifyProduct = true;
-                modification.PurchaseButtonText = "Create";
-                modification.Color = PurchaseButtonColor.Green;
-            }
-        }
-
         if (MyPlayer.localPlayer != null && product.Id.StartsWith("__WEAPON__"))
         {
             var weaponName = product.Id.Substring(11);
@@ -178,7 +156,7 @@ public partial class Store : System<Store>
         return modification;
     }
 
-    public bool OnItemPurchaseSuccessfull(Player _player, GameProduct product)
+    public bool OnItemPurchaseSuccessful(Player _player, GameProduct product)
     {
         var player = (MyPlayer)_player;
 
@@ -220,16 +198,8 @@ public partial class Store : System<Store>
 
             player.ServerSyncAmmoAmount(ammoType, player.AmmoAmounts[ammoType].CurrentAmount);
         }
-        else if (product.Id.StartsWith("__GENERATIVE__"))
-        {
-            if (generativeMessage.Length < 3)
-            {
-                return false;
-            }
-
-        }
 
         return true;
     }
-
 }
+```
