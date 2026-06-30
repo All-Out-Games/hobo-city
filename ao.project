@@ -8,5 +8,6 @@
       "name": "Staging RP",
       "id": "682f5de7d582190d3cf300c2"
     }
-  ]
+  ],
+  "manual_mip_divisor": 16
 }

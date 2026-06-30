@@ -14,3 +14,11 @@ res/.asset_manifest
 res/.asset_manifest.txt
 asset_report.txt
 *.psd
+.agents
+.claude
+.mcp.json
+.gemini
+.cursor
+AGENTS.md
+CLAUDE.md
+ao_debug.lock

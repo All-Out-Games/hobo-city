@@ -38,13 +38,13 @@
   {
     "id": "housing/bases/0c1bde9a8ccc23e1.png",
     "texture": {
-      "resample_multiplier": 1
+      "resample_multiplier": 0.75
     }
   },
   {
     "id": "housing/bases/FBI_Mansion_n_Corn_Map.png",
     "texture": {
-      "resample_multiplier": 1
+      "resample_multiplier": 0.75
     }
   },
   {
@@ -110,7 +110,7 @@
   {
     "id": "housing/bases/ssundee_was_murdered_map_tiny.png",
     "texture": {
-      "resample_multiplier": 1
+      "resample_multiplier": 0.75
     }
   },
   {
@@ -218,7 +218,7 @@
   {
     "id": "housing/bases/warp.png",
     "texture": {
-      "resample_multiplier": 1
+      "resample_multiplier": 0.75
     }
   },
   {
@@ -230,8 +230,9 @@
   {
     "id": "island.png",
     "texture": {
-      "resample_multiplier": 1
-    }
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
   },
   {
     "id": "boat1.png",
@@ -242,7 +243,7 @@
   {
     "id": "boat2.png",
     "texture": {
-      "resample_multiplier": 0.8000000119209290
+      "resample_multiplier": 0.800000011920929
     }
   },
   {
@@ -260,13 +261,13 @@
   {
     "id": "housing/bases/House2.png",
     "texture": {
-      "resample_multiplier": 0.8000000119209290
+      "resample_multiplier": 0.800000011920929
     }
   },
   {
     "id": "stand.png",
     "texture": {
-      "resample_multiplier": 0.8000000119209290
+      "resample_multiplier": 0.800000011920929
     }
   },
   {
@@ -284,7 +285,7 @@
   {
     "id": "sussys.png",
     "texture": {
-      "resample_multiplier": 1.1000000238418579
+      "resample_multiplier": 1.100000023841858
     }
   },
   {
@@ -338,7 +339,7 @@
   {
     "id": "housing/bases/island-house.png",
     "texture": {
-      "resample_multiplier": 1
+      "resample_multiplier": 0.75
     }
   },
   {
@@ -368,7 +369,7 @@
   {
     "id": "pets/icons/velociraptor.png",
     "texture": {
-      "resample_multiplier": 1.1000000238418579
+      "resample_multiplier": 1.100000023841858
     }
   },
   {
@@ -398,7 +399,7 @@
   {
     "id": "white house interior/WhiteHouse_Interior.png",
     "texture": {
-      "resample_multiplier": 0.8000000119209290
+      "resample_multiplier": 0.75
     }
   },
   {
@@ -429,19 +430,22 @@
     "id": "map/GroundTiles/Sidewalk/Sidewalk_corner_Horizontal_Lower.png",
     "texture": {
       "wrap_repeat": true
-    }
+    },
+    "should_mip": true
   },
   {
     "id": "map/GroundTiles/Sidewalk/Sidewalk_corner_Horizontal_Upper.png",
     "texture": {
       "wrap_repeat": true
-    }
+    },
+    "should_mip": true
   },
   {
     "id": "map/GroundTiles/Street_Tile.png",
     "texture": {
       "wrap_repeat": true
-    }
+    },
+    "should_mip": true
   },
   {
     "id": "basket.png",
@@ -524,7 +528,365 @@
   {
     "id": "spooky-area.png",
     "texture": {
-      "resample_multiplier": 1
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Blocks/block_business_1.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_business_2.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_commercial_1.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_commercial_2.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_commercial_3.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_gray_0.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_highclass_1.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_highclass_2.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_lowclass_1.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_lowclass_2.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_lowclass_3.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_midclass_1.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_midclass_2.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/block_utilities.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/Block_Industrial_Jail.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Blocks/Block_Jail.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    },
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/GUN_STORE/Gun_Store.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/GUN_STORE/Gun_Store_Wall_Front.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/GUN_STORE/Gun_Store_Wall_Back.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/GENERAL_STORE/Gen_Store.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/GENERAL_STORE/Gen_Store_Wall_Front.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/GENERAL_STORE/Gen_Store_Wall_Back.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Hospital/Hospital.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/Hospital/Hospital_Wall_Back.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Hospital/Hospital_Wall_Front.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Hospital/Hospital_Tower.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Factory_Bldg.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Factory_Bldg2.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Sanitation/Sanitation_Bldg.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Sanitation/Sanitation_Fence1.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Sanitation/Sanitation_Fence_V1.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Sanitation/Sanitation_Fence_V2.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/city_bldg2.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/city_bldg3.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/city_bldg4.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/city_bldg5.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/city_bldg6.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/city_bldg7.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/Bldg2.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/old_brick_bldg2.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/old_brick_bldg3.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/suburban_bldg1.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/suburban_bldg2.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/suburban_bldg3.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/suburban_bldg4.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/suburban_bldg5.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Cafe_hobo.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/Buildings/Diner.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/firestation.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/JAIL/jail.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/JAIL/wall3.png",
+    "should_mip": true,
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/GroundTiles/Sidewalk/Sidewalk_corner_Vertial_L.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/GroundTiles/Sidewalk/Sidewalk_corner_UpperL.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/GroundTiles/Sidewalk/Sidewalk_corner_Upper_Interior.png",
+    "should_mip": true
+  },
+  {
+    "id": "map/GroundTiles/Sidewalk/Sidewalk_corner_LowerR_TOP.png",
+    "should_mip": true
+  },
+  {
+    "id": "housing/bases/[BABY105]_map.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "housing/bases/[MWSD116]_map.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/Whitehouse/Whitehouse.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/Mill.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/Mansion2.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Decoration/RoundTree4.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/Bldg_Brick2.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Decoration/RoundTree6.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "housing/bases/House5.png",
+    "texture": {
+      "resample_multiplier": 0.75
+    }
+  },
+  {
+    "id": "map/Buildings/Airport/Tower.png",
+    "texture": {
+      "resample_multiplier": 0.75
     }
   }
 ]
