@@ -22,3 +22,5 @@ asset_report.txt
 AGENTS.md
 CLAUDE.md
 ao_debug.lock
+res/.upload_cache
+.codex

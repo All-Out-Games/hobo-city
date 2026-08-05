@@ -693,16 +693,19 @@ public static partial class SpinWheelUI
             return;
         }
 
-        if (!Game.IsMobile && !(Game.IsEditor || Game.LaunchedFromEditor))
+        bool isEditor = Game.IsEditor || Game.LaunchedFromEditor;
+        bool rewardedAdsEnabled = Ads.IsRewardedAdLoaded();
+
+        if (!Game.IsMobile && !rewardedAdsEnabled && !isEditor)
         {
-            // desktop can't do ads
+            // Desktop clients without rewarded ads cannot spin.
             buttonRect = UI.ScreenRect.BottomCenterRect().Offset(0, 175).Grow(buttonSize / 2f, buttonSize * 4f, buttonSize / 2f, buttonSize * 4f);
             buttonRect = buttonRect.Scale(buttonScale);
             UI.Button(buttonRect, "Download on your phone/tablet to spin!", bs, LabelTs);
             return;
         }
 
-        if (!(Game.IsEditor || Game.LaunchedFromEditor) && Economy.GetBalance(Network.LocalPlayer, "__wheelspins__") <= 0)
+        if (!isEditor && Economy.GetBalance(Network.LocalPlayer, "__wheelspins__") <= 0)
         {
 
             var adButtonSettings = new UI.ButtonSettings()
@@ -711,7 +714,7 @@ public static partial class SpinWheelUI
                 PressScaling = 0.25f,
             };
 
-            if (Ads.IsRewardedAdLoaded())
+            if (rewardedAdsEnabled)
             {
                 // we have an ad ready to show so they can spin
                 if (UI.Button(buttonRect, "SPIN", adButtonSettings, LabelTs).Clicked && isSpinning == false && !isButtonScaling)

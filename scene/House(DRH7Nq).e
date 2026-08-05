@@ -1,0 +1,61 @@
+14
+4514010628097
+3508515690
+{
+  "name": "House",
+  "local_enabled": true,
+  "local_position": {
+    "X": -1.9148864746093750,
+    "Y": 3.1712360382080078
+  },
+  "local_rotation": 0,
+  "local_scale": {
+    "X": 1,
+    "Y": 1
+  },
+  "previous_sibling": 2944104535,
+  "next_sibling": 3244145546,
+  "parent": 2713222824
+},
+{
+  "cid": 1,
+  "aoid": 4290297405,
+  "component_type": "Internal_Component",
+  "internal_component_type": "Sprite_Renderer",
+  "data": {
+    "texture": "map/Buildings/Slum_Tent5.png",
+    "depth_offset": -0.4430875778198242
+  }
+},
+{
+  "cid": 2,
+  "aoid": 279379623,
+  "component_type": "Internal_Component",
+  "internal_component_type": "Polygon_Collider",
+  "data": {
+    "make_navmesh_loop": true,
+    "flip_navmesh_loop": true,
+    "points": [
+      {
+        "X": -1.8675842285156250,
+        "Y": -0.5799999237060547
+      },
+      {
+        "X": -0.2730407714843750,
+        "Y": -1.1964473724365234
+      },
+      {
+        "X": 1.8863830566406250,
+        "Y": -0.6495666503906250
+      },
+      {
+        "X": 1.0624542236328125,
+        "Y": 0.8336429595947266
+      },
+      {
+        "X": -1.3020172119140625,
+        "Y": 0.5349712371826172
+      }
+    ]
+  }
+}
