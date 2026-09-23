@@ -1,0 +1,40 @@
+14
+777389080577
+568846848
+{
+  "name": "Stand",
+  "local_enabled": true,
+  "local_position": {
+
+  },
+  "local_rotation": 0,
+  "local_scale": {
+    "X": 1,
+    "Y": 1
+  },
+  "previous_sibling": 472960770,
+  "parent": 3114891131
+},
+{
+  "cid": 1,
+  "aoid": 370480290,
+  "component_type": "Internal_Component",
+  "internal_component_type": "Sprite_Renderer",
+  "data": {
+    "texture": "map/Buildings/GENERAL_STORE/Shop_Pedestal_small.png"
+  }
+},
+{
+  "cid": 3,
+  "aoid": 3161312222,
+  "component_type": "Internal_Component",
+  "internal_component_type": "Box_Collider",
+  "data": {
+    "size": {
+      "Y": 0.6769027709960938
+    },
+    "offset": {
+      "Y": -0.0415420532226562
+    }
+  }
+}
